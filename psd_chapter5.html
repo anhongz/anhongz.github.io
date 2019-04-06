@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>产品系统设计</title>
+<meta name="author" content="(Product System Design)"/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="./reveal.js/css/reveal.css"/>
+
+<link rel="stylesheet" href="./reveal.js/css/theme/white2.css" id="theme"/>
+
+
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = './reveal.js/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide"><h1 class="title">产品系统设计</h1><h2 class="author">Product System Design</h2><p class="date">Created: 2019-04-06 Sat 09:48</p>
+</section>
+<section id="table-of-contents">
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#/slide-orgheadline1">1. 产品系统设计概述</a></li>
+<li><a href="#/slide-orgheadline2">2. 产品系统设计要素</a></li>
+<li><a href="#/slide-orgheadline3">3. 产品创新设计思维与方法</a></li>
+<li><a href="#/slide-orgheadline4">4. 产品系统设计流程</a></li>
+<li><a href="#/slide-orgheadline5">5. 产品系统设计案例</a></li>
+<li><a href="#/slide-orgheadline7">6. 产品系统设计发展趋势</a>
+<ul>
+<li><a href="#/slide-orgheadline6">6.1. 系统设计的时代价值</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</section>
+
+<section>
+<section id="slide-orgheadline1">
+<h2 id="orgheadline1"><span class="section-number-2">1</span> 产品系统设计概述</h2>
+</section>
+</section>
+<section>
+<section id="slide-orgheadline2">
+<h2 id="orgheadline2"><span class="section-number-2">2</span> 产品系统设计要素</h2>
+</section>
+</section>
+<section>
+<section id="slide-orgheadline3">
+<h2 id="orgheadline3"><span class="section-number-2">3</span> 产品创新设计思维与方法</h2>
+</section>
+</section>
+<section>
+<section id="slide-orgheadline4">
+<h2 id="orgheadline4"><span class="section-number-2">4</span> 产品系统设计流程</h2>
+</section>
+</section>
+<section>
+<section id="slide-orgheadline5">
+<h2 id="orgheadline5"><span class="section-number-2">5</span> 产品系统设计案例</h2>
+</section>
+</section>
+<section>
+<section id="slide-orgheadline7" data-background="./img6/design_trend.jpg" data-background-size="100%" data-background-transition="slide">
+<h2 id="orgheadline7"><span class="section-number-2">6</span> 产品系统设计发展趋势</h2>
+<ul>
+<li>产品设计发展趋势</li>
+<li>产品系统设计核心走向</li>
+<li>持续推动产品系统设计</li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-orgheadline6">
+<h3 id="orgheadline6"><span class="section-number-3">6.1</span> 系统设计的时代价值</h3>
+<ul>
+<li>社会兼容</li>
+<li>产品拓展</li>
+<li>特殊匹配</li>
+
+</ul>
+<br><br><br><br><div class="horizontal_alignment"><div><img src="./img6/futureSociety.jpeg" height="500"></div><div><img src="./img6/light-evolution.jpg" height="500"></div><div><img src="./img6/extension_plug2.jpg" height="500"></div></div>
+</section>
+</section>
+</div>
+</div>
+<script src="./reveal.js/lib/js/head.min.js"></script>
+<script src="./reveal.js/js/reveal.js"></script>
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+
+controls: true,
+progress: true,
+history: false,
+center: false,
+slideNumber: 'c',
+rollingLinks: false,
+keyboard: true,
+overview: true,
+
+theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+transition: Reveal.getQueryHash().transition || 'Fade', // default/cube/page/concave/zoom/linear/fade/none
+transitionSpeed: 'default',
+multiplex: {
+    secret: '', // null if client
+    id: '', // id, obtained from socket.io server
+    url: '' // Location of socket.io server
+},
+
+// Optional libraries used to extend on reveal.js
+dependencies: [
+ { src: './reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+ { src: './reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: './reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: './reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+ { src: './reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }]
+});
+</script>
+</body>
+</html>
