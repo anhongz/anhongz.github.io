@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2019-04-06 Sat 22:28 -->
+<!-- 2019-04-07 Sun 13:04 -->
 <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta  name="viewport" content="width=device-width, initial-scale=1" />
 <title>产品系统设计 Product System Design</title>
@@ -195,29 +195,26 @@ for the JavaScript code in this tag.
 <li><a href="#orgheadline494">4.8. 思考题</a></li>
 </ul>
 </li>
-<li><a href="#orgheadline658">5. 产品系统设计案例</a>
+<li><a href="#orgheadline657">5. 产品系统设计案例</a>
 <ul>
 <li><a href="#orgheadline509">5.1. 概述</a></li>
 <li><a href="#orgheadline549">5.2. 婴儿监护器调研</a></li>
 <li><a href="#orgheadline564">5.3. 婴儿监护器设计</a></li>
 <li><a href="#orgheadline613">5.4. 微波炉调研</a></li>
-<li><a href="#orgheadline627">5.5. 微波炉互动交流阶段</a></li>
-<li><a href="#orgheadline656">5.6. 帝度微波炉设计</a></li>
-<li><a href="#orgheadline657">5.7. 思考题</a></li>
+<li><a href="#orgheadline626">5.5. 微波炉互动交流阶段</a></li>
+<li><a href="#orgheadline655">5.6. 帝度微波炉设计</a></li>
+<li><a href="#orgheadline656">5.7. 思考题</a></li>
 </ul>
 </li>
-<li><a href="#orgheadline694">6. 产品系统设计发展趋势</a>
+<li><a href="#orgheadline693">6. 产品系统设计发展趋势</a>
 <ul>
-<li><a href="#orgheadline678">6.1. 产品设计发展趋势</a></li>
-<li><a href="#orgheadline689">6.2. 产品系统设计核心走向</a></li>
-<li><a href="#orgheadline692">6.3. 持续推动产品系统设计</a></li>
-<li><a href="#orgheadline693">6.4. 思考题</a></li>
+<li><a href="#orgheadline677">6.1. 产品设计发展趋势</a></li>
+<li><a href="#orgheadline688">6.2. 产品系统设计核心走向</a></li>
+<li><a href="#orgheadline691">6.3. 持续推动产品系统设计</a></li>
+<li><a href="#orgheadline692">6.4. 思考题</a></li>
 </ul>
 </div>
 </div>
-<p>
-绪论
-</p>
 
 <div id="outline-container-orgheadline9" class="outline-3">
 <h3 id="orgheadline9"><span class="section-number-3">0.1</span> 产品设计系统观</h3>
@@ -229,12 +226,18 @@ for the JavaScript code in this tag.
 <h5 id="orgheadline1"><span class="section-number-5">0.1.1.1</span> 设计系统观</h5>
 <div class="outline-text-5" id="text-0-1-1-1">
 <p>
-产品由若干相互联系的要素构成集合。
+　　产品由若干相互联系的要素构成集合。
 </p>
 
 <p>
-设计活动是构成集合的过程,由相互作用的若干组成部分合成的有机整体。
+　　设计活动是构成集合的过程,由相互作用的若干组成部分合成的有机整体。
 </p>
+
+
+<div class="figure">
+<p><img src="img/product_design_system.png" alt="product_design_system.png" width="270px" />
+</p>
+</div>
 </div>
 </div>
 
@@ -242,12 +245,13 @@ for the JavaScript code in this tag.
 <h5 id="orgheadline2"><span class="section-number-5">0.1.1.2</span> 产品循环系统</h5>
 <div class="outline-text-5" id="text-0-1-1-2">
 <p>
-产品设计系统从属于产品循环系统
+　　产品设计系统从属于产品循环系统 (设计-&gt;制造-&gt;流通-&gt;回收)
 </p>
 
-<p>
-设计-&gt;制造-&gt;流通-&gt;回收
+<div class="figure">
+<p><img src="img/Circular-economy.png" alt="Circular-economy.png" width="430px" />
 </p>
+</div>
 </div>
 </div>
 </div>
@@ -259,11 +263,11 @@ for the JavaScript code in this tag.
 <h5 id="orgheadline4"><span class="section-number-5">0.1.2.1</span> 整体关联性</h5>
 <div class="outline-text-5" id="text-0-1-2-1">
 <p>
-系统整体性是各组成元素相互作用表现出的宏观涌现；
+　　系统整体性是各组成元素相互作用表现出的宏观涌现；
 </p>
 
 <p>
-组成元素之间相互作用,相互依存。
+　　组成元素之间相互作用,相互依存。
 </p>
 </div>
 </div>
@@ -272,12 +276,18 @@ for the JavaScript code in this tag.
 <h5 id="orgheadline5"><span class="section-number-5">0.1.2.2</span> 层次性</h5>
 <div class="outline-text-5" id="text-0-1-2-2">
 <p>
-在不同技术、文化背景下,针对不同的设计解决方案可能呈现不同的元素层次优先级。
+　　在不同技术、文化背景下,针对不同的设计解决方案可能呈现不同的元素层次优先级。
 </p>
 
 <p>
-例：产品造型质量评价（功能因素、物质因素、美学因素）
+　　例：产品造型质量评价（功能因素、物质因素、美学因素）
 </p>
+
+
+<div class="figure">
+<p><img src="img/hierarchical_evaluation.png" alt="hierarchical_evaluation.png" />
+</p>
+</div>
 </div>
 </div>
 
@@ -285,7 +295,7 @@ for the JavaScript code in this tag.
 <h5 id="orgheadline6"><span class="section-number-5">0.1.2.3</span> 动态开放性</h5>
 <div class="outline-text-5" id="text-0-1-2-3">
 <p>
-设计为审美、使用习惯、行为方式和文化背景不同且不断更迭的人们提供解决方案。
+　　设计为审美、使用习惯、行为方式和文化背景不同且不断更迭的人们提供解决方案。
 </p>
 <ul class="org-ul">
 <li>开放性:接受新理念、新知识</li>
@@ -298,11 +308,11 @@ for the JavaScript code in this tag.
 <h5 id="orgheadline7"><span class="section-number-5">0.1.2.4</span> 自组织性</h5>
 <div class="outline-text-5" id="text-0-1-2-4">
 <p>
-产品设计系统内部以及系统与环境的交叉作用的结果。
+　　产品设计系统内部以及系统与环境的交叉作用的结果。
 </p>
 
 <p>
-市场调查、需求分析和设计定位等组成元素的环环相扣,组成一个牢固的系统,这些元素相互依存,若其中一个元素没发挥好应有作用,便会影响到与之相关的其它元素所进行的工作。故产品设计系统组成元素的动态关联体现其自组织性。
+　　市场调查、需求分析和设计定位等组成元素的环环相扣,组成一个牢固的系统,这些元素相互依存,若其中一个元素没发挥好应有作用,便会影响到与之相关的其它元素所进行的工作。故产品设计系统组成元素的动态关联体现其自组织性。
 </p>
 </div>
 </div>
@@ -313,7 +323,7 @@ for the JavaScript code in this tag.
 <h3 id="orgheadline43"><span class="section-number-3">0.2</span> 产品的系统化特征</h3>
 <div class="outline-text-3" id="text-0-2">
 <p>
-随着科技发展、学科间的渗透及社会人文的变化,产品系统化特征不断强化。从社会文化和经济背景下的产品决策到科技条件下的产品生产制造(包括信息化手段,分工与集成作业的可互换生产方式),体现广泛领域的多因素相互依存和制约的过程系统。
+　　随着科技发展、学科间的渗透及社会人文的变化,产品系统化特征不断强化。从社会文化和经济背景下的产品决策到科技条件下的产品生产制造(包括信息化手段,分工与集成作业的可互换生产方式),体现广泛领域的多因素相互依存和制约的过程系统。
 </p>
 </div>
 
@@ -321,7 +331,7 @@ for the JavaScript code in this tag.
 <h4 id="orgheadline29"><span class="section-number-4">0.2.1</span> 产品信息化</h4>
 <div class="outline-text-4" id="text-0-2-1">
 <p>
-信息本身已成为重要产品,实体产品强化为信息载体。信息化已全面融合到产品生命周期中,从产品的设计生产到推广销售和售后服务。
+　　信息本身已成为重要产品,实体产品强化为信息载体。信息化已全面融合到产品生命周期中,从产品的设计生产到推广销售和售后服务。
 </p>
 </div>
 
@@ -332,7 +342,7 @@ for the JavaScript code in this tag.
 <h6 id="orgheadline10"><span class="section-number-6">0.2.1.1.1</span> 多功能复合化</h6>
 <div class="outline-text-6" id="text-0-2-1-1-1">
 <p>
-随着电子信息技术的发展,通过改进产品结构和零部件电子元器件的组成,扩大了同一产品的功能及使用范围。如:集收、录、唱、视于一体的家庭影院,在扩大功能的同时利用数字技术提高产品效果和精度。再如集复印、扫瞄、存储、打印为一体的复合式办公设备。
+　　随着电子信息技术的发展,通过改进产品结构和零部件电子元器件的组成,扩大了同一产品的功能及使用范围。如:集收、录、唱、视于一体的家庭影院,在扩大功能的同时利用数字技术提高产品效果和精度。再如集复印、扫瞄、存储、打印为一体的复合式办公设备。
 </p>
 </div>
 </div>
@@ -341,7 +351,7 @@ for the JavaScript code in this tag.
 <h6 id="orgheadline11"><span class="section-number-6">0.2.1.1.2</span> 便携化</h6>
 <div class="outline-text-6" id="text-0-2-1-1-2">
 <p>
-电子元器件的大量应用及信息技术的发展,使产品结构得以改良,零部件数量减少,体积缩小,重量减轻。使产品便于操作、携带,运输及安装,同时节约能源和资源,降低成本。
+　　电子元器件的大量应用及信息技术的发展,使产品结构得以改良,零部件数量减少,体积缩小,重量减轻。使产品便于操作、携带,运输及安装,同时节约能源和资源,降低成本。
 </p>
 <ul class="org-ul">
 <li>电子元器件替代部分机械零部件</li>
@@ -355,7 +365,7 @@ for the JavaScript code in this tag.
 <h6 id="orgheadline12"><span class="section-number-6">0.2.1.1.3</span> 智能与知识化</h6>
 <div class="outline-text-6" id="text-0-2-1-1-3">
 <p>
-把人们通过学习才能掌握的知识和技术转化到产品中,如各类智能产品:自动吸尘器、送餐机器人、儿童学习机器伴侣。
+　　把人们通过学习才能掌握的知识和技术转化到产品中,如各类智能产品:自动吸尘器、送餐机器人、儿童学习机器伴侣。
 </p>
 </div>
 </div>
@@ -364,7 +374,7 @@ for the JavaScript code in this tag.
 <h6 id="orgheadline13"><span class="section-number-6">0.2.1.1.4</span> 精神化</h6>
 <div class="outline-text-6" id="text-0-2-1-1-4">
 <p>
-对品味的追求,包括美学价值和象征意味等精神文化价值。
+　　对品味的追求,包括美学价值和象征意味等精神文化价值。
 </p>
 </div>
 </div>
@@ -380,7 +390,7 @@ for the JavaScript code in this tag.
 <h7 id="orgheadline15"><span class="section-number-7">0.2.1.2.1.1</span> 串行设计</h7>
 <div class="outline-text-7" id="text-0-2-1-2-1-1">
 <p>
-遵循“开发-&gt;设计-&gt;样品试制-&gt;修改设计-&gt;工艺准备-&gt;试生产-&gt;生产"的固定顺序进行产品开发。
+　　遵循“开发-&gt;设计-&gt;样品试制-&gt;修改设计-&gt;工艺准备-&gt;试生产-&gt;生产"的固定顺序进行产品开发。
 </p>
 </div>
 </div>
@@ -389,11 +399,11 @@ for the JavaScript code in this tag.
 <h7 id="orgheadline16"><span class="section-number-7">0.2.1.2.1.2</span> 并行设计</h7>
 <div class="outline-text-7" id="text-0-2-1-2-1-2">
 <p>
-初期就由开发设计人员、质量控制人员、生产制造人员、营销人员、协作厂家及用户代表等协同工作,对合理性、可行性等因素加以控制,以便及早发现,寻求满足新产品性能的技术及满足目标成本的材料和合理的加工工艺。
+　　初期就由开发设计人员、质量控制人员、生产制造人员、营销人员、协作厂家及用户代表等协同工作,对合理性、可行性等因素加以控制,以便及早发现,寻求满足新产品性能的技术及满足目标成本的材料和合理的加工工艺。
 </p>
 
 <p>
-从设计一开始就考虑产品整个生命周期中从概念形成到报废处理的各种因素,包括质量、成本、进度计划,充分利用企业一切资源,通过易制造性,缩短上市周期来最大限度满足用户要求。
+　　从设计一开始就考虑产品整个生命周期中从概念形成到报废处理的各种因素,包括质量、成本、进度计划,充分利用企业一切资源,通过易制造性,缩短上市周期来最大限度满足用户要求。
 </p>
 </div>
 </div>
@@ -402,7 +412,7 @@ for the JavaScript code in this tag.
 <h7 id="orgheadline17"><span class="section-number-7">0.2.1.2.1.3</span> 并行工程</h7>
 <div class="outline-text-7" id="text-0-2-1-2-1-3">
 <p>
-利用计算机的数据处理信息集成和网络通讯,发挥参与人员的集体力量和团队精神,将新产品开发研究设计和生产准备的各种工程活动尽可能并行交叉地进行,以缩短周期,提高质量。
+　　利用计算机的数据处理信息集成和网络通讯,发挥参与人员的集体力量和团队精神,将新产品开发研究设计和生产准备的各种工程活动尽可能并行交叉地进行,以缩短周期,提高质量。
 </p>
 </div>
 </div>
@@ -427,7 +437,7 @@ for the JavaScript code in this tag.
 <h7 id="orgheadline20"><span class="section-number-7">0.2.1.2.2.2</span> 逆向工程(反向工程)</h7>
 <div class="outline-text-7" id="text-0-2-1-2-2-2">
 <p>
-直接从模型或实物获得几何数据,转化成零件图纸和加工程序。将手工产品、甚至艺术品在短时间内加以复制,进行批量生产。
+　　直接从模型或实物获得几何数据,转化成零件图纸和加工程序。将手工产品、甚至艺术品在短时间内加以复制,进行批量生产。
 </p>
 </div>
 </div>
@@ -436,7 +446,7 @@ for the JavaScript code in this tag.
 <h7 id="orgheadline21"><span class="section-number-7">0.2.1.2.2.3</span> 快速成型技术(3D打印)</h7>
 <div class="outline-text-7" id="text-0-2-1-2-2-3">
 <p>
-在CAD/CAM技术支持下,采用粘结、熔结、聚合作用或化学反应等手段,有选择地固化液体材料,快速制作出所需形态的零部件。
+　　在CAD/CAM技术支持下,采用粘结、熔结、聚合作用或化学反应等手段,有选择地固化液体材料,快速制作出所需形态的零部件。
 </p>
 </div>
 </div>
@@ -445,7 +455,7 @@ for the JavaScript code in this tag.
 <h7 id="orgheadline22"><span class="section-number-7">0.2.1.2.2.4</span> 虚拟制造与虚拟产品开发</h7>
 <div class="outline-text-7" id="text-0-2-1-2-2-4">
 <p>
-以计算机仿真、智能推理和预测为基础,对制造信息动态操作,虚拟“制造过程”及“产品”,甚至产品“消费”或“损耗”过程。以真实制造信息驱动虚拟设备,“加工”出虚拟却贴近实际的产品,并通过先进传感技术和声像技术,构成身临其境的人机界面,提供虚拟消费,或提交虚拟试验与分析。与实际制造比较,具安全性、经济性和速效性。
+　　以计算机仿真、智能推理和预测为基础,对制造信息动态操作,虚拟“制造过程”及“产品”,甚至产品“消费”或“损耗”过程。以真实制造信息驱动虚拟设备,“加工”出虚拟却贴近实际的产品,并通过先进传感技术和声像技术,构成身临其境的人机界面,提供虚拟消费,或提交虚拟试验与分析。与实际制造比较,具安全性、经济性和速效性。
 </p>
 </div>
 </div>
@@ -454,7 +464,7 @@ for the JavaScript code in this tag.
 <h7 id="orgheadline23"><span class="section-number-7">0.2.1.2.2.5</span> 全面质量控制体系</h7>
 <div class="outline-text-7" id="text-0-2-1-2-2-5">
 <p>
-用计算机收集整理用户对产品质量的需求,并转变成生产时间、成本、性能值,以此调整生产系统,指导设计。确保顾客和市场反馈信息精确转移到产品开发每个阶段的有关技术和措施中去。在确保产品使用性能前提下,减少产品冗余功能,降低成本,提高质量和延长寿命,使产品尽可能无维修,零件适时报废或回收利用。
+　　用计算机收集整理用户对产品质量的需求,并转变成生产时间、成本、性能值,以此调整生产系统,指导设计。确保顾客和市场反馈信息精确转移到产品开发每个阶段的有关技术和措施中去。在确保产品使用性能前提下,减少产品冗余功能,降低成本,提高质量和延长寿命,使产品尽可能无维修,零件适时报废或回收利用。
 </p>
 </div>
 </div>
@@ -468,7 +478,7 @@ for the JavaScript code in this tag.
 <h6 id="orgheadline26"><span class="section-number-6">0.2.1.3.1</span> 信息化促成精益生产、敏捷生产和柔性生产方式</h6>
 <div class="outline-text-6" id="text-0-2-1-3-1">
 <p>
-应对个性化需求和复杂精细、功能多样的产品制造要求。
+　　应对个性化需求和复杂精细、功能多样的产品制造要求。
 </p>
 
 <ul class="org-ul">
@@ -483,7 +493,7 @@ for the JavaScript code in this tag.
 <h6 id="orgheadline27"><span class="section-number-6">0.2.1.3.2</span> 自动化机器生产机器、控制机器</h6>
 <div class="outline-text-6" id="text-0-2-1-3-2">
 <p>
-计算机技术广泛应用于设计开发系统、生产系统及管理系统。工业化使人的肢体得以延伸,信息化使人的大脑得以延伸,使人们从一部分脑力劳动中解放出来。
+　　计算机技术广泛应用于设计开发系统、生产系统及管理系统。工业化使人的肢体得以延伸,信息化使人的大脑得以延伸,使人们从一部分脑力劳动中解放出来。
 </p>
 </div>
 </div>
@@ -494,7 +504,7 @@ for the JavaScript code in this tag.
 <h4 id="orgheadline39"><span class="section-number-4">0.2.2</span> 产品系列化</h4>
 <div class="outline-text-4" id="text-0-2-2">
 <p>
-相互关联的成组、成套产品
+　　相互关联的成组、成套产品
 </p>
 </div>
 <div id="outline-container-orgheadline33" class="outline-5">
@@ -504,7 +514,7 @@ for the JavaScript code in this tag.
 <h6 id="orgheadline30"><span class="section-number-6">0.2.2.1.1</span> 品牌系列</h6>
 <div class="outline-text-6" id="text-0-2-2-1-1">
 <p>
-如,同一品牌的家用电器
+　　如,同一品牌的家用电器
 </p>
 </div>
 </div>
@@ -512,7 +522,7 @@ for the JavaScript code in this tag.
 <h6 id="orgheadline31"><span class="section-number-6">0.2.2.1.2</span> 成套系列</h6>
 <div class="outline-text-6" id="text-0-2-2-1-2">
 <p>
-由多种独立功能产品组成一个产品系统。如,成套办公产品,既有各自功能,又组成完整的办公系统。
+　　由多种独立功能产品组成一个产品系统。如,成套办公产品,既有各自功能,又组成完整的办公系统。
 </p>
 </div>
 </div>
@@ -520,7 +530,7 @@ for the JavaScript code in this tag.
 <h6 id="orgheadline32"><span class="section-number-6">0.2.2.1.3</span> 单元系列</h6>
 <div class="outline-text-6" id="text-0-2-2-1-3">
 <p>
-单元产品之间具有某种相关性和依存关系,构成完整的产品系列。如,母子电话机、儿童手表与父母手机相连等。
+　　单元产品之间具有某种相关性和依存关系,构成完整的产品系列。如,母子电话机、儿童手表与父母手机相连等。
 </p>
 </div>
 </div>
@@ -533,7 +543,7 @@ for the JavaScript code in this tag.
 <h6 id="orgheadline34"><span class="section-number-6">0.2.2.2.1</span> 商业意义</h6>
 <div class="outline-text-6" id="text-0-2-2-2-1">
 <p>
-通过增加产品覆盖面和提高产品适应性来提高市场竞争力。系列产品以多变的功能或要素组合,适应多极市场格局和快速变化的市场需求。
+　　通过增加产品覆盖面和提高产品适应性来提高市场竞争力。系列产品以多变的功能或要素组合,适应多极市场格局和快速变化的市场需求。
 </p>
 </div>
 </div>
@@ -545,7 +555,7 @@ for the JavaScript code in this tag.
 <h7 id="orgheadline35"><span class="section-number-7">0.2.2.2.2.1</span> 柔性生产</h7>
 <div class="outline-text-7" id="text-0-2-2-2-2-1">
 <p>
-灵活多样地小批量生产多种产品或定制单件特种产品。随用户需求变化和产品改进,开发重新组合的换代产品,无需全新产品替代老产品。跨地域、跨行业分工协作模块化生产。如航空器。
+　　灵活多样地小批量生产多种产品或定制单件特种产品。随用户需求变化和产品改进,开发重新组合的换代产品,无需全新产品替代老产品。跨地域、跨行业分工协作模块化生产。如航空器。
 </p>
 </div>
 </div>
@@ -553,7 +563,7 @@ for the JavaScript code in this tag.
 <h7 id="orgheadline36"><span class="section-number-7">0.2.2.2.2.2</span> 刚性生产</h7>
 <div class="outline-text-7" id="text-0-2-2-2-2-2">
 <p>
-产品系列化设计出一系列标准模块,通过成套设备大批量刚性生产,使生产成本、存贮费用、用户耗费维护和修理费达到最低。如电气开关和插座,通过标准组件的不同组合方式形成不同规格和功能产品。
+　　产品系列化设计出一系列标准模块,通过成套设备大批量刚性生产,使生产成本、存贮费用、用户耗费维护和修理费达到最低。如电气开关和插座,通过标准组件的不同组合方式形成不同规格和功能产品。
 </p>
 </div>
 </div>
@@ -565,11 +575,11 @@ for the JavaScript code in this tag.
 <h4 id="orgheadline40"><span class="section-number-4">0.2.3</span> 产品商品化</h4>
 <div class="outline-text-4" id="text-0-2-3">
 <p>
-企业为谋求生产系统快速反应市场变化,打破生产和营销的分离状态。
+　　企业为谋求生产系统快速反应市场变化,打破生产和营销的分离状态。
 </p>
 
 <p>
-生产企业调整组织结构、管理体制及工作方式,向着产品设计、制造、流通、市场连接紧密化、一体化的方向努力。
+　　生产企业调整组织结构、管理体制及工作方式,向着产品设计、制造、流通、市场连接紧密化、一体化的方向努力。
 </p>
 </div>
 </div>
@@ -578,7 +588,7 @@ for the JavaScript code in this tag.
 <h4 id="orgheadline41"><span class="section-number-4">0.2.4</span> 产品生态化</h4>
 <div class="outline-text-4" id="text-0-2-4">
 <p>
-生产制造业已成为大量废弃物(包括物料废弃物、能源废弃物和产品使用终结废弃物等)的主要源头。只用“见污治污”的未端治理方式不能从根本上解决污染问题,需从“绿色设计”入手。
+　　生产制造业已成为大量废弃物(包括物料废弃物、能源废弃物和产品使用终结废弃物等)的主要源头。只用“见污治污”的未端治理方式不能从根本上解决污染问题,需从“绿色设计”入手。
 </p>
 
 <ul class="org-ul">
@@ -588,11 +598,11 @@ for the JavaScript code in this tag.
 </ul>
 
 <p>
-绿色产品在生命周期全程中,符合环保要求,对环境无害或危害极少,资源利用率高,能源消耗低。
+　　绿色产品在生命周期全程中,符合环保要求,对环境无害或危害极少,资源利用率高,能源消耗低。
 </p>
 
 <p>
-绿色设计(生态设计)着重考虑产品环境属性,即可拆卸、可回收、可维护、可重复利用等特性,并确保产品应有的功能、使用寿命和质量。
+　　绿色设计(生态设计)着重考虑产品环境属性,即可拆卸、可回收、可维护、可重复利用等特性,并确保产品应有的功能、使用寿命和质量。
 </p>
 </div>
 </div>
@@ -607,7 +617,7 @@ for the JavaScript code in this tag.
 </ul>
 
 <p>
-市场需求趋于多样化、个性化,开发采用新技术、新材料、新结构或新形式的全新产品。
+　　市场需求趋于多样化、个性化,开发采用新技术、新材料、新结构或新形式的全新产品。
 </p>
 </div>
 </div>
@@ -617,7 +627,7 @@ for the JavaScript code in this tag.
 <h3 id="orgheadline44"><span class="section-number-3">0.3</span> 思考题</h3>
 <div class="outline-text-3" id="text-0-3">
 <p>
-结合设计案例简述对产品设计系统观或产品系统特征的认识
+　　结合设计案例简述对产品设计系统观或产品系统特征的认识
 </p>
 
 <ul class="org-ul">
@@ -640,11 +650,11 @@ for the JavaScript code in this tag.
 <h4 id="orgheadline45"><span class="section-number-4">1.1.1</span> 系统论</h4>
 <div class="outline-text-4" id="text-1-1-1">
 <p>
-核心思想: 整体观 (一个有机整体由多要素相互作用实现新的功能或更好的性能)
+　　核心思想: 整体观 (一个有机整体由多要素相互作用实现新的功能或更好的性能)
 </p>
 
 <p>
-贝塔朗菲 (美籍奥地利理论生物学家)
+　　贝塔朗菲 (美籍奥地利理论生物学家)
 </p>
 <ul class="org-ul">
 <li>《关于一般系统论》</li>
@@ -657,12 +667,18 @@ for the JavaScript code in this tag.
 <h4 id="orgheadline46"><span class="section-number-4">1.1.2</span> 系统定义</h4>
 <div class="outline-text-4" id="text-1-1-2">
 <p>
-系统是由若干要素以一定结构形式联结构成的具有某种功能的有机整体。
+　　系统是由若干要素以一定结构形式联结构成的具有某种功能的有机整体。
 </p>
 
 <p>
-表明要素与要素、要素与系统、系统与环境三方面的关系。
+　　表明要素与要素、要素与系统、系统与环境三方面的关系。
 </p>
+
+
+<div class="figure">
+<p><img src="img/system_elements.jpg" alt="system_elements.jpg" width="410px" />
+</p>
+</div>
 </div>
 </div>
 
@@ -673,7 +689,7 @@ for the JavaScript code in this tag.
 <h5 id="orgheadline47"><span class="section-number-5">1.1.3.1</span> 系统组成条件</h5>
 <div class="outline-text-5" id="text-1-1-3-1">
 <p>
-两个以上的要素组合而成具有一定结构的整体,可看成一个系统。
+　　两个以上的要素组合而成具有一定结构的整体,可看成一个系统。
 </p>
 <ul class="org-ul">
 <li>条件一:包含至少两个元素;</li>
@@ -720,7 +736,7 @@ for the JavaScript code in this tag.
 <h6 id="orgheadline53"><span class="section-number-6">1.1.4.2.1</span> 简单系统</h6>
 <div class="outline-text-6" id="text-1-1-4-2-1">
 <p>
-线性,可还原。自然界中非生命事物及规律抽象成一种简单的、受有限因素影响,能被还原和重复的系统。如微积分、牛顿力学、机械结构、理想气体。
+　　线性,可还原。自然界中非生命事物及规律抽象成一种简单的、受有限因素影响,能被还原和重复的系统。如微积分、牛顿力学、机械结构、理想气体。
 </p>
 </div>
 </div>
@@ -729,7 +745,7 @@ for the JavaScript code in this tag.
 <h6 id="orgheadline54"><span class="section-number-6">1.1.4.2.2</span> 复杂系统</h6>
 <div class="outline-text-6" id="text-1-1-4-2-2">
 <p>
-非线性耗散结构,远离平衡的开放系统,在不断与外界交换物质和能量过程中,通过内部非线性动力学机理,自动从无序状态形成并维持在时间、空间或功能上的有序结构状态。如细胞、生物体、大脑、社会组织、生态系统等。
+　　非线性耗散结构,远离平衡的开放系统,在不断与外界交换物质和能量过程中,通过内部非线性动力学机理,自动从无序状态形成并维持在时间、空间或功能上的有序结构状态。如细胞、生物体、大脑、社会组织、生态系统等。
 </p>
 </div>
 </div>
@@ -742,11 +758,11 @@ for the JavaScript code in this tag.
 <h6 id="orgheadline56"><span class="section-number-6">1.1.4.3.1</span> 开放系统(open system)</h6>
 <div class="outline-text-6" id="text-1-1-4-3-1">
 <p>
-与环境间既有能量交换又有物质交换的系统。
+　　与环境间既有能量交换又有物质交换的系统。
 </p>
 
 <p>
-在环境发生变化时,开放系统通过系统中要素与环境的交互作用以及系统本身的调节作用,使系统达到某一稳定状态。因此,开放系统常是自调整或自适应的系统。
+　　在环境发生变化时,开放系统通过系统中要素与环境的交互作用以及系统本身的调节作用,使系统达到某一稳定状态。因此,开放系统常是自调整或自适应的系统。
 </p>
 </div>
 </div>
@@ -755,7 +771,7 @@ for the JavaScript code in this tag.
 <h6 id="orgheadline57"><span class="section-number-6">1.1.4.3.2</span> 封闭系统(closed system)</h6>
 <div class="outline-text-6" id="text-1-1-4-3-2">
 <p>
-与环境间只有能量交换而无物质交换的系统。
+　　与环境间只有能量交换而无物质交换的系统。
 </p>
 </div>
 </div>
@@ -763,7 +779,7 @@ for the JavaScript code in this tag.
 <h6 id="orgheadline58"><span class="section-number-6">1.1.4.3.3</span> 隔离系统(isolated system)</h6>
 <div class="outline-text-6" id="text-1-1-4-3-3">
 <p>
-与环境间既无能量交换又无物质交换的系统(理想状态)。(例：密闭储罐)
+　　与环境间既无能量交换又无物质交换的系统(理想状态)。(例：密闭储罐)
 </p>
 </div>
 </div>
@@ -773,7 +789,7 @@ for the JavaScript code in this tag.
 <h5 id="orgheadline60"><span class="section-number-5">1.1.4.4</span> 静态系统 / 动态系统</h5>
 <div class="outline-text-5" id="text-1-1-4-4">
 <p>
-动态系统和系统的运动不同。运动是系统的基本属性,一切系统包括静态系统都在不断地运动。唯有系统在运动中状态随时间发生明显变化的,才是动态系统 (如:城市的交通系统或森林的生态系统)。
+　　动态系统和系统的运动不同。运动是系统的基本属性,一切系统包括静态系统都在不断地运动。唯有系统在运动中状态随时间发生明显变化的,才是动态系统 (如:城市的交通系统或森林的生态系统)。
 </p>
 </div>
 </div>
@@ -790,7 +806,7 @@ for the JavaScript code in this tag.
 <h5 id="orgheadline66"><span class="section-number-5">1.2.1.1</span> 人的整体与部分</h5>
 <div class="outline-text-5" id="text-1-2-1-1">
 <p>
-团体成员因所承担角色发挥不同作用,如能各负其责,团结合作,组织精良,就能发挥团队优势,完成个体难以企及的任务。
+　　团体成员因所承担角色发挥不同作用,如能各负其责,团结合作,组织精良,就能发挥团队优势,完成个体难以企及的任务。
 </p>
 </div>
 
@@ -801,7 +817,7 @@ for the JavaScript code in this tag.
 <h7 id="orgheadline63"><span class="section-number-7">1.2.1.1.1.1</span> “个”的方法:</h7>
 <div class="outline-text-7" id="text-1-2-1-1-1-1">
 <p>
-由三个设计师分别设计,结果可能三个产品没有共通之处,如:材料、部件、装配方法、尺寸、大小、形状、加工方法、成型手段、表面处理。
+　　由三个设计师分别设计,结果可能三个产品没有共通之处,如:材料、部件、装配方法、尺寸、大小、形状、加工方法、成型手段、表面处理。
 </p>
 </div>
 </div>
@@ -809,7 +825,7 @@ for the JavaScript code in this tag.
 <h7 id="orgheadline64"><span class="section-number-7">1.2.1.1.1.2</span> “集”的方法:</h7>
 <div class="outline-text-7" id="text-1-2-1-1-1-2">
 <p>
-协同、合作、交流,经过缜密计划,寻求共同之处,通过信息、资源的共享,节约时间,提高效率,降低成本。
+　　协同、合作、交流,经过缜密计划,寻求共同之处,通过信息、资源的共享,节约时间,提高效率,降低成本。
 </p>
 </div>
 </div>
@@ -823,7 +839,7 @@ for the JavaScript code in this tag.
 <h6 id="orgheadline67"><span class="section-number-6">1.2.1.2.1</span> 个体</h6>
 <div class="outline-text-6" id="text-1-2-1-2-1">
 <p>
-一件产品可被视为具某种结构和功能的个体,即由不同材料和工艺制造的部件组成的整体。
+　　一件产品可被视为具某种结构和功能的个体,即由不同材料和工艺制造的部件组成的整体。
 </p>
 </div>
 </div>
@@ -831,7 +847,7 @@ for the JavaScript code in this tag.
 <h6 id="orgheadline68"><span class="section-number-6">1.2.1.2.2</span> 系统</h6>
 <div class="outline-text-6" id="text-1-2-1-2-2">
 <p>
-一件产品也可被看作一个由各种要素或子系统构成的系统。构成产品的要素可以是某个部件或构件,也可以是一个操作系统或元器件。要素的品质和组成结构影响系统整体质量。多个不同的产品,如在目标诸方面具有统一性,可能集成为一个体系。
+　　一件产品也可被看作一个由各种要素或子系统构成的系统。构成产品的要素可以是某个部件或构件,也可以是一个操作系统或元器件。要素的品质和组成结构影响系统整体质量。多个不同的产品,如在目标诸方面具有统一性,可能集成为一个体系。
 </p>
 </div>
 </div>
@@ -839,7 +855,7 @@ for the JavaScript code in this tag.
 <h6 id="orgheadline69"><span class="section-number-6">1.2.1.2.3</span> 类别 (种与类)</h6>
 <div class="outline-text-6" id="text-1-2-1-2-3">
 <p>
-一个类型的产品包含各种品种,如家具类产品包含木制品和金属制品等。系列化产品是种与类系统关系的具体形式。
+　　一个类型的产品包含各种品种,如家具类产品包含木制品和金属制品等。系列化产品是种与类系统关系的具体形式。
 </p>
 
 <ul class="org-ul">
@@ -855,18 +871,18 @@ for the JavaScript code in this tag.
 <h4 id="orgheadline78"><span class="section-number-4">1.2.2</span> 产品系统构成</h4>
 <div class="outline-text-4" id="text-1-2-2">
 <p>
-产品系统与任何系统一样,宏观由物质、能量和信息构成。
+　　产品系统与任何系统一样,宏观由物质、能量和信息构成。
 </p>
 
 <p>
-存在方式和属性上表现为要素、结构和功能因素。
+　　存在方式和属性上表现为要素、结构和功能因素。
 </p>
 </div>
 <div id="outline-container-orgheadline72" class="outline-5">
 <h5 id="orgheadline72"><span class="section-number-5">1.2.2.1</span> 产品系统构成之要素</h5>
 <div class="outline-text-5" id="text-1-2-2-1">
 <p>
-一个产品包括功能、结构、材料、工艺、色彩、纹理和界面 (信息产品) 等要素。各个不同产品也会组成系统,这里产品就成为子要素和子系统。
+　　一个产品包括功能、结构、材料、工艺、色彩、纹理和界面 (信息产品) 等要素。各个不同产品也会组成系统,这里产品就成为子要素和子系统。
 </p>
 </div>
 </div>
@@ -874,14 +890,14 @@ for the JavaScript code in this tag.
 <h5 id="orgheadline76"><span class="section-number-5">1.2.2.2</span> 产品系统构成之结构</h5>
 <div class="outline-text-5" id="text-1-2-2-2">
 <p>
-若干要素相互联系相互作用的方式。结构是对系统内在关系的综合反映,是系统保持整体性及具有一定功能的内在依据。系统结构具有以下几个方面特征:
+　　若干要素相互联系相互作用的方式。结构是对系统内在关系的综合反映,是系统保持整体性及具有一定功能的内在依据。系统结构具有以下几个方面特征:
 </p>
 </div>
 <div id="outline-container-orgheadline73" class="outline-6">
 <h6 id="orgheadline73"><span class="section-number-6">1.2.2.2.1</span> 有序性(关联性)</h6>
 <div class="outline-text-6" id="text-1-2-2-2-1">
 <p>
-系统按一定规律构成自身特征,通过一定的时空状态体现。
+　　系统按一定规律构成自身特征,通过一定的时空状态体现。
 </p>
 <ul class="org-ul">
 <li>矩阵结构―――表示单位与单位之间的关系</li>
@@ -895,7 +911,7 @@ for the JavaScript code in this tag.
 <h6 id="orgheadline74"><span class="section-number-6">1.2.2.2.2</span> 整体性</h6>
 <div class="outline-text-6" id="text-1-2-2-2-2">
 <p>
-结构内部诸要素之间的相互联系和作用,形成一个有机体。以通讯系统为例,网络作为整个系统结构,使该通讯系统中各要素在一定秩序下形成一个整体,保持整个系统的正常运作。
+　　结构内部诸要素之间的相互联系和作用,形成一个有机体。以通讯系统为例,网络作为整个系统结构,使该通讯系统中各要素在一定秩序下形成一个整体,保持整个系统的正常运作。
 </p>
 </div>
 </div>
@@ -904,11 +920,11 @@ for the JavaScript code in this tag.
 <h6 id="orgheadline75"><span class="section-number-6">1.2.2.2.3</span> 稳定性</h6>
 <div class="outline-text-6" id="text-1-2-2-2-3">
 <p>
-系统结构的有序性和整体性,使内部诸要素之间的作用与依存关系产生惯性,显现出动态平衡,维持着系统的稳定性。
+　　系统结构的有序性和整体性,使内部诸要素之间的作用与依存关系产生惯性,显现出动态平衡,维持着系统的稳定性。
 </p>
 
 <p>
-如当手机需求量增加,移动通讯系统扩容,负载能力加强,促进系统结构优化:无论哪个环节发生变化,其它环节必然与之相适应。这就是系统内部通过涨落保持稳定。
+　　如当手机需求量增加,移动通讯系统扩容,负载能力加强,促进系统结构优化:无论哪个环节发生变化,其它环节必然与之相适应。这就是系统内部通过涨落保持稳定。
 </p>
 </div>
 </div>
@@ -917,11 +933,11 @@ for the JavaScript code in this tag.
 <h5 id="orgheadline77"><span class="section-number-5">1.2.2.3</span> 产品系统构成之功能</h5>
 <div class="outline-text-5" id="text-1-2-2-3">
 <p>
-系统与外部环境相互联系和作用过程的秩序及能力称为系统功能。系统功能体现了与外部环境之间物质、能量和信息输入与输出的变换关系。外部环境包括用户使用情景、生态保护、社会文化、经济发展(包括企业赢利)和技术支撑等。
+　　系统与外部环境相互联系和作用过程的秩序及能力称为系统功能。系统功能体现了与外部环境之间物质、能量和信息输入与输出的变换关系。外部环境包括用户使用情景、生态保护、社会文化、经济发展(包括企业赢利)和技术支撑等。
 </p>
 
 <p>
-功能是一个过程,体现系统与外部作用能力,由系统整体运动表现,是系统内部固有能力的外部体现。系统功能的发挥,受环境变化和系统内部结构制约。系统与环境相互作用演化,有可能使系统改变或失去原有功能。
+　　功能是一个过程,体现系统与外部作用能力,由系统整体运动表现,是系统内部固有能力的外部体现。系统功能的发挥,受环境变化和系统内部结构制约。系统与环境相互作用演化,有可能使系统改变或失去原有功能。
 </p>
 </div>
 </div>
@@ -931,7 +947,7 @@ for the JavaScript code in this tag.
 <h4 id="orgheadline79"><span class="section-number-4">1.2.3</span> 产品系统特性 (意义)</h4>
 <div class="outline-text-4" id="text-1-2-3">
 <p>
-专注整体与部分 (整体性) 以及与外部环境 (综合性) 之间的相互关系,找到处理问题的最佳或最适合的方法 (优选性)。
+　　专注整体与部分 (整体性) 以及与外部环境 (综合性) 之间的相互关系,找到处理问题的最佳或最适合的方法 (优选性)。
 </p>
 </div>
 </div>
@@ -941,7 +957,7 @@ for the JavaScript code in this tag.
 <h3 id="orgheadline118"><span class="section-number-3">1.3</span> 产品系统设计思想与模式</h3>
 <div class="outline-text-3" id="text-1-3">
 <p>
-设计概念和领域的不断扩大及系统观念的强化,现代产品设计已将对象事物当作一个整体系统认识和研究,从全局出发,将各组成部分看作是子系统或要素,通过整合,建立有机联系以及系统与环境之间的有机关系。
+　　设计概念和领域的不断扩大及系统观念的强化,现代产品设计已将对象事物当作一个整体系统认识和研究,从全局出发,将各组成部分看作是子系统或要素,通过整合,建立有机联系以及系统与环境之间的有机关系。
 </p>
 </div>
 
@@ -952,7 +968,7 @@ for the JavaScript code in this tag.
 <h5 id="orgheadline81"><span class="section-number-5">1.3.1.1</span> 多种构成</h5>
 <div class="outline-text-5" id="text-1-3-1-1">
 <p>
-产品设计是一个由多要素和多方法构成的过程系统,需考虑从产品诞生到消亡的整个生命过程。产品开发初期需设计师能动的发挥,而功能实现则需设计内容匹配具体的制造方式 (大批量或小批量定制),并考虑生产技术成本等问题。
+　　产品设计是一个由多要素和多方法构成的过程系统,需考虑从产品诞生到消亡的整个生命过程。产品开发初期需设计师能动的发挥,而功能实现则需设计内容匹配具体的制造方式 (大批量或小批量定制),并考虑生产技术成本等问题。
 </p>
 </div>
 </div>
@@ -960,7 +976,7 @@ for the JavaScript code in this tag.
 <h5 id="orgheadline82"><span class="section-number-5">1.3.1.2</span> 动态变化</h5>
 <div class="outline-text-5" id="text-1-3-1-2">
 <p>
-产品设计过程是一个动态开放的与外部环境交互的过程。从产品战略到市场营销 (产品战略 -&gt; 基础研究 -&gt; 市场调查 -&gt;产品企划 -&gt; 产品开发 -&gt; 产品设计 -&gt; 技术开发 -&gt; 生产 -&gt;营销),经多个环节,产品要素不断变化和调整,形成动态设计系统。
+　　产品设计过程是一个动态开放的与外部环境交互的过程。从产品战略到市场营销 (产品战略 -&gt; 基础研究 -&gt; 市场调查 -&gt;产品企划 -&gt; 产品开发 -&gt; 产品设计 -&gt; 技术开发 -&gt; 生产 -&gt;营销),经多个环节,产品要素不断变化和调整,形成动态设计系统。
 </p>
 </div>
 </div>
@@ -970,7 +986,7 @@ for the JavaScript code in this tag.
 <h4 id="orgheadline84"><span class="section-number-4">1.3.2</span> 产品系统设计关联要素</h4>
 <div class="outline-text-4" id="text-1-3-2">
 <p>
-目标 -&gt; 途径 -&gt; 策略 -&gt; 工具 -&gt; 程序
+　　目标 -&gt; 途径 -&gt; 策略 -&gt; 工具 -&gt; 程序
 </p>
 
 <ul class="org-ul">
@@ -986,7 +1002,7 @@ for the JavaScript code in this tag.
 <h4 id="orgheadline114"><span class="section-number-4">1.3.3</span> 产品设计内部系统</h4>
 <div class="outline-text-4" id="text-1-3-3">
 <p>
-产品设计内部系统着重于产品设计开发过程,包括产品设计工具、方法、流程和范畴 (设计对象)。
+　　产品设计内部系统着重于产品设计开发过程,包括产品设计工具、方法、流程和范畴 (设计对象)。
 </p>
 </div>
 <div id="outline-container-orgheadline91" class="outline-5">
@@ -996,7 +1012,7 @@ for the JavaScript code in this tag.
 <h6 id="orgheadline85"><span class="section-number-6">1.3.3.1.1</span> 硬工具</h6>
 <div class="outline-text-6" id="text-1-3-3-1-1">
 <p>
-计算机、(软件)、纸、笔等
+　　计算机、(软件)、纸、笔等
 </p>
 </div>
 </div>
@@ -1004,14 +1020,14 @@ for the JavaScript code in this tag.
 <h6 id="orgheadline90"><span class="section-number-6">1.3.3.1.2</span> 软工具</h6>
 <div class="outline-text-6" id="text-1-3-3-1-2">
 <p>
-辅助设计思考的方法工具等 (Mind Map)
+　　辅助设计思考的方法工具等 (Mind Map)
 </p>
 </div>
 <div id="outline-container-orgheadline89" class="outline-7">
 <h7 id="orgheadline89"><span class="section-number-7">1.3.3.1.2.1</span> 软工具实例:升降车SET (Society - Economy - Technology) 分析</h7>
 <div class="outline-text-7" id="text-1-3-3-1-2-1">
 <p>
-Jonathan Cagan, and CraigM. Vogel提出帮助设计师系统分析设计背景的工具
+　　Jonathan Cagan, and CraigM. Vogel提出帮助设计师系统分析设计背景的工具
 </p>
 </div>
 <ol class="org-ol"><li><a id="orgheadline86"></a>Society:<br  /><div class="outline-text-8" id="text-1-3-3-1-2-1-1">
@@ -1047,7 +1063,7 @@ Jonathan Cagan, and CraigM. Vogel提出帮助设计师系统分析设计背景�
 <h6 id="orgheadline92"><span class="section-number-6">1.3.3.2.1</span> 协同设计</h6>
 <div class="outline-text-6" id="text-1-3-3-2-1">
 <p>
-通过网络实现群体合作开发设计,如设计师与工程师应用OnShape等网络设计软件异地在线合作完成产品虚拟模型开发;产品用户通过互联网参与到设计开发和改进过程中,用户通过网络提出各种修改建议,设计师及时修改和更新使小米的MIUI操作系统不断升级满足用户需求。
+　　通过网络实现群体合作开发设计,如设计师与工程师应用OnShape等网络设计软件异地在线合作完成产品虚拟模型开发;产品用户通过互联网参与到设计开发和改进过程中,用户通过网络提出各种修改建议,设计师及时修改和更新使小米的MIUI操作系统不断升级满足用户需求。
 </p>
 </div>
 </div>
@@ -1056,7 +1072,7 @@ Jonathan Cagan, and CraigM. Vogel提出帮助设计师系统分析设计背景�
 <h6 id="orgheadline93"><span class="section-number-6">1.3.3.2.2</span> 仿生设计</h6>
 <div class="outline-text-6" id="text-1-3-3-2-2">
 <p>
-研究自然界各种事物的功能、结构、形态和色彩等,并应用到设计中。
+　　研究自然界各种事物的功能、结构、形态和色彩等,并应用到设计中。
 </p>
 </div>
 </div>
@@ -1065,7 +1081,7 @@ Jonathan Cagan, and CraigM. Vogel提出帮助设计师系统分析设计背景�
 <h6 id="orgheadline94"><span class="section-number-6">1.3.3.2.3</span> 通用设计</h6>
 <div class="outline-text-6" id="text-1-3-3-2-3">
 <p>
-对于产品的设计和环境的考虑尽最大可能面向广泛使用者的一种设计活动。如视觉设计考虑红绿色盲人群的存在。OXO Good Grips削皮器因其高度的可用性、美观和对材料的创新应用减轻手臂患关节炎人群的使用负担。
+　　对于产品的设计和环境的考虑尽最大可能面向广泛使用者的一种设计活动。如视觉设计考虑红绿色盲人群的存在。OXO Good Grips削皮器因其高度的可用性、美观和对材料的创新应用减轻手臂患关节炎人群的使用负担。
 </p>
 </div>
 </div>
@@ -1077,7 +1093,7 @@ Jonathan Cagan, and CraigM. Vogel提出帮助设计师系统分析设计背景�
 <h6 id="orgheadline96"><span class="section-number-6">1.3.3.3.1</span> 面向机会流程</h6>
 <div class="outline-text-6" id="text-1-3-3-3-1">
 <p>
-新趋势 &#x2013;&gt; [识别机会]-一个机会 &#x2013;&gt; [理解机会(多方面研究)]-产品定义 &#x2013;&gt; [概念化机会(生成多个概念并作出选择)]-一个概念 &#x2013;&gt; [实现机会(构思多个产品并细化设计) &#x2013;&gt;产品提案
+　　新趋势 &#x2013;&gt; [识别机会]-一个机会 &#x2013;&gt; [理解机会(多方面研究)]-产品定义 &#x2013;&gt; [概念化机会(生成多个概念并作出选择)]-一个概念 &#x2013;&gt; [实现机会(构思多个产品并细化设计) &#x2013;&gt;产品提案
 </p>
 </div>
 </div>
@@ -1086,15 +1102,15 @@ Jonathan Cagan, and CraigM. Vogel提出帮助设计师系统分析设计背景�
 <h6 id="orgheadline100"><span class="section-number-6">1.3.3.3.2</span> 0R0流程</h6>
 <div class="outline-text-6" id="text-1-3-3-3-2">
 <p>
-Object - Relation - Output
+　　Object - Relation - Output
 </p>
 
 <p>
-客体(要素) - 联系(结构) - 产出(功能)
+　　客体(要素) - 联系(结构) - 产出(功能)
 </p>
 
 <p>
-系统始于不同客体如:自然资源、人力资源、材料、工艺等。在各客体之间建立结构联系,通过这些联系产生既定结果。
+　　系统始于不同客体如:自然资源、人力资源、材料、工艺等。在各客体之间建立结构联系,通过这些联系产生既定结果。
 </p>
 </div>
 <div id="outline-container-orgheadline97" class="outline-7">
@@ -1111,7 +1127,7 @@ Object - Relation - Output
 <h7 id="orgheadline98"><span class="section-number-7">1.3.3.3.2.2</span> 正向0R0流程</h7>
 <div class="outline-text-7" id="text-1-3-3-3-2-2">
 <p>
-投入(木料、构件、工艺、尺度、色彩、木胶、镙钉、人体工学)[要素] &#x2013;&gt; 转换(造型、构造、连接)[结构] &#x2013;&gt; 产出(产品)[功能]
+　　投入(木料、构件、工艺、尺度、色彩、木胶、镙钉、人体工学)[要素] &#x2013;&gt; 转换(造型、构造、连接)[结构] &#x2013;&gt; 产出(产品)[功能]
 </p>
 </div>
 </div>
@@ -1120,18 +1136,24 @@ Object - Relation - Output
 <h7 id="orgheadline99"><span class="section-number-7">1.3.3.3.2.3</span> 逆向0R0流程</h7>
 <div class="outline-text-7" id="text-1-3-3-3-2-3">
 <p>
-功能-&gt;结构-&gt;要素。先确定目标,如,设计项目立项 &#x2013;&gt; 确定构成方式 &#x2013;&gt; 确定要素内容
+　　功能-&gt;结构-&gt;要素。先确定目标,如,设计项目立项 &#x2013;&gt; 确定构成方式 &#x2013;&gt; 确定要素内容
 </p>
 </div>
 </div>
 </div>
 
 <div id="outline-container-orgheadline101" class="outline-6">
-<h6 id="orgheadline101"><span class="section-number-6">1.3.3.3.3</span> FBS流程</h6>
+<h6 id="orgheadline101"><span class="section-number-6">1.3.3.3.3</span> FBS流程 (功能-行为-结构)</h6>
 <div class="outline-text-6" id="text-1-3-3-3-3">
 <p>
-Function-Behaviour-Structure ontology
+　　Function-Behaviour-Structure ontology
 </p>
+
+
+<div class="figure">
+<p><img src="img/Function-Behaviour-Structure.png" alt="Function-Behaviour-Structure.png" width="450px" />
+</p>
+</div>
 </div>
 </div>
 
@@ -1142,7 +1164,7 @@ Function-Behaviour-Structure ontology
 <h7 id="orgheadline102"><span class="section-number-7">1.3.3.3.4.1</span> 串行模式定义</h7>
 <div class="outline-text-7" id="text-1-3-3-3-4-1">
 <p>
-将设计过程各个环节视为系统要素,要素之间的构成关系按一定顺序进行,所构成系统即为串行系统。
+　　将设计过程各个环节视为系统要素,要素之间的构成关系按一定顺序进行,所构成系统即为串行系统。
 </p>
 </div>
 </div>
@@ -1150,7 +1172,7 @@ Function-Behaviour-Structure ontology
 <h7 id="orgheadline103"><span class="section-number-7">1.3.3.3.4.2</span> 串行模式特点</h7>
 <div class="outline-text-7" id="text-1-3-3-3-4-2">
 <p>
-串行系统的突出特征是要素之间具有相关性和依次产生制约性。串行模式由于单线进程,故易于整体控制。但犹如串联电路,线路上某一元件出现故障,会造成整个线路瘫痪。
+　　串行系统的突出特征是要素之间具有相关性和依次产生制约性。串行模式由于单线进程,故易于整体控制。但犹如串联电路,线路上某一元件出现故障,会造成整个线路瘫痪。
 </p>
 </div>
 </div>
@@ -1158,7 +1180,7 @@ Function-Behaviour-Structure ontology
 <h7 id="orgheadline108"><span class="section-number-7">1.3.3.3.4.3</span> 串行系统设计流程</h7>
 <div class="outline-text-7" id="text-1-3-3-3-4-3">
 <p>
-计划阶段 &#x2013;&gt; 构思阶段 &#x2013;&gt; 提案阶段 &#x2013;&gt; 转化阶段
+　　计划阶段 &#x2013;&gt; 构思阶段 &#x2013;&gt; 提案阶段 &#x2013;&gt; 转化阶段
 </p>
 </div>
 <ol class="org-ol"><li><a id="orgheadline104"></a>计划阶段<br  /><div class="outline-text-8" id="text-1-3-3-3-4-3-1">
@@ -1396,7 +1418,7 @@ Function-Behaviour-Structure ontology
 <h7 id="orgheadline109"><span class="section-number-7">1.3.3.3.4.4</span> 产品串行设计流程</h7>
 <div class="outline-text-7" id="text-1-3-3-3-4-4">
 <p>
-构想设计、确立概念 &#x2013;&gt; 初步设计1:展开构思 &#x2013;&gt; 初步设计2:按既定目标展开设计 &#x2013;&gt; 实施设计1:按既定目标展开设计 &#x2013;&gt; 实施设计2:深化设计 &#x2013;&gt; 发布设计
+　　构想设计、确立概念 &#x2013;&gt; 初步设计1:展开构思 &#x2013;&gt; 初步设计2:按既定目标展开设计 &#x2013;&gt; 实施设计1:按既定目标展开设计 &#x2013;&gt; 实施设计2:深化设计 &#x2013;&gt; 发布设计
 </p>
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
@@ -1482,15 +1504,15 @@ Function-Behaviour-Structure ontology
 <h6 id="orgheadline111"><span class="section-number-6">1.3.3.3.5</span> 并行流程</h6>
 <div class="outline-text-6" id="text-1-3-3-3-5">
 <p>
-并行流程是以要素的网络结构为基本特征,对产品及相关过程集成、并行设计的系统化流程。设计一开始就考虑产品整个生命周期的各种因素,包括概念形成、需求定位、可行性、设计实施、生产制造及市场推广等,参与者由不同专业领域成员组成,如决策人、市场研究者、设计师、工程师和营销人员等。各组成部分形成网络关系 (或包括部分串行流程) 相互协同。
+　　并行流程是以要素的网络结构为基本特征,对产品及相关过程集成、并行设计的系统化流程。设计一开始就考虑产品整个生命周期的各种因素,包括概念形成、需求定位、可行性、设计实施、生产制造及市场推广等,参与者由不同专业领域成员组成,如决策人、市场研究者、设计师、工程师和营销人员等。各组成部分形成网络关系 (或包括部分串行流程) 相互协同。
 </p>
 
 <p>
-并行流程避免了时空顺序关系 (串行) 的制约,更具可靠性。通过并行流程各单元的协同关系可及时修正由于决策和判断错误导致的总体失误。并行协同流程可最大限度避免错误,减少重复和变更,降低成本,提高效率。
+　　并行流程避免了时空顺序关系 (串行) 的制约,更具可靠性。通过并行流程各单元的协同关系可及时修正由于决策和判断错误导致的总体失误。并行协同流程可最大限度避免错误,减少重复和变更,降低成本,提高效率。
 </p>
 
 <p>
-并行流程改变了传统的只在产品定型时才导入设计的做法,而使设计介入整个开发过程,避免和减少反复、变更及浪费,对新产品研发(R&amp;D)至关重要。
+　　并行流程改变了传统的只在产品定型时才导入设计的做法,而使设计介入整个开发过程,避免和减少反复、变更及浪费,对新产品研发(R&amp;D)至关重要。
 </p>
 </div>
 </div>
@@ -1538,6 +1560,11 @@ Function-Behaviour-Structure ontology
 
 <li>市场-设计-工程:以人为本</li>
 </ul>
+
+<div class="figure">
+<p><img src="img/market_design_engineering.png" alt="market_design_engineering.png" width="410px" />
+</p>
+</div>
 </div>
 </div>
 </div>
@@ -1550,11 +1577,11 @@ Function-Behaviour-Structure ontology
 <h4 id="orgheadline119"><span class="section-number-4">1.4.1</span> 布劳恩袖珍电唱收音机组合</h4>
 <div class="outline-text-4" id="text-1-4-1">
 <p>
-1959 模块化系统设计
+　　1959 模块化系统设计
 </p>
 
 <p>
-布劳恩公司与乌尔姆造型学院合作使设计直接服务于工业。1959年布劳恩推出袖珍电唱收音机组合。其中的电唱机和收音机是可分可合的标准件。其后很多设计都具备这种模块化特征(功能和结构),如布劳恩1980年生产的高保真音响系统。通过系统设计使标准化生产和多样化选择结合起来,以满足不同需求。
+　　布劳恩公司与乌尔姆造型学院合作使设计直接服务于工业。1959年布劳恩推出袖珍电唱收音机组合。其中的电唱机和收音机是可分可合的标准件。其后很多设计都具备这种模块化特征(功能和结构),如布劳恩1980年生产的高保真音响系统。通过系统设计使标准化生产和多样化选择结合起来,以满足不同需求。
 </p>
 </div>
 </div>
@@ -1563,11 +1590,11 @@ Function-Behaviour-Structure ontology
 <h4 id="orgheadline120"><span class="section-number-4">1.4.2</span> IBM 公司识别系统</h4>
 <div class="outline-text-4" id="text-1-4-2">
 <p>
-1956 品牌化系统设计
+　　1956 品牌化系统设计
 </p>
 
 <p>
-第二次世界大战后,批量生产逐渐集中于大公司。产品种类很少,一定范围的产品变得越来越相似,企业产品与竞争对手的产品差别不大。这时企业的整体形象,而不是单个产品的形象变得更加重要。不少公司建立了自己的识别体系。国际商业机器公司(IBM)在1956年任命设计师诺伊斯为设计部主任,他对IBM公司的设计进行了全面的改造和统一管理。诺伊斯对公司的产品外形进行了标准化和系统化。
+　　第二次世界大战后,批量生产逐渐集中于大公司。产品种类很少,一定范围的产品变得越来越相似,企业产品与竞争对手的产品差别不大。这时企业的整体形象,而不是单个产品的形象变得更加重要。不少公司建立了自己的识别体系。国际商业机器公司(IBM)在1956年任命设计师诺伊斯为设计部主任,他对IBM公司的设计进行了全面的改造和统一管理。诺伊斯对公司的产品外形进行了标准化和系统化。
 </p>
 </div>
 </div>
@@ -1576,11 +1603,11 @@ Function-Behaviour-Structure ontology
 <h4 id="orgheadline121"><span class="section-number-4">1.4.3</span> Alessi 系列产品 THE CHIN FAMILY</h4>
 <div class="outline-text-4" id="text-1-4-3">
 <p>
-2007 系列化系统设计
+　　2007 系列化系统设计
 </p>
 
 <p>
-用清朝肖像设计厨房产品,如计数器、胡椒粉瓶子、刨子和鸡蛋盒。Alessi具有意大利设计特点:热情活泼、鲜艳的颜色、情感化、有个性等。这是一组经典的系列化产品,体现于产品风格和组合的系列化。
+　　用清朝肖像设计厨房产品,如计数器、胡椒粉瓶子、刨子和鸡蛋盒。Alessi具有意大利设计特点:热情活泼、鲜艳的颜色、情感化、有个性等。这是一组经典的系列化产品,体现于产品风格和组合的系列化。
 </p>
 </div>
 </div>
@@ -1589,15 +1616,15 @@ Function-Behaviour-Structure ontology
 <h4 id="orgheadline122"><span class="section-number-4">1.4.4</span> Odin 有机蔬菜供应服务系统</h4>
 <div class="outline-text-4" id="text-1-4-4">
 <p>
-1983 服务化系统设计
+　　1983 服务化系统设计
 </p>
 
 <p>
-Odin Holland (www.odin.nl) 在欧洲各国进出口蔬菜水果,运往蔬菜商场或提供订购服务。消费者每周收到一纸袋有机水果和蔬菜及食谱,货源通常来自附近有机蔬果店,由Odin筛选,保证质量,且运输成本最小化,但冬季,有些食物是进口的。Odin为种植者提供指导,基于顾客对特定蔬菜需求预期进行规划种植。
+　　Odin Holland (www.odin.nl) 在欧洲各国进出口蔬菜水果,运往蔬菜商场或提供订购服务。消费者每周收到一纸袋有机水果和蔬菜及食谱,货源通常来自附近有机蔬果店,由Odin筛选,保证质量,且运输成本最小化,但冬季,有些食物是进口的。Odin为种植者提供指导,基于顾客对特定蔬菜需求预期进行规划种植。
 </p>
 
 <p>
-服务系统达到单独产品很难做到的经济效益和环保效益,但需系统化考虑多种要素,如利益相关者的关系(购买者、蔬果种植者)、经济因素、成本和收益、蔬菜培育、验证、品牌塑造、网购系统和流程、物流运输规划、包装等。
+　　服务系统达到单独产品很难做到的经济效益和环保效益,但需系统化考虑多种要素,如利益相关者的关系(购买者、蔬果种植者)、经济因素、成本和收益、蔬菜培育、验证、品牌塑造、网购系统和流程、物流运输规划、包装等。
 </p>
 </div>
 </div>
@@ -1606,11 +1633,11 @@ Odin Holland (www.odin.nl) 在欧洲各国进出口蔬菜水果,运往蔬菜商�
 <h4 id="orgheadline123"><span class="section-number-4">1.4.5</span> 小米</h4>
 <div class="outline-text-4" id="text-1-4-5">
 <p>
-2010 协同化系统设计
+　　2010 协同化系统设计
 </p>
 
 <p>
-“为发烧而生”是小米的产品理念,小米手机、MIUI、米聊是公司三大核心业务。MIUI是小米基于安卓开发的手机系统,也是小米最先开发的产品,并首创了用互联网开发手机操作系统,即小米与网友协同设计。
+　　“为发烧而生”是小米的产品理念,小米手机、MIUI、米聊是公司三大核心业务。MIUI是小米基于安卓开发的手机系统,也是小米最先开发的产品,并首创了用互联网开发手机操作系统,即小米与网友协同设计。
 </p>
 </div>
 </div>
@@ -1620,7 +1647,7 @@ Odin Holland (www.odin.nl) 在欧洲各国进出口蔬菜水果,运往蔬菜商�
 <h3 id="orgheadline125"><span class="section-number-3">1.5</span> 思考题</h3>
 <div class="outline-text-3" id="text-1-5">
 <p>
-从产品设计范畴中任选一类(平面、立体、交互、服务),结合一个或多个实例对其设计方法和流程进行分析总结。
+　　从产品设计范畴中任选一类(平面、立体、交互、服务),结合一个或多个实例对其设计方法和流程进行分析总结。
 </p>
 
 <ul class="org-ul">
@@ -1641,40 +1668,40 @@ Odin Holland (www.odin.nl) 在欧洲各国进出口蔬菜水果,运往蔬菜商�
 <h3 id="orgheadline238"><span class="section-number-3">2.1</span> 系统设计内部要素</h3>
 <div class="outline-text-3" id="text-2-1">
 <p>
-通过系统内部各要素的有效组合来实现产品价值,并满足外部要素的要求。
+　　通过系统内部各要素的有效组合来实现产品价值,并满足外部要素的要求。
 </p>
 
 <p>
-功能要素、结构要素、形态要素、材料要素、色彩要素、人因要素和环境要素
+　　功能要素、结构要素、形态要素、材料要素、色彩要素、人因要素和环境要素
 </p>
 </div>
 <div id="outline-container-orgheadline147" class="outline-4">
 <h4 id="orgheadline147"><span class="section-number-4">2.1.1</span> 功能要素</h4>
 <div class="outline-text-4" id="text-2-1-1">
 <p>
-功能是指产品所具有的效用,并被接受的能力。产品实质上是功能的载体。设计与制造针对依附于产品实体的功能而进行,用户购买的是产品实体所具备的功能,在使用过程中可能会产生一些新的功能(如:把书当枕头)。在支撑产品系统的诸要素中,功能要素是首要的,它决定着产品以及整个系统的意义。功能回答“这是什么”和“用来做什么”的问题。
+　　功能是指产品所具有的效用,并被接受的能力。产品实质上是功能的载体。设计与制造针对依附于产品实体的功能而进行,用户购买的是产品实体所具备的功能,在使用过程中可能会产生一些新的功能(如:把书当枕头)。在支撑产品系统的诸要素中,功能要素是首要的,它决定着产品以及整个系统的意义。功能回答“这是什么”和“用来做什么”的问题。
 </p>
 </div>
 <div id="outline-container-orgheadline145" class="outline-5">
 <h5 id="orgheadline145"><span class="section-number-5">2.1.1.1</span> 功能分析</h5>
 <div class="outline-text-5" id="text-2-1-1-1">
 <p>
-明确用户对功能的要求,由功能到结构可以克服由结构到功能的局限。
+　　明确用户对功能的要求,由功能到结构可以克服由结构到功能的局限。
 </p>
 </div>
 <div id="outline-container-orgheadline127" class="outline-6">
 <h6 id="orgheadline127"><span class="section-number-6">2.1.1.1.1</span> 功能定义</h6>
 <div class="outline-text-6" id="text-2-1-1-1-1">
 <p>
-产品和零部件或构成要素作为功能的载体 (主语),功能发挥一定的效用 (谓语及宾语)。
+　　产品和零部件或构成要素作为功能的载体 (主语),功能发挥一定的效用 (谓语及宾语)。
 </p>
 
 <p>
-如:手表(主) 显示(谓) 时间(宾)。
+　　如:手表(主) 显示(谓) 时间(宾)。
 </p>
 
 <p>
-从(抽象)功能描述出发,摆脱实体结构和材料特性束缚,利于设计出实现该功能的新结构、材料和工艺。
+　　从(抽象)功能描述出发,摆脱实体结构和材料特性束缚,利于设计出实现该功能的新结构、材料和工艺。
 </p>
 </div>
 </div>
@@ -1687,12 +1714,12 @@ Odin Holland (www.odin.nl) 在欧洲各国进出口蔬菜水果,运往蔬菜商�
 <div class="outline-text-7" id="text-2-1-1-1-2-1">
 </div><ol class="org-ol"><li><a id="orgheadline128"></a>使用 (物质) 功能<br  /><div class="outline-text-8" id="text-2-1-1-1-2-1-1">
 <p>
-产品特定用途,体现使用目的,也包括与技术、经济用途相关功能。
+　　产品特定用途,体现使用目的,也包括与技术、经济用途相关功能。
 </p>
 </div></li>
 <li><a id="orgheadline129"></a>精神功能<br  /><div class="outline-text-8" id="text-2-1-1-1-2-1-2">
 <p>
-影响用户心理感受和主观意识的功能,即心理功能。如由产品样式、造型、质感、色彩等产生豪华感、现代感、技术感等。
+　　影响用户心理感受和主观意识的功能,即心理功能。如由产品样式、造型、质感、色彩等产生豪华感、现代感、技术感等。
 </p>
 </div></li></ol>
 </div>
@@ -1702,21 +1729,21 @@ Odin Holland (www.odin.nl) 在欧洲各国进出口蔬菜水果,运往蔬菜商�
 <div class="outline-text-7" id="text-2-1-1-1-2-2">
 </div><ol class="org-ol"><li><a id="orgheadline131"></a>主要功能:<br  /><div class="outline-text-8" id="text-2-1-1-1-2-2-1">
 <p>
-与设计产品的主要目的直接相关的功能
+　　与设计产品的主要目的直接相关的功能
 </p>
 </div></li>
 <li><a id="orgheadline132"></a>附属功能:<br  /><div class="outline-text-8" id="text-2-1-1-1-2-2-2">
 <p>
-辅助主要功能更好地实现其目的的功能,有时也不可或缺。
+　　辅助主要功能更好地实现其目的的功能,有时也不可或缺。
 </p>
 </div></li>
 <li><a id="orgheadline133"></a>主要功能与附属功能的关系<br  /><div class="outline-text-8" id="text-2-1-1-1-2-2-3">
 <p>
-主要功能是产品存在的基础,相对稳定,不会出现大幅度变化。否则,产品性质就会发生变化。
+　　主要功能是产品存在的基础,相对稳定,不会出现大幅度变化。否则,产品性质就会发生变化。
 </p>
 
 <p>
-附属功能往往多变,有时起辅助作用,有时会模糊功能的主次关系。如文具钟,很难判断文具和钟的主次关系。一件产品的附属功能可不断增加,其成本有时会高于主功能。合理设置功能结构可降低成本。
+　　附属功能往往多变,有时起辅助作用,有时会模糊功能的主次关系。如文具钟,很难判断文具和钟的主次关系。一件产品的附属功能可不断增加,其成本有时会高于主功能。合理设置功能结构可降低成本。
 </p>
 </div></li></ol>
 </div>
@@ -1725,7 +1752,7 @@ Odin Holland (www.odin.nl) 在欧洲各国进出口蔬菜水果,运往蔬菜商�
 <h7 id="orgheadline135"><span class="section-number-7">2.1.1.1.2.3</span> 按需求分类(必要功能和非比要功能)</h7>
 <div class="outline-text-7" id="text-2-1-1-1-2-3">
 <p>
-使用者需求变化,会影响到功能的必要性。必要和非比要、主要和附属功能会在某种情况下发生转换(相对性)。在设计实务中,剔除不必要功能可降低成本,减少误操作。
+　　使用者需求变化,会影响到功能的必要性。必要和非比要、主要和附属功能会在某种情况下发生转换(相对性)。在设计实务中,剔除不必要功能可降低成本,减少误操作。
 </p>
 </div>
 </div>
@@ -1735,7 +1762,7 @@ Odin Holland (www.odin.nl) 在欧洲各国进出口蔬菜水果,运往蔬菜商�
 <div class="outline-text-7" id="text-2-1-1-1-2-4">
 </div><ol class="org-ol"><li><a id="orgheadline136"></a>不足功能<br  /><div class="outline-text-8" id="text-2-1-1-1-2-4-1">
 <p>
-必要功能未达预定目标。如因结构、选材不合理造成强度不足、可靠性、安全性、耐用性不够等。
+　　必要功能未达预定目标。如因结构、选材不合理造成强度不足、可靠性、安全性、耐用性不够等。
 </p>
 </div></li>
 <li><a id="orgheadline137"></a>过剩功能指超出使用需求的必要功能<br  /><div class="outline-text-8" id="text-2-1-1-1-2-4-2">
@@ -1750,7 +1777,7 @@ Odin Holland (www.odin.nl) 在欧洲各国进出口蔬菜水果,运往蔬菜商�
 <h7 id="orgheadline139"><span class="section-number-7">2.1.1.1.2.5</span> 按相互关系分类(上位功能、下位功能和同位功能)</h7>
 <div class="outline-text-7" id="text-2-1-1-1-2-5">
 <p>
-若一功能是另一功能的目的,而另一功能是此功能的手段,则把作为目的的功能称为上位功能,作为手段的功能称为下位功能,两者是从属关系。与同一上位功能相连的若干下位功能是同位功能。
+　　若一功能是另一功能的目的,而另一功能是此功能的手段,则把作为目的的功能称为上位功能,作为手段的功能称为下位功能,两者是从属关系。与同一上位功能相连的若干下位功能是同位功能。
 </p>
 </div>
 </div>
@@ -1760,8 +1787,14 @@ Odin Holland (www.odin.nl) 在欧洲各国进出口蔬菜水果,运往蔬菜商�
 <h6 id="orgheadline141"><span class="section-number-6">2.1.1.1.3</span> 功能系统图</h6>
 <div class="outline-text-6" id="text-2-1-1-1-3">
 <p>
-功能系统图是产品结构系统的功能抽象表现,显示设计出发点和思路,反映功能需求。建立功能系统图先从基本功能开始,根据目的和手段关系建立系统骨架,然后找到二次功能的目的功能,将二次功能与其目的功能相连,形成树状结构。
+　　功能系统图是产品结构系统的功能抽象表现,显示设计出发点和思路,反映功能需求。建立功能系统图先从基本功能开始,根据目的和手段关系建立系统骨架,然后找到二次功能的目的功能,将二次功能与其目的功能相连,形成树状结构。
 </p>
+
+
+<div class="figure">
+<p><img src="img/functional_system.png" alt="functional_system.png" width="430px" />
+</p>
+</div>
 </div>
 </div>
 
@@ -1769,11 +1802,11 @@ Odin Holland (www.odin.nl) 在欧洲各国进出口蔬菜水果,运往蔬菜商�
 <h6 id="orgheadline144"><span class="section-number-6">2.1.1.1.4</span> 功能整理</h6>
 <div class="outline-text-6" id="text-2-1-1-1-4">
 <p>
-功能之间存在依存关系(目的-手段),通过系统图明确设计概念,准确定位功能,发现并取消不必要功能,提高产品竞争力。但所发现的没有用或目的不明确的功能也有可能是功能定义不准确造成的。
+　　功能之间存在依存关系(目的-手段),通过系统图明确设计概念,准确定位功能,发现并取消不必要功能,提高产品竞争力。但所发现的没有用或目的不明确的功能也有可能是功能定义不准确造成的。
 </p>
 
 <p>
-通过功能整理,建立功能系统,根据功能系统确认不同级别的功能领域,再确定部件设计,使设计更有针对性、合理性和可行性。
+　　通过功能整理,建立功能系统,根据功能系统确认不同级别的功能领域,再确定部件设计,使设计更有针对性、合理性和可行性。
 </p>
 </div>
 
@@ -1850,11 +1883,11 @@ Odin Holland (www.odin.nl) 在欧洲各国进出口蔬菜水果,运往蔬菜商�
 <h5 id="orgheadline146"><span class="section-number-5">2.1.1.2</span> 产品功能设计</h5>
 <div class="outline-text-5" id="text-2-1-1-2">
 <p>
-通过功能分析,设定具体目标,实现目标的设计过程就是功能设计。
+　　通过功能分析,设定具体目标,实现目标的设计过程就是功能设计。
 </p>
 
 <p>
-功能实现面临两方面问题:结构原理和构成形式(造型),往往并不能都由工业设计师完成。要形成市场分析、功能设计、工艺设计等多方人员的设计共同体进行协同设计。
+　　功能实现面临两方面问题:结构原理和构成形式(造型),往往并不能都由工业设计师完成。要形成市场分析、功能设计、工艺设计等多方人员的设计共同体进行协同设计。
 </p>
 </div>
 </div>
@@ -1864,11 +1897,11 @@ Odin Holland (www.odin.nl) 在欧洲各国进出口蔬菜水果,运往蔬菜商�
 <h4 id="orgheadline158"><span class="section-number-4">2.1.2</span> 结构要素</h4>
 <div class="outline-text-4" id="text-2-1-2">
 <p>
-产品结构是产品内部各要素所占比重和关系之和的体现。
+　　产品结构是产品内部各要素所占比重和关系之和的体现。
 </p>
 
 <p>
-功能是系统与环境的外部联系,结构则是系统内部要素的联系。结构是功能和形式的承担者,受材料、工程、工艺、商品使用环境等方面制约。
+　　功能是系统与环境的外部联系,结构则是系统内部要素的联系。结构是功能和形式的承担者,受材料、工程、工艺、商品使用环境等方面制约。
 </p>
 </div>
 <div id="outline-container-orgheadline156" class="outline-5">
@@ -1881,7 +1914,7 @@ Odin Holland (www.odin.nl) 在欧洲各国进出口蔬菜水果,运往蔬菜商�
 <h7 id="orgheadline148"><span class="section-number-7">2.1.2.1.1.1</span> 外部结构</h7>
 <div class="outline-text-7" id="text-2-1-2-1-1-1">
 <p>
-外部结构指外观造型及相关整体结构,是外部形式承担者和内在功能传达者。通过整体结构使元器件发挥核心功能,且实现界面功能(造型)。具备材料、工艺知识及经验是优化结构的关键。外部结构须在外部条件和内部因素明确的情况下进行设计。
+　　外部结构指外观造型及相关整体结构,是外部形式承担者和内在功能传达者。通过整体结构使元器件发挥核心功能,且实现界面功能(造型)。具备材料、工艺知识及经验是优化结构的关键。外部结构须在外部条件和内部因素明确的情况下进行设计。
 </p>
 
 <ul class="org-ul">
@@ -1895,11 +1928,11 @@ Odin Holland (www.odin.nl) 在欧洲各国进出口蔬菜水果,运往蔬菜商�
 <h7 id="orgheadline149"><span class="section-number-7">2.1.2.1.1.2</span> 核心结构</h7>
 <div class="outline-text-7" id="text-2-1-2-1-1-2">
 <p>
-技术原理系统形成的具有核心功能的产品结构。如吸尘器电机结构及高速风扇的真空抽吸原理。
+　　技术原理系统形成的具有核心功能的产品结构。如吸尘器电机结构及高速风扇的真空抽吸原理。
 </p>
 
 <p>
-由机械工程师、电子工程师设计,专业厂家生产 (标准化\模块化) &#x2013;&gt; 工业设计师明确核心结构输入输出关系, 进行系统整合。
+　　由机械工程师、电子工程师设计,专业厂家生产 (标准化\模块化) &#x2013;&gt; 工业设计师明确核心结构输入输出关系, 进行系统整合。
 </p>
 </div>
 </div>
@@ -1909,14 +1942,14 @@ Odin Holland (www.odin.nl) 在欧洲各国进出口蔬菜水果,运往蔬菜商�
 <h6 id="orgheadline154"><span class="section-number-6">2.1.2.1.2</span> 多个产品的关系结构</h6>
 <div class="outline-text-6" id="text-2-1-2-1-2">
 <p>
-将若干产品所构成的关系看作一个整体,将其中具有独立功能的产品看作要素。
+　　将若干产品所构成的关系看作一个整体,将其中具有独立功能的产品看作要素。
 </p>
 </div>
 <div id="outline-container-orgheadline151" class="outline-7">
 <h7 id="orgheadline151"><span class="section-number-7">2.1.2.1.2.1</span> 分体结构</h7>
 <div class="outline-text-7" id="text-2-1-2-1-2-1">
 <p>
-相对于整体结构,同一目的不同功能的产品关系分离。如,电脑由主机、显示器、键盘、鼠标及外围设备组成完整系统。
+　　相对于整体结构,同一目的不同功能的产品关系分离。如,电脑由主机、显示器、键盘、鼠标及外围设备组成完整系统。
 </p>
 </div>
 </div>
@@ -1925,7 +1958,7 @@ Odin Holland (www.odin.nl) 在欧洲各国进出口蔬菜水果,运往蔬菜商�
 <h7 id="orgheadline152"><span class="section-number-7">2.1.2.1.2.2</span> 系列结构</h7>
 <div class="outline-text-7" id="text-2-1-2-1-2-2">
 <p>
-由若干产品构成成套系列、组合系列、家族系列、单元系列等。产品之间相互依存、作用。
+　　由若干产品构成成套系列、组合系列、家族系列、单元系列等。产品之间相互依存、作用。
 </p>
 </div>
 </div>
@@ -1934,7 +1967,7 @@ Odin Holland (www.odin.nl) 在欧洲各国进出口蔬菜水果,运往蔬菜商�
 <h7 id="orgheadline153"><span class="section-number-7">2.1.2.1.2.3</span> 网络结构</h7>
 <div class="outline-text-7" id="text-2-1-2-1-2-3">
 <p>
-若干具有独立功能的产品相互进行有形或无形连接,构成复合功能网络系统。如,电脑相互联网,服务器与若干终端(手机、传感器)连接(物联网)等。
+　　若干具有独立功能的产品相互进行有形或无形连接,构成复合功能网络系统。如,电脑相互联网,服务器与若干终端(手机、传感器)连接(物联网)等。
 </p>
 </div>
 </div>
@@ -1944,15 +1977,15 @@ Odin Holland (www.odin.nl) 在欧洲各国进出口蔬菜水果,运往蔬菜商�
 <h6 id="orgheadline155"><span class="section-number-6">2.1.2.1.3</span> 产品与空间的关系结构</h6>
 <div class="outline-text-6" id="text-2-1-2-1-3">
 <p>
-产品在空间上的构成关系,产品与周围环境相互联系、相互作用。
+　　产品在空间上的构成关系,产品与周围环境相互联系、相互作用。
 </p>
 
 <p>
-“埏shān填以为器,当其无,有器之用;凿牖yǒu以为室,当其无,有空之用。"(和泥制作陶器,有了器具中空的地方,才有器皿的作用。开凿门窗建造房屋,有了门窗四壁内的空虚部分,才有房屋的作用。所以,“有”给人便利,“无”发挥了它的作用。)
+　　“埏shān填以为器,当其无,有器之用;凿牖yǒu以为室,当其无,有空之用。"(和泥制作陶器,有了器具中空的地方,才有器皿的作用。开凿门窗建造房屋,有了门窗四壁内的空虚部分,才有房屋的作用。所以,“有”给人便利,“无”发挥了它的作用。)
 </p>
 
 <p>
-功能体现于产品实体与空间本身及其相互作用。
+　　功能体现于产品实体与空间本身及其相互作用。
 </p>
 </div>
 </div>
@@ -1962,8 +1995,14 @@ Odin Holland (www.odin.nl) 在欧洲各国进出口蔬菜水果,运往蔬菜商�
 <h5 id="orgheadline157"><span class="section-number-5">2.1.2.2</span> 产品结构设计要点</h5>
 <div class="outline-text-5" id="text-2-1-2-2">
 <p>
-产品结构分为白箱结构(外部结构)与黑箱结构(核心结构),两者是不可分割的相互作用的整体。相对于黑箱结构,白箱结构存在变换空间。在设计外部结构时,往往沉溺于自由表现,而忽略来自黑箱结构或者外部因素的制约,无视制约条件是不现实的。只有树立整体观念,才有可能正确处理内外结构相互作用,结构与功能的有机关系。
+　　产品结构分为白箱结构(外部结构)与黑箱结构(核心结构),两者是不可分割的相互作用的整体。相对于黑箱结构,白箱结构存在变换空间。在设计外部结构时,往往沉溺于自由表现,而忽略来自黑箱结构或者外部因素的制约,无视制约条件是不现实的。只有树立整体观念,才有可能正确处理内外结构相互作用,结构与功能的有机关系。
 </p>
+
+
+<div class="figure">
+<p><img src="img/structure.png" alt="structure.png" />
+</p>
+</div>
 </div>
 </div>
 </div>
@@ -1975,14 +2014,14 @@ Odin Holland (www.odin.nl) 在欧洲各国进出口蔬菜水果,运往蔬菜商�
 <h5 id="orgheadline167"><span class="section-number-5">2.1.3.1</span> 形态的概念</h5>
 <div class="outline-text-5" id="text-2-1-3-1">
 <p>
-事物在一定条件下的表现形式
+　　事物在一定条件下的表现形式
 </p>
 </div>
 <div id="outline-container-orgheadline160" class="outline-6">
 <h6 id="orgheadline160"><span class="section-number-6">2.1.3.1.1</span> 概念形态</h6>
 <div class="outline-text-6" id="text-2-1-3-1-1">
 <p>
-空间所规定的抽象形态,可表现为感知形态(以图形的形式出现),即纯粹形态(造型设计基本要素)。
+　　空间所规定的抽象形态,可表现为感知形态(以图形的形式出现),即纯粹形态(造型设计基本要素)。
 </p>
 </div>
 <div id="outline-container-orgheadline159" class="outline-7">
@@ -2003,17 +2042,17 @@ Odin Holland (www.odin.nl) 在欧洲各国进出口蔬菜水果,运往蔬菜商�
 <h7 id="orgheadline163"><span class="section-number-7">2.1.3.1.2.1</span> 自然形态</h7>
 <div class="outline-text-7" id="text-2-1-3-1-2-1">
 <p>
-山水树木、花鸟虫鱼
+　　山水树木、花鸟虫鱼
 </p>
 </div>
 <ol class="org-ol"><li><a id="orgheadline161"></a>有机形态 (organic)<br  /><div class="outline-text-8" id="text-2-1-3-1-2-1-1">
 <p>
-大自然自身平衡力及各种自然法则,产生具有平滑曲线,体现生命形态的特征。
+　　大自然自身平衡力及各种自然法则,产生具有平滑曲线,体现生命形态的特征。
 </p>
 </div></li>
 <li><a id="orgheadline162"></a>无机形态<br  /><div class="outline-text-8" id="text-2-1-3-1-2-1-2">
 <p>
-体现在几何形态上,给人以理性的感觉。
+　　体现在几何形态上,给人以理性的感觉。
 </p>
 </div></li></ol>
 </div>
@@ -2021,11 +2060,11 @@ Odin Holland (www.odin.nl) 在欧洲各国进出口蔬菜水果,运往蔬菜商�
 <h7 id="orgheadline164"><span class="section-number-7">2.1.3.1.2.2</span> 人工形态</h7>
 <div class="outline-text-7" id="text-2-1-3-1-2-2">
 <p>
-产品、建筑等
+　　产品、建筑等
 </p>
 
 <p>
-通过各种技术手段创造的形态,比如设计形态
+　　通过各种技术手段创造的形态,比如设计形态
 </p>
 <ul class="org-ul">
 <li>象征符号的形态: 齿轮表示工业、镰刀代表农业</li>
@@ -2041,11 +2080,11 @@ Odin Holland (www.odin.nl) 在欧洲各国进出口蔬菜水果,运往蔬菜商�
 <h6 id="orgheadline166"><span class="section-number-6">2.1.3.1.3</span> 形态学 Morphology</h6>
 <div class="outline-text-6" id="text-2-1-3-1-3">
 <p>
-生物学分支,探索生物体形态生成和发展过程、有关机理及形态分析与分类。从设计角度看,形态即表面形式,反映具体事实。形态学在对形态分类基础上,研究各种形态的共同规律,揭示其特殊性和彼此联系,并作出理论概念和分析。
+　　生物学分支,探索生物体形态生成和发展过程、有关机理及形态分析与分类。从设计角度看,形态即表面形式,反映具体事实。形态学在对形态分类基础上,研究各种形态的共同规律,揭示其特殊性和彼此联系,并作出理论概念和分析。
 </p>
 
 <p>
-以自然形态为研究对象的形态学观点及其成果,对人工形态设计有很多启发。对人工形态的形态学分析,是以人工创造的形态,如,生活器具、建筑与城市等的各种外在特性(如形状、大小、色彩与材料等)为对象,寻求蕴含的各种内在特性(如设计意图、价值、相互关系与人的爱好等);对以上形态可视性方面与非可视性方面的对应研究,并弄清人工形态创意机理等。
+　　以自然形态为研究对象的形态学观点及其成果,对人工形态设计有很多启发。对人工形态的形态学分析,是以人工创造的形态,如,生活器具、建筑与城市等的各种外在特性(如形状、大小、色彩与材料等)为对象,寻求蕴含的各种内在特性(如设计意图、价值、相互关系与人的爱好等);对以上形态可视性方面与非可视性方面的对应研究,并弄清人工形态创意机理等。
 </p>
 </div>
 </div>
@@ -2055,18 +2094,18 @@ Odin Holland (www.odin.nl) 在欧洲各国进出口蔬菜水果,运往蔬菜商�
 <h5 id="orgheadline179"><span class="section-number-5">2.1.3.2</span> 形态的意义</h5>
 <div class="outline-text-5" id="text-2-1-3-2">
 <p>
-形态是产品与功能的中介,并具有表意作用 (产品语意学)。通过形态可以传达各种信息,如产品属性 (是什么)、功能 (能做什么或怎么做) 等。
+　　形态是产品与功能的中介,并具有表意作用 (产品语意学)。通过形态可以传达各种信息,如产品属性 (是什么)、功能 (能做什么或怎么做) 等。
 </p>
 </div>
 <div id="outline-container-orgheadline168" class="outline-6">
 <h6 id="orgheadline168"><span class="section-number-6">2.1.3.2.1</span> 产品语意学</h6>
 <div class="outline-text-6" id="text-2-1-3-2-1">
 <p>
-语意 (Semantic) 的原意是语言的含义,语言学研究语言的意义。
+　　语意 (Semantic) 的原意是语言的含义,语言学研究语言的意义。
 </p>
 
 <p>
-产品设计语意学将研究语言意义的方法用于产品设计,研究人造形态在使用环境中的象征特性,在形态设计时运用隐喻、暗示及相似性的手法来表达产品意义。符号学用于研究符号意义,包含指示符号、图像符号及象征符号。产品语意学通过由符号造型、抽象图形和一些与表达产品意义相关元素的排列、综合等构成方式来解释产品意义。使用者通过了解产品意义,正确有效地使用产品。
+　　产品设计语意学将研究语言意义的方法用于产品设计,研究人造形态在使用环境中的象征特性,在形态设计时运用隐喻、暗示及相似性的手法来表达产品意义。符号学用于研究符号意义,包含指示符号、图像符号及象征符号。产品语意学通过由符号造型、抽象图形和一些与表达产品意义相关元素的排列、综合等构成方式来解释产品意义。使用者通过了解产品意义,正确有效地使用产品。
 </p>
 </div>
 </div>
@@ -2075,19 +2114,25 @@ Odin Holland (www.odin.nl) 在欧洲各国进出口蔬菜水果,运往蔬菜商�
 <h6 id="orgheadline172"><span class="section-number-6">2.1.3.2.2</span> 传达意义的形态</h6>
 <div class="outline-text-6" id="text-2-1-3-2-2">
 <p>
-形态是一个符号系统,具有意指、表现与传达等类语言功能的综合系统。类语言功能的产生出于人的感知。对不同形状的按钮或旋钮、人能作出反应,如根据旋钮形状作出按、拨、旋等动作。
+　　形态是一个符号系统,具有意指、表现与传达等类语言功能的综合系统。类语言功能的产生出于人的感知。对不同形状的按钮或旋钮、人能作出反应,如根据旋钮形状作出按、拨、旋等动作。
 </p>
 </div>
 <div id="outline-container-orgheadline169" class="outline-7">
 <h7 id="orgheadline169"><span class="section-number-7">2.1.3.2.2.1</span> 物质角度</h7>
 <div class="outline-text-7" id="text-2-1-3-2-2-1">
 <p>
-灰色处于纯白色环境中时看起来比实际更深 (视网膜邻近区域之间交互作用的结果 &#x2014; 视错觉现象)。
+　　灰色处于纯白色环境中时看起来比实际更深 (视网膜邻近区域之间交互作用的结果 &#x2014; 视错觉现象)。
 </p>
 
 <p>
-色彩不变性: 人们能准确判断同一色彩在不同照度下其实际色彩并未发生变化,是因为瞳孔会自动放大或缩小,控制光通量。这也有可能是经验学习的结果。
+　　色彩不变性: 　　人们能准确判断同一色彩在不同照度下其实际色彩并未发生变化,是因为瞳孔会自动放大或缩小,控制光通量。这也有可能是经验学习的结果。
 </p>
+
+
+<div class="figure">
+<p><img src="img/gray_with_background.png" alt="gray_with_background.png" width="400px" />
+</p>
+</div>
 </div>
 </div>
 
@@ -2095,7 +2140,7 @@ Odin Holland (www.odin.nl) 在欧洲各国进出口蔬菜水果,运往蔬菜商�
 <h7 id="orgheadline170"><span class="section-number-7">2.1.3.2.2.2</span> 学习角度</h7>
 <div class="outline-text-7" id="text-2-1-3-2-2-2">
 <p>
-人能感知事物,是因为人具有学习能力。眼睛能辨别方位,是由于人们触摸物体的经验。人类对空间或形态上的感知是学习的结果,感知基于过去有过的经验。
+　　人能感知事物,是因为人具有学习能力。眼睛能辨别方位,是由于人们触摸物体的经验。人类对空间或形态上的感知是学习的结果,感知基于过去有过的经验。
 </p>
 </div>
 </div>
@@ -2104,7 +2149,7 @@ Odin Holland (www.odin.nl) 在欧洲各国进出口蔬菜水果,运往蔬菜商�
 <h7 id="orgheadline171"><span class="section-number-7">2.1.3.2.2.3</span> 功能角度</h7>
 <div class="outline-text-7" id="text-2-1-3-2-2-3">
 <p>
-物质有许多特性,如材质、色彩等。它们虽不会移动,但能造成认识上的改变。感知的最后阶段不是将看到的东西与记忆在人脑内的东西比较,而是引导人类对环境的探究,是一种“指引行为”,如:当步行劳累时,看到的任何一个平坦的石头都具有椅子的功能;若要写字时,它可成为桌子。
+　　物质有许多特性,如材质、色彩等。它们虽不会移动,但能造成认识上的改变。感知的最后阶段不是将看到的东西与记忆在人脑内的东西比较,而是引导人类对环境的探究,是一种“指引行为”,如:当步行劳累时,看到的任何一个平坦的石头都具有椅子的功能;若要写字时,它可成为桌子。
 </p>
 </div>
 </div>
@@ -2114,18 +2159,18 @@ Odin Holland (www.odin.nl) 在欧洲各国进出口蔬菜水果,运往蔬菜商�
 <h6 id="orgheadline178"><span class="section-number-6">2.1.3.2.3</span> 诠释设计的形态</h6>
 <div class="outline-text-6" id="text-2-1-3-2-3">
 <p>
-诠释功能由“形”完成。研究形态的意义不停在“物”的层面,把视点置于“事”的层面,通过形态传递信息,受信者(用户)在形态信息引导下,正确使用产品。使用者能否按信息编制者(设计者)意图作出反应,取决于设计者对形态语言的运用和把握。形态语言不仅要传达“这是什么、能做什么”等产品属性信息,还要让人明白“怎么做、不能怎么做、只能这样、不能那样、除了这样、还能那样”等。
+　　诠释功能由“形”完成。研究形态的意义不停在“物”的层面,把视点置于“事”的层面,通过形态传递信息,受信者(用户)在形态信息引导下,正确使用产品。使用者能否按信息编制者(设计者)意图作出反应,取决于设计者对形态语言的运用和把握。形态语言不仅要传达“这是什么、能做什么”等产品属性信息,还要让人明白“怎么做、不能怎么做、只能这样、不能那样、除了这样、还能那样”等。
 </p>
 
 <p>
-形态是利用人特有的感知力,通过类比、隐喻、象征等手法描述产品及与产品相关事物。产品形态表现事物方法如下:
+　　形态是利用人特有的感知力,通过类比、隐喻、象征等手法描述产品及与产品相关事物。产品形态表现事物方法如下:
 </p>
 </div>
 <div id="outline-container-orgheadline173" class="outline-7">
 <h7 id="orgheadline173"><span class="section-number-7">2.1.3.2.3.1</span> 形态与识别/表明属性</h7>
 <div class="outline-text-7" id="text-2-1-3-2-3-1">
 <p>
-通过产品自身解说力,判断出产品属性。如自行车与摩托车。
+　　通过产品自身解说力,判断出产品属性。如自行车与摩托车。
 </p>
 </div>
 </div>
@@ -2156,7 +2201,7 @@ Odin Holland (www.odin.nl) 在欧洲各国进出口蔬菜水果,运往蔬菜商�
 <h7 id="orgheadline176"><span class="section-number-7">2.1.3.2.3.4</span> 形态与环境/适应环境</h7>
 <div class="outline-text-7" id="text-2-1-3-2-3-4">
 <p>
-产品处于具体环境,如建筑空间里,或自然环境中,也可能与其它产品同在一处,这些都与产品形态之间存在相互影响,包括尺度、材质等。
+　　产品处于具体环境,如建筑空间里,或自然环境中,也可能与其它产品同在一处,这些都与产品形态之间存在相互影响,包括尺度、材质等。
 </p>
 </div>
 </div>
@@ -2165,7 +2210,7 @@ Odin Holland (www.odin.nl) 在欧洲各国进出口蔬菜水果,运往蔬菜商�
 <h7 id="orgheadline177"><span class="section-number-7">2.1.3.2.3.5</span> 形态与记忆/满足心理需求</h7>
 <div class="outline-text-7" id="text-2-1-3-2-3-5">
 <p>
-如何使产品具有魅力,形态是关键,不一定崭新的形态语言才会产生魅力。若能让人从形态中读出记忆中所熟悉而喜爱的信息,也能使人在对往事回顾中产生亲切感。
+　　如何使产品具有魅力,形态是关键,不一定崭新的形态语言才会产生魅力。若能让人从形态中读出记忆中所熟悉而喜爱的信息,也能使人在对往事回顾中产生亲切感。
 </p>
 </div>
 </div>
@@ -2191,11 +2236,11 @@ Odin Holland (www.odin.nl) 在欧洲各国进出口蔬菜水果,运往蔬菜商�
 <h6 id="orgheadline181"><span class="section-number-6">2.1.3.4.1</span> 分割</h6>
 <div class="outline-text-6" id="text-2-1-3-4-1">
 <p>
-在母形基础上分割出一个或多个子形
+　　在母形基础上分割出一个或多个子形
 </p>
 
 <p>
-分割事项:
+　　分割事项:
 </p>
 <ul class="org-ul">
 <li>分割比例适宜(如黄金分割比)</li>
@@ -2210,7 +2255,7 @@ Odin Holland (www.odin.nl) 在欧洲各国进出口蔬菜水果,运往蔬菜商�
 <h6 id="orgheadline182"><span class="section-number-6">2.1.3.4.2</span> 切削</h6>
 <div class="outline-text-6" id="text-2-1-3-4-2">
 <p>
-通过一到多个不同大小,不同位置的局部切割,产生造型变化。
+　　通过一到多个不同大小,不同位置的局部切割,产生造型变化。
 </p>
 </div>
 </div>
@@ -2219,7 +2264,7 @@ Odin Holland (www.odin.nl) 在欧洲各国进出口蔬菜水果,运往蔬菜商�
 <h6 id="orgheadline183"><span class="section-number-6">2.1.3.4.3</span> 聚集</h6>
 <div class="outline-text-6" id="text-2-1-3-4-3">
 <p>
-将多个单体经大小、位置、数量、方向等变化,采用渐变、发射、特异等排列方式产生新的造型。
+　　将多个单体经大小、位置、数量、方向等变化,采用渐变、发射、特异等排列方式产生新的造型。
 </p>
 </div>
 </div>
@@ -2246,18 +2291,18 @@ Odin Holland (www.odin.nl) 在欧洲各国进出口蔬菜水果,运往蔬菜商�
 <h5 id="orgheadline198"><span class="section-number-5">2.1.3.5</span> 形态的表现</h5>
 <div class="outline-text-5" id="text-2-1-3-5">
 <p>
-产品形态不仅具有“物”和“事”的层面意义,还包括精神、文化及时代背景层面意义。
+　　产品形态不仅具有“物”和“事”的层面意义,还包括精神、文化及时代背景层面意义。
 </p>
 </div>
 <div id="outline-container-orgheadline190" class="outline-6">
 <h6 id="orgheadline190"><span class="section-number-6">2.1.3.5.1</span> 功能主义形态表现</h6>
 <div class="outline-text-6" id="text-2-1-3-5-1">
 <p>
-20世纪30年代前后,在美国,为使经济危机下的产品打开局面,使用流线形设计,成了速度、效率等新时代的象征;在德国,人们对产量和质量的双重需求推进统一化、规格化的量产方式;英国也开始规格化、合理化等功能主义设计实践。
+　　20世纪30年代前后,在美国,为使经济危机下的产品打开局面,使用流线形设计,成了速度、效率等新时代的象征;在德国,人们对产量和质量的双重需求推进统一化、规格化的量产方式;英国也开始规格化、合理化等功能主义设计实践。
 </p>
 
 <p>
-形式服从功能,强调以科学、客观分析为基础,提高产品效率及经济性;反对无理性根据的形式,反对传统样式及装饰,提倡创新。形成特有设计语汇,即净化了的几何形态。这虽然符合工业化生产要求,但简洁单纯的几何形态作为抽象功能在材料、结构上的体现,有时不能完全呈现功能多样化产品的目的性。批量生产条件下的简约化或标准化一定程度上难于满足消费市场多元化、多层次要求。
+　　形式服从功能,强调以科学、客观分析为基础,提高产品效率及经济性;反对无理性根据的形式,反对传统样式及装饰,提倡创新。形成特有设计语汇,即净化了的几何形态。这虽然符合工业化生产要求,但简洁单纯的几何形态作为抽象功能在材料、结构上的体现,有时不能完全呈现功能多样化产品的目的性。批量生产条件下的简约化或标准化一定程度上难于满足消费市场多元化、多层次要求。
 </p>
 </div>
 </div>
@@ -2277,7 +2322,7 @@ Odin Holland (www.odin.nl) 在欧洲各国进出口蔬菜水果,运往蔬菜商�
 <h7 id="orgheadline191"><span class="section-number-7">2.1.3.5.2.1</span> 联想形态</h7>
 <div class="outline-text-7" id="text-2-1-3-5-2-1">
 <p>
-为加强形态说服力和感染力,采用自然物或人造物形态特征,产生联想作用;或把握产品功能和特性,与某种自然物或人造物形态联系起来,使产品形态具有某种象征意义。
+　　为加强形态说服力和感染力,采用自然物或人造物形态特征,产生联想作用;或把握产品功能和特性,与某种自然物或人造物形态联系起来,使产品形态具有某种象征意义。
 </p>
 </div>
 </div>
@@ -2286,7 +2331,7 @@ Odin Holland (www.odin.nl) 在欧洲各国进出口蔬菜水果,运往蔬菜商�
 <h7 id="orgheadline192"><span class="section-number-7">2.1.3.5.2.2</span> 引用形态</h7>
 <div class="outline-text-7" id="text-2-1-3-5-2-2">
 <p>
-产品各部分形的处理引用过去产品的元素。在内部机构不变情况下,别具一格的外壳,成为新的卖点。寻求历史文脉将过去的形态重新组合,怀旧感的产品。
+　　产品各部分形的处理引用过去产品的元素。在内部机构不变情况下,别具一格的外壳,成为新的卖点。寻求历史文脉将过去的形态重新组合,怀旧感的产品。
 </p>
 </div>
 </div>
@@ -2295,11 +2340,11 @@ Odin Holland (www.odin.nl) 在欧洲各国进出口蔬菜水果,运往蔬菜商�
 <h7 id="orgheadline193"><span class="section-number-7">2.1.3.5.2.3</span> 象征形态</h7>
 <div class="outline-text-7" id="text-2-1-3-5-2-3">
 <p>
-基于某个具体形态进行类比暗示及联想。“象征物与被象征物之间的共同点并非外形,而是功能"。小孩看见竹马(骑在胯下的竹竿)时,便会认为这就是马。这时的“马"是意想中的概念。竹杆成了功能替代物。尽管模仿物和被模仿物在外形上已经分离,但其功能却是共有的(马和竹马都是骑在胯下向前奔走。功能成为形的媒介,通过联系构成象征形态。
+　　基于某个具体形态进行类比暗示及联想。“象征物与被象征物之间的共同点并非外形,而是功能"。小孩看见竹马(骑在胯下的竹竿)时,便会认为这就是马。这时的“马"是意想中的概念。竹杆成了功能替代物。尽管模仿物和被模仿物在外形上已经分离,但其功能却是共有的(马和竹马都是骑在胯下向前奔走。功能成为形的媒介,通过联系构成象征形态。
 </p>
 
 <p>
-产品形态的象征作用,逐步从以视觉为中心扩大到综合听觉、触觉等知觉领域。
+　　产品形态的象征作用,逐步从以视觉为中心扩大到综合听觉、触觉等知觉领域。
 </p>
 </div>
 </div>
@@ -2308,7 +2353,7 @@ Odin Holland (www.odin.nl) 在欧洲各国进出口蔬菜水果,运往蔬菜商�
 <h7 id="orgheadline194"><span class="section-number-7">2.1.3.5.2.4</span> 触感形态</h7>
 <div class="outline-text-7" id="text-2-1-3-5-2-4">
 <p>
-曲面形态变化。如照相机、电话、汽车等以复杂曲面构成,变无机性为有机性,或在形的某部分体现人体的一部分或触摸的痕迹。通过柔性生产在形的表现上有较大自由度,可创造多变的产品形象。
+　　曲面形态变化。如照相机、电话、汽车等以复杂曲面构成,变无机性为有机性,或在形的某部分体现人体的一部分或触摸的痕迹。通过柔性生产在形的表现上有较大自由度,可创造多变的产品形象。
 </p>
 </div>
 </div>
@@ -2317,7 +2362,7 @@ Odin Holland (www.odin.nl) 在欧洲各国进出口蔬菜水果,运往蔬菜商�
 <h7 id="orgheadline195"><span class="section-number-7">2.1.3.5.2.5</span> 新古典主义和新功能主义</h7>
 <div class="outline-text-7" id="text-2-1-3-5-2-5">
 <p>
-立体几何形式,表现为机械的、无意识感觉,被看作古典主义风格或功能主义&#x2013;新古典主义和新功能主义。或暴露机件,或以几何体构形,且惯用几何圆形和弧形。
+　　立体几何形式,表现为机械的、无意识感觉,被看作古典主义风格或功能主义&#x2013;新古典主义和新功能主义。或暴露机件,或以几何体构形,且惯用几何圆形和弧形。
 </p>
 </div>
 </div>
@@ -2326,7 +2371,7 @@ Odin Holland (www.odin.nl) 在欧洲各国进出口蔬菜水果,运往蔬菜商�
 <h7 id="orgheadline196"><span class="section-number-7">2.1.3.5.2.6</span> 无根源形态</h7>
 <div class="outline-text-7" id="text-2-1-3-5-2-6">
 <p>
-无根源形态只出于功能需要,以最基本的几何形体进行产品“包装",并在表面印上指示说明文字和图形。
+　　无根源形态只出于功能需要,以最基本的几何形体进行产品“包装",并在表面印上指示说明文字和图形。
 </p>
 </div>
 </div>
@@ -2338,14 +2383,14 @@ Odin Holland (www.odin.nl) 在欧洲各国进出口蔬菜水果,运往蔬菜商�
 <h4 id="orgheadline210"><span class="section-number-4">2.1.4</span> 材料要素</h4>
 <div class="outline-text-4" id="text-2-1-4">
 <p>
-物质基础(石材与木材 -&gt; 金属 -&gt; 塑料 -&gt; 合金及生物材料)。产品设计需考虑材料选择是否满足产品功能。从石器时代的粗糙石器到信息时代的谷歌眼镜,产品设计经历了一个改造和提升人们存在方式和使用方式的过程。
+　　物质基础(石材与木材 -&gt; 金属 -&gt; 塑料 -&gt; 合金及生物材料)。产品设计需考虑材料选择是否满足产品功能。从石器时代的粗糙石器到信息时代的谷歌眼镜,产品设计经历了一个改造和提升人们存在方式和使用方式的过程。
 </p>
 </div>
 <div id="outline-container-orgheadline200" class="outline-5">
 <h5 id="orgheadline200"><span class="section-number-5">2.1.4.1</span> 材料学与新技术</h5>
 <div class="outline-text-5" id="text-2-1-4-1">
 <p>
-材料学是研究材料组成、结构、工艺、性质和使用性能之间相互关系的学科,为材料设计、制造、工艺优化和合理使用提供科学依据。新技术新发现能够带来材料的革新, 注重材料类别的交叉性和综合性,为设计发展提供更多可能与方向(潘顿1970用发泡塑料技术设计船体内部空间)
+　　材料学是研究材料组成、结构、工艺、性质和使用性能之间相互关系的学科,为材料设计、制造、工艺优化和合理使用提供科学依据。新技术新发现能够带来材料的革新, 注重材料类别的交叉性和综合性,为设计发展提供更多可能与方向(潘顿1970用发泡塑料技术设计船体内部空间)
 </p>
 </div>
 </div>
@@ -2354,11 +2399,11 @@ Odin Holland (www.odin.nl) 在欧洲各国进出口蔬菜水果,运往蔬菜商�
 <h5 id="orgheadline201"><span class="section-number-5">2.1.4.2</span> 材料处理过程</h5>
 <div class="outline-text-5" id="text-2-1-4-2">
 <p>
-认材-&gt; 选材-&gt; 配材-&gt; 理材-&gt; 用材
+　　认材-&gt; 选材-&gt; 配材-&gt; 理材-&gt; 用材
 </p>
 
 <p>
-材料选择需考虑材料对产品性能和寿命的影响,符合人机要求,环保及心理需求(iMac半透明机壳)
+　　材料选择需考虑材料对产品性能和寿命的影响,符合人机要求,环保及心理需求(iMac半透明机壳)
 </p>
 </div>
 </div>
@@ -2370,7 +2415,7 @@ Odin Holland (www.odin.nl) 在欧洲各国进出口蔬菜水果,运往蔬菜商�
 <h6 id="orgheadline202"><span class="section-number-6">2.1.4.3.1</span> 材料性能</h6>
 <div class="outline-text-6" id="text-2-1-4-3-1">
 <p>
-强度、刚度、稳定性、平衡性、疲劳特性和抗冲击性
+　　强度、刚度、稳定性、平衡性、疲劳特性和抗冲击性
 </p>
 </div>
 </div>
@@ -2420,7 +2465,7 @@ Odin Holland (www.odin.nl) 在欧洲各国进出口蔬菜水果,运往蔬菜商�
 <h6 id="orgheadline207"><span class="section-number-6">2.1.4.4.2</span> 材料的视觉特性</h6>
 <div class="outline-text-6" id="text-2-1-4-4-2">
 <p>
-材料表面的色泽、肌理、面积都会影响材料的视觉感受
+　　材料表面的色泽、肌理、面积都会影响材料的视觉感受
 </p>
 </div>
 </div>
@@ -2429,7 +2474,7 @@ Odin Holland (www.odin.nl) 在欧洲各国进出口蔬菜水果,运往蔬菜商�
 <h6 id="orgheadline208"><span class="section-number-6">2.1.4.4.3</span> 材料的听觉特性</h6>
 <div class="outline-text-6" id="text-2-1-4-4-3">
 <p>
-不同材料通过敲击和振动产生不同的音效感受
+　　不同材料通过敲击和振动产生不同的音效感受
 </p>
 </div>
 </div>
@@ -2440,22 +2485,22 @@ Odin Holland (www.odin.nl) 在欧洲各国进出口蔬菜水果,运往蔬菜商�
 <h4 id="orgheadline227"><span class="section-number-4">2.1.5</span> 色彩要素</h4>
 <div class="outline-text-4" id="text-2-1-5">
 <p>
-色彩是由物体发射、反射的光通过视觉产生印象的颜色集合。色彩随人们情感不同和认知差异而变化。
+　　　　色彩是由物体发射、反射的光通过视觉产生印象的颜色集合。色彩随人们情感不同和认知差异而变化。
 </p>
 
 <p>
-色彩应与产品造型相符。对同质化产品,可用色彩特质加大与其他同类产品间的不同,创造多样化、个性化和差异化。
+　　　　色彩应与产品造型相符。对同质化产品,可用色彩特质加大与其他同类产品间的不同,创造多样化、个性化和差异化。
 </p>
 </div>
 <div id="outline-container-orgheadline211" class="outline-5">
 <h5 id="orgheadline211"><span class="section-number-5">2.1.5.1</span> 产品色彩意义</h5>
 <div class="outline-text-5" id="text-2-1-5-1">
 <p>
-色彩相对于形态和材质,更趋感性化,色的变化比形(受设计制造、成本的制约)的变化代价小,且较为多样。如:同一款轿车,不同色彩可以造成不同视觉效果。
+　　色彩相对于形态和材质,更趋感性化,色的变化比形(受设计制造、成本的制约)的变化代价小,且较为多样。如:同一款轿车,不同色彩可以造成不同视觉效果。
 </p>
 
 <p>
-GM企业特别成立色彩总体策划部门,根据人们特有的心理意识,以色彩区别不同车型,使它的产品与“清一黑”的T型福特轿车形成鲜明对照。按市场规律,一旦轿车的低价位高产量状况趋于稳定,人们开始产生各种感性需求。GM把握这一点,推出具有舒适性、安全性、追求卓越的形和色的K型轿车,在竞争中胜出。
+　　GM企业特别成立色彩总体策划部门,根据人们特有的心理意识,以色彩区别不同车型,使它的产品与“清一黑”的T型福特轿车形成鲜明对照。按市场规律,一旦轿车的低价位高产量状况趋于稳定,人们开始产生各种感性需求。GM把握这一点,推出具有舒适性、安全性、追求卓越的形和色的K型轿车,在竞争中胜出。
 </p>
 </div>
 </div>
@@ -2467,7 +2512,7 @@ GM企业特别成立色彩总体策划部门,根据人们特有的心理意识,�
 <h6 id="orgheadline214"><span class="section-number-6">2.1.5.2.1</span> 色彩与功能</h6>
 <div class="outline-text-6" id="text-2-1-5-2-1">
 <p>
-色彩同形态一样具有类语言功能,能传达语意。利用约定俗成的习惯,通过色彩产生联想。或利用色彩符号暗示功能,传达意图。色彩不仅表示单个商品特性,也反映商品群体形象及企业形象和理念。
+　　色彩同形态一样具有类语言功能,能传达语意。利用约定俗成的习惯,通过色彩产生联想。或利用色彩符号暗示功能,传达意图。色彩不仅表示单个商品特性,也反映商品群体形象及企业形象和理念。
 </p>
 </div>
 <div id="outline-container-orgheadline212" class="outline-7">
@@ -2537,7 +2582,7 @@ GM企业特别成立色彩总体策划部门,根据人们特有的心理意识,�
 <h5 id="orgheadline222"><span class="section-number-5">2.1.5.3</span> 色彩计划</h5>
 <div class="outline-text-5" id="text-2-1-5-3">
 <p>
-通过对产品设计需求和营销策略分析,以配色原理、色彩学理论为基础制定色彩使用计划,考虑用户认知与心理需求。
+　　通过对产品设计需求和营销策略分析,以配色原理、色彩学理论为基础制定色彩使用计划,考虑用户认知与心理需求。
 </p>
 </div>
 <div id="outline-container-orgheadline220" class="outline-6">
@@ -2570,7 +2615,7 @@ GM企业特别成立色彩总体策划部门,根据人们特有的心理意识,�
 <h5 id="orgheadline226"><span class="section-number-5">2.1.5.4</span> 色彩管理</h5>
 <div class="outline-text-5" id="text-2-1-5-4">
 <p>
-从企业总体目标出发,在从产品计划、设计到营销、服务等企业活动所有环节中,以理性、定量化方法对所用色彩的色相、明度、辉度进行统一控制和管理。
+　　从企业总体目标出发,在从产品计划、设计到营销、服务等企业活动所有环节中,以理性、定量化方法对所用色彩的色相、明度、辉度进行统一控制和管理。
 </p>
 </div>
 <div id="outline-container-orgheadline223" class="outline-6">
@@ -2583,7 +2628,7 @@ GM企业特别成立色彩总体策划部门,根据人们特有的心理意识,�
 </ul>
 
 <p>
-设计师须与表面色彩技术处理部门联系,通过原材料供应商或生产厂家提供的色标选定产品色彩。
+　　设计师须与表面色彩技术处理部门联系,通过原材料供应商或生产厂家提供的色标选定产品色彩。
 </p>
 </div>
 </div>
@@ -2616,18 +2661,18 @@ GM企业特别成立色彩总体策划部门,根据人们特有的心理意识,�
 <h4 id="orgheadline232"><span class="section-number-4">2.1.6</span> 人因要素</h4>
 <div class="outline-text-4" id="text-2-1-6">
 <p>
-为实现产品与人的匹配,在设计中须考虑有关人的因素。包括人类工程学要素、心理学要素和社会学要素及审美要素等。产品从完成设计最终到达消费者手中,需各专业人员协作完成。
+　　为实现产品与人的匹配,在设计中须考虑有关人的因素。包括人类工程学要素、心理学要素和社会学要素及审美要素等。产品从完成设计最终到达消费者手中,需各专业人员协作完成。
 </p>
 </div>
 <div id="outline-container-orgheadline228" class="outline-5">
 <h5 id="orgheadline228"><span class="section-number-5">2.1.6.1</span> 生产者</h5>
 <div class="outline-text-5" id="text-2-1-6-1">
 <p>
-生产者的工作效率和质量关系到产品成败。设计是影响效率和质量的前提条件。如在设计时充分老虑生产线与装配流程,及工艺特点和生产管理方式,最大限度与之相适应。同时考虑人的操作特点,尽可能减少装配部件和装配工序,优化装配方法,降低组装难度等。这样既节省时间,又提高质量。产品在生产过程中的储运方式也应重视。
+　　生产者的工作效率和质量关系到产品成败。设计是影响效率和质量的前提条件。如在设计时充分老虑生产线与装配流程,及工艺特点和生产管理方式,最大限度与之相适应。同时考虑人的操作特点,尽可能减少装配部件和装配工序,优化装配方法,降低组装难度等。这样既节省时间,又提高质量。产品在生产过程中的储运方式也应重视。
 </p>
 
 <p>
-案例:某企业空调生产线最后程序由人工对两个不同型号机型分别进行包装封箱,两个机型仅在某个局部有细微差别,包装箱几乎一样,只有箱体下角的F-1和E-1字样区别,经常造成机型与包装箱不符的错装。
+　　案例:某企业空调生产线最后程序由人工对两个不同型号机型分别进行包装封箱,两个机型仅在某个局部有细微差别,包装箱几乎一样,只有箱体下角的F-1和E-1字样区别,经常造成机型与包装箱不符的错装。
 </p>
 </div>
 </div>
@@ -2636,7 +2681,7 @@ GM企业特别成立色彩总体策划部门,根据人们特有的心理意识,�
 <h5 id="orgheadline229"><span class="section-number-5">2.1.6.2</span> 营销者</h5>
 <div class="outline-text-5" id="text-2-1-6-2">
 <p>
-销售人员的能动性至关重要。设计时须根据营销活动特点考虑产品与营销者的匹配。如销售时的陈列方式,广告部门根据产品特点进行视觉设计。若产品在设计阶段就考虑产品展示性,有利于促销时的二度创造及不同条件下的促销行为(如现场演示,适应各种卖场包括百货店或超市等不同展示陈列环境)。设计也应考虑产品销售过程中的送货、安装等服务,包括移动、运输、仓储、商品分类等。
+　　销售人员的能动性至关重要。设计时须根据营销活动特点考虑产品与营销者的匹配。如销售时的陈列方式,广告部门根据产品特点进行视觉设计。若产品在设计阶段就考虑产品展示性,有利于促销时的二度创造及不同条件下的促销行为(如现场演示,适应各种卖场包括百货店或超市等不同展示陈列环境)。设计也应考虑产品销售过程中的送货、安装等服务,包括移动、运输、仓储、商品分类等。
 </p>
 </div>
 </div>
@@ -2645,12 +2690,18 @@ GM企业特别成立色彩总体策划部门,根据人们特有的心理意识,�
 <h5 id="orgheadline230"><span class="section-number-5">2.1.6.3</span> 使用者</h5>
 <div class="outline-text-5" id="text-2-1-6-3">
 <p>
-产品效能只有通过人的使用才能发挥,而人能否正确、有效地使用产品取决于产品本身是否匹配人的身心。
+　　产品效能只有通过人的使用才能发挥,而人能否正确、有效地使用产品取决于产品本身是否匹配人的身心。
 </p>
 
 <p>
-人类工程学是对人的生物特性的研究(基础),以及人与产品、环境等关系合理化的研究(应用)。
+　　人类工程学是对人的生物特性的研究(基础),以及人与产品、环境等关系合理化的研究(应用)。
 </p>
+
+
+<div class="figure">
+<p><img src="img/Ergonomic_Diagram_Chair.png" alt="Ergonomic_Diagram_Chair.png" />
+</p>
+</div>
 </div>
 </div>
 
@@ -2658,7 +2709,7 @@ GM企业特别成立色彩总体策划部门,根据人们特有的心理意识,�
 <h5 id="orgheadline231"><span class="section-number-5">2.1.6.4</span> 回收者</h5>
 <div class="outline-text-5" id="text-2-1-6-4">
 <p>
-产品更新周期日益缩短,应使废旧产品继续产生价值,如整体回收和拆解回收。
+　　产品更新周期日益缩短,应使废旧产品继续产生价值,如整体回收和拆解回收。
 </p>
 
 <ul class="org-ul">
@@ -2676,7 +2727,7 @@ GM企业特别成立色彩总体策划部门,根据人们特有的心理意识,�
 <h4 id="orgheadline237"><span class="section-number-4">2.1.7</span> 环境要素</h4>
 <div class="outline-text-4" id="text-2-1-7">
 <p>
-将环境要素作为产品设计、开发、生产过程中的评价指标不仅是可持续发展的需要,也关系到每个产品生产者、使用者的实际利益。即重视产品与环境的关系,环境与人的关系。考虑环境要素的绿色设计是面向产品全生命周期的设计,以解决产品在生命循环的每个环节造成的环境问题。
+　　将环境要素作为产品设计、开发、生产过程中的评价指标不仅是可持续发展的需要,也关系到每个产品生产者、使用者的实际利益。即重视产品与环境的关系,环境与人的关系。考虑环境要素的绿色设计是面向产品全生命周期的设计,以解决产品在生命循环的每个环节造成的环境问题。
 </p>
 </div>
 <div id="outline-container-orgheadline235" class="outline-5">
@@ -2686,8 +2737,14 @@ GM企业特别成立色彩总体策划部门,根据人们特有的心理意识,�
 <h6 id="orgheadline233"><span class="section-number-6">2.1.7.1.1</span> 商业产品生命周期</h6>
 <div class="outline-text-6" id="text-2-1-7-1-1">
 <p>
-从市场营销角度看,新产品投入市场到退出市场的生命周期分4阶段:引入期、成长期、成熟期、衰退期。
+　　从市场营销角度看,新产品投入市场到退出市场的生命周期分4阶段:引入期、成长期、成熟期、衰退期。
 </p>
+
+
+<div class="figure">
+<p><img src="img/product-life-cycle.jpg" alt="product-life-cycle.jpg" />
+</p>
+</div>
 </div>
 </div>
 
@@ -2695,7 +2752,7 @@ GM企业特别成立色彩总体策划部门,根据人们特有的心理意识,�
 <h6 id="orgheadline234"><span class="section-number-6">2.1.7.1.2</span> 绿色设计产品生命周期</h6>
 <div class="outline-text-6" id="text-2-1-7-1-2">
 <p>
-绿色产品生命周期从原材料加工、产品生产制造装配、包装运输、销售使用,到回收重新利用全过程:
+　　绿色产品生命周期从原材料加工、产品生产制造装配、包装运输、销售使用,到回收重新利用全过程:
 </p>
 
 <ul class="org-ul">
@@ -2707,8 +2764,14 @@ GM企业特别成立色彩总体策划部门,根据人们特有的心理意识,�
 </ul>
 
 <p>
-产品生命周期各阶段都会有物料输入和输出,有些进入人为循环再利用,有些则进入自然循环,可能造成环境生态问题。
+　　产品生命周期各阶段都会有物料输入和输出,有些进入人为循环再利用,有些则进入自然循环,可能造成环境生态问题。
 </p>
+
+
+<div class="figure">
+<p><img src="img/epa_smm.jpg" alt="epa_smm.jpg" width="600px" />
+</p>
+</div>
 </div>
 </div>
 </div>
@@ -2732,7 +2795,7 @@ GM企业特别成立色彩总体策划部门,根据人们特有的心理意识,�
 <h3 id="orgheadline256"><span class="section-number-3">2.2</span> 系统设计外部要素</h3>
 <div class="outline-text-3" id="text-2-2">
 <p>
-与社会、经济、技术、时间、空间、用户等要素之间的相互关系及影响
+　　与社会、经济、技术、时间、空间、用户等要素之间的相互关系及影响
 </p>
 </div>
 <div id="outline-container-orgheadline242" class="outline-4">
@@ -2742,11 +2805,11 @@ GM企业特别成立色彩总体策划部门,根据人们特有的心理意识,�
 <h5 id="orgheadline239"><span class="section-number-5">2.2.1.1</span> 社会要素</h5>
 <div class="outline-text-5" id="text-2-2-1-1">
 <p>
-社会生活和文化中相互作用的因素。设计与社会状态匹配,并促进社会发展。如为非洲设计的低成本炉灶 Baker Cookstove 减少煮食时的热量浪费和有害烟雾排放。Motorola Talkabout 对讲机解决父母对孩子的监护问题,并维持家人和孩子的良好关系。
+　　社会生活和文化中相互作用的因素。设计与社会状态匹配,并促进社会发展。如为非洲设计的低成本炉灶 Baker Cookstove 减少煮食时的热量浪费和有害烟雾排放。Motorola Talkabout 对讲机解决父母对孩子的监护问题,并维持家人和孩子的良好关系。
 </p>
 
 <p>
-社会、经济和技术因素的改变会创造出新的趋势和产品机会缺口。
+　　社会、经济和技术因素的改变会创造出新的趋势和产品机会缺口。
 </p>
 </div>
 </div>
@@ -2755,7 +2818,7 @@ GM企业特别成立色彩总体策划部门,根据人们特有的心理意识,�
 <h5 id="orgheadline240"><span class="section-number-5">2.2.1.2</span> 经济要素</h5>
 <div class="outline-text-5" id="text-2-2-1-2">
 <p>
-经济发展状况、经济结构、居民收入和消费者结构等会影响人们的消费观念。产品合理的性价比、成本控制和营销方式在提高销量使更多消费者受益的同时,企业也能盈利,并促成经济整体发展。
+　　经济发展状况、经济结构、居民收入和消费者结构等会影响人们的消费观念。产品合理的性价比、成本控制和营销方式在提高销量使更多消费者受益的同时,企业也能盈利,并促成经济整体发展。
 </p>
 </div>
 </div>
@@ -2764,7 +2827,7 @@ GM企业特别成立色彩总体策划部门,根据人们特有的心理意识,�
 <h5 id="orgheadline241"><span class="section-number-5">2.2.1.3</span> 技术要素</h5>
 <div class="outline-text-5" id="text-2-2-1-3">
 <p>
-对新技术和科研成果及其潜在价值的直接或间接应用。如新材料、新工艺、电子信息技术、生物技术等。蒸汽机引发工业革命,计算机助力信息产业,包括交互产品设计和服务产品设计与信息技术密切相关。
+　　对新技术和科研成果及其潜在价值的直接或间接应用。如新材料、新工艺、电子信息技术、生物技术等。蒸汽机引发工业革命,计算机助力信息产业,包括交互产品设计和服务产品设计与信息技术密切相关。
 </p>
 </div>
 </div>
@@ -2793,8 +2856,14 @@ GM企业特别成立色彩总体策划部门,根据人们特有的心理意识,�
 <h6 id="orgheadline244"><span class="section-number-6">2.2.2.1.2</span> 敏捷开发</h6>
 <div class="outline-text-6" id="text-2-2-2-1-2">
 <p>
-敏捷开发应对产品迭代周期缩短趋势。
+　　敏捷开发应对产品迭代周期缩短趋势。
 </p>
+
+
+<div class="figure">
+<p><img src="img/Agile-development-methodology.png" alt="Agile-development-methodology.png" />
+</p>
+</div>
 </div>
 </div>
 </div>
@@ -2811,11 +2880,11 @@ GM企业特别成立色彩总体策划部门,根据人们特有的心理意识,�
 <h5 id="orgheadline248"><span class="section-number-5">2.2.3.1</span> 实空间和虚空间</h5>
 <div class="outline-text-5" id="text-2-2-3-1">
 <p>
-产品所占空间分为实空间和虚空间。实空间指产品本身所占空间;虚空间指不占物体的那部分空间形体,但却参与产品形成。实空间和虚空间是并存的。
+　　产品所占空间分为实空间和虚空间。实空间指产品本身所占空间;虚空间指不占物体的那部分空间形体,但却参与产品形成。实空间和虚空间是并存的。
 </p>
 
 <p>
-以水杯为例:拿起水杯喝水时,就杯子实空间而言,水在杯子外面,但从杯子提供空间来装水而言,水却在杯子里面,杯子提供了储水空间。实空间为杯子的存在提供前提,虚空间为杯子的实用性提供保障。
+　　以水杯为例:拿起水杯喝水时,就杯子实空间而言,水在杯子外面,但从杯子提供空间来装水而言,水却在杯子里面,杯子提供了储水空间。实空间为杯子的存在提供前提,虚空间为杯子的实用性提供保障。
 </p>
 </div>
 </div>
@@ -2824,7 +2893,7 @@ GM企业特别成立色彩总体策划部门,根据人们特有的心理意识,�
 <h5 id="orgheadline249"><span class="section-number-5">2.2.3.2</span> 心理空间</h5>
 <div class="outline-text-5" id="text-2-2-3-2">
 <p>
-心理空间诉诸于人的视觉,不仅限于实体形态印象,同时产生心理联想。
+　　心理空间诉诸于人的视觉,不仅限于实体形态印象,同时产生心理联想。
 </p>
 </div>
 </div>
@@ -2837,14 +2906,14 @@ GM企业特别成立色彩总体策划部门,根据人们特有的心理意识,�
 <h5 id="orgheadline253"><span class="section-number-5">2.2.4.1</span> 直接用户</h5>
 <div class="outline-text-5" id="text-2-2-4-1">
 <p>
-包含使用者和消费者 (经常使用和偶尔使用的用户)
+　　包含使用者和消费者 (经常使用和偶尔使用的用户)
 </p>
 </div>
 <div id="outline-container-orgheadline251" class="outline-6">
 <h6 id="orgheadline251"><span class="section-number-6">2.2.4.1.1</span> 用户体验设计</h6>
 <div class="outline-text-6" id="text-2-2-4-1-1">
 <p>
-与直接用户相关,核心在于带给用户价值感和愉悦度,而不仅是系统的实用功能和可靠性能。
+　　与直接用户相关,核心在于带给用户价值感和愉悦度,而不仅是系统的实用功能和可靠性能。
 </p>
 </div>
 </div>
@@ -2859,6 +2928,12 @@ GM企业特别成立色彩总体策划部门,根据人们特有的心理意识,�
 <li>范围层:产品能实现的功能有哪些</li>
 <li>战略层:产品开发的宏观目标</li>
 </ul>
+
+
+<div class="figure">
+<p><img src="img/simple_planes.png" alt="simple_planes.png" />
+</p>
+</div>
 </div>
 </div>
 </div>
@@ -2867,7 +2942,7 @@ GM企业特别成立色彩总体策划部门,根据人们特有的心理意识,�
 <h5 id="orgheadline254"><span class="section-number-5">2.2.4.2</span> 间接用户</h5>
 <div class="outline-text-5" id="text-2-2-4-2">
 <p>
-包括产品开发人员、管理人员、营销人员、后期维修人员等。
+　　包括产品开发人员、管理人员、营销人员、后期维修人员等。
 </p>
 </div>
 </div>
@@ -2877,7 +2952,7 @@ GM企业特别成立色彩总体策划部门,根据人们特有的心理意识,�
 <h3 id="orgheadline257"><span class="section-number-3">2.3</span> 思考题</h3>
 <div class="outline-text-3" id="text-2-3">
 <p>
-选择一个或一类产品,列举其内部要素和外部要素的特点及作用,并阐明各要素之间的联系;然后与相关产品比较分析,找出产品缺口(即新产品的开发定位)。
+　　选择一个或一类产品,列举其内部要素和外部要素的特点及作用,并阐明各要素之间的联系;然后与相关产品比较分析,找出产品缺口(即新产品的开发定位)。
 </p>
 
 <ul class="org-ul">
@@ -2912,11 +2987,11 @@ GM企业特别成立色彩总体策划部门,根据人们特有的心理意识,�
 <h4 id="orgheadline259"><span class="section-number-4">3.1.1</span> 设计与创新</h4>
 <div class="outline-text-4" id="text-3-1-1">
 <p>
-设计是把一种计划、规划、设想通过具体形式传达出来的活动过程。
+　　设计是把一种计划、规划、设想通过具体形式传达出来的活动过程。
 </p>
 
 <p>
-创新是以新思维、新发明和新描述为特征的一种概念化过程。
+　　创新是以新思维、新发明和新描述为特征的一种概念化过程。
 </p>
 </div>
 </div>
@@ -2966,14 +3041,20 @@ GM企业特别成立色彩总体策划部门,根据人们特有的心理意识,�
 <h4 id="orgheadline279"><span class="section-number-4">3.2.2</span> 创新设计思维形式</h4>
 <div class="outline-text-4" id="text-3-2-2">
 <p>
-创新设计思维是创造性思维在设计上的延伸和具体化，是思考设计问题，解决设计问题的方式。
+　　创新设计思维是创造性思维在设计上的延伸和具体化，是思考设计问题，解决设计问题的方式。
 </p>
 </div>
 
 <div id="outline-container-orgheadline266" class="outline-5">
 <h5 id="orgheadline266"><span class="section-number-5">3.2.2.1</span> 发散与收敛</h5>
 <div class="outline-text-5" id="text-3-2-2-1">
-</div><div id="outline-container-orgheadline264" class="outline-6">
+
+<div class="figure">
+<p><img src="img/diverge_converge.png" alt="diverge_converge.png" />
+</p>
+</div>
+</div>
+<div id="outline-container-orgheadline264" class="outline-6">
 <h6 id="orgheadline264"><span class="section-number-6">3.2.2.1.1</span> 发散思维</h6>
 <div class="outline-text-6" id="text-3-2-2-1-1">
 <p>
@@ -3009,8 +3090,15 @@ GM企业特别成立色彩总体策划部门,根据人们特有的心理意识,�
 <p>
 　　横向思维是一种共时性的横断思维。具体指思维具有横向发展、宽度发展的特点。横向思维过程中，通过截取历史横面，研究一个事物在不同环境下的发展状况，并将其与周围事物进行比较，得出事物在不同环境中的不同特点，以便深刻了解事物。横向思维善于多角度了解和认识事物，强调宽广的视野。
 </p>
+
+
+<div class="figure">
+<p><img src="img/lateral_thinking.jpg" alt="lateral_thinking.jpg" width="500px" />
+</p>
 </div>
 </div>
+</div>
+
 <div id="outline-container-orgheadline268" class="outline-6">
 <h6 id="orgheadline268"><span class="section-number-6">3.2.2.2.2</span> 纵向思维 (时间)</h6>
 <div class="outline-text-6" id="text-3-2-2-2-2">
@@ -3172,7 +3260,7 @@ The ability to connect previously unconnected ideas.
 <h5 id="orgheadline288"><span class="section-number-5">3.3.2.1</span> 头脑风暴法</h5>
 <div class="outline-text-5" id="text-3-3-2-1">
 <p>
-由一组人员针对问题各抒己见、互相启发、自由讨论，从多角度寻求解决问题。
+　　由一组人员针对问题各抒己见、互相启发、自由讨论，从多角度寻求解决问题。
 </p>
 </div>
 <div id="outline-container-orgheadline286" class="outline-6">
@@ -3242,7 +3330,7 @@ The ability to connect previously unconnected ideas.
 <h6 id="orgheadline292"><span class="section-number-6">3.3.3.1.2</span> 过程</h6>
 <div class="outline-text-6" id="text-3-3-3-1-2">
 <p>
-列举现有事物的特征，发现需要改进的问题，提出新的创造设想。
+　　列举现有事物的特征，发现需要改进的问题，提出新的创造设想。
 </p>
 <ul class="org-ul">
 <li>选择需要改进的对象；</li>
@@ -3389,7 +3477,7 @@ The ability to connect previously unconnected ideas.
 <h5 id="orgheadline310"><span class="section-number-5">3.3.4.3</span> 替代设计</h5>
 <div class="outline-text-5" id="text-3-3-4-3">
 <p>
-用某一事物替代另一事物的设计。
+　　用某一事物替代另一事物的设计。
 </p>
 </div>
 
@@ -3439,7 +3527,7 @@ The ability to connect previously unconnected ideas.
 <h5 id="orgheadline314"><span class="section-number-5">3.3.4.5</span> 专利应用设计</h5>
 <div class="outline-text-5" id="text-3-3-4-5">
 <p>
-利用已有专利或过期专利对其进行改进，产生新的设计方案，形成新的设想甚至取得新的专利。
+　　利用已有专利或过期专利对其进行改进，产生新的设计方案，形成新的设想甚至取得新的专利。
 </p>
 </div>
 <div id="outline-container-orgheadline312" class="outline-6">
@@ -3687,7 +3775,7 @@ The ability to connect previously unconnected ideas.
 <h5 id="orgheadline334"><span class="section-number-5">3.3.5.12</span> NBS法(NHK智力激励法)</h5>
 <div class="outline-text-5" id="text-3-3-5-12">
 <p>
-类似奥斯本智力激励法，但限定与会者提意见的数量，在较短时间（2-3小时）解决问题。程序如下：
+　　类似奥斯本智力激励法，但限定与会者提意见的数量，在较短时间（2-3小时）解决问题。程序如下：
 </p>
 
 <ul class="org-ul">
@@ -3961,7 +4049,7 @@ c. 进行经济预测时，要考虑运动的多变性，预测期不宜过长�
 </p>
 
 <p>
-按表象概括程度分为初级与高级形象思维
+　　按表象概括程度分为初级与高级形象思维
 </p>
 <ul class="org-ul">
 <li>初级：幼儿时期形象思维主要依靠知觉，依赖具体事物形象或表象及其联想，表象概括程度较低；</li>
@@ -4052,7 +4140,7 @@ c. 进行经济预测时，要考虑运动的多变性，预测期不宜过长�
 <h4 id="orgheadline356"><span class="section-number-4">4.1.1</span> 经营方针</h4>
 <div class="outline-text-4" id="text-4-1-1">
 <p>
-苹果公司: “简约、细节、关注环境”
+　　苹果公司: “简约、细节、关注环境”
 </p>
 </div>
 </div>
@@ -4061,13 +4149,162 @@ c. 进行经济预测时，要考虑运动的多变性，预测期不宜过长�
 <h4 id="orgheadline360"><span class="section-number-4">4.1.2</span> 开发体制</h4>
 <div class="outline-text-4" id="text-4-1-2">
 <p>
-企业内部和外部专家之间的协同
+　　企业内部和外部专家之间的协同
 </p>
 </div>
 
 <div id="outline-container-orgheadline357" class="outline-5">
 <h5 id="orgheadline357"><span class="section-number-5">4.1.2.1</span> 项目组构成及分工 (设计开发计划书)</h5>
 <div class="outline-text-5" id="text-4-1-2-1">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">项目部门</th>
+<th scope="col" class="org-left">项目分工</th>
+<th scope="col" class="org-left">期限</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">项目管理</td>
+<td class="org-left">项目组构成</td>
+<td class="org-left">3个月</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">开发范围和开发内容研讨</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">开发进度</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">企划概念</td>
+<td class="org-left">市场调查的范围和调查项目研讨</td>
+<td class="org-left">3个月</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">市场调查的实施和分析</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">调查评价和产品范围、用户目标</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">商品企划确立设计概念</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">造型设计</td>
+<td class="org-left">产品使用环境和使用状态分析</td>
+<td class="org-left">3个月</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">产品系统构成形式分析</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">产品机构和功能研究</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">展开设计（构思草图概念模型）</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">设计评价（效果图，外观模型）</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">样机制作和综合评价</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">工艺设计与投产</td>
+<td class="org-left">工艺设计</td>
+<td class="org-left">3个月</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">量产化、生产技术研讨</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">OEM选择</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">产品化</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">促销</td>
+<td class="org-left">制定促销计划</td>
+<td class="org-left">3个月</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">建立分销点和分销谈判</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">样本广告制作</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">论证会和研讨会</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 
@@ -4141,6 +4378,89 @@ c. 进行经济预测时，要考虑运动的多变性，预测期不宜过长�
 <div id="outline-container-orgheadline359" class="outline-5">
 <h5 id="orgheadline359"><span class="section-number-5">4.1.2.3</span> H产品开发设计流程</h5>
 <div class="outline-text-5" id="text-4-1-2-3">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">部门人员</th>
+<th scope="col" class="org-left">步骤</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">公司内部人员(设计师/用户代表/医学专家)</td>
+<td class="org-left">项目讨论</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">市场调查方法研讨</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">市场调查方法实施</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">市场分析</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">产品概念研讨</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">产品范围设定</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">产品企划结果总结</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">设计事务所/由技术部门</td>
+<td class="org-left">设计概念研讨</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">设计概念设定</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">设计展开</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">生产厂家</td>
+<td class="org-left">设计定案</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">工艺设计</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">促销</td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>
@@ -4179,7 +4499,7 @@ c. 进行经济预测时，要考虑运动的多变性，预测期不宜过长�
 <h5 id="orgheadline363"><span class="section-number-5">4.2.1.2</span> 企划内容</h5>
 <div class="outline-text-5" id="text-4-2-1-2">
 <p>
-新产品开发 (从产生到报废全过程的处理及策划)
+　　新产品开发 (从产生到报废全过程的处理及策划)
 </p>
 <ul class="org-ul">
 <li>核心产品企划</li>
@@ -4231,7 +4551,7 @@ c. 进行经济预测时，要考虑运动的多变性，预测期不宜过长�
 <h7 id="orgheadline366"><span class="section-number-7">4.2.1.3.2.2</span> 被动剔除</h7>
 <div class="outline-text-7" id="text-4-2-1-3-2-2">
 <p>
-销售不畅、盈利降低 
+　　销售不畅、盈利降低 
 </p>
 </div>
 </div>
@@ -4240,7 +4560,7 @@ c. 进行经济预测时，要考虑运动的多变性，预测期不宜过长�
 <h6 id="orgheadline368"><span class="section-number-6">4.2.1.3.3</span> 产品用途创新</h6>
 <div class="outline-text-6" id="text-4-2-1-3-3">
 <p>
-开拓旧产品新用途
+　　开拓旧产品新用途
 </p>
 </div>
 </div>
@@ -4331,7 +4651,7 @@ c. 进行经济预测时，要考虑运动的多变性，预测期不宜过长�
 <h4 id="orgheadline383"><span class="section-number-4">4.2.2</span> 市埸调查与分析</h4>
 <div class="outline-text-4" id="text-4-2-2">
 <p>
-出发点：发现重要需求，找到商品化途径
+　　出发点：发现重要需求，找到商品化途径
 </p>
 </div>
 
@@ -4367,7 +4687,7 @@ c. 进行经济预测时，要考虑运动的多变性，预测期不宜过长�
 <h5 id="orgheadline375"><span class="section-number-5">4.2.2.3</span> 市埸调查协作</h5>
 <div class="outline-text-5" id="text-4-2-2-3">
 <p>
-收集大量产品样品和样本，了解竟争对手产品动向。
+　　收集大量产品样品和样本，了解竟争对手产品动向。
 </p>
 
 <ul class="org-ul">
@@ -4411,7 +4731,7 @@ c. 进行经济预测时，要考虑运动的多变性，预测期不宜过长�
 <h7 id="orgheadline377"><span class="section-number-7">4.2.2.4.1.2</span> H产品消费倾向 (定性分析)</h7>
 <div class="outline-text-7" id="text-4-2-2-4-1-2">
 <p>
-追求健康: 简明 / 自然 / 休闲
+　　追求健康: 简明 / 自然 / 休闲
 </p>
 </div>
 </div>
@@ -4421,7 +4741,7 @@ c. 进行经济预测时，要考虑运动的多变性，预测期不宜过长�
 <h6 id="orgheadline379"><span class="section-number-6">4.2.2.4.2</span> 探测产品需求（产品形象）</h6>
 <div class="outline-text-6" id="text-4-2-2-4-2">
 <p>
-询问消费者对该产品形象期待如何 (明确设计意图)
+　　询问消费者对该产品形象期待如何 (明确设计意图)
 </p>
 
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
@@ -4461,6 +4781,12 @@ c. 进行经济预测时，要考虑运动的多变性，预测期不宜过长�
 <li>主动 (健身器械) &#x2014; 被动 (按摩器、音响)</li>
 <li>有需求而无产品的区域是潜力市场</li>
 </ul>
+
+
+<div class="figure">
+<p><img src="img/uisdc-wn.jpg" alt="uisdc-wn.jpg" width="500px" />
+</p>
+</div>
 </div>
 </div>
 
@@ -4468,7 +4794,7 @@ c. 进行经济预测时，要考虑运动的多变性，预测期不宜过长�
 <h6 id="orgheadline381"><span class="section-number-6">4.2.2.4.4</span> 形成概念框架 (头脑风暴)</h6>
 <div class="outline-text-6" id="text-4-2-2-4-4">
 <p>
-关键词描述 &#x2013; 研讨 &#x2013; 筛选 
+　　关键词描述 &#x2013; 研讨 &#x2013; 筛选 
 </p>
 
 <ul class="org-ul">
@@ -4492,7 +4818,7 @@ c. 进行经济预测时，要考虑运动的多变性，预测期不宜过长�
 <h5 id="orgheadline384"><span class="section-number-5">4.2.3.1</span> 产品构思</h5>
 <div class="outline-text-5" id="text-4-2-3-1">
 <p>
-罗列调查信息，集体讨论 (暂不顾及可行性，尽量提出各种构思)
+　　罗列调查信息，集体讨论 (暂不顾及可行性，尽量提出各种构思)
 </p>
 
 <ul class="org-ul">
@@ -4517,6 +4843,12 @@ c. 进行经济预测时，要考虑运动的多变性，预测期不宜过长�
 <li>与相同位置产品比较是否强势，是否有望扩大市场及技术可行性</li>
 <li>通过评价，产品开发方向趋于定位，如切入空白市场</li>
 </ul>
+
+
+<div class="figure">
+<p><img src="img/brand-vol-vs-def.png" alt="brand-vol-vs-def.png" width="500px" />
+</p>
+</div>
 </div>
 </div>
 
@@ -4572,7 +4904,7 @@ c. 进行经济预测时，要考虑运动的多变性，预测期不宜过长�
 <h5 id="orgheadline391"><span class="section-number-5">4.2.4.2</span> 企划</h5>
 <div class="outline-text-5" id="text-4-2-4-2">
 <p>
-对产品概念、生产方式、产量、流通途径，商品化等条件作出决定。
+　　对产品概念、生产方式、产量、流通途径，商品化等条件作出决定。
 </p>
 </div>
 </div>
@@ -4582,7 +4914,7 @@ c. 进行经济预测时，要考虑运动的多变性，预测期不宜过长�
 <h4 id="orgheadline402"><span class="section-number-4">4.2.5</span> 设计概念</h4>
 <div class="outline-text-4" id="text-4-2-5">
 <p>
-基于特定使用对象或意义，将使用方法、机构、形式、色彩等具体化。
+　　基于特定使用对象或意义，将使用方法、机构、形式、色彩等具体化。
 </p>
 <ul class="org-ul">
 <li>中药汽疗设施</li>
@@ -4668,7 +5000,7 @@ c. 进行经济预测时，要考虑运动的多变性，预测期不宜过长�
 <h5 id="orgheadline400"><span class="section-number-5">4.2.5.2</span> 丰田汽车</h5>
 <div class="outline-text-5" id="text-4-2-5-2">
 <p>
-追求高度的功能性和温馨典雅的乘车体验
+　　追求高度的功能性和温馨典雅的乘车体验
 </p>
 
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
@@ -4850,11 +5182,11 @@ c. 进行经济预测时，要考虑运动的多变性，预测期不宜过长�
 <h5 id="orgheadline403"><span class="section-number-5">4.2.6.1</span> 产品形式 (5W2H)</h5>
 <div class="outline-text-5" id="text-4-2-6-1">
 <p>
-5W2H设定产品化条件，锁定具体产品形象
+　　5W2H设定产品化条件，锁定具体产品形象
 </p>
 
 <p>
-谁(WHO)在什么场所(WHERE)，何时(WHEN)为何(WHY)，干什么(WHAT)，如何使用(HOW)，以什么价格(HOWMUCH)购入。
+　　谁(WHO)在什么场所(WHERE)，何时(WHEN)为何(WHY)，干什么(WHAT)，如何使用(HOW)，以什么价格(HOWMUCH)购入。
 </p>
 
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
@@ -4915,23 +5247,23 @@ c. 进行经济预测时，要考虑运动的多变性，预测期不宜过长�
 <h5 id="orgheadline404"><span class="section-number-5">4.2.6.2</span> 中药汽疗设备形象定位</h5>
 <div class="outline-text-5" id="text-4-2-6-2">
 <p>
-追求身心关怀(WHY)
+　　追求身心关怀(WHY)
 </p>
 
 <p>
-的商务人员(WHO)
+　　的商务人员(WHO)
 </p>
 
 <p>
-可以在下班或体息时(WHEN)
+　　可以在下班或体息时(WHEN)
 </p>
 
 <p>
-轻松(HOW)使用保健设施
+　　轻松(HOW)使用保健设施
 </p>
 
 <p>
-产品价格为1万元左右(HOW MUCH)
+　　产品价格为1万元左右(HOW MUCH)
 </p>
 </div>
 </div>
@@ -5022,6 +5354,126 @@ c. 进行经济预测时，要考虑运动的多变性，预测期不宜过长�
 <li>企划部将产品化概要整理成企划书，征得经营、设计、制造、营销等部门认可</li>
 <li>由设计部完成方案，送各部门评价</li>
 </ul>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">项目</th>
+<th scope="col" class="org-left">类别</th>
+<th scope="col" class="org-left">内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">产品概要</td>
+<td class="org-left">产品概念</td>
+<td class="org-left">使用目的 (用途 / 使用场所 / 产品目标)</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">设计概念</td>
+<td class="org-left">产品形象 / 使用方式</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">形式</td>
+<td class="org-left">材质 / 形状 / 实现功能</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">产量</td>
+<td class="org-left">月产量 / 年产量</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">预想价格</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">交付期</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">模具费</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">市场调查</td>
+<td class="org-left">市场信息</td>
+<td class="org-left">动向 / 需求</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">产品化效果</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">与竞争厂家关系</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">营销者/分销商的希望</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">生产管理</td>
+<td class="org-left">信赖感</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">法规性</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">生产性</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">开发进度</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">开发预算</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 
@@ -5029,8 +5481,115 @@ c. 进行经济预测时，要考虑运动的多变性，预测期不宜过长�
 <h5 id="orgheadline407"><span class="section-number-5">4.2.6.5</span> 产品企划评价</h5>
 <div class="outline-text-5" id="text-4-2-6-5">
 <p>
-为产品化的实现、设计向生产转化及产品市场化等阶段打下基础
+　　为产品化的实现、设计向生产转化及产品市场化等阶段打下基础
 </p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">评价对象</th>
+<th scope="col" class="org-left">评价要素</th>
+<th scope="col" class="org-left">内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">市场</td>
+<td class="org-left">成长性</td>
+<td class="org-left">需求的持续性</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">竞争性</td>
+<td class="org-left">有无竞争对手</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">持续性</td>
+<td class="org-left">产品周期和需求量</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">必要性</td>
+<td class="org-left">有无产品需求</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">技术</td>
+<td class="org-left">难易程度</td>
+<td class="org-left">技术难易度</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">开发时间</td>
+<td class="org-left">开发完成期</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">开发经费</td>
+<td class="org-left">研究开发经费</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">相关技术</td>
+<td class="org-left">与相关技术、相关商品的关系</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">生产</td>
+<td class="org-left">难易程度</td>
+<td class="org-left">生产难易度</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">部件材料比</td>
+<td class="org-left">关系产品价格的部件材料比率</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">设备费</td>
+<td class="org-left">生产设备费</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">流通</td>
+<td class="org-left">难易程度</td>
+<td class="org-left">销售时的难易程序</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">销售途径</td>
+<td class="org-left">原有途径还是新途径</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">销售费用</td>
+<td class="org-left">销售所需经费</td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>
@@ -5051,7 +5610,7 @@ c. 进行经济预测时，要考虑运动的多变性，预测期不宜过长�
 <h4 id="orgheadline410"><span class="section-number-4">4.3.1</span> 造型设计概要</h4>
 <div class="outline-text-4" id="text-4-3-1">
 <p>
-通过产品造型构思 (草图) 完成预想图和概念模型，逐步将产品形象具体化。
+　　通过产品造型构思 (草图) 完成预想图和概念模型，逐步将产品形象具体化。
 </p>
 
 <ul class="org-ul">
@@ -5172,7 +5731,7 @@ c. 进行经济预测时，要考虑运动的多变性，预测期不宜过长�
 <h4 id="orgheadline415"><span class="section-number-4">4.3.4</span> 色彩研究</h4>
 <div class="outline-text-4" id="text-4-3-4">
 <p>
-色彩可改变造型感觉及形成不同心理感受
+　　色彩可改变造型感觉及形成不同心理感受
 </p>
 
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
@@ -5259,7 +5818,7 @@ c. 进行经济预测时，要考虑运动的多变性，预测期不宜过长�
 <h5 id="orgheadline418"><span class="section-number-5">4.3.5.3</span> 以人为本 (D.A-罗曼《为谁而设计》)</h5>
 <div class="outline-text-5" id="text-4-3-5-3">
 <p>
-电子芯片控制可简化操作，但也使过程黑箱化，如因选择复杂造成麻烦或误操作。
+　　电子芯片控制可简化操作，但也使过程黑箱化，如因选择复杂造成麻烦或误操作。
 </p>
 
 <ul class="org-ul">
@@ -5322,7 +5881,7 @@ c. 进行经济预测时，要考虑运动的多变性，预测期不宜过长�
 <h5 id="orgheadline424"><span class="section-number-5">4.4.1.4</span> 面向应用领域的设计评价</h5>
 <div class="outline-text-5" id="text-4-4-1-4">
 <p>
-对设计方案作出可行性分析
+　　对设计方案作出可行性分析
 </p>
 </div>
 </div>
@@ -5335,7 +5894,7 @@ c. 进行经济预测时，要考虑运动的多变性，预测期不宜过长�
 <h5 id="orgheadline426"><span class="section-number-5">4.4.2.1</span> 商业评价</h5>
 <div class="outline-text-5" id="text-4-4-2-1">
 <p>
-以此建立营销计划作为销售起点
+　　以此建立营销计划作为销售起点
 </p>
 <ul class="org-ul">
 <li>是否符合市场需求</li>
@@ -5350,7 +5909,7 @@ c. 进行经济预测时，要考虑运动的多变性，预测期不宜过长�
 <h5 id="orgheadline427"><span class="section-number-5">4.4.2.2</span> 技术评价</h5>
 <div class="outline-text-5" id="text-4-4-2-2">
 <p>
-产品设计直接影响生产和成本
+　　产品设计直接影响生产和成本
 </p>
 <ul class="org-ul">
 <li>设计方案对产品功能和构造产生了多大程度的影响</li>
@@ -5395,7 +5954,7 @@ c. 进行经济预测时，要考虑运动的多变性，预测期不宜过长�
 <h4 id="orgheadline432"><span class="section-number-4">4.4.4</span> 商品化</h4>
 <div class="outline-text-4" id="text-4-4-4">
 <p>
-在设计评价基础上，进行商品化作业研究
+　　在设计评价基础上，进行商品化作业研究
 </p>
 
 <ul class="org-ul">
@@ -5410,7 +5969,7 @@ c. 进行经济预测时，要考虑运动的多变性，预测期不宜过长�
 <h3 id="orgheadline472"><span class="section-number-3">4.5</span> 设计与生产转化</h3>
 <div class="outline-text-3" id="text-4-5">
 <p>
-根据已定方案进行工艺设计和原型制作，寻求合适的制造、组装和表面处理方法，明确需变更的部分。
+　　根据已定方案进行工艺设计和原型制作，寻求合适的制造、组装和表面处理方法，明确需变更的部分。
 </p>
 </div>
 <div id="outline-container-orgheadline437" class="outline-4">
@@ -5453,7 +6012,7 @@ c. 进行经济预测时，要考虑运动的多变性，预测期不宜过长�
 <h4 id="orgheadline443"><span class="section-number-4">4.5.2</span> 结构设计</h4>
 <div class="outline-text-4" id="text-4-5-2">
 <p>
-结构紧凑、外形美观、安全耐用、易于制造
+　　结构紧凑、外形美观、安全耐用、易于制造
 </p>
 </div>
 
@@ -5470,7 +6029,7 @@ c. 进行经济预测时，要考虑运动的多变性，预测期不宜过长�
 <h6 id="orgheadline438"><span class="section-number-6">4.5.2.1.1</span> 模块化设计优势</h6>
 <div class="outline-text-6" id="text-4-5-2-1-1">
 <p>
-不必全新设计，通过不同模块的不同组合开发新产品
+　　不必全新设计，通过不同模块的不同组合开发新产品
 </p>
 <ul class="org-ul">
 <li>减少专用件数量</li>
@@ -5502,7 +6061,7 @@ c. 进行经济预测时，要考虑运动的多变性，预测期不宜过长�
 <h5 id="orgheadline442"><span class="section-number-5">4.5.2.3</span> 可拆卸设计</h5>
 <div class="outline-text-5" id="text-4-5-2-3">
 <p>
-目的：针对回收利用和产品维修来减少资源浪费及废旧产品对环境的污染
+　　目的：针对回收利用和产品维修来减少资源浪费及废旧产品对环境的污染
 </p>
 
 <ul class="org-ul">
@@ -5552,7 +6111,7 @@ c. 进行经济预测时，要考虑运动的多变性，预测期不宜过长�
 <h7 id="orgheadline446"><span class="section-number-7">4.5.3.2.1.2</span> 塑料成型工艺</h7>
 <div class="outline-text-7" id="text-4-5-3-2-1-2">
 <p>
-注塑成型、挤出成型、压制成型、浇注、中空吹塑
+　　注塑成型、挤出成型、压制成型、浇注、中空吹塑
 </p>
 </div>
 </div>
@@ -5561,7 +6120,7 @@ c. 进行经济预测时，要考虑运动的多变性，预测期不宜过长�
 <h7 id="orgheadline447"><span class="section-number-7">4.5.3.2.1.3</span> 表面热处理工艺</h7>
 <div class="outline-text-7" id="text-4-5-3-2-1-3">
 <p>
-真空技术、离子氮化、镀渗工艺
+　　真空技术、离子氮化、镀渗工艺
 </p>
 </div>
 </div>
@@ -5570,7 +6129,7 @@ c. 进行经济预测时，要考虑运动的多变性，预测期不宜过长�
 <h7 id="orgheadline448"><span class="section-number-7">4.5.3.2.1.4</span> 难加工材料或复杂形面处理工艺</h7>
 <div class="outline-text-7" id="text-4-5-3-2-1-4">
 <p>
-电火花、电解、激光、电子束、超声加工
+　　电火花、电解、激光、电子束、超声加工
 </p>
 </div>
 </div>
@@ -5612,7 +6171,7 @@ c. 进行经济预测时，要考虑运动的多变性，预测期不宜过长�
 <h5 id="orgheadline455"><span class="section-number-5">4.5.4.1</span> 大批量生产</h5>
 <div class="outline-text-5" id="text-4-5-4-1">
 <p>
-注塑成型或铸模成型的制造工艺适合忠实再现构成微妙曲线的、具有柔和感的设计形象。模貝费用昂贵，但能从量产中得到回报。
+　　注塑成型或铸模成型的制造工艺适合忠实再现构成微妙曲线的、具有柔和感的设计形象。模貝费用昂贵，但能从量产中得到回报。
 </p>
 </div>
 </div>
@@ -5620,7 +6179,7 @@ c. 进行经济预测时，要考虑运动的多变性，预测期不宜过长�
 <h5 id="orgheadline456"><span class="section-number-5">4.5.4.2</span> 小批量生产</h5>
 <div class="outline-text-5" id="text-4-5-4-2">
 <p>
-采用真空成型、钣金、精密铸造等工艺。
+　　采用真空成型、钣金、精密铸造等工艺。
 </p>
 </div>
 </div>
@@ -5652,11 +6211,11 @@ c. 进行经济预测时，要考虑运动的多变性，预测期不宜过长�
 <h7 id="orgheadline460"><span class="section-number-7">4.5.5.1.2.2</span> 产品形象、使用方便、操作界面</h7>
 <div class="outline-text-7" id="text-4-5-5-1-2-2">
 <p>
-成形技术和面处理技术是产品质感表现的关键
+　　成形技术和面处理技术是产品质感表现的关键
 </p>
 
 <p>
-气压成型、真空成型和金属压铸成型等已达到低成本、高精度，即使与用钢模进行量产化注塑成型和压铸成型工艺相比也不逊色。
+　　气压成型、真空成型和金属压铸成型等已达到低成本、高精度，即使与用钢模进行量产化注塑成型和压铸成型工艺相比也不逊色。
 </p>
 </div>
 </div>
@@ -5669,7 +6228,7 @@ c. 进行经济预测时，要考虑运动的多变性，预测期不宜过长�
 <h7 id="orgheadline462"><span class="section-number-7">4.5.5.1.3.1</span> H产品壳体结构</h7>
 <div class="outline-text-7" id="text-4-5-5-1-3-1">
 <p>
-壳体由外壳和内壳复合而成，内外壳之间形成的夹层空隙正好隐藏各种管线。
+　　壳体由外壳和内壳复合而成，内外壳之间形成的夹层空隙正好隐藏各种管线。
 </p>
 </div>
 </div>
@@ -5678,7 +6237,7 @@ c. 进行经济预测时，要考虑运动的多变性，预测期不宜过长�
 <h7 id="orgheadline463"><span class="section-number-7">4.5.5.1.3.2</span> H产品壳体成型</h7>
 <div class="outline-text-7" id="text-4-5-5-1-3-2">
 <p>
-起初内外壳体均由玻璃纤维增强塑料（玻璃钢）成型，一定量产后，改用真空成型
+　　起初内外壳体均由玻璃纤维增强塑料（玻璃钢）成型，一定量产后，改用真空成型
 </p>
 <ul class="org-ul">
 <li>降低成本</li>
@@ -5691,7 +6250,7 @@ c. 进行经济预测时，要考虑运动的多变性，预测期不宜过长�
 <h7 id="orgheadline464"><span class="section-number-7">4.5.5.1.3.3</span> H产品机身控制</h7>
 <div class="outline-text-7" id="text-4-5-5-1-3-3">
 <p>
-在控制机身角度的技术上，因为液压传动成本太高，且存在使用寿命和维修服务问题，故采用电动柜传动，并对其进行了降噪处理。
+　　在控制机身角度的技术上，因为液压传动成本太高，且存在使用寿命和维修服务问题，故采用电动柜传动，并对其进行了降噪处理。
 </p>
 </div>
 </div>
@@ -5702,7 +6261,7 @@ c. 进行经济预测时，要考虑运动的多变性，预测期不宜过长�
 <h5 id="orgheadline470"><span class="section-number-5">4.5.5.2</span> 气压成型技术</h5>
 <div class="outline-text-5" id="text-4-5-5-2">
 <p>
-有效的外观成型技术
+　　有效的外观成型技术
 </p>
 </div>
 
@@ -5710,7 +6269,7 @@ c. 进行经济预测时，要考虑运动的多变性，预测期不宜过长�
 <h6 id="orgheadline467"><span class="section-number-6">4.5.5.2.1</span> 壳体造型用材料</h6>
 <div class="outline-text-6" id="text-4-5-5-2-1">
 <p>
-铁、铝、塑料、橡胶等
+　　铁、铝、塑料、橡胶等
 </p>
 
 <ul class="org-ul">
@@ -5737,7 +6296,7 @@ c. 进行经济预测时，要考虑运动的多变性，预测期不宜过长�
 <h6 id="orgheadline469"><span class="section-number-6">4.5.5.2.3</span> 气压成型技术优势</h6>
 <div class="outline-text-6" id="text-4-5-5-2-3">
 <p>
-生产资料类产品 (医疗产品、理化学产品、工程产品等)，一般是小批量订货生产，钣金、铸造、焊接的加工方法居多，而导入大规模生产设备的成型及冲压加工方法有困难，存在成本问题。气压成型和真空成型可解决此问题。
+　　生产资料类产品 (医疗产品、理化学产品、工程产品等)，一般是小批量订货生产，钣金、铸造、焊接的加工方法居多，而导入大规模生产设备的成型及冲压加工方法有困难，存在成本问题。气压成型和真空成型可解决此问题。
 </p>
 <ul class="org-ul">
 <li>对改良的塑料的加工性能与注塑成型己无差别，并可用于金属板材，通过加热加压的方法成型（金属气压成型）。</li>
@@ -5757,6 +6316,11 @@ c. 进行经济预测时，要考虑运动的多变性，预测期不宜过长�
 </div><div id="outline-container-orgheadline477" class="outline-4">
 <h4 id="orgheadline477"><span class="section-number-4">4.6.1</span> 产品生命周期营销策略</h4>
 <div class="outline-text-4" id="text-4-6-1">
+
+<div class="figure">
+<p><img src="img/product-life-cycle-management.jpg" alt="product-life-cycle-management.jpg" />
+</p>
+</div>
 </div>
 <div id="outline-container-orgheadline473" class="outline-5">
 <h5 id="orgheadline473"><span class="section-number-5">4.6.1.1</span> 导入期</h5>
@@ -5810,7 +6374,7 @@ c. 进行经济预测时，要考虑运动的多变性，预测期不宜过长�
 <h5 id="orgheadline478"><span class="section-number-5">4.6.2.1</span> 促销目的</h5>
 <div class="outline-text-5" id="text-4-6-2-1">
 <p>
-通过开拓流通渠道，完成向消费者正确传达产品概念和企业理念，提升产品价值，构筑产品形象。
+　　通过开拓流通渠道，完成向消费者正确传达产品概念和企业理念，提升产品价值，构筑产品形象。
 </p>
 </div>
 </div>
@@ -5819,7 +6383,7 @@ c. 进行经济预测时，要考虑运动的多变性，预测期不宜过长�
 <h5 id="orgheadline479"><span class="section-number-5">4.6.2.2</span> 产品形象推广</h5>
 <div class="outline-text-5" id="text-4-6-2-2">
 <p>
-包装样本、广告、展示会
+　　包装样本、广告、展示会
 </p>
 <ul class="org-ul">
 <li>在广告方面，通过优质、震撼人心的画面，和差别化、个性化的诉求打开市场。</li>
@@ -5859,10 +6423,6 @@ c. 进行经济预测时，要考虑运动的多变性，预测期不宜过长�
 <li>强化品牌形象(提示广告)和差异化(品牌个性)</li>
 <li>并衍生新的产品概念</li>
 </ul>
-
-<p>
-Just do it!
-</p>
 </div>
 </div>
 
@@ -5886,7 +6446,7 @@ Just do it!
 <h5 id="orgheadline489"><span class="section-number-5">4.6.3.1</span> 产品商品化</h5>
 <div class="outline-text-5" id="text-4-6-3-1">
 <p>
-服务业帮助快速实现产品的商品化
+　　服务业帮助快速实现产品的商品化
 </p>
 </div>
 
@@ -5894,7 +6454,7 @@ Just do it!
 <h6 id="orgheadline486"><span class="section-number-6">4.6.3.1.1</span> 产品测试评价服务</h6>
 <div class="outline-text-6" id="text-4-6-3-1-1">
 <p>
-配置大量现代知识测试要素和可靠保障
+　　配置大量现代知识测试要素和可靠保障
 </p>
 </div>
 </div>
@@ -5903,7 +6463,7 @@ Just do it!
 <h6 id="orgheadline487"><span class="section-number-6">4.6.3.1.2</span> 知识产权运作服务</h6>
 <div class="outline-text-6" id="text-4-6-3-1-2">
 <p>
-为产品的商品化实现的新进性和有效性提供法律支持和保护
+　　为产品的商品化实现的新进性和有效性提供法律支持和保护
 </p>
 </div>
 </div>
@@ -5912,7 +6472,7 @@ Just do it!
 <h6 id="orgheadline488"><span class="section-number-6">4.6.3.1.3</span> 市场需求信息服务</h6>
 <div class="outline-text-6" id="text-4-6-3-1-3">
 <p>
-为企业时刻关注消费需求，获取第一手市场信息资料，使企业持续开发市场所需新产品，建立先发优势
+　　为企业时刻关注消费需求，获取第一手市场信息资料，使企业持续开发市场所需新产品，建立先发优势
 </p>
 </div>
 </div>
@@ -5922,7 +6482,7 @@ Just do it!
 <h5 id="orgheadline490"><span class="section-number-5">4.6.3.2</span> 产品"软"价值</h5>
 <div class="outline-text-5" id="text-4-6-3-2">
 <p>
-同样功能、同样制造成本的产品由于服务和企业文化差异可能使售价相差几倍。
+　　同样功能、同样制造成本的产品由于服务和企业文化差异可能使售价相差几倍。
 </p>
 
 <ul class="org-ul">
@@ -5938,7 +6498,7 @@ Just do it!
 <h3 id="orgheadline493"><span class="section-number-3">4.7</span> 信息反馈</h3>
 <div class="outline-text-3" id="text-4-7">
 <p>
-产品在投放市场后，需收集用户反馈信息。通过对反馈信息的分析可以有效地进行产品的改良以及加强用户与产品之间的沟通。
+　　产品在投放市场后，需收集用户反馈信息。通过对反馈信息的分析可以有效地进行产品的改良以及加强用户与产品之间的沟通。
 </p>
 <ul class="org-ul">
 <li>建立完善的反馈机制</li>
@@ -5952,7 +6512,7 @@ Just do it!
 <h3 id="orgheadline494"><span class="section-number-3">4.8</span> 思考题</h3>
 <div class="outline-text-3" id="text-4-8">
 <p>
-选择一个具体的产品设计案例对其进行产品系统设计流程分析。
+　　选择一个具体的产品设计案例对其进行产品系统设计流程分析。
 </p>
 
 <ul class="org-ul">
@@ -5967,8 +6527,8 @@ Just do it!
 </div>
 </div>
 
-<div id="outline-container-orgheadline658" class="outline-2">
-<h2 id="orgheadline658"><span class="section-number-2">5</span> 产品系统设计案例</h2>
+<div id="outline-container-orgheadline657" class="outline-2">
+<h2 id="orgheadline657"><span class="section-number-2">5</span> 产品系统设计案例</h2>
 <div class="outline-text-2" id="text-5">
 </div><div id="outline-container-orgheadline509" class="outline-3">
 <h3 id="orgheadline509"><span class="section-number-3">5.1</span> 概述</h3>
@@ -6130,7 +6690,7 @@ Just do it!
 <h4 id="orgheadline520"><span class="section-number-4">5.2.2</span> 制定设计计划</h4>
 <div class="outline-text-4" id="text-5-2-2">
 <p>
-项目计划书包含时间安排 (甘特图)、人员分工、费用预算、方法手段、评价标准等。 
+　　项目计划书包含时间安排 (甘特图)、人员分工、费用预算、方法手段、评价标准等。 
 </p>
 </div>
 
@@ -6151,8 +6711,13 @@ Just do it!
 <h6 id="orgheadline512"><span class="section-number-6">5.2.2.1.1</span> 直线式设计计划</h6>
 <div class="outline-text-6" id="text-5-2-2-1-1">
 <p>
-每一行动依赖上阶段的结果，适于对现有产品重新组合或改进。
+　　每一行动依赖上阶段的结果，适于对现有产品重新组合或改进。
 </p>
+
+<div class="figure">
+<p><img src="img/designPlan1.png" alt="designPlan1.png" width="500px" />
+</p>
+</div>
 </div>
 </div>
 
@@ -6160,50 +6725,80 @@ Just do it!
 <h6 id="orgheadline513"><span class="section-number-6">5.2.2.1.2</span> 循环式设计计划</h6>
 <div class="outline-text-6" id="text-5-2-2-1-2">
 <p>
-有时须将结果返回，重复执行之前阶段的程序构成循环。
+　　有时须将结果返回，重复执行之前阶段的程序构成循环。
+</p>
+
+<div class="figure">
+<p><img src="img/designPlan2.png" alt="designPlan2.png" width="500px" />
 </p>
 </div>
 </div>
+</div>
+
 <div id="outline-container-orgheadline514" class="outline-6">
 <h6 id="orgheadline514"><span class="section-number-6">5.2.2.1.3</span> 分支型设计计划</h6>
 <div class="outline-text-6" id="text-5-2-2-1-3">
 <p>
-同时存在几个彼此独立的设计行动 (平行步骤)。
+　　同时存在几个彼此独立的设计行动 (平行步骤)。
+</p>
+
+<div class="figure">
+<p><img src="img/designPlan3.png" alt="designPlan3.png" />
 </p>
 </div>
 </div>
+</div>
+
 <div id="outline-container-orgheadline515" class="outline-6">
 <h6 id="orgheadline515"><span class="section-number-6">5.2.2.1.4</span> 适应型设计计划</h6>
 <div class="outline-text-6" id="text-5-2-2-1-4">
 <p>
-确定第一个行动，随后每个行动的选择，由前一行动结果来决定。
+　　确定第一个行动，随后每个行动的选择，由前一行动结果来决定。
+</p>
+
+<div class="figure">
+<p><img src="img/designPlan4.png" alt="designPlan4.png" />
 </p>
 </div>
 </div>
+</div>
+
 <div id="outline-container-orgheadline516" class="outline-6">
 <h6 id="orgheadline516"><span class="section-number-6">5.2.2.1.5</span> 递增型设计计划</h6>
 <div class="outline-text-6" id="text-5-2-2-1-5">
 <p>
-在适应性设计中设置若干修正量，调节现有结果寻求优化设计。
+　　在适应性设计中设置若干修正量，调节现有结果寻求优化设计。
 </p>
 <ul class="org-ul">
 <li>递增量太大可能漏掉好的结果，</li>
 <li>递增量过小可能延缓设计进程。</li>
 </ul>
+
+<div class="figure">
+<p><img src="img/designPlan5.png" alt="designPlan5.png" width="550px" />
+</p>
 </div>
 </div>
+</div>
+
 <div id="outline-container-orgheadline517" class="outline-6">
 <h6 id="orgheadline517"><span class="section-number-6">5.2.2.1.6</span> 随机型设计计划</h6>
 <div class="outline-text-6" id="text-5-2-2-1-6">
 <p>
-范围不确定，适用于一些独立研究，寻求若干出发点，每一步骤相对独立
+　　范围不确定，适用于一些独立研究，寻求若干出发点，每一步骤相对独立
 </p>
 <ul class="org-ul">
 <li>如：头脑风暴法</li>
 </ul>
+
+<div class="figure">
+<p><img src="img/designPlan6.png" alt="designPlan6.png" width="500px" />
+</p>
 </div>
 </div>
 </div>
+</div>
+
 <div id="outline-container-orgheadline519" class="outline-5">
 <h5 id="orgheadline519"><span class="section-number-5">5.2.2.2</span> 项目计划</h5>
 <div class="outline-text-5" id="text-5-2-2-2">
@@ -6211,6 +6806,12 @@ Just do it!
 <li>项目周期39天，资金较少，需高效率、低成本计划；</li>
 <li>直线式和分支型相结合， 将时间进程和组员工作合理配置。</li>
 </ul>
+
+
+<div class="figure">
+<p><img src="img/baby_care_gantt.png" alt="baby_care_gantt.png" width="550px" />
+</p>
+</div>
 </div>
 </div>
 </div>
@@ -6219,7 +6820,7 @@ Just do it!
 <h4 id="orgheadline548"><span class="section-number-4">5.2.3</span> 市场调研</h4>
 <div class="outline-text-4" id="text-5-2-3">
 <p>
-综合功能要素、人因要素、环境要素等，市场调研分三阶段。
+　　综合功能要素、人因要素、环境要素等，市场调研分三阶段。
 </p>
 
 <ul class="org-ul">
@@ -6233,7 +6834,7 @@ Just do it!
 <h5 id="orgheadline524"><span class="section-number-5">5.2.3.1</span> 调研准备阶段</h5>
 <div class="outline-text-5" id="text-5-2-3-1">
 <p>
-会议讨论
+　　会议讨论
 </p>
 
 <ul class="org-ul">
@@ -6267,7 +6868,7 @@ Just do it!
 <h5 id="orgheadline530"><span class="section-number-5">5.2.3.2</span> 调研实施阶段</h5>
 <div class="outline-text-5" id="text-5-2-3-2">
 <p>
-调研方法
+　　调研方法
 </p>
 <ul class="org-ul">
 <li>桌面研究</li>
@@ -6340,7 +6941,7 @@ Just do it!
 <h6 id="orgheadline531"><span class="section-number-6">5.2.3.3.1</span> 调研结果整理</h6>
 <div class="outline-text-6" id="text-5-2-3-3-1">
 <p>
-将搜集到的资料分类，并统计分析。
+　　将搜集到的资料分类，并统计分析。
 </p>
 </div>
 </div>
@@ -6358,7 +6959,7 @@ Just do it!
 <h6 id="orgheadline535"><span class="section-number-6">5.2.3.3.3</span> 同类产品分析</h6>
 <div class="outline-text-6" id="text-5-2-3-3-3">
 <p>
-限于时间、资金，采用次级 (二手) 资料调研法
+　　限于时间、资金，采用次级 (二手) 资料调研法
 </p>
 
 <ul class="org-ul">
@@ -6456,7 +7057,7 @@ Just do it!
 <h7 id="orgheadline536"><span class="section-number-7">5.2.3.3.4.1</span> 资料分析</h7>
 <div class="outline-text-7" id="text-5-2-3-3-4-1">
 <p>
-查找Arduino资料，找到实现功能的办法及相关硬件。
+　　查找Arduino资料，找到实现功能的办法及相关硬件。
 </p>
 <ul class="org-ul">
 <li>通过各种传感器感知环境；</li>
@@ -6486,6 +7087,18 @@ Just do it!
 <li>新晋父母在产假后一般回职场工作，陪婴儿时间较少，由其父母或保姆照顾，他们希望在上班空余看看孩子。</li>
 <li>通过回收数据和访谈资料进行分析和构建人物模型。</li>
 </ul>
+
+
+<div class="figure">
+<p><img src="img/character1.png" alt="character1.png" width="550px" />
+</p>
+</div>
+
+
+<div class="figure">
+<p><img src="img/character2.png" alt="character2.png" width="550px" />
+</p>
+</div>
 </div>
 
 <div id="outline-container-orgheadline539" class="outline-7">
@@ -6528,7 +7141,7 @@ Just do it!
 <h6 id="orgheadline546"><span class="section-number-6">5.2.3.3.6</span> 设计定位</h6>
 <div class="outline-text-6" id="text-5-2-3-3-6">
 <p>
-将企业自身产品、服务与竞争对手区分，为企业进入市场打开缺口。 
+　　将企业自身产品、服务与竞争对手区分，为企业进入市场打开缺口。 
 </p>
 
 <ul class="org-ul">
@@ -6536,6 +7149,12 @@ Just do it!
 <li>按功能和价格两个维度区分，反映各产品在图中的定位情况；</li>
 <li>发现中间偏右上角部分空白区域，成为机会空间。</li>
 </ul>
+
+
+<div class="figure">
+<p><img src="img/marketPosition.png" alt="marketPosition.png" width="500px" />
+</p>
+</div>
 </div>
 
 <div id="outline-container-orgheadline545" class="outline-7">
@@ -6558,7 +7177,7 @@ Just do it!
 <h3 id="orgheadline564"><span class="section-number-3">5.3</span> 婴儿监护器设计</h3>
 <div class="outline-text-3" id="text-5-3">
 <p>
-由于设计周期限制，按分支型设计计划执行。 
+　　由于设计周期限制，按分支型设计计划执行。 
 </p>
 </div>
 
@@ -6566,7 +7185,7 @@ Just do it!
 <h4 id="orgheadline552"><span class="section-number-4">5.3.1</span> 原型设计</h4>
 <div class="outline-text-4" id="text-5-3-1">
 <p>
-Arduino程序开发流程
+　　Arduino程序开发流程
 </p>
 
 <ul class="org-ul">
@@ -6601,7 +7220,7 @@ Arduino程序开发流程
 <h5 id="orgheadline553"><span class="section-number-5">5.3.2.1</span> 设计草图</h5>
 <div class="outline-text-5" id="text-5-3-2-1">
 <p>
-根据Arduino原型结构，进行草图表达。
+　　根据Arduino原型结构，进行草图表达。
 </p>
 </div>
 </div>
@@ -6639,7 +7258,7 @@ Arduino程序开发流程
 <h6 id="orgheadline556"><span class="section-number-6">5.3.2.3.2</span> 加工工艺分析</h6>
 <div class="outline-text-6" id="text-5-3-2-3-2">
 <p>
-采用ABS一次成型技术
+　　采用ABS一次成型技术
 </p>
 </div>
 </div>
@@ -6688,7 +7307,7 @@ Arduino程序开发流程
 <h5 id="orgheadline562"><span class="section-number-5">5.3.3.3</span> 表现层</h5>
 <div class="outline-text-5" id="text-5-3-3-3">
 <p>
-界面布局和交互效果
+　　界面布局和交互效果
 </p>
 
 <ul class="org-ul">
@@ -6785,6 +7404,12 @@ Arduino程序开发流程
 <li>⑨支架烤盘：光波烹调食物时用的托盘；</li>
 <li>⑩炉门开关：按此开关，炉门打开。</li>
 </ul>
+
+
+<div class="figure">
+<p><img src="img/microwaveStructure.png" alt="microwaveStructure.png" width="500px" />
+</p>
+</div>
 </div>
 </div>
 
@@ -6845,7 +7470,7 @@ Arduino程序开发流程
 <h5 id="orgheadline581"><span class="section-number-5">5.4.2.1</span> 实地调研</h5>
 <div class="outline-text-5" id="text-5-4-2-1">
 <p>
-实体店销售情况及销售者在销售过程中出现的问题 (实地考察) 
+　　实体店销售情况及销售者在销售过程中出现的问题 (实地考察) 
 </p>
 <ul class="org-ul">
 <li>专业的电器城，如苏宁电器</li>
@@ -6938,6 +7563,12 @@ Arduino程序开发流程
 <p>
 中国几大主要品牌市场占有率
 </p>
+
+
+<div class="figure">
+<p><img src="img/MarketShare.png" alt="MarketShare.png" width="430px" />
+</p>
+</div>
 </div>
 </div>
 
@@ -7083,6 +7714,11 @@ Arduino程序开发流程
 <div id="outline-container-orgheadline595" class="outline-6">
 <h6 id="orgheadline595"><span class="section-number-6">5.4.2.3.5</span> 品牌对比分析图</h6>
 <div class="outline-text-6" id="text-5-4-2-3-5">
+
+<div class="figure">
+<p><img src="img/brands.png" alt="brands.png" width="550px" />
+</p>
+</div>
 </div>
 </div>
 </div>
@@ -7091,7 +7727,7 @@ Arduino程序开发流程
 <h5 id="orgheadline597"><span class="section-number-5">5.4.2.4</span> 市场趋势分析</h5>
 <div class="outline-text-5" id="text-5-4-2-4">
 <p>
-人性化、智能化、多功能化、安全化、复合化和节能化
+　　人性化、智能化、多功能化、安全化、复合化和节能化
 </p>
 </div>
 </div>
@@ -7115,7 +7751,7 @@ Arduino程序开发流程
 <ul class="org-ul">
 <li>购买微波炉的消费者中年轻消费者占主导地位，大部分原因是将要组建新家庭；</li>
 <li>还有部分年龄较小或较大消费者是由于生活需要；</li>
-<li>从“看条件”选项可以看出，有部分不稳定人群，从抽查结果看，多为学生和打工者。</li>
+<li>另外不确定是否购买的部分人群多为学生和打工者。</li>
 </ul>
 </div>
 </div>
@@ -7124,7 +7760,7 @@ Arduino程序开发流程
 <h6 id="orgheadline600"><span class="section-number-6">5.4.3.1.2</span> 品牌</h6>
 <div class="outline-text-6" id="text-5-4-3-1-2">
 <p>
-美的占据霸主地位，格兰仕作为老品牌没有美的强势，其他品牌弱势。
+　　美的占据霸主地位，格兰仕作为老品牌没有美的强势，其他品牌弱势。
 </p>
 </div>
 </div>
@@ -7153,7 +7789,7 @@ Arduino程序开发流程
 <h6 id="orgheadline603"><span class="section-number-6">5.4.3.1.5</span> 材料</h6>
 <div class="outline-text-6" id="text-5-4-3-1-5">
 <p>
-人们对现有材料种类目的性不强，对微波炉使用材料不介意。
+　　人们对现有材料种类目的性不强，对微波炉使用材料不介意。
 </p>
 </div>
 </div>
@@ -7189,7 +7825,7 @@ Arduino程序开发流程
 <h5 id="orgheadline611"><span class="section-number-5">5.4.3.2</span> 特征用户设定</h5>
 <div class="outline-text-5" id="text-5-4-3-2">
 <p>
-通过用户调研，抽象出一特征用户一一Tom夫妇
+　　通过用户调研，抽象出一特征用户一一Tom夫妇
 </p>
 <ul class="org-ul">
 <li>年龄25岁</li>
@@ -7215,7 +7851,7 @@ Arduino程序开发流程
 <h6 id="orgheadline608"><span class="section-number-6">5.4.3.2.2</span> Tom夫妇微波炉使用</h6>
 <div class="outline-text-6" id="text-5-4-3-2-2">
 <p>
-常用微波炉加热米饭、剩菜、面食、牛奶、外卖等。
+　　常用微波炉加热米饭、剩菜、面食、牛奶、外卖等。
 </p>
 </div>
 </div>
@@ -7246,8 +7882,8 @@ Arduino程序开发流程
 </div>
 </div>
 
-<div id="outline-container-orgheadline627" class="outline-3">
-<h3 id="orgheadline627"><span class="section-number-3">5.5</span> 微波炉互动交流阶段</h3>
+<div id="outline-container-orgheadline626" class="outline-3">
+<h3 id="orgheadline626"><span class="section-number-3">5.5</span> 微波炉互动交流阶段</h3>
 <div class="outline-text-3" id="text-5-5">
 </div><div id="outline-container-orgheadline614" class="outline-4">
 <h4 id="orgheadline614"><span class="section-number-4">5.5.1</span> 头脑风暴</h4>
@@ -7266,7 +7902,7 @@ Arduino程序开发流程
 <h5 id="orgheadline615"><span class="section-number-5">5.5.2.1</span> 环境</h5>
 <div class="outline-text-5" id="text-5-5-2-1">
 <p>
-每件产品与其它产品相呼应，构建完整厨房环境。
+　　每件产品与其它产品相呼应，构建完整厨房环境。
 </p>
 </div>
 </div>
@@ -7286,7 +7922,7 @@ Arduino程序开发流程
 <h5 id="orgheadline617"><span class="section-number-5">5.5.2.3</span> 情节定义</h5>
 <div class="outline-text-5" id="text-5-5-2-3">
 <p>
-通过情节定义使设计师具有用户同理心。
+　　通过情节定义使设计师具有用户同理心。
 </p>
 
 <ul class="org-ul">
@@ -7300,47 +7936,265 @@ Arduino程序开发流程
 </div>
 </div>
 
-<div id="outline-container-orgheadline623" class="outline-4">
-<h4 id="orgheadline623"><span class="section-number-4">5.5.3</span> 分析模型</h4>
+<div id="outline-container-orgheadline622" class="outline-4">
+<h4 id="orgheadline622"><span class="section-number-4">5.5.3</span> 分析模型</h4>
 <div class="outline-text-4" id="text-5-5-3">
 </div><div id="outline-container-orgheadline619" class="outline-5">
 <h5 id="orgheadline619"><span class="section-number-5">5.5.3.1</span> 价值机会图 (体验即价值)</h5>
 <div class="outline-text-5" id="text-5-5-3-1">
-</div>
-</div>
-<div id="outline-container-orgheadline620" class="outline-5">
-<h5 id="orgheadline620"><span class="section-number-5">5.5.3.2</span> 价值机会图二</h5>
-<div class="outline-text-5" id="text-5-5-3-2">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">项目</th>
+<th scope="col" class="org-left">属性</th>
+<th scope="col" class="org-left">价值</th>
+<th scope="col" class="org-left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">情感</td>
+<td class="org-left">冒险</td>
+<td class="org-left">中</td>
+<td class="org-left">延续使用帝度产品时所期待的高品质体验</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">独立</td>
+<td class="org-left">低</td>
+<td class="org-left">可以在工作环境中独立存在</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">安全</td>
+<td class="org-left">高</td>
+<td class="org-left">感觉安全可靠</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">感性</td>
+<td class="org-left">高</td>
+<td class="org-left">与厨房及食物相关的温和有效感</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">信心</td>
+<td class="org-left">高</td>
+<td class="org-left">相信它能够按要求完成任务</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">力量</td>
+<td class="org-left">中</td>
+<td class="org-left">适应和支配工作环境的能力</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">人机工程学</td>
+<td class="org-left">舒适</td>
+<td class="org-left">高</td>
+<td class="org-left">稳定放于固定位置，操作舒适</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">安全</td>
+<td class="org-left">高</td>
+<td class="org-left">操作者得到保护，不受微波辐射</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">易用</td>
+<td class="org-left">高</td>
+<td class="org-left">存取食物方便；操作简单；易于把握</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">美学</td>
+<td class="org-left">视觉</td>
+<td class="org-left">高</td>
+<td class="org-left">正确清晰的视觉系统，提示当前操作与使用</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">听觉</td>
+<td class="org-left">高</td>
+<td class="org-left">状态产品噪音小，并且在紧急情况下能够发出有效警告</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">触觉</td>
+<td class="org-left">高</td>
+<td class="org-left">表面、工作界面有适合的材料和图层以提高清洁、使用效率</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">嗅觉</td>
+<td class="org-left">高</td>
+<td class="org-left">减少食物产生的异味</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">味觉</td>
+<td class="org-left">中</td>
+<td class="org-left">降低过程中对事物味道的影响</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">特性</td>
+<td class="org-left">适时</td>
+<td class="org-left">高</td>
+<td class="org-left">为迅速发展的现代化厨房生活建立一种新的美学体验</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">适地</td>
+<td class="org-left">高</td>
+<td class="org-left">设计必须适合现代厨房环境</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">个性</td>
+<td class="org-left">高</td>
+<td class="org-left">稳重而不失温馨，视觉上有一种全新的感觉</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">影响</td>
+<td class="org-left">社会的</td>
+<td class="org-left">高</td>
+<td class="org-left">给使用者提供良好操作体验；符合安全与健康的要求</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">环境的</td>
+<td class="org-left">中</td>
+<td class="org-left">符合帝度其他设备与家庭设备已有的环境标准</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">核心技术</td>
+<td class="org-left">可靠性</td>
+<td class="org-left">高</td>
+<td class="org-left">拥有稳定的工作状态，易于维护和修理</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">可用性</td>
+<td class="org-left">高</td>
+<td class="org-left">产品能满足安全、准确加热及烹饪食物的要求</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">质量</td>
+<td class="org-left">工艺</td>
+<td class="org-left">高</td>
+<td class="org-left">保持与其他帝度产品的一致性，看起来高档</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">耐用性</td>
+<td class="org-left">高</td>
+<td class="org-left">在使用寿命期间，产品能够保持良好地工作状态</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">效应</td>
+<td class="org-left">利益效应</td>
+<td class="org-left">高</td>
+<td class="org-left">为几乎空白的帝度微波炉领域创造新的价值</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">品牌效应</td>
+<td class="org-left">高</td>
+<td class="org-left">创造一个新的拥有自己设计语言的微波炉品牌</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">可扩展性</td>
+<td class="org-left">高</td>
+<td class="org-left">能够根据原始设计衍生出一系列产品</td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 
-<div id="outline-container-orgheadline621" class="outline-5">
-<h5 id="orgheadline621"><span class="section-number-5">5.5.3.3</span> 定位图 ( Positioning Map )</h5>
-<div class="outline-text-5" id="text-5-5-3-3">
+<div id="outline-container-orgheadline620" class="outline-5">
+<h5 id="orgheadline620"><span class="section-number-5">5.5.3.2</span> 定位图 ( Positioning Map )</h5>
+<div class="outline-text-5" id="text-5-5-3-2">
 <ul class="org-ul">
 <li>用技术和造型分别作为横坐标和纵坐标量度；</li>
 <li>位于象限右上角的产品结合了造型和技术，具有显著价值。</li>
 </ul>
+
+
+<div class="figure">
+<p><img src="img/form_tech.png" alt="form_tech.png" width="450px" />
+</p>
+</div>
 </div>
 </div>
 
-<div id="outline-container-orgheadline622" class="outline-5">
-<h5 id="orgheadline622"><span class="section-number-5">5.5.3.4</span> 部件分化矩阵 PDM</h5>
-<div class="outline-text-5" id="text-5-5-3-4">
+<div id="outline-container-orgheadline621" class="outline-5">
+<h5 id="orgheadline621"><span class="section-number-5">5.5.3.3</span> 部件分化矩阵 PDM</h5>
+<div class="outline-text-5" id="text-5-5-3-3">
 <ul class="org-ul">
 <li>Part Differentiation Matrix 将产品零件和组件归类的策略</li>
 <li>通过分析各零部件对用户生活方式的影响及零部件本身的复杂程度；</li>
 <li>决定哪些零部件更需要整合不同专业领域来设计开发。</li>
 </ul>
+
+
+<div class="figure">
+<p><img src="img/matrix.png" alt="matrix.png" width="500px" />
+</p>
+</div>
 </div>
 </div>
 </div>
 
-<div id="outline-container-orgheadline626" class="outline-4">
-<h4 id="orgheadline626"><span class="section-number-4">5.5.4</span> 界面设计</h4>
+<div id="outline-container-orgheadline625" class="outline-4">
+<h4 id="orgheadline625"><span class="section-number-4">5.5.4</span> 界面设计</h4>
 <div class="outline-text-4" id="text-5-5-4">
-</div><div id="outline-container-orgheadline624" class="outline-5">
-<h5 id="orgheadline624"><span class="section-number-5">5.5.4.1</span> 界面设计原则</h5>
+</div><div id="outline-container-orgheadline623" class="outline-5">
+<h5 id="orgheadline623"><span class="section-number-5">5.5.4.1</span> 界面设计原则</h5>
 <div class="outline-text-5" id="text-5-5-4-1">
 <ul class="org-ul">
 <li>一致性</li>
@@ -7352,8 +8206,8 @@ Arduino程序开发流程
 </div>
 </div>
 
-<div id="outline-container-orgheadline625" class="outline-5">
-<h5 id="orgheadline625"><span class="section-number-5">5.5.4.2</span> 界面设计</h5>
+<div id="outline-container-orgheadline624" class="outline-5">
+<h5 id="orgheadline624"><span class="section-number-5">5.5.4.2</span> 界面设计</h5>
 <div class="outline-text-5" id="text-5-5-4-2">
 <ul class="org-ul">
 <li>对现有微波炉界面调研；</li>
@@ -7364,69 +8218,69 @@ Arduino程序开发流程
 </div>
 </div>
 
-<div id="outline-container-orgheadline656" class="outline-3">
-<h3 id="orgheadline656"><span class="section-number-3">5.6</span> 帝度微波炉设计</h3>
+<div id="outline-container-orgheadline655" class="outline-3">
+<h3 id="orgheadline655"><span class="section-number-3">5.6</span> 帝度微波炉设计</h3>
 <div class="outline-text-3" id="text-5-6">
-</div><div id="outline-container-orgheadline632" class="outline-4">
-<h4 id="orgheadline632"><span class="section-number-4">5.6.1</span> 设计语言</h4>
+</div><div id="outline-container-orgheadline631" class="outline-4">
+<h4 id="orgheadline631"><span class="section-number-4">5.6.1</span> 设计语言</h4>
 <div class="outline-text-4" id="text-5-6-1">
 </div>
-<div id="outline-container-orgheadline628" class="outline-5">
-<h5 id="orgheadline628"><span class="section-number-5">5.6.1.1</span> U形线条探索</h5>
+<div id="outline-container-orgheadline627" class="outline-5">
+<h5 id="orgheadline627"><span class="section-number-5">5.6.1.1</span> U形线条探索</h5>
 <div class="outline-text-5" id="text-5-6-1-1">
 <p>
-U形线条常见于高端精密电子产品，诠释电子产品优雅感和科技感。
+　　U形线条常见于高端精密电子产品，诠释电子产品优雅感和科技感。
+</p>
+</div>
+</div>
+<div id="outline-container-orgheadline628" class="outline-5">
+<h5 id="orgheadline628"><span class="section-number-5">5.6.1.2</span> 三角形探索</h5>
+<div class="outline-text-5" id="text-5-6-1-2">
+<p>
+　　三角形常见于需要稳定和支撑的产品结构中，通过三条边和角度变化产生丰富效果。
 </p>
 </div>
 </div>
 <div id="outline-container-orgheadline629" class="outline-5">
-<h5 id="orgheadline629"><span class="section-number-5">5.6.1.2</span> 三角形探索</h5>
-<div class="outline-text-5" id="text-5-6-1-2">
+<h5 id="orgheadline629"><span class="section-number-5">5.6.1.3</span> 圆球形探索</h5>
+<div class="outline-text-5" id="text-5-6-1-3">
 <p>
-三角形常见于需要稳定和支撑的产品结构中，通过三条边和角度变化产生丰富效果。
+　　圆球形给人以饱满、圆润和流畅感，既突出科技感又拉近产品与使用者的关系。
 </p>
 </div>
 </div>
 <div id="outline-container-orgheadline630" class="outline-5">
-<h5 id="orgheadline630"><span class="section-number-5">5.6.1.3</span> 圆球形探索</h5>
-<div class="outline-text-5" id="text-5-6-1-3">
-<p>
-圆球形给人以饱满、圆润和流畅感，既突出科技感又拉近产品与使用者的关系。
-</p>
-</div>
-</div>
-<div id="outline-container-orgheadline631" class="outline-5">
-<h5 id="orgheadline631"><span class="section-number-5">5.6.1.4</span> 设计语言建筑形态探索</h5>
+<h5 id="orgheadline630"><span class="section-number-5">5.6.1.4</span> 设计语言建筑形态探索</h5>
 <div class="outline-text-5" id="text-5-6-1-4">
 <p>
-将从建筑上提取的造型元素融入产品设计中可以使产品技术感与美感并存。
+　　将从建筑上提取的造型元素融入产品设计中可以使产品技术感与美感并存。
 </p>
 </div>
 </div>
 </div>
 
 
-<div id="outline-container-orgheadline651" class="outline-4">
-<h4 id="orgheadline651"><span class="section-number-4">5.6.2</span> 设计方案</h4>
+<div id="outline-container-orgheadline650" class="outline-4">
+<h4 id="orgheadline650"><span class="section-number-4">5.6.2</span> 设计方案</h4>
 <div class="outline-text-4" id="text-5-6-2">
 <ul class="org-ul">
 <li>对设计语言提取，综合分析产品功能和定位；</li>
 <li>提出三套设计方案：平衡、冰与火、升波。</li>
 </ul>
 </div>
-<div id="outline-container-orgheadline636" class="outline-5">
-<h5 id="orgheadline636"><span class="section-number-5">5.6.2.1</span> 平衡</h5>
+<div id="outline-container-orgheadline635" class="outline-5">
+<h5 id="orgheadline635"><span class="section-number-5">5.6.2.1</span> 平衡</h5>
 <div class="outline-text-5" id="text-5-6-2-1">
 <p>
-由功能模块、控制模块、散热模块和底板四部分组成。
+　　由功能模块、控制模块、散热模块和底板四部分组成。
 </p>
 </div>
 
-<div id="outline-container-orgheadline633" class="outline-6">
-<h6 id="orgheadline633"><span class="section-number-6">5.6.2.1.1</span> 灵感来源</h6>
+<div id="outline-container-orgheadline632" class="outline-6">
+<h6 id="orgheadline632"><span class="section-number-6">5.6.2.1.1</span> 灵感来源</h6>
 <div class="outline-text-6" id="text-5-6-2-1-1">
 <p>
-灵感源于西班牙阿利坎特卡尔佩悬崖上的住宅。
+　　灵感源于西班牙阿利坎特卡尔佩悬崖上的住宅。
 </p>
 <ul class="org-ul">
 <li>阳光下，悬崖上，住宅彤成阴影，平静地俯瞰地中海；</li>
@@ -7435,8 +8289,8 @@ U形线条常见于高端精密电子产品，诠释电子产品优雅感和科�
 </div>
 </div>
 
-<div id="outline-container-orgheadline634" class="outline-6">
-<h6 id="orgheadline634"><span class="section-number-6">5.6.2.1.2</span> 造型特点</h6>
+<div id="outline-container-orgheadline633" class="outline-6">
+<h6 id="orgheadline633"><span class="section-number-6">5.6.2.1.2</span> 造型特点</h6>
 <div class="outline-text-6" id="text-5-6-2-1-2">
 <ul class="org-ul">
 <li>简单平衡的美感；</li>
@@ -7446,32 +8300,32 @@ U形线条常见于高端精密电子产品，诠释电子产品优雅感和科�
 </div>
 </div>
 
-<div id="outline-container-orgheadline635" class="outline-6">
-<h6 id="orgheadline635"><span class="section-number-6">5.6.2.1.3</span> 造型敞开状态</h6>
+<div id="outline-container-orgheadline634" class="outline-6">
+<h6 id="orgheadline634"><span class="section-number-6">5.6.2.1.3</span> 造型敞开状态</h6>
 <div class="outline-text-6" id="text-5-6-2-1-3">
 </div>
 </div>
 </div>
 
-<div id="outline-container-orgheadline643" class="outline-5">
-<h5 id="orgheadline643"><span class="section-number-5">5.6.2.2</span> 冰与火</h5>
+<div id="outline-container-orgheadline642" class="outline-5">
+<h5 id="orgheadline642"><span class="section-number-5">5.6.2.2</span> 冰与火</h5>
 <div class="outline-text-5" id="text-5-6-2-2">
 </div>
 
-<div id="outline-container-orgheadline637" class="outline-6">
-<h6 id="orgheadline637"><span class="section-number-6">5.6.2.2.1</span> 灵感来源</h6>
+<div id="outline-container-orgheadline636" class="outline-6">
+<h6 id="orgheadline636"><span class="section-number-6">5.6.2.2.1</span> 灵感来源</h6>
 <div class="outline-text-6" id="text-5-6-2-2-1">
 <p>
-灵感来自建筑，冷静不冷酷，纯洁中带锐利，变化又不失稳定。
+　　灵感来自建筑，冷静不冷酷，纯洁中带锐利，变化又不失稳定。
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgheadline638" class="outline-6">
-<h6 id="orgheadline638"><span class="section-number-6">5.6.2.2.2</span> 造型特点</h6>
+<div id="outline-container-orgheadline637" class="outline-6">
+<h6 id="orgheadline637"><span class="section-number-6">5.6.2.2.2</span> 造型特点</h6>
 <div class="outline-text-6" id="text-5-6-2-2-2">
 <p>
-“冰与火”
+　　“冰与火”
 </p>
 <ul class="org-ul">
 <li>纯几何造型及象征高端品质的商务灰和金属质感，像一块冷峻的被切了一角的冰块；</li>
@@ -7480,8 +8334,8 @@ U形线条常见于高端精密电子产品，诠释电子产品优雅感和科�
 </div>
 </div>
 
-<div id="outline-container-orgheadline639" class="outline-6">
-<h6 id="orgheadline639"><span class="section-number-6">5.6.2.2.3</span> 提醒设计</h6>
+<div id="outline-container-orgheadline638" class="outline-6">
+<h6 id="orgheadline638"><span class="section-number-6">5.6.2.2.3</span> 提醒设计</h6>
 <div class="outline-text-6" id="text-5-6-2-2-3">
 <ul class="org-ul">
 <li>六条贯穿炉体LED灯，工作开始前三秒预闪和警告使用者远离工作区 , 避免微波辐射；</li>
@@ -7490,17 +8344,17 @@ U形线条常见于高端精密电子产品，诠释电子产品优雅感和科�
 </div>
 </div>
 
-<div id="outline-container-orgheadline640" class="outline-6">
-<h6 id="orgheadline640"><span class="section-number-6">5.6.2.2.4</span> 安全设计1</h6>
+<div id="outline-container-orgheadline639" class="outline-6">
+<h6 id="orgheadline639"><span class="section-number-6">5.6.2.2.4</span> 安全设计1</h6>
 <div class="outline-text-6" id="text-5-6-2-2-4">
 <p>
-微波炉门板和炉体斜面契合，密封更彻底，有效防止微波泄漏。
+　　微波炉门板和炉体斜面契合，密封更彻底，有效防止微波泄漏。
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgheadline641" class="outline-6">
-<h6 id="orgheadline641"><span class="section-number-6">5.6.2.2.5</span> 安全设计2</h6>
+<div id="outline-container-orgheadline640" class="outline-6">
+<h6 id="orgheadline640"><span class="section-number-6">5.6.2.2.5</span> 安全设计2</h6>
 <div class="outline-text-6" id="text-5-6-2-2-5">
 <p>
 　　炉腔内有自动检测装置，当检测到有禁忌放入的食品、容器等，会通过LED灯显示，避免微波炉腔内着火 、爆炸等事故。
@@ -7508,8 +8362,8 @@ U形线条常见于高端精密电子产品，诠释电子产品优雅感和科�
 </div>
 </div>
 
-<div id="outline-container-orgheadline642" class="outline-6">
-<h6 id="orgheadline642"><span class="section-number-6">5.6.2.2.6</span> 界面设计</h6>
+<div id="outline-container-orgheadline641" class="outline-6">
+<h6 id="orgheadline641"><span class="section-number-6">5.6.2.2.6</span> 界面设计</h6>
 <div class="outline-text-6" id="text-5-6-2-2-6">
 <ul class="org-ul">
 <li>位于三角区，全触摸屏，通电后显示 LED 灯光文字；</li>
@@ -7520,13 +8374,13 @@ U形线条常见于高端精密电子产品，诠释电子产品优雅感和科�
 </div>
 </div>
 </div>
-<div id="outline-container-orgheadline650" class="outline-5">
-<h5 id="orgheadline650"><span class="section-number-5">5.6.2.3</span> 升波</h5>
+<div id="outline-container-orgheadline649" class="outline-5">
+<h5 id="orgheadline649"><span class="section-number-5">5.6.2.3</span> 升波</h5>
 <div class="outline-text-5" id="text-5-6-2-3">
 </div>
 
-<div id="outline-container-orgheadline644" class="outline-6">
-<h6 id="orgheadline644"><span class="section-number-6">5.6.2.3.1</span> 灵感来源</h6>
+<div id="outline-container-orgheadline643" class="outline-6">
+<h6 id="orgheadline643"><span class="section-number-6">5.6.2.3.1</span> 灵感来源</h6>
 <div class="outline-text-6" id="text-5-6-2-3-1">
 <ul class="org-ul">
 <li>灵感源于挪威JOTUL公司F470独立式燃木壁炉；</li>
@@ -7536,11 +8390,11 @@ U形线条常见于高端精密电子产品，诠释电子产品优雅感和科�
 </div>
 </div>
 
-<div id="outline-container-orgheadline645" class="outline-6">
-<h6 id="orgheadline645"><span class="section-number-6">5.6.2.3.2</span> 造型一特点</h6>
+<div id="outline-container-orgheadline644" class="outline-6">
+<h6 id="orgheadline644"><span class="section-number-6">5.6.2.3.2</span> 造型一特点</h6>
 <div class="outline-text-6" id="text-5-6-2-3-2">
 <p>
-悬挂式球形内舱，以气球为原型，顶部散热，主板与加热盘合体。
+　　悬挂式球形内舱，以气球为原型，顶部散热，主板与加热盘合体。
 </p>
 <ul class="org-ul">
 <li>优势：散热很好、造型新颖、界面人机、节约空间；</li>
@@ -7549,11 +8403,11 @@ U形线条常见于高端精密电子产品，诠释电子产品优雅感和科�
 </div>
 </div>
 
-<div id="outline-container-orgheadline649" class="outline-6">
-<h6 id="orgheadline649"><span class="section-number-6">5.6.2.3.3</span> 造型二特点</h6>
+<div id="outline-container-orgheadline648" class="outline-6">
+<h6 id="orgheadline648"><span class="section-number-6">5.6.2.3.3</span> 造型二特点</h6>
 <div class="outline-text-6" id="text-5-6-2-3-3">
 <p>
-壁挂式半圆柱筒状、加热盘与主体分离、主板和界面在上方、加热可视 、触屏界面。
+　　壁挂式半圆柱筒状、加热盘与主体分离、主板和界面在上方、加热可视 、触屏界面。
 </p>
 <ul class="org-ul">
 <li>优势：较稳定、加热均处、界面隐藏更多内容、给人安全感、屏幕防油烟污染；</li>
@@ -7561,8 +8415,8 @@ U形线条常见于高端精密电子产品，诠释电子产品优雅感和科�
 </ul>
 </div>
 
-<div id="outline-container-orgheadline646" class="outline-7">
-<h7 id="orgheadline646"><span class="section-number-7">5.6.2.3.3.1</span> 造型二亮点</h7>
+<div id="outline-container-orgheadline645" class="outline-7">
+<h7 id="orgheadline645"><span class="section-number-7">5.6.2.3.3.1</span> 造型二亮点</h7>
 <div class="outline-text-7" id="text-5-6-2-3-3-1">
 <ul class="org-ul">
 <li>壁挂式</li>
@@ -7575,14 +8429,14 @@ U形线条常见于高端精密电子产品，诠释电子产品优雅感和科�
 </ul>
 </div>
 </div>
-<div id="outline-container-orgheadline647" class="outline-7">
-<h7 id="orgheadline647"><span class="section-number-7">5.6.2.3.3.2</span> 造型二智能管家</h7>
+<div id="outline-container-orgheadline646" class="outline-7">
+<h7 id="orgheadline646"><span class="section-number-7">5.6.2.3.3.2</span> 造型二智能管家</h7>
 <div class="outline-text-7" id="text-5-6-2-3-3-2">
 </div>
 </div>
 
-<div id="outline-container-orgheadline648" class="outline-7">
-<h7 id="orgheadline648"><span class="section-number-7">5.6.2.3.3.3</span> 造型二活动加热板</h7>
+<div id="outline-container-orgheadline647" class="outline-7">
+<h7 id="orgheadline647"><span class="section-number-7">5.6.2.3.3.3</span> 造型二活动加热板</h7>
 <div class="outline-text-7" id="text-5-6-2-3-3-3">
 <ul class="org-ul">
 <li>加热板降到桌面平台更易取放食物；</li>
@@ -7595,37 +8449,37 @@ U形线条常见于高端精密电子产品，诠释电子产品优雅感和科�
 </div>
 </div>
 
-<div id="outline-container-orgheadline655" class="outline-4">
-<h4 id="orgheadline655"><span class="section-number-4">5.6.3</span> 模型制作</h4>
+<div id="outline-container-orgheadline654" class="outline-4">
+<h4 id="orgheadline654"><span class="section-number-4">5.6.3</span> 模型制作</h4>
 <div class="outline-text-4" id="text-5-6-3">
-</div><div id="outline-container-orgheadline652" class="outline-5">
-<h5 id="orgheadline652"><span class="section-number-5">5.6.3.1</span> 材料</h5>
+</div><div id="outline-container-orgheadline651" class="outline-5">
+<h5 id="orgheadline651"><span class="section-number-5">5.6.3.1</span> 材料</h5>
 <div class="outline-text-5" id="text-5-6-3-1">
 <p>
-微波炉主体选用不锈钢，其他透明部分为微晶玻璃。
+　　微波炉主体选用不锈钢，其他透明部分为微晶玻璃。
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgheadline652" class="outline-5">
+<h5 id="orgheadline652"><span class="section-number-5">5.6.3.2</span> 工程视图</h5>
+<div class="outline-text-5" id="text-5-6-3-2">
+<p>
+　　准确展示产品各方面尺寸和加工标准，为工程人员加工制作产品提供技术支持。
 </p>
 </div>
 </div>
 
 <div id="outline-container-orgheadline653" class="outline-5">
-<h5 id="orgheadline653"><span class="section-number-5">5.6.3.2</span> 工程视图</h5>
-<div class="outline-text-5" id="text-5-6-3-2">
-<p>
-准确展示产品各方面尺寸和加工标准，为工程人员加工制作产品提供技术支持。
-</p>
-</div>
-</div>
-
-<div id="outline-container-orgheadline654" class="outline-5">
-<h5 id="orgheadline654"><span class="section-number-5">5.6.3.3</span> 草模</h5>
+<h5 id="orgheadline653"><span class="section-number-5">5.6.3.3</span> 草模</h5>
 <div class="outline-text-5" id="text-5-6-3-3">
 </div>
 </div>
 </div>
 </div>
 
-<div id="outline-container-orgheadline657" class="outline-3">
-<h3 id="orgheadline657"><span class="section-number-3">5.7</span> 思考题</h3>
+<div id="outline-container-orgheadline656" class="outline-3">
+<h3 id="orgheadline656"><span class="section-number-3">5.7</span> 思考题</h3>
 <div class="outline-text-3" id="text-5-7">
 <p>
 　　应用产品系统设计方法设计一款3C产品 (计算机Computer、通信Communication、消费类电子产品ConsumerElectronics)。
@@ -7642,8 +8496,8 @@ U形线条常见于高端精密电子产品，诠释电子产品优雅感和科�
 </div>
 </div>
 
-<div id="outline-container-orgheadline694" class="outline-2">
-<h2 id="orgheadline694"><span class="section-number-2">6</span> 产品系统设计发展趋势</h2>
+<div id="outline-container-orgheadline693" class="outline-2">
+<h2 id="orgheadline693"><span class="section-number-2">6</span> 产品系统设计发展趋势</h2>
 <div class="outline-text-2" id="text-6">
 <ul class="org-ul">
 <li>产品设计发展趋势</li>
@@ -7651,8 +8505,8 @@ U形线条常见于高端精密电子产品，诠释电子产品优雅感和科�
 <li>持续推动产品系统设计</li>
 </ul>
 </div>
-<div id="outline-container-orgheadline678" class="outline-3">
-<h3 id="orgheadline678"><span class="section-number-3">6.1</span> 产品设计发展趋势</h3>
+<div id="outline-container-orgheadline677" class="outline-3">
+<h3 id="orgheadline677"><span class="section-number-3">6.1</span> 产品设计发展趋势</h3>
 <div class="outline-text-3" id="text-6-1">
 <ul class="org-ul">
 <li>产品功能</li>
@@ -7662,8 +8516,8 @@ U形线条常见于高端精密电子产品，诠释电子产品优雅感和科�
 </ul>
 </div>
 
-<div id="outline-container-orgheadline667" class="outline-4">
-<h4 id="orgheadline667"><span class="section-number-4">6.1.1</span> 产品功能</h4>
+<div id="outline-container-orgheadline666" class="outline-4">
+<h4 id="orgheadline666"><span class="section-number-4">6.1.1</span> 产品功能</h4>
 <div class="outline-text-4" id="text-6-1-1">
 <ul class="org-ul">
 <li>综合化</li>
@@ -7673,8 +8527,8 @@ U形线条常见于高端精密电子产品，诠释电子产品优雅感和科�
 </ul>
 </div>
 
-<div id="outline-container-orgheadline661" class="outline-5">
-<h5 id="orgheadline661"><span class="section-number-5">6.1.1.1</span> 综合化</h5>
+<div id="outline-container-orgheadline660" class="outline-5">
+<h5 id="orgheadline660"><span class="section-number-5">6.1.1.1</span> 综合化</h5>
 <div class="outline-text-5" id="text-6-1-1-1">
 <ul class="org-ul">
 <li>多功能整合到同一产品</li>
@@ -7682,8 +8536,8 @@ U形线条常见于高端精密电子产品，诠释电子产品优雅感和科�
 </ul>
 </div>
 
-<div id="outline-container-orgheadline659" class="outline-6">
-<h6 id="orgheadline659"><span class="section-number-6">6.1.1.1.1</span> 综合化作用</h6>
+<div id="outline-container-orgheadline658" class="outline-6">
+<h6 id="orgheadline658"><span class="section-number-6">6.1.1.1.1</span> 综合化作用</h6>
 <div class="outline-text-6" id="text-6-1-1-1-1">
 <ul class="org-ul">
 <li>减少生产资料消耗，降低生产成本；</li>
@@ -7693,8 +8547,8 @@ U形线条常见于高端精密电子产品，诠释电子产品优雅感和科�
 </div>
 </div>
 
-<div id="outline-container-orgheadline660" class="outline-6">
-<h6 id="orgheadline660"><span class="section-number-6">6.1.1.1.2</span> 综合化实例</h6>
+<div id="outline-container-orgheadline659" class="outline-6">
+<h6 id="orgheadline659"><span class="section-number-6">6.1.1.1.2</span> 综合化实例</h6>
 <div class="outline-text-6" id="text-6-1-1-1-2">
 <ul class="org-ul">
 <li>惠普多功能激光一体机集成打印 、复印 、扫描、收发传真等功能；</li>
@@ -7704,11 +8558,11 @@ U形线条常见于高端精密电子产品，诠释电子产品优雅感和科�
 </div>
 </div>
 
-<div id="outline-container-orgheadline664" class="outline-5">
-<h5 id="orgheadline664"><span class="section-number-5">6.1.1.2</span> 信息化</h5>
+<div id="outline-container-orgheadline663" class="outline-5">
+<h5 id="orgheadline663"><span class="section-number-5">6.1.1.2</span> 信息化</h5>
 <div class="outline-text-5" id="text-6-1-1-2">
 <p>
-产品使用功能和体验功能共同构成企业品牌核心元素，推进产品发展。
+　　产品使用功能和体验功能共同构成企业品牌核心元素，推进产品发展。
 </p>
 <ul class="org-ul">
 <li>使用功能</li>
@@ -7716,17 +8570,17 @@ U形线条常见于高端精密电子产品，诠释电子产品优雅感和科�
 </ul>
 </div>
 
-<div id="outline-container-orgheadline662" class="outline-6">
-<h6 id="orgheadline662"><span class="section-number-6">6.1.1.2.1</span> 使用功能</h6>
+<div id="outline-container-orgheadline661" class="outline-6">
+<h6 id="orgheadline661"><span class="section-number-6">6.1.1.2.1</span> 使用功能</h6>
 <div class="outline-text-6" id="text-6-1-1-2-1">
 <p>
-如，手机具有电话功能
+　　如，手机具有电话功能
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgheadline663" class="outline-6">
-<h6 id="orgheadline663"><span class="section-number-6">6.1.1.2.2</span> 体验功能</h6>
+<div id="outline-container-orgheadline662" class="outline-6">
+<h6 id="orgheadline662"><span class="section-number-6">6.1.1.2.2</span> 体验功能</h6>
 <div class="outline-text-6" id="text-6-1-1-2-2">
 <ul class="org-ul">
 <li>产品提供某种服务以丰富、完善人的体验。</li>
@@ -7737,11 +8591,11 @@ U形线条常见于高端精密电子产品，诠释电子产品优雅感和科�
 </div>
 </div>
 
-<div id="outline-container-orgheadline665" class="outline-5">
-<h5 id="orgheadline665"><span class="section-number-5">6.1.1.3</span> 网络化</h5>
+<div id="outline-container-orgheadline664" class="outline-5">
+<h5 id="orgheadline664"><span class="section-number-5">6.1.1.3</span> 网络化</h5>
 <div class="outline-text-5" id="text-6-1-1-3">
 <p>
-产品功能借助网络手段实现。
+　　产品功能借助网络手段实现。
 </p>
 
 <ul class="org-ul">
@@ -7752,8 +8606,8 @@ U形线条常见于高端精密电子产品，诠释电子产品优雅感和科�
 </div>
 </div>
 
-<div id="outline-container-orgheadline666" class="outline-5">
-<h5 id="orgheadline666"><span class="section-number-5">6.1.1.4</span> 智能化</h5>
+<div id="outline-container-orgheadline665" class="outline-5">
+<h5 id="orgheadline665"><span class="section-number-5">6.1.1.4</span> 智能化</h5>
 <div class="outline-text-5" id="text-6-1-1-4">
 <ul class="org-ul">
 <li>工业机器人完成过程复杂 、耗时费力的标准化生产流程，解放劳动力；</li>
@@ -7765,11 +8619,11 @@ U形线条常见于高端精密电子产品，诠释电子产品优雅感和科�
 </div>
 </div>
 
-<div id="outline-container-orgheadline668" class="outline-4">
-<h4 id="orgheadline668"><span class="section-number-4">6.1.2</span> 产品使用方式</h4>
+<div id="outline-container-orgheadline667" class="outline-4">
+<h4 id="orgheadline667"><span class="section-number-4">6.1.2</span> 产品使用方式</h4>
 <div class="outline-text-4" id="text-6-1-2">
 <p>
-体验设计以顾客感性需求为设计目标，通过生动有趣的产品，营造完善的使用感受。
+　　体验设计以顾客感性需求为设计目标，通过生动有趣的产品，营造完善的使用感受。
 </p>
 
 <ul class="org-ul">
@@ -7782,8 +8636,8 @@ U形线条常见于高端精密电子产品，诠释电子产品优雅感和科�
 </div>
 </div>
 
-<div id="outline-container-orgheadline675" class="outline-4">
-<h4 id="orgheadline675"><span class="section-number-4">6.1.3</span> 产品设计定位</h4>
+<div id="outline-container-orgheadline674" class="outline-4">
+<h4 id="orgheadline674"><span class="section-number-4">6.1.3</span> 产品设计定位</h4>
 <div class="outline-text-4" id="text-6-1-3">
 <ul class="org-ul">
 <li>功能差异化、个性化指对产品的功能、效果、性能等多样个性化需求；</li>
@@ -7791,17 +8645,17 @@ U形线条常见于高端精密电子产品，诠释电子产品优雅感和科�
 </ul>
 </div>
 
-<div id="outline-container-orgheadline669" class="outline-5">
-<h5 id="orgheadline669"><span class="section-number-5">6.1.3.1</span> 个性化</h5>
+<div id="outline-container-orgheadline668" class="outline-5">
+<h5 id="orgheadline668"><span class="section-number-5">6.1.3.1</span> 个性化</h5>
 <div class="outline-text-5" id="text-6-1-3-1">
 <p>
-个性化市场策略和设计手段，细分市场，拓展产品设计空间，获得更大市场份额。
+　　个性化市场策略和设计手段，细分市场，拓展产品设计空间，获得更大市场份额。
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgheadline674" class="outline-5">
-<h5 id="orgheadline674"><span class="section-number-5">6.1.3.2</span> 差异化</h5>
+<div id="outline-container-orgheadline673" class="outline-5">
+<h5 id="orgheadline673"><span class="section-number-5">6.1.3.2</span> 差异化</h5>
 <div class="outline-text-5" id="text-6-1-3-2">
 <ul class="org-ul">
 <li>功能创新</li>
@@ -7810,8 +8664,8 @@ U形线条常见于高端精密电子产品，诠释电子产品优雅感和科�
 </ul>
 </div>
 
-<div id="outline-container-orgheadline670" class="outline-6">
-<h6 id="orgheadline670"><span class="section-number-6">6.1.3.2.1</span> 功能创新</h6>
+<div id="outline-container-orgheadline669" class="outline-6">
+<h6 id="orgheadline669"><span class="section-number-6">6.1.3.2.1</span> 功能创新</h6>
 <div class="outline-text-6" id="text-6-1-3-2-1">
 <ul class="org-ul">
 <li>功能创新获得竞争差异化优势。</li>
@@ -7820,16 +8674,16 @@ U形线条常见于高端精密电子产品，诠释电子产品优雅感和科�
 </div>
 </div>
 
-<div id="outline-container-orgheadline672" class="outline-6">
-<h6 id="orgheadline672"><span class="section-number-6">6.1.3.2.2</span> 性能改善</h6>
+<div id="outline-container-orgheadline671" class="outline-6">
+<h6 id="orgheadline671"><span class="section-number-6">6.1.3.2.2</span> 性能改善</h6>
 <div class="outline-text-6" id="text-6-1-3-2-2">
 <p>
-因地制宜进行产品差异化设计
+　　因地制宜进行产品差异化设计
 </p>
 </div>
 
-<div id="outline-container-orgheadline671" class="outline-7">
-<h7 id="orgheadline671"><span class="section-number-7">6.1.3.2.2.1</span> 海尔空调应对巴基斯坦气候特点的差异化设计</h7>
+<div id="outline-container-orgheadline670" class="outline-7">
+<h7 id="orgheadline670"><span class="section-number-7">6.1.3.2.2.1</span> 海尔空调应对巴基斯坦气候特点的差异化设计</h7>
 <div class="outline-text-7" id="text-6-1-3-2-2-1">
 <ul class="org-ul">
 <li>夏天部分地区中午气温超50摄氏度，快速制冷成突出需求；另外，经常停电，电压不稳；海尔空调具备强力快速制冷、高温低电压启动功能；</li>
@@ -7839,8 +8693,8 @@ U形线条常见于高端精密电子产品，诠释电子产品优雅感和科�
 </div>
 </div>
 
-<div id="outline-container-orgheadline673" class="outline-6">
-<h6 id="orgheadline673"><span class="section-number-6">6.1.3.2.3</span> 量身定做</h6>
+<div id="outline-container-orgheadline672" class="outline-6">
+<h6 id="orgheadline672"><span class="section-number-6">6.1.3.2.3</span> 量身定做</h6>
 <div class="outline-text-6" id="text-6-1-3-2-3">
 <ul class="org-ul">
 <li>海尔静音洗衣机避免夜间洗衣噪音大 (日本木结构住宅, 主妇习惯晚上清洗衣服)；</li>
@@ -7851,8 +8705,8 @@ U形线条常见于高端精密电子产品，诠释电子产品优雅感和科�
 </div>
 </div>
 
-<div id="outline-container-orgheadline677" class="outline-4">
-<h4 id="orgheadline677"><span class="section-number-4">6.1.4</span> 产品设计者</h4>
+<div id="outline-container-orgheadline676" class="outline-4">
+<h4 id="orgheadline676"><span class="section-number-4">6.1.4</span> 产品设计者</h4>
 <div class="outline-text-4" id="text-6-1-4">
 <ul class="org-ul">
 <li>设计走向普通大众；</li>
@@ -7861,8 +8715,8 @@ U形线条常见于高端精密电子产品，诠释电子产品优雅感和科�
 </ul>
 </div>
 
-<div id="outline-container-orgheadline676" class="outline-5">
-<h5 id="orgheadline676"><span class="section-number-5">6.1.4.1</span> 参与式设计模式</h5>
+<div id="outline-container-orgheadline675" class="outline-5">
+<h5 id="orgheadline675"><span class="section-number-5">6.1.4.1</span> 参与式设计模式</h5>
 <div class="outline-text-5" id="text-6-1-4-1">
 <ul class="org-ul">
 <li>把用户引入设计过程中观察、了解用户思维模式，使用产品方式；</li>
@@ -7874,8 +8728,8 @@ U形线条常见于高端精密电子产品，诠释电子产品优雅感和科�
 </div>
 </div>
 
-<div id="outline-container-orgheadline689" class="outline-3">
-<h3 id="orgheadline689"><span class="section-number-3">6.2</span> 产品系统设计核心走向</h3>
+<div id="outline-container-orgheadline688" class="outline-3">
+<h3 id="orgheadline688"><span class="section-number-3">6.2</span> 产品系统设计核心走向</h3>
 <div class="outline-text-3" id="text-6-2">
 <ul class="org-ul">
 <li>服务设计</li>
@@ -7883,13 +8737,13 @@ U形线条常见于高端精密电子产品，诠释电子产品优雅感和科�
 </ul>
 </div>
 
-<div id="outline-container-orgheadline684" class="outline-4">
-<h4 id="orgheadline684"><span class="section-number-4">6.2.1</span> 服务设计</h4>
+<div id="outline-container-orgheadline683" class="outline-4">
+<h4 id="orgheadline683"><span class="section-number-4">6.2.1</span> 服务设计</h4>
 <div class="outline-text-4" id="text-6-2-1">
 </div>
 
-<div id="outline-container-orgheadline679" class="outline-5">
-<h5 id="orgheadline679"><span class="section-number-5">6.2.1.1</span> 服务设计定义</h5>
+<div id="outline-container-orgheadline678" class="outline-5">
+<h5 id="orgheadline678"><span class="section-number-5">6.2.1.1</span> 服务设计定义</h5>
 <div class="outline-text-5" id="text-6-2-1-1">
 <p>
 　　有效计划和组织一项服务中涉及的人 、基础设施、通信交流及物料等相关因素，从而提高用户体验和服务质量的设计活动。
@@ -7897,11 +8751,11 @@ U形线条常见于高端精密电子产品，诠释电子产品优雅感和科�
 </div>
 </div>
 
-<div id="outline-container-orgheadline680" class="outline-5">
-<h5 id="orgheadline680"><span class="section-number-5">6.2.1.2</span> 服务设计对象</h5>
+<div id="outline-container-orgheadline679" class="outline-5">
+<h5 id="orgheadline679"><span class="section-number-5">6.2.1.2</span> 服务设计对象</h5>
 <div class="outline-text-5" id="text-6-2-1-2">
 <p>
-所有提供服务的行业 (有形或无形) 
+　　所有提供服务的行业 (有形或无形) 
 </p>
 <ul class="org-ul">
 <li>饭店、学校、机场、医院、公共交通</li>
@@ -7910,8 +8764,8 @@ U形线条常见于高端精密电子产品，诠释电子产品优雅感和科�
 </div>
 </div>
 
-<div id="outline-container-orgheadline681" class="outline-5">
-<h5 id="orgheadline681"><span class="section-number-5">6.2.1.3</span> 服务设计作用</h5>
+<div id="outline-container-orgheadline680" class="outline-5">
+<h5 id="orgheadline680"><span class="section-number-5">6.2.1.3</span> 服务设计作用</h5>
 <div class="outline-text-5" id="text-6-2-1-3">
 <ul class="org-ul">
 <li>有效提高企业形象，使消费者对服务产生更大满意度，吸引更多商业机遇和投资；</li>
@@ -7920,8 +8774,8 @@ U形线条常见于高端精密电子产品，诠释电子产品优雅感和科�
 </div>
 </div>
 
-<div id="outline-container-orgheadline683" class="outline-5">
-<h5 id="orgheadline683"><span class="section-number-5">6.2.1.4</span> 案例：悉尼攀桥旅游</h5>
+<div id="outline-container-orgheadline682" class="outline-5">
+<h5 id="orgheadline682"><span class="section-number-5">6.2.1.4</span> 案例：悉尼攀桥旅游</h5>
 <div class="outline-text-5" id="text-6-2-1-4">
 <ul class="org-ul">
 <li>于1932年建成通车的悉尼大桥共12车道，跨度503米，拱部最高处距海平面122米。</li>
@@ -7929,8 +8783,8 @@ U形线条常见于高端精密电子产品，诠释电子产品优雅感和科�
 </ul>
 </div>
 
-<div id="outline-container-orgheadline682" class="outline-6">
-<h6 id="orgheadline682"><span class="section-number-6">6.2.1.4.1</span> 悉尼攀桥内容</h6>
+<div id="outline-container-orgheadline681" class="outline-6">
+<h6 id="orgheadline681"><span class="section-number-6">6.2.1.4.1</span> 悉尼攀桥内容</h6>
 <div class="outline-text-6" id="text-6-2-1-4-1">
 <ul class="org-ul">
 <li>白天和夜晚 (恶劣天气除外)，每隔10分钟一队由12人组成的攀登小组向拱顶出发；</li>
@@ -7944,11 +8798,11 @@ U形线条常见于高端精密电子产品，诠释电子产品优雅感和科�
 </div>
 </div>
 </div>
-<div id="outline-container-orgheadline688" class="outline-4">
-<h4 id="orgheadline688"><span class="section-number-4">6.2.2</span> 可持续设计</h4>
+<div id="outline-container-orgheadline687" class="outline-4">
+<h4 id="orgheadline687"><span class="section-number-4">6.2.2</span> 可持续设计</h4>
 <div class="outline-text-4" id="text-6-2-2">
 <p>
-3R原则：Reduce, Recycle and Reuse
+　　3R原则：Reduce, Recycle and Reuse
 </p>
 
 <ul class="org-ul">
@@ -7957,8 +8811,8 @@ U形线条常见于高端精密电子产品，诠释电子产品优雅感和科�
 </ul>
 </div>
 
-<div id="outline-container-orgheadline687" class="outline-5">
-<h5 id="orgheadline687"><span class="section-number-5">6.2.2.1</span> 绿色汽车</h5>
+<div id="outline-container-orgheadline686" class="outline-5">
+<h5 id="orgheadline686"><span class="section-number-5">6.2.2.1</span> 绿色汽车</h5>
 <div class="outline-text-5" id="text-6-2-2-1">
 <ul class="org-ul">
 <li>使用能源 (如天然气、液氢、电和太阳能等) 符合低污染和低排放原则</li>
@@ -7966,8 +8820,8 @@ U形线条常见于高端精密电子产品，诠释电子产品优雅感和科�
 </ul>
 </div>
 
-<div id="outline-container-orgheadline685" class="outline-6">
-<h6 id="orgheadline685"><span class="section-number-6">6.2.2.1.1</span> 奔驰公司汽车全生命周期回收目标</h6>
+<div id="outline-container-orgheadline684" class="outline-6">
+<h6 id="orgheadline684"><span class="section-number-6">6.2.2.1.1</span> 奔驰公司汽车全生命周期回收目标</h6>
 <div class="outline-text-6" id="text-6-2-2-1-1">
 <ul class="org-ul">
 <li>从汽车设计开始注重汽车可回收性；</li>
@@ -7978,8 +8832,8 @@ U形线条常见于高端精密电子产品，诠释电子产品优雅感和科�
 </div>
 </div>
 
-<div id="outline-container-orgheadline686" class="outline-6">
-<h6 id="orgheadline686"><span class="section-number-6">6.2.2.1.2</span> 沃尔沃公司与瑞典环境研究所联合开发EPS系统</h6>
+<div id="outline-container-orgheadline685" class="outline-6">
+<h6 id="orgheadline685"><span class="section-number-6">6.2.2.1.2</span> 沃尔沃公司与瑞典环境研究所联合开发EPS系统</h6>
 <div class="outline-text-6" id="text-6-2-2-1-2">
 <ul class="org-ul">
 <li>数据收集与分析：材料，燃料提炼 、制造、使用到废弃全过程对环境的影响；</li>
@@ -7992,8 +8846,8 @@ U形线条常见于高端精密电子产品，诠释电子产品优雅感和科�
 </div>
 </div>
 </div>
-<div id="outline-container-orgheadline692" class="outline-3">
-<h3 id="orgheadline692"><span class="section-number-3">6.3</span> 持续推动产品系统设计</h3>
+<div id="outline-container-orgheadline691" class="outline-3">
+<h3 id="orgheadline691"><span class="section-number-3">6.3</span> 持续推动产品系统设计</h3>
 <div class="outline-text-3" id="text-6-3">
 <ul class="org-ul">
 <li>技术革新、环境保护、以人为本是持续发展的时代要求。</li>
@@ -8001,8 +8855,8 @@ U形线条常见于高端精密电子产品，诠释电子产品优雅感和科�
 </ul>
 </div>
 
-<div id="outline-container-orgheadline690" class="outline-4">
-<h4 id="orgheadline690"><span class="section-number-4">6.3.1</span> 发展热点</h4>
+<div id="outline-container-orgheadline689" class="outline-4">
+<h4 id="orgheadline689"><span class="section-number-4">6.3.1</span> 发展热点</h4>
 <div class="outline-text-4" id="text-6-3-1">
 <ul class="org-ul">
 <li>纳米技术的应用带来新材料热点</li>
@@ -8012,8 +8866,8 @@ U形线条常见于高端精密电子产品，诠释电子产品优雅感和科�
 </div>
 </div>
 
-<div id="outline-container-orgheadline691" class="outline-4">
-<h4 id="orgheadline691"><span class="section-number-4">6.3.2</span> 系统设计的时代价值</h4>
+<div id="outline-container-orgheadline690" class="outline-4">
+<h4 id="orgheadline690"><span class="section-number-4">6.3.2</span> 系统设计的时代价值</h4>
 <div class="outline-text-4" id="text-6-3-2">
 <ul class="org-ul">
 <li>社会兼容</li>
@@ -8025,8 +8879,8 @@ U形线条常见于高端精密电子产品，诠释电子产品优雅感和科�
 </div>
 
 
-<div id="outline-container-orgheadline693" class="outline-3">
-<h3 id="orgheadline693"><span class="section-number-3">6.4</span> 思考题</h3>
+<div id="outline-container-orgheadline692" class="outline-3">
+<h3 id="orgheadline692"><span class="section-number-3">6.4</span> 思考题</h3>
 <div class="outline-text-3" id="text-6-4">
 <p>
 　　对未来设计趋势进行综合预测或某一新方向的预期，并对预测 (预期) 结果的合理性或实现路径进行分析说明。
@@ -8045,7 +8899,7 @@ U形线条常见于高端精密电子产品，诠释电子产品优雅感和科�
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Anhongz@outlook.com</p>
-<p class="date">Created: 2019-04-06 Sat 22:28</p>
+<p class="date">Created: 2019-04-07 Sun 13:04</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
