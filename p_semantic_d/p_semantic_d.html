@@ -1,0 +1,1081 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2019-05-14 Tue 15:31 -->
+<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta  name="viewport" content="width=device-width, initial-scale=1" />
+<title>产品语意设计 Product Semantic Design</title>
+<meta  name="generator" content="Org-mode" />
+<meta  name="author" content="Anhongz@outlook.com" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/styles/readtheorg/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/styles/readtheorg/css/readtheorg.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/styles/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/styles/readtheorg/js/readtheorg.js"></script>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">产品语意设计 Product Semantic Design</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orgheadline85">1. 产品语意概述</a>
+<ul>
+<li><a href="#orgheadline4">1.1. 产品语意</a></li>
+<li><a href="#orgheadline33">1.2. 产品语言</a></li>
+<li><a href="#orgheadline71">1.3. 产品符号</a></li>
+<li><a href="#orgheadline78">1.4. 产品语意层次</a></li>
+<li><a href="#orgheadline82">1.5. 产品语意价值</a></li>
+<li><a href="#orgheadline83">1.6. 产品语意学习内容</a></li>
+<li><a href="#orgheadline84">1.7. 作业一</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgheadline85" class="outline-2">
+<h2 id="orgheadline85"><span class="section-number-2">1</span> 产品语意概述</h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li>产品语意 &lt; 产品语言 &lt; 产品符号</li>
+<li>产品语意层次 (外延 | 内涵)</li>
+<li>产品语意价值</li>
+</ul>
+</div>
+
+<div id="outline-container-orgheadline4" class="outline-3">
+<h3 id="orgheadline4"><span class="section-number-3">1.1</span> 产品语意</h3>
+<div class="outline-text-3" id="text-1-1">
+<ul class="org-ul">
+<li>语意(Semantic)是语言的意义</li>
+<li>产品语意是产品语言所表达的含义</li>
+</ul>
+</div>
+
+<div id="outline-container-orgheadline1" class="outline-4">
+<h4 id="orgheadline1"><span class="section-number-4">1.1.1</span> 产品语意学</h4>
+<div class="outline-text-4" id="text-1-1-1">
+<ul class="org-ul">
+<li>语意学(Semantics)是研究语言意义的学科。</li>
+<li>产品语意学是研究人造物形态在使用情境中的象征特性，并将此运用于设计。</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgheadline2" class="outline-4">
+<h4 id="orgheadline2"><span class="section-number-4">1.1.2</span> 广义产品语意学</h4>
+<div class="outline-text-4" id="text-1-1-2">
+<ul class="org-ul">
+<li>产品语意反映心理、社会及文化连贯性，产品从而成为人与象征环境的连接者，架起一个象征环境。</li>
+<li>产品语意学是对旧有事实的新觉醒；</li>
+<li>产品不仅具备物理机能，且能够：</li>
+<li>(1)指示如何使用；</li>
+<li>(2)具有象征功能；</li>
+<li>(3)构成人们生活其中的象征环境。</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgheadline3" class="outline-4">
+<h4 id="orgheadline3"><span class="section-number-4">1.1.3</span> 产品语意示例</h4>
+<div class="outline-text-4" id="text-1-1-3">
+<ul class="org-ul">
+<li>指示 / 隐喻 / 象征 / 联想</li>
+</ul>
+
+<img width="600" src="./img/series.png"></img>
+</div>
+</div>
+</div>
+<div id="outline-container-orgheadline33" class="outline-3">
+<h3 id="orgheadline33"><span class="section-number-3">1.2</span> 产品语言</h3>
+<div class="outline-text-3" id="text-1-2">
+<ul class="org-ul">
+<li>产品语意是产品语言（语构、语意、语用）的一部分。</li>
+<li>产品语言着力于人和物的交流；</li>
+<li>形/构/材/色/质揭示或暗示内部结构，功能明确，界面易理解，解除操作困惑；</li>
+<li>形态设计明确视觉形象和象征意义，传达文化内涵，产生富有情趣的生活方式；</li>
+<li>达到人、机、环境的和谐统一。</li>
+</ul>
+</div>
+
+<div id="outline-container-orgheadline7" class="outline-4">
+<h4 id="orgheadline7"><span class="section-number-4">1.2.1</span> 产品语言表达</h4>
+<div class="outline-text-4" id="text-1-2-1">
+<p>
+产品表达即语言， 对产品语言的理解因人而异 (一个编码或对应数个解码)。
+</p>
+<img width="280" src="./img/info_transmission.png"></img>
+</div>
+
+<div id="outline-container-orgheadline5" class="outline-5">
+<h5 id="orgheadline5"><span class="section-number-5">1.2.1.1</span> 直白表达</h5>
+<div class="outline-text-5" id="text-1-2-1-1">
+<ul class="org-ul">
+<li>直白表达建立在人们对标识语意达成共识的基础上。</li>
+<li>例：洗手间标示男厕所、女厕所</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgheadline6" class="outline-5">
+<h5 id="orgheadline6"><span class="section-number-5">1.2.1.2</span> 隐含表达</h5>
+<div class="outline-text-5" id="text-1-2-1-2">
+<ul class="org-ul">
+<li>感觉是人的体验，据思维习惯展开联想。</li>
+<li>同一产品，不同人或有不同理解与情感体验。</li>
+<li>例：香水瓶从形态、色彩、质感，甚至摆放环境读出“端庄”“优雅”。</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline28" class="outline-4">
+<h4 id="orgheadline28"><span class="section-number-4">1.2.2</span> 产品语言组成</h4>
+<div class="outline-text-4" id="text-1-2-2">
+<ul class="org-ul">
+<li>构成：造型语言 / 互动语言</li>
+<li>要素：形态 / 色彩 / 材质 / 声音 / 动作</li>
+<li>系统：系统性 / 主导性</li>
+</ul>
+</div>
+
+<div id="outline-container-orgheadline8" class="outline-5">
+<h5 id="orgheadline8"><span class="section-number-5">1.2.2.1</span> 有声语言构成</h5>
+<div class="outline-text-5" id="text-1-2-2-1">
+<p>
+通过语音传达信息，使听者接收该信息后产生一定理解。
+</p>
+
+<ul class="org-ul">
+<li>字、词、句、语法与音调、音量等共同构成语言内容和表达方式</li>
+<li>相同话语由于语调变化产生意思或情感差异 (温柔/犀利)。</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgheadline9" class="outline-5">
+<h5 id="orgheadline9"><span class="section-number-5">1.2.2.2</span> 有声语言 -&gt; 产品语言</h5>
+<div class="outline-text-5" id="text-1-2-2-2">
+<ul class="org-ul">
+<li>通过有声语言语意理解过渡到产品语意理解降低产品语意学习难度。</li>
+<li>产品语意设计目的是对产品进行表达与信息传播。</li>
+<li>电影和摄影语言有各自独特的语意表达方式，</li>
+<li>选择特定领域表达方式，将其原理转化到产品设计中。</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgheadline15" class="outline-5">
+<h5 id="orgheadline15"><span class="section-number-5">1.2.2.3</span> 产品语言构成</h5>
+<div class="outline-text-5" id="text-1-2-2-3">
+<ul class="org-ul">
+<li>说话内容: 产品类型 (操作类 / 家具类 / 欣赏类等)</li>
+<li>表达方式: 类似语调、语气呈现情感，脸面呈现表情和气质。</li>
+<li>造型语言 / 互动语言</li>
+</ul>
+</div>
+
+<div id="outline-container-orgheadline12" class="outline-6">
+<h6 id="orgheadline12"><span class="section-number-6">1.2.2.3.1</span> 产品造型语言</h6>
+<div class="outline-text-6" id="text-1-2-2-3-1">
+<p>
+通过形态、色彩和材质表达产品造型
+</p>
+</div>
+
+<div id="outline-container-orgheadline10" class="outline-7">
+<h7 id="orgheadline10"><span class="section-number-7">1.2.2.3.1.1</span> 游艇 (扎哈·哈迪德设计)</h7>
+<div class="outline-text-7" id="text-1-2-2-3-1-1">
+<ul class="org-ul">
+<li>线条交织、虚实呼应体现豪华感与现代感，激发情感体验。</li>
+<li>人对速度的感性认识与游艇流动性的形态产生共鸣。</li>
+<li>共鸣本质上是人对事物的理解或期盼正好和某事物的出现相吻合。</li>
+</ul>
+<img width="420" src="./img/img2-081-75.png"></img><br><br>
+</div>
+</div>
+
+<div id="outline-container-orgheadline11" class="outline-7">
+<h7 id="orgheadline11"><span class="section-number-7">1.2.2.3.1.2</span> 商场导视牌</h7>
+<div class="outline-text-7" id="text-1-2-2-3-1-2">
+<ul class="org-ul">
+<li>打破传统高直立方或柱状造型，蛋形呈现敦实可爱的情感语意</li>
+</ul>
+<img width="180" src="./img/img2-081-77.png"></img><br><br>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline14" class="outline-6">
+<h6 id="orgheadline14"><span class="section-number-6">1.2.2.3.2</span> 产品互动语言</h6>
+<div class="outline-text-6" id="text-1-2-2-3-2">
+<p>
+产品通过声音和动作表达互动
+</p>
+<ul class="org-ul">
+<li>产品语言据互动方式产生不同语意</li>
+<li>例：肢体语言互动，抱和拉手呈现语意差异</li>
+<li>产品语言涉及感官体验多样而综合</li>
+<li>例：视 / 触 /  听 / 嗅觉体验都能成为人们理解产品语言的一种手段。</li>
+</ul>
+</div>
+
+<div id="outline-container-orgheadline13" class="outline-7">
+<h7 id="orgheadline13"><span class="section-number-7">1.2.2.3.2.1</span> 扫地机器人</h7>
+<div class="outline-text-7" id="text-1-2-2-3-2-1">
+<ul class="org-ul">
+<li>室内自行运动时，产生生命感，与周围事物和人互动</li>
+</ul>
+
+<img width="250" src="./img/img2-081-78.png"></img><br><br>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline24" class="outline-5">
+<h5 id="orgheadline24"><span class="section-number-5">1.2.2.4</span> 产品语言要素</h5>
+<div class="outline-text-5" id="text-1-2-2-4">
+<ul class="org-ul">
+<li>形态</li>
+<li>色彩</li>
+<li>材质</li>
+<li>声音与动作</li>
+</ul>
+</div>
+<div id="outline-container-orgheadline18" class="outline-6">
+<h6 id="orgheadline18"><span class="section-number-6">1.2.2.4.1</span> 形态</h6>
+<div class="outline-text-6" id="text-1-2-2-4-1">
+<img width="600" src="./img/forms.png"></img><br><br>
+</div>
+
+<div id="outline-container-orgheadline16" class="outline-7">
+<h7 id="orgheadline16"><span class="section-number-7">1.2.2.4.1.1</span> 形态例1</h7>
+<div class="outline-text-7" id="text-1-2-2-4-1-1">
+<ul class="org-ul">
+<li>水晕－－日本庭院枯山水</li>
+<li>亲近自然、修身养性</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgheadline17" class="outline-7">
+<h7 id="orgheadline17"><span class="section-number-7">1.2.2.4.1.2</span> 形态例2</h7>
+<div class="outline-text-7" id="text-1-2-2-4-1-2">
+<ul class="org-ul">
+<li>卢浮宫入口地下倒锥天窗充满张力</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline21" class="outline-6">
+<h6 id="orgheadline21"><span class="section-number-6">1.2.2.4.2</span> 色彩</h6>
+<div class="outline-text-6" id="text-1-2-2-4-2">
+<p>
+当产品色彩与人的情绪匹配时，便产生共鸣。
+</p>
+
+<ul class="org-ul">
+<li>用餐设计偏暖色，吃饭更温馨。</li>
+<li>设备色彩低纯度，局部高亮，适合环境和操作。</li>
+</ul>
+</div>
+
+<div id="outline-container-orgheadline19" class="outline-7">
+<h7 id="orgheadline19"><span class="section-number-7">1.2.2.4.2.1</span> 色彩体现差异</h7>
+<div class="outline-text-7" id="text-1-2-2-4-2-1">
+<ul class="org-ul">
+<li>同款商品多种色彩供选择。</li>
+</ul>
+
+<img width="500" src="./img/img2-081-81.png"></img><br><br>
+</div>
+</div>
+<div id="outline-container-orgheadline20" class="outline-7">
+<h7 id="orgheadline20"><span class="section-number-7">1.2.2.4.2.2</span> 色彩展示焦点</h7>
+<div class="outline-text-7" id="text-1-2-2-4-2-2">
+<ul class="org-ul">
+<li>一组产品的单个产品色彩或一个产品的局部用色作为视觉焦点，主导氛围。</li>
+<li>例：自行车局部用色影响自行车气质和场地氛围。</li>
+</ul>
+<img width="330" src="./img/bicycle.jpg"></img><br><br>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline22" class="outline-6">
+<h6 id="orgheadline22"><span class="section-number-6">1.2.2.4.3</span> 材质</h6>
+<div class="outline-text-6" id="text-1-2-2-4-3">
+<ul class="org-ul">
+<li>材质包括视觉效果和触觉感受</li>
+<li>例：手柄磨砂效果与光滑表面给人不同品质感</li>
+</ul>
+<img width="400" src="./img/Handles.png"></img><br><br>
+</div>
+</div>
+
+<div id="outline-container-orgheadline23" class="outline-6">
+<h6 id="orgheadline23"><span class="section-number-6">1.2.2.4.4</span> 声音与动作</h6>
+<div class="outline-text-6" id="text-1-2-2-4-4">
+<ul class="org-ul">
+<li>智能产品通过声音与动作增加人和产品的互动</li>
+<li>手指划过屏幕的声音，按下开关键发出的音效等。</li>
+<li>例：通过感应实现开合的垃圾箱，开合速度、幅度等成为语言特征。</li>
+</ul>
+<img width="300" src="./img/rubbish_bin.png"></img><br><br>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline27" class="outline-5">
+<h5 id="orgheadline27"><span class="section-number-5">1.2.2.5</span> 产品语言系统特征</h5>
+<div class="outline-text-5" id="text-1-2-2-5">
+<ul class="org-ul">
+<li>系统性</li>
+<li>主导性</li>
+</ul>
+</div>
+<div id="outline-container-orgheadline25" class="outline-6">
+<h6 id="orgheadline25"><span class="section-number-6">1.2.2.5.1</span> 系统性</h6>
+<div class="outline-text-6" id="text-1-2-2-5-1">
+<ul class="org-ul">
+<li>局部和整体相联系</li>
+<li>例：衣、裤、裙、鞋、帽需搭配发挥整体价值。</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgheadline26" class="outline-6">
+<h6 id="orgheadline26"><span class="section-number-6">1.2.2.5.2</span> 主导性</h6>
+<div class="outline-text-6" id="text-1-2-2-5-2">
+<ul class="org-ul">
+<li>主导语言即产品主要性格</li>
+<li>其他语言根据系统规律依次出场。如说话时主题表达基础上，用其他语言润色。</li>
+<li>产品通过表情或气质确定“主导语言”，继而通过细节实现产品语意综合表达。</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline32" class="outline-4">
+<h4 id="orgheadline32"><span class="section-number-4">1.2.3</span> 产品语言作用</h4>
+<div class="outline-text-4" id="text-1-2-3">
+<ul class="org-ul">
+<li>贴合消费心理</li>
+<li>人文关怀与社会责任</li>
+<li>传达哲学观念</li>
+</ul>
+</div>
+
+<div id="outline-container-orgheadline29" class="outline-5">
+<h5 id="orgheadline29"><span class="section-number-5">1.2.3.1</span> 贴合消费心理</h5>
+<div class="outline-text-5" id="text-1-2-3-1">
+<ul class="org-ul">
+<li>产品语言与消费心理产生共鸣，即“共同语言”，实现设计价值。</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgheadline30" class="outline-5">
+<h5 id="orgheadline30"><span class="section-number-5">1.2.3.2</span> 人文关怀与社会责任</h5>
+<div class="outline-text-5" id="text-1-2-3-2">
+<ul class="org-ul">
+<li>以人为本，考虑个体差异</li>
+<li>例：公共洗手池高低不同的尺寸满足不同身高与年龄人的需求</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgheadline31" class="outline-5">
+<h5 id="orgheadline31"><span class="section-number-5">1.2.3.3</span> 传达哲学观念</h5>
+<div class="outline-text-5" id="text-1-2-3-3">
+<ul class="org-ul">
+<li>产品与环境共同作用形成意会“言传”哲学</li>
+<li>例：安静淡雅的茶杯</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline71" class="outline-3">
+<h3 id="orgheadline71"><span class="section-number-3">1.3</span> 产品符号</h3>
+<div class="outline-text-3" id="text-1-3">
+<ul class="org-ul">
+<li>符号作为抽象概念，是一种具有表意功能的传达手段或媒介</li>
+<li>语言是符号的一种类型 (非语言符号有手势、表情等)</li>
+<li>产品语言以符号形式传达信息，在不同层面和人交流</li>
+</ul>
+</div>
+
+<div id="outline-container-orgheadline36" class="outline-4">
+<h4 id="orgheadline36"><span class="section-number-4">1.3.1</span> 符号学</h4>
+<div class="outline-text-4" id="text-1-3-1">
+<ul class="org-ul">
+<li>符号学是有关符号或符号系统的科学</li>
+<li>研究符号本质、发展规律、意指作用，及符号与人类各种活动的关系等</li>
+</ul>
+<img width="90%" src="./img/symbols.png"></img>
+</div>
+
+<div id="outline-container-orgheadline34" class="outline-5">
+<h5 id="orgheadline34"><span class="section-number-5">1.3.1.1</span> 符号系统研究</h5>
+<div class="outline-text-5" id="text-1-3-1-1">
+<p>
+分三部分：语形学syntactics、语意学semantics和语用学pragmatics 
+</p>
+<ul class="org-ul">
+<li>语形学：符号之间的形式关系 (符号与符号)</li>
+<li>语意学：符号和其所表对象之间的关系 (符号与意义)</li>
+<li>语用学：符号和解释者之间的关系 (符号与人)</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgheadline35" class="outline-5">
+<h5 id="orgheadline35"><span class="section-number-5">1.3.1.2</span> 符号学与产品语意学</h5>
+<div class="outline-text-5" id="text-1-3-1-2">
+<ul class="org-ul">
+<li>符号学是一门交叉科学，产品语意学是符号学在产品设计中的应用。</li>
+<li>产品语意研究设计符号与其象征意义之间的关系。</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline38" class="outline-4">
+<h4 id="orgheadline38"><span class="section-number-4">1.3.2</span> 符号来源</h4>
+<div class="outline-text-4" id="text-1-3-2">
+<ul class="org-ul">
+<li>人类生存需要，在实践中不断寻找各种观念、情感、信息交流和表达形式。</li>
+<li>例：原始绘画、文字、音乐等，形成某些有意义的特殊媒介物，即符号。</li>
+</ul>
+</div>
+
+<div id="outline-container-orgheadline37" class="outline-5">
+<h5 id="orgheadline37"><span class="section-number-5">1.3.2.1</span> 符号与信号</h5>
+<div class="outline-text-5" id="text-1-3-2-1">
+<ul class="org-ul">
+<li>符号 (表达和意指)：有间接层面</li>
+<li>信号 (条件反射)：植物 (向日葵/含羞草)、动物 (蜜蜂)、人 (打喷嚏)</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline42" class="outline-4">
+<h4 id="orgheadline42"><span class="section-number-4">1.3.3</span> 符号组成</h4>
+<div class="outline-text-4" id="text-1-3-3">
+<ul class="org-ul">
+<li>二元组成</li>
+<li>三元组成</li>
+</ul>
+</div>
+<div id="outline-container-orgheadline39" class="outline-5">
+<h5 id="orgheadline39"><span class="section-number-5">1.3.3.1</span> 二元组成：能指 | 所指</h5>
+<div class="outline-text-5" id="text-1-3-3-1">
+<ul class="org-ul">
+<li>能指 (signifier)：语言符号的“音响形象”(指称物)</li>
+<li>例：造型、色彩、肌理或构成视觉图形的点、线、面等</li>
+<li>所指 (signified)：符号所表达的概念和承载的意义 (被指称物)</li>
+<li>例：冒烟表示着火了</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgheadline40" class="outline-5">
+<h5 id="orgheadline40"><span class="section-number-5">1.3.3.2</span> 三元组成：形体 | 对象 | 解释</h5>
+<div class="outline-text-5" id="text-1-3-3-2">
+<ul class="org-ul">
+<li>符号形体 (sign) ：某种对某人来说在某方面或以某种能力代表某一事物的东西</li>
+<li>符号对象 (object)：符号形体代表的那个“某一事物”</li>
+<li>符号解释 (interpretant)：使用者对符号形体所传达的关于符号对象的讯息 (意义)</li>
+</ul>
+<img width="350" src="./img/sign_aspects3_1.jpg"></img><br><br>
+</div>
+</div>
+
+<div id="outline-container-orgheadline41" class="outline-5">
+<h5 id="orgheadline41"><span class="section-number-5">1.3.3.3</span> 二元和三元对应</h5>
+<div class="outline-text-5" id="text-1-3-3-3">
+<ul class="org-ul">
+<li>能指 &#x2013; 符号形体</li>
+<li>所指 &#x2013; 符号对象和符号解释</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline45" class="outline-4">
+<h4 id="orgheadline45"><span class="section-number-4">1.3.4</span> 符号传播</h4>
+<div class="outline-text-4" id="text-1-3-4">
+<p>
+符号信息发出和接收，表达意和理解意或有差异。
+</p>
+
+<img width="550" src="./img/communications-model.png"></img>
+</div>
+
+<div id="outline-container-orgheadline43" class="outline-5">
+<h5 id="orgheadline43"><span class="section-number-5">1.3.4.1</span> 编码与解码</h5>
+<div class="outline-text-5" id="text-1-3-4-1">
+<ul class="org-ul">
+<li>设计师编码视觉语言信息 (符号元素组合成视觉系统)；</li>
+<li>消费者解码信息 (自身理解)；</li>
+<li>设计语言的有效程度取决于编码和解码的一致程度和创新空间。</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgheadline44" class="outline-5">
+<h5 id="orgheadline44"><span class="section-number-5">1.3.4.2</span> 符号传播过程</h5>
+<div class="outline-text-5" id="text-1-3-4-2">
+<p>
+信息发出，通过媒介被接收者翻译和理解的过程。
+</p>
+<ul class="org-ul">
+<li>信息发出 (发出者/发出方式/发出内容和数量/发出环境)</li>
+<li>信息传播 (传播环境)</li>
+<li>信息接收 (接收者特征/接收者对信息的理解)</li>
+<li>例：你好或再见，语境不同理解不同</li>
+</ul>
+<img width="350" src="./img/hello_bye.jpg"></img><br><br>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline51" class="outline-4">
+<h4 id="orgheadline51"><span class="section-number-4">1.3.5</span> 设计符号</h4>
+<div class="outline-text-4" id="text-1-3-5">
+<ul class="org-ul">
+<li>设计符号是设计信息和观念的载体，也是文化表现形式。</li>
+<li>语意符号表达观念，通过产品外形和人沟通。</li>
+</ul>
+</div>
+
+<div id="outline-container-orgheadline46" class="outline-5">
+<h5 id="orgheadline46"><span class="section-number-5">1.3.5.1</span> 设计能指和所指</h5>
+<div class="outline-text-5" id="text-1-3-5-1">
+<ul class="org-ul">
+<li>能指：用各种手段创造视觉内容，图形、物品与建筑空间包括光效构成的虚空间</li>
+<li>所指：对这些图形、物品、空间的理解</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgheadline50" class="outline-5">
+<h5 id="orgheadline50"><span class="section-number-5">1.3.5.2</span> 设计符号表达</h5>
+<div class="outline-text-5" id="text-1-3-5-2">
+<ul class="org-ul">
+<li>由物质构成手段和使用功能所限，设计符号以象征和隐喻为主，较少具象；</li>
+<li>可将设计元素和手段看作设计符号；</li>
+<li>通过对这些元素的加工与整合，实现传情达意。</li>
+</ul>
+</div>
+
+<div id="outline-container-orgheadline47" class="outline-6">
+<h6 id="orgheadline47"><span class="section-number-6">1.3.5.2.1</span> 现代语意符号表达</h6>
+<div class="outline-text-6" id="text-1-3-5-2-1">
+<ul class="org-ul">
+<li>现代主义建筑和产品采用抽象符号表达对理性美的追求</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgheadline48" class="outline-6">
+<h6 id="orgheadline48"><span class="section-number-6">1.3.5.2.2</span> 传统语意符号表达</h6>
+<div class="outline-text-6" id="text-1-3-5-2-2">
+<ul class="org-ul">
+<li>表达传统文化意境，而不是简单堆砌。</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgheadline49" class="outline-6">
+<h6 id="orgheadline49"><span class="section-number-6">1.3.5.2.3</span> 产品语意变化 (流行)</h6>
+<div class="outline-text-6" id="text-1-3-5-2-3">
+<ul class="org-ul">
+<li>依赖人们的生活方式和社会观念；</li>
+<li>依赖科技发展。</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline70" class="outline-4">
+<h4 id="orgheadline70"><span class="section-number-4">1.3.6</span> 设计符号的传播</h4>
+<div class="outline-text-4" id="text-1-3-6">
+<ul class="org-ul">
+<li>设计师想要表达的产品信息和消费者理解到的或存差异。</li>
+<li>怎样使产品信息易被理解?</li>
+</ul>
+</div>
+
+<div id="outline-container-orgheadline52" class="outline-5">
+<h5 id="orgheadline52"><span class="section-number-5">1.3.6.1</span> 产品解码差异原因</h5>
+<div class="outline-text-5" id="text-1-3-6-1">
+<ul class="org-ul">
+<li>接收者在知识、年龄、地域文化习惯等方面有差异</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgheadline53" class="outline-5">
+<h5 id="orgheadline53"><span class="section-number-5">1.3.6.2</span> 应对解码差异</h5>
+<div class="outline-text-5" id="text-1-3-6-2">
+<ul class="org-ul">
+<li>尽可能缩小解码误差 (找共性)；</li>
+<li>同时留给受众解码空间。</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgheadline69" class="outline-5">
+<h5 id="orgheadline69"><span class="section-number-5">1.3.6.3</span> 影响符号传播 (编码/解码) 因素</h5>
+<div class="outline-text-5" id="text-1-3-6-3">
+<ul class="org-ul">
+<li>设计因素</li>
+<li>受众因素</li>
+<li>环境因素</li>
+<li>时间因素</li>
+</ul>
+</div>
+
+<div id="outline-container-orgheadline56" class="outline-6">
+<h6 id="orgheadline56"><span class="section-number-6">1.3.6.3.1</span> 设计因素 (影响编码)</h6>
+<div class="outline-text-6" id="text-1-3-6-3-1">
+<ul class="org-ul">
+<li>设计是一种促进交流 (人与环境、人与产品、人与人) 的手段。</li>
+<li>编码是设计者通过设计语言呈现给用户的沟通方式。</li>
+<li>新产品开发：符号设计建立和人沟通的方式。</li>
+</ul>
+</div>
+
+<div id="outline-container-orgheadline54" class="outline-7">
+<h7 id="orgheadline54"><span class="section-number-7">1.3.6.3.1.1</span> 编码问题 (空气净化器)</h7>
+<div class="outline-text-7" id="text-1-3-6-3-1-1">
+<ul class="org-ul">
+<li>空气净化器应对空气质量下降；</li>
+<li>人们之前对空气净化器没有任何印象，给语意设计提供较大空间；</li>
+<li>但也影响人们对空气净化器的识别和情感诉求。</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgheadline55" class="outline-7">
+<h7 id="orgheadline55"><span class="section-number-7">1.3.6.3.1.2</span> 编码者和解码者沟通</h7>
+<div class="outline-text-7" id="text-1-3-6-3-1-2">
+<p>
+编码-(解释)-&gt;解码
+</p>
+
+<ul class="org-ul">
+<li>若编码和人们记忆中的解读方式吻合，易根据经验理解</li>
+<li>若编码难理解，需讲解说明，形成印象后成为约定俗成的编码为设计师所用。</li>
+<li>例：华为手机截屏用指关节敲击完成</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline63" class="outline-6">
+<h6 id="orgheadline63"><span class="section-number-6">1.3.6.3.2</span> 受众因素 (影响解码)</h6>
+<div class="outline-text-6" id="text-1-3-6-3-2">
+<ul class="org-ul">
+<li>差异和共性</li>
+<li>消费者的解码特征</li>
+<li>消费者解码环节</li>
+<li>消费者的解码创新</li>
+</ul>
+</div>
+<div id="outline-container-orgheadline57" class="outline-7">
+<h7 id="orgheadline57"><span class="section-number-7">1.3.6.3.2.1</span> 差异和共性</h7>
+<div class="outline-text-7" id="text-1-3-6-3-2-1">
+<ul class="org-ul">
+<li>生长环境、现在环境、思维习惯、知识体系</li>
+<li>同一个社交圈、同一类职业</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgheadline58" class="outline-7">
+<h7 id="orgheadline58"><span class="section-number-7">1.3.6.3.2.2</span> 消费者的解码特征</h7>
+<div class="outline-text-7" id="text-1-3-6-3-2-2">
+<ul class="org-ul">
+<li>设计编码时，需了解消费者解码习惯 (产品语言依赖人们的解读)</li>
+<li>例：宜家产品简约、实用、不贵的符号特征抓住年轻人的心。</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgheadline61" class="outline-7">
+<h7 id="orgheadline61"><span class="section-number-7">1.3.6.3.2.3</span> 消费者解码环节</h7>
+<div class="outline-text-7" id="text-1-3-6-3-2-3">
+</div><ol class="org-ol"><li><a id="orgheadline59"></a>购买环节<br  /><div class="outline-text-8" id="text-1-3-6-3-2-3-1">
+<ul class="org-ul">
+<li>调查和模拟消费者购物环境、需求目的心态等，准确定位产品；</li>
+<li>产品语言适合消费者认知习惯易产生共鸣；但要有新意，消除视觉疲劳。</li>
+</ul>
+</div></li>
+<li><a id="orgheadline60"></a>使用环节<br  /><div class="outline-text-8" id="text-1-3-6-3-2-3-2">
+<ul class="org-ul">
+<li>了解产品是否符合使用者审美、使用习惯等。</li>
+</ul>
+</div></li></ol>
+</div>
+
+<div id="outline-container-orgheadline62" class="outline-7">
+<h7 id="orgheadline62"><span class="section-number-7">1.3.6.3.2.4</span> 消费者的解码创新</h7>
+<div class="outline-text-7" id="text-1-3-6-3-2-4">
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline67" class="outline-6">
+<h6 id="orgheadline67"><span class="section-number-6">1.3.6.3.3</span> 环境因素 (影响信息传播)</h6>
+<div class="outline-text-6" id="text-1-3-6-3-3">
+<ul class="org-ul">
+<li>物品具有所处环境的语言特性，称为语境。</li>
+<li>环境对物品的影响</li>
+<li>物品对环境的影响</li>
+</ul>
+</div>
+<div id="outline-container-orgheadline64" class="outline-7">
+<h7 id="orgheadline64"><span class="section-number-7">1.3.6.3.3.1</span> 环境对物品的影响</h7>
+<div class="outline-text-7" id="text-1-3-6-3-3-1">
+<ul class="org-ul">
+<li>一般商品经包装后放在专卖店，不会感到它的廉价;</li>
+<li>名牌商品混在地摊里，很难一下发现其高档。</li>
+<li>产品设计需设想可能出现的环境具有哪些特征。</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgheadline65" class="outline-7">
+<h7 id="orgheadline65"><span class="section-number-7">1.3.6.3.3.2</span> 物品对环境的影响</h7>
+<div class="outline-text-7" id="text-1-3-6-3-3-2">
+<ul class="org-ul">
+<li>与所处环境相关因素构成符号群系统，每个元素承担协调作用。</li>
+<li>若某个元素与其他元素在一起显得突兀，协调性被打破。</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgheadline66" class="outline-7">
+<h7 id="orgheadline66"><span class="section-number-7">1.3.6.3.3.3</span> 语境实例 (手电钻专业性感受)</h7>
+<div class="outline-text-7" id="text-1-3-6-3-3-3">
+<ul class="org-ul">
+<li>手电钻放在超市货架或电动工具专卖店。</li>
+<li>低纯度深色机身：沉稳、冷静和经验丰富，与车间环境和机械类产品色彩一致。</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline68" class="outline-6">
+<h6 id="orgheadline68"><span class="section-number-6">1.3.6.3.4</span> 时间因素</h6>
+<div class="outline-text-6" id="text-1-3-6-3-4">
+<ul class="org-ul">
+<li>人在不同时期或时间对事物信息理解不同。</li>
+<li>一个设计半年前时尚，半年后俗套 (熟悉度)。</li>
+<li>社会在不同时间段呈现不同氛围会影响人们对信息的理解。</li>
+<li>时间因素和空间及人的性格、心情等共同作用实现信息传播。</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline78" class="outline-3">
+<h3 id="orgheadline78"><span class="section-number-3">1.4</span> 产品语意层次</h3>
+<div class="outline-text-3" id="text-1-4">
+<ul class="org-ul">
+<li>产品语意分外延与内涵两层次</li>
+
+<li>外延可视为意指系统的表达部分 &#x2013; 传递形象信息 (尺寸、款式)</li>
+<li>内涵则是意指系统的内容层面 &#x2013; 传达抽象信息 (活泼、温柔、善解人意、乐观)</li>
+</ul>
+</div>
+
+<div id="outline-container-orgheadline74" class="outline-4">
+<h4 id="orgheadline74"><span class="section-number-4">1.4.1</span> 产品的外延语意</h4>
+<div class="outline-text-4" id="text-1-4-1">
+<ul class="org-ul">
+<li>产品确定、显在或常识性的意义</li>
+<li>由形态、色彩、质感等直接说明产品内容(目的、功能、操作)。</li>
+<li>外延相对稳定，虽然每个人对产品外延理解有差异，但共性较多。</li>
+</ul>
+</div>
+
+<div id="outline-container-orgheadline72" class="outline-5">
+<h5 id="orgheadline72"><span class="section-number-5">1.4.1.1</span> 桌子</h5>
+<div class="outline-text-5" id="text-1-4-1-1">
+<ul class="org-ul">
+<li>几乎所有人都认可看到桌面和桌腿将其理解为一张桌子</li>
+<li>也许会坐在上面，但较少有人会把它看成凳子。</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgheadline73" class="outline-5">
+<h5 id="orgheadline73"><span class="section-number-5">1.4.1.2</span> 盘子和碗</h5>
+<div class="outline-text-5" id="text-1-4-1-2">
+<ul class="org-ul">
+<li>盘子和碗因为高度不同产生不同语意(比例成为外延特性)</li>
+<li>也存在介于盘子和碗之间的形态产生语意模糊。</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline76" class="outline-4">
+<h4 id="orgheadline76"><span class="section-number-4">1.4.2</span> 产品的内涵语意</h4>
+<div class="outline-text-4" id="text-1-4-2">
+<ul class="org-ul">
+<li>产品所含社会文化和个人联想。与职业、年龄、性别、受教育程度、生活方式等有关。(不同使用者，赋予产品不同意义)</li>
+<li>感性认知，由形态间接说明产品在使用环境中的心理、社会和文化等象征价值。</li>
+</ul>
+</div>
+
+<div id="outline-container-orgheadline75" class="outline-5">
+<h5 id="orgheadline75"><span class="section-number-5">1.4.2.1</span> 内涵多义性</h5>
+<div class="outline-text-5" id="text-1-4-2-1">
+<p>
+每个人对符号理解有所不同，对设计师形成挑战：
+</p>
+<ul class="org-ul">
+<li>设计师不仅要了解不同符号元素互相作用后产生怎样的内涵</li>
+<li>同时要思考符号的语意经媒介传播给消费者，会产生怎样的理解</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline77" class="outline-4">
+<h4 id="orgheadline77"><span class="section-number-4">1.4.3</span> 外延语意与内涵语意的统一</h4>
+<div class="outline-text-4" id="text-1-4-3">
+<ul class="org-ul">
+<li>外延语意是产品存在的基础，表达直观，理性；</li>
+<li>内涵语意以外延语意为前提，二者相互关联；</li>
+<li>在满足功能前提下实现理性与感性并重，功能与情感相统一。</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline82" class="outline-3">
+<h3 id="orgheadline82"><span class="section-number-3">1.5</span> 产品语意价值</h3>
+<div class="outline-text-3" id="text-1-5">
+<p>
+借助符号学原理实现人与产品更好的沟通与交流，让产品"说话"，操作更方便，并传达文化内涵及富有情趣的生活方式。
+</p>
+<ul class="org-ul">
+<li>设计观念</li>
+<li>设计方式</li>
+<li>设计发展</li>
+</ul>
+</div>
+<div id="outline-container-orgheadline79" class="outline-4">
+<h4 id="orgheadline79"><span class="section-number-4">1.5.1</span> 从设计观念看产品语意</h4>
+<div class="outline-text-4" id="text-1-5-1">
+<ul class="org-ul">
+<li>合理平衡功能理性与人文理性。在强调机能前提下，重视主体精神及文化脉络。</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgheadline80" class="outline-4">
+<h4 id="orgheadline80"><span class="section-number-4">1.5.2</span> 从设计方式看产品语意</h4>
+<div class="outline-text-4" id="text-1-5-2">
+<ul class="org-ul">
+<li>扩展造型语言，使产品形态更富意味及内涵。</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgheadline81" class="outline-4">
+<h4 id="orgheadline81"><span class="section-number-4">1.5.3</span> 从设计发展看产品语意</h4>
+<div class="outline-text-4" id="text-1-5-3">
+<ul class="org-ul">
+<li>突出人的重要性，在产品中给予人更多关怀及情感体验。</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline83" class="outline-3">
+<h3 id="orgheadline83"><span class="section-number-3">1.6</span> 产品语意学习内容</h3>
+<div class="outline-text-3" id="text-1-6">
+<ul class="org-ul">
+<li>从符号构成、传播特性和含义不同层面，分析与理解产品语意学在设计中的作用</li>
+<li>如何通过产品语意进行产品设计</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgheadline84" class="outline-3">
+<h3 id="orgheadline84"><span class="section-number-3">1.7</span> 作业一</h3>
+<div class="outline-text-3" id="text-1-7">
+<ul class="org-ul">
+<li>草图构思产品语意造型10个</li>
+<li>可借用语意外延和内涵以及设计符号的编码和解码</li>
+<li>内部结构外化（外延，方便操作，一看就懂）</li>
+<li>个性、情感（你的宠物或你的朋友或另一个你）</li>
+<li>象征（某种寓意“青松挺且直”）</li>
+<li>10页草图纸扫瞄后合成pdf文档</li>
+<li>以5月19日(周日)23:00前发送到anhongz@outlook.com</li>
+<li>文件名：产品语意作业1-姓名</li>
+<li>文件类型：Word或PDF文档</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Anhongz@outlook.com</p>
+<p class="date">Created: 2019-05-14 Tue 15:31</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
