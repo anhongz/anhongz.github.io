@@ -1,13 +1,9 @@
 #+Title: Design
 #+Author: Anhongz@outlook.com
-#+REVEAL_HLEVEL: 6
-#+OPTIONS: H:6 num:7 toc:2 num:nil reveal_center:nil reveal_control:t reveal_progress:t reveal_keyboard:t org-reveal-klipsify-src:non-nil  reveal_title_slide:nil
-#+REVEAL_ROOT: ./reveal.js
-#+REVEAL_TRANS: none
-#+REVEAL_THEME: white2
-# #+REVEAL_INIT_SCRIPT: {src: "./reveal.js/plugin/toc-progress/toc-progress.js"}
 
-# #+SETUPFILE: ./org-html-themes/setup/theme-readtheorg.setup
+# https://github.com/marsmining/ox-twbs
+# M-x package-install [RET] ox-twbs [RET]
+# org-twbs-export-to-html
 
 * 产品系统设计 Product System Design 
 
@@ -16,3 +12,10 @@
 * 产品语意设计 Product Semantic Design
 
 [[file:p_semantic_d/p_semantic_d.html][产品语意设计 Product Semantic Design]]
+
+* 参考资料 References
+[[file:references/product_system_design_book_XiangWu.pdf][产品系统设计 吴翔]]
+
+[[file:references/product_system_design_book_yuhong.pdf][产品系统设计 张宇红]]
+
+[[file:references/Industrial_Design_Methodology.pdf][工业设计方法学 简召全]]
