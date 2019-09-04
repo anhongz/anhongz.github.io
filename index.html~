@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <title>Design</title>
-<!-- 2019-09-02 Mon 09:43 -->
+<!-- 2019-09-02 Mon 09:44 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="generator" content="Org-mode">
@@ -217,8 +217,15 @@ $(function() {
 <div class="outline-text-2" id="text-3">
 <p>
 <a href="references/product_system_design_book_XiangWu.pdf">产品系统设计 吴翔</a>
+</p>
+
+<p>
 <a href="references/product_system_design_book_yuhong.pdf">产品系统设计 张宇红</a>
-<a href="references/Industrial_Design_Methodology.pdf">工业设计方法学 简召全</a></p>
+</p>
+
+<p>
+<a href="references/Industrial_Design_Methodology.pdf">工业设计方法学 简召全</a>
+</p>
 </div>
 </div>
 </div><div class="col-md-3"><nav id="table-of-contents">
@@ -233,7 +240,7 @@ $(function() {
 </div></div></div>
 <footer id="postamble" class="">
 <div><p class="author">Author: Anhongz@outlook.com</p>
-<p class="date">Created: 2019-09-02 Mon 09:43</p>
+<p class="date">Created: 2019-09-02 Mon 09:44</p>
 <p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 26.1 (<a href="http://orgmode.org">Org-mode</a> 9.1.9)</p>
 </div>
 </footer>

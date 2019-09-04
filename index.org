@@ -13,6 +13,10 @@
 
 [[file:p_semantic_d/p_semantic_d.html][产品语意设计 Product Semantic Design]]
 
+* 计算机辅助设计 Computer Aided Design
+** FreeCAD
+[[file:cad/FreeCAD/pen.FCStd][笔的模型文件 pen.FCStd]]
+
 * 参考资料 References
 [[file:references/product_system_design_book_XiangWu.pdf][产品系统设计 吴翔]]
 
