@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2019-09-02 Mon 10:22 -->
+<!-- 2019-09-04 Wed 13:16 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>产品系统设计 Product System Design</title>
@@ -241,25 +241,36 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org901f910">1. 产品系统设计概述</a>
+<li><a href="#org877e9cc">1. 产品系统设计概述</a>
 <ul>
-<li><a href="#org58ab1e5">1.1. 系统概念</a></li>
-<li><a href="#org28d4c87">1.2. 系统组成</a></li>
-<li><a href="#orgca78a92">1.3. 系统属性(特征)</a></li>
-<li><a href="#orgfcc37b7">1.4. 系统分类</a></li>
-<li><a href="#org10d1260">1.5. 设计系统观</a></li>
-<li><a href="#org37926b5">1.6. 产品系统化特征</a></li>
-<li><a href="#org54b4ed1">1.7. 作业一</a></li>
+<li><a href="#org7cc48e7">1.1. 系统概念</a></li>
+<li><a href="#orga4d7134">1.2. 系统组成</a></li>
+<li><a href="#orgb2b5a37">1.3. 系统属性(特征)</a></li>
+<li><a href="#orgd00bca2">1.4. 系统分类</a></li>
+<li><a href="#org2ad458c">1.5. 设计系统观</a></li>
+<li><a href="#org0829fbc">1.6. 产品系统化特征</a></li>
+<li><a href="#org92e3e6d">1.7. 作业一</a></li>
+</ul>
+</li>
+<li><a href="#org2ea97b5">2. 产品系统设计方法</a>
+<ul>
+<li><a href="#orgc60bd9c">2.1. 系统方法论</a></li>
+<li><a href="#org4cc382e">2.2. 系统方法特点</a></li>
+<li><a href="#orgaffb969">2.3. 产品系统分析与综合法</a></li>
+<li><a href="#org5c12288">2.4. 产品系统优化设计方法</a></li>
+<li><a href="#org8e53e25">2.5. 产品系统原型设计方法</a></li>
+<li><a href="#org0051d73">2.6. 产品系统过程设计方法</a></li>
+<li><a href="#org2156fe7">2.7. 作业二</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org901f910" class="outline-2">
-<h2 id="org901f910"><span class="section-number-2">1</span> 产品系统设计概述</h2>
+<div id="outline-container-org877e9cc" class="outline-2">
+<h2 id="org877e9cc"><span class="section-number-2">1</span> 产品系统设计概述</h2>
 <div class="outline-text-2" id="text-1">
 </div>
-<div id="outline-container-org4a5850a" class="outline-11">
+<div id="outline-container-org8fc9e34" class="outline-11">
 <div class="outline-text-11" id="text-1-0-0-0-0-0-0-0-0-1">
 
 <div class="figure">
@@ -269,16 +280,16 @@ Sorry, your browser does not support SVG.</object>
 </div>
 </div>
 </div>
-<div id="outline-container-org58ab1e5" class="outline-3">
-<h3 id="org58ab1e5"><span class="section-number-3">1.1</span> 系统概念</h3>
+<div id="outline-container-org7cc48e7" class="outline-3">
+<h3 id="org7cc48e7"><span class="section-number-3">1.1</span> 系统概念</h3>
 <div class="outline-text-3" id="text-1-1">
 </div>
-<div id="outline-container-orgcb9f563" class="outline-11">
+<div id="outline-container-org426bf91" class="outline-11">
 <div class="outline-text-11" id="text-1-1-0-0-0-0-0-0-0-1">
 </div>
 </div>
-<div id="outline-container-org5b5338a" class="outline-4">
-<h4 id="org5b5338a"><span class="section-number-4">1.1.1</span> 系统论</h4>
+<div id="outline-container-org70b1ff5" class="outline-4">
+<h4 id="org70b1ff5"><span class="section-number-4">1.1.1</span> 系统论</h4>
 <div class="outline-text-4" id="text-1-1-1">
 <p>
 核心思想: 整体观
@@ -295,12 +306,13 @@ Sorry, your browser does not support SVG.</object>
 </p>
 </div>
 </div>
-<div id="outline-container-org9aca08c" class="outline-11">
+<div id="outline-container-org91e8662" class="outline-11">
+<h11 id="org91e8662"> 整体观 (一个有机整体由多要素相互作用实现新功能或更好性能)</h11>
 <div class="outline-text-11" id="text-1-1-1-0-0-0-0-0-0-1">
 </div>
 </div>
-<div id="outline-container-org91137e5" class="outline-5">
-<h5 id="org91137e5"><span class="section-number-5">1.1.1.1</span> 贝塔朗菲的系统区分</h5>
+<div id="outline-container-orga5ae8e7" class="outline-5">
+<h5 id="orga5ae8e7"><span class="section-number-5">1.1.1.1</span> 贝塔朗菲的系统区分</h5>
 <div class="outline-text-5" id="text-1-1-1-1">
 <p>
 元素的数目、种类、关系
@@ -312,8 +324,8 @@ Sorry, your browser does not support SVG.</object>
 </div>
 </div>
 </div>
-<div id="outline-container-orgc1401c0" class="outline-5">
-<h5 id="orgc1401c0"><span class="section-number-5">1.1.1.2</span> 系统工程</h5>
+<div id="outline-container-org600eb66" class="outline-5">
+<h5 id="org600eb66"><span class="section-number-5">1.1.1.2</span> 系统工程</h5>
 <div class="outline-text-5" id="text-1-1-1-2">
 <p>
 阿波罗登月计划: 1960s末，耗资300亿美元，42万人、120所大学和研究所、2万家企业参加。
@@ -329,8 +341,8 @@ Sorry, your browser does not support SVG.</object>
 </div>
 </div>
 </div>
-<div id="outline-container-org4709144" class="outline-5">
-<h5 id="org4709144"><span class="section-number-5">1.1.1.3</span> 系统论思想的作用</h5>
+<div id="outline-container-org4e6b509" class="outline-5">
+<h5 id="org4e6b509"><span class="section-number-5">1.1.1.3</span> 系统论思想的作用</h5>
 <div class="outline-text-5" id="text-1-1-1-3">
 <ul class="org-ul">
 <li>对分析认识与设计有关的各种因素有很好的指导意义</li>
@@ -344,8 +356,8 @@ Sorry, your browser does not support SVG.</object>
 </div>
 </div>
 </div>
-<div id="outline-container-org31b8ce4" class="outline-4">
-<h4 id="org31b8ce4"><span class="section-number-4">1.1.2</span> 系统定义</h4>
+<div id="outline-container-orgc5e82ea" class="outline-4">
+<h4 id="orgc5e82ea"><span class="section-number-4">1.1.2</span> 系统定义</h4>
 <div class="outline-text-4" id="text-1-1-2">
 <ul class="org-ul">
 <li>系统由若干要素以一定结构形式联结构成有某种功能的有机整体。</li>
@@ -361,16 +373,16 @@ Sorry, your browser does not support SVG.</object>
 </div>
 </div>
 </div>
-<div id="outline-container-orga5ed929" class="outline-4">
-<h4 id="orga5ed929"><span class="section-number-4">1.1.3</span> 产品系统中的人与物</h4>
+<div id="outline-container-orgf082553" class="outline-4">
+<h4 id="orgf082553"><span class="section-number-4">1.1.3</span> 产品系统中的人与物</h4>
 <div class="outline-text-4" id="text-1-1-3">
 <ul class="org-ul">
 <li>人的整体与部分</li>
 <li>物的整体与部分</li>
 </ul>
 </div>
-<div id="outline-container-orgd91b492" class="outline-5">
-<h5 id="orgd91b492"><span class="section-number-5">1.1.3.1</span> 人的整体与部分</h5>
+<div id="outline-container-org1860ad3" class="outline-5">
+<h5 id="org1860ad3"><span class="section-number-5">1.1.3.1</span> 人的整体与部分</h5>
 <div class="outline-text-5" id="text-1-1-3-1">
 <p>
 成员承担不同角色,发挥团队优势,完成个体难以企及的任务。
@@ -388,8 +400,8 @@ Sorry, your browser does not support SVG.</object>
 </div>
 </div>
 
-<div id="outline-container-orgec3eeb7" class="outline-5">
-<h5 id="orgec3eeb7"><span class="section-number-5">1.1.3.2</span> 物的整体与部分</h5>
+<div id="outline-container-orgb6c190d" class="outline-5">
+<h5 id="orgb6c190d"><span class="section-number-5">1.1.3.2</span> 物的整体与部分</h5>
 <div class="outline-text-5" id="text-1-1-3-2">
 <ul class="org-ul">
 <li>个: 一件产品可被视为具某种结构和功能个体,即由不同材料和工艺制造部件组成整体。</li>
@@ -402,8 +414,8 @@ Sorry, your browser does not support SVG.</object>
 </div>
 </div>
 
-<div id="outline-container-org889172f" class="outline-6">
-<h6 id="org889172f"><span class="section-number-6">1.1.3.2.1</span> 物的系统</h6>
+<div id="outline-container-org0987842" class="outline-6">
+<h6 id="org0987842"><span class="section-number-6">1.1.3.2.1</span> 物的系统</h6>
 <div class="outline-text-6" id="text-1-1-3-2-1">
 <ul class="org-ul">
 <li>构成产品要素可以是某个部件或构件,也可以是一个操作系统或元器件。</li>
@@ -412,14 +424,14 @@ Sorry, your browser does not support SVG.</object>
 </ul>
 
 <div class="figure">
-<p><img src="./psd/img/Ned-Ship-105m-Sport-Yacht.jpg" alt="Ned-Ship-105m-Sport-Yacht-Design-Sovereign-by-Grey-Design-Copy.jpg" width="100%" />
+<p><img src="./psd/img/Ned-Ship-105m-Sport-Yacht.jpg" alt="Ned-Ship-105m-Sport-Yacht.jpg" width="100%" />
 </p>
 </div>
 </div>
 </div>
 
-<div id="outline-container-orgd38a3a8" class="outline-6">
-<h6 id="orgd38a3a8"><span class="section-number-6">1.1.3.2.2</span> 物的类别 (种与类)</h6>
+<div id="outline-container-org41bef23" class="outline-6">
+<h6 id="org41bef23"><span class="section-number-6">1.1.3.2.2</span> 物的类别 (种与类)</h6>
 <div class="outline-text-6" id="text-1-1-3-2-2">
 <ul class="org-ul">
 <li>一个类型产品包含各种品种,如家具类产品包含木制品和金属制品等。</li>
@@ -438,11 +450,12 @@ Sorry, your browser does not support SVG.</object>
 </div>
 </div>
 
-<div id="outline-container-org28d4c87" class="outline-3">
-<h3 id="org28d4c87"><span class="section-number-3">1.2</span> 系统组成</h3>
+<div id="outline-container-orga4d7134" class="outline-3">
+<h3 id="orga4d7134"><span class="section-number-3">1.2</span> 系统组成</h3>
 <div class="outline-text-3" id="text-1-2">
 </div>
-<div id="outline-container-org4438a7f" class="outline-11">
+<div id="outline-container-org60f1529" class="outline-11">
+<h11 id="org60f1529"><span class="section-number-11">1.2.0.0.0.0.0.0.0.1</span> </h11>
 <div class="outline-text-11" id="text-1-2-0-0-0-0-0-0-0-1">
 <ul class="org-ul">
 <li>系统由多个事物构成有序集合体。</li>
@@ -456,8 +469,8 @@ Sorry, your browser does not support SVG.</object>
 </div>
 </div>
 </div>
-<div id="outline-container-org15da573" class="outline-4">
-<h4 id="org15da573"><span class="section-number-4">1.2.1</span> 系统组成条件</h4>
+<div id="outline-container-org99003d1" class="outline-4">
+<h4 id="org99003d1"><span class="section-number-4">1.2.1</span> 系统组成条件</h4>
 <div class="outline-text-4" id="text-1-2-1">
 <ul class="org-ul">
 <li>两个以上要素组合而成有一定结构整体,可看成一个系统。</li>
@@ -466,13 +479,13 @@ Sorry, your browser does not support SVG.</object>
 </ul>
 
 <div class="figure">
-<p><img src="./psd/img/cup_table.jpeg" alt="cup_table.jpeg" width="40%" />
+<p><img src="./psd/img/cup_table.jpeg" alt="cup_table.jpeg" width="50%" />
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-orgdbe1856" class="outline-4">
-<h4 id="orgdbe1856"><span class="section-number-4">1.2.2</span> 系统组成特性</h4>
+<div id="outline-container-org1d62aed" class="outline-4">
+<h4 id="org1d62aed"><span class="section-number-4">1.2.2</span> 系统组成特性</h4>
 <div class="outline-text-4" id="text-1-2-2">
 <ul class="org-ul">
 <li>相对性：一部机器只是生产系统的一个元素。但从这台机器角度看，各零部件构成一个机器系统。</li>
@@ -487,8 +500,8 @@ Sorry, your browser does not support SVG.</object>
 </div>
 </div>
 
-<div id="outline-container-org68d1f99" class="outline-4">
-<h4 id="org68d1f99"><span class="section-number-4">1.2.3</span> 系统组织</h4>
+<div id="outline-container-orgd9e34de" class="outline-4">
+<h4 id="orgd9e34de"><span class="section-number-4">1.2.3</span> 系统组织</h4>
 <div class="outline-text-4" id="text-1-2-3">
 <ul class="org-ul">
 <li>系统组织：要素、结构、子系统、系统层次。</li>
@@ -501,8 +514,8 @@ Sorry, your browser does not support SVG.</object>
 </div>
 </div>
 
-<div id="outline-container-org555cb5f" class="outline-5">
-<h5 id="org555cb5f"><span class="section-number-5">1.2.3.1</span> 系统要素</h5>
+<div id="outline-container-org4c2f5b5" class="outline-5">
+<h5 id="org4c2f5b5"><span class="section-number-5">1.2.3.1</span> 系统要素</h5>
 <div class="outline-text-5" id="text-1-2-3-1">
 <p>
 系统基本成分,系统存在基础
@@ -518,8 +531,8 @@ Sorry, your browser does not support SVG.</object>
 </div>
 </div>
 
-<div id="outline-container-org816f28d" class="outline-6">
-<h6 id="org816f28d"><span class="section-number-6">1.2.3.1.1</span> 产品结构要素</h6>
+<div id="outline-container-org0b82b86" class="outline-6">
+<h6 id="org0b82b86"><span class="section-number-6">1.2.3.1.1</span> 产品结构要素</h6>
 <div class="outline-text-6" id="text-1-2-3-1-1">
 
 <div class="figure">
@@ -529,14 +542,14 @@ Sorry, your browser does not support SVG.</object>
 </div>
 </div>
 
-<div id="outline-container-org0335e1c" class="outline-6">
-<h6 id="org0335e1c"><span class="section-number-6">1.2.3.1.2</span> 产品外观要素</h6>
+<div id="outline-container-orgcbd997c" class="outline-6">
+<h6 id="orgcbd997c"><span class="section-number-6">1.2.3.1.2</span> 产品外观要素</h6>
 <div class="outline-text-6" id="text-1-2-3-1-2">
 </div>
 </div>
 </div>
-<div id="outline-container-orgdaf33ca" class="outline-5">
-<h5 id="orgdaf33ca"><span class="section-number-5">1.2.3.2</span> 系统结构</h5>
+<div id="outline-container-orgee31590" class="outline-5">
+<h5 id="orgee31590"><span class="section-number-5">1.2.3.2</span> 系统结构</h5>
 <div class="outline-text-5" id="text-1-2-3-2">
 <p>
 系统内各要素间相互联系作用的方式或秩序 (时空排列组合)。
@@ -553,8 +566,8 @@ Sorry, your browser does not support SVG.</object>
 </div>
 </div>
 
-<div id="outline-container-orgdb5e565" class="outline-6">
-<h6 id="orgdb5e565"><span class="section-number-6">1.2.3.2.1</span> 矩阵结构</h6>
+<div id="outline-container-orgca32368" class="outline-6">
+<h6 id="orgca32368"><span class="section-number-6">1.2.3.2.1</span> 矩阵结构</h6>
 <div class="outline-text-6" id="text-1-2-3-2-1">
 <p>
 在内部关系不明确情况下、只表示单位与单位间的关系
@@ -566,8 +579,8 @@ Sorry, your browser does not support SVG.</object>
 </div>
 </div>
 </div>
-<div id="outline-container-org37f6577" class="outline-6">
-<h6 id="org37f6577"><span class="section-number-6">1.2.3.2.2</span> 树形结构</h6>
+<div id="outline-container-org5eb24e9" class="outline-6">
+<h6 id="org5eb24e9"><span class="section-number-6">1.2.3.2.2</span> 树形结构</h6>
 <div class="outline-text-6" id="text-1-2-3-2-2">
 <p>
 元素间存在一对多树形关系，分层扩展 (树根-&gt;树干-&gt;树枝-&gt;树叶)。
@@ -582,8 +595,8 @@ Sorry, your browser does not support SVG.</object>
 </div>
 </div>
 
-<div id="outline-container-org229b12b" class="outline-7">
-<h7 id="org229b12b"><span class="section-number-7">1.2.3.2.2.1</span> 例: 大众汽车公司PQ35平台</h7>
+<div id="outline-container-orgd5d34f6" class="outline-7">
+<h7 id="orgd5d34f6"><span class="section-number-7">1.2.3.2.2.1</span> 例: 大众汽车公司PQ35平台</h7>
 <div class="outline-text-7" id="text-1-2-3-2-2-1">
 <ul class="org-ul">
 <li>不同车身结构设计生产出两厢和三厢宝来轿车、途安小型MPV、开迪货运车、小型SUV-TIGUAN、速腾、明锐、高尔伏等。</li>
@@ -592,8 +605,8 @@ Sorry, your browser does not support SVG.</object>
 </div>
 </div>
 
-<div id="outline-container-org38c7896" class="outline-6">
-<h6 id="org38c7896"><span class="section-number-6">1.2.3.2.3</span> 网络结构</h6>
+<div id="outline-container-org639a806" class="outline-6">
+<h6 id="org639a806"><span class="section-number-6">1.2.3.2.3</span> 网络结构</h6>
 <div class="outline-text-6" id="text-1-2-3-2-3">
 <p>
 单位间存在概念性相互关系,表示集团或群体存在
@@ -604,8 +617,8 @@ Sorry, your browser does not support SVG.</object>
 </p>
 </div>
 </div>
-<div id="outline-container-org8f1148b" class="outline-7">
-<h7 id="org8f1148b"><span class="section-number-7">1.2.3.2.3.1</span> 例：移动通讯系统</h7>
+<div id="outline-container-org74d5f1e" class="outline-7">
+<h7 id="org74d5f1e"><span class="section-number-7">1.2.3.2.3.1</span> 例：移动通讯系统</h7>
 <div class="outline-text-7" id="text-1-2-3-2-3-1">
 <p>
 包含手机、中继站、卫星传送等要素。
@@ -620,8 +633,8 @@ Sorry, your browser does not support SVG.</object>
 </div>
 </div>
 
-<div id="outline-container-orgcdee325" class="outline-5">
-<h5 id="orgcdee325"><span class="section-number-5">1.2.3.3</span> 子系统</h5>
+<div id="outline-container-orgfb81234" class="outline-5">
+<h5 id="orgfb81234"><span class="section-number-5">1.2.3.3</span> 子系统</h5>
 <div class="outline-text-5" id="text-1-2-3-3">
 <p>
 子系统Subsystem可看成一种模块
@@ -637,8 +650,8 @@ Sorry, your browser does not support SVG.</object>
 </div>
 </div>
 
-<div id="outline-container-org2fc95cc" class="outline-6">
-<h6 id="org2fc95cc"><span class="section-number-6">1.2.3.3.1</span> 子系统设计</h6>
+<div id="outline-container-orgba3ca20" class="outline-6">
+<h6 id="orgba3ca20"><span class="section-number-6">1.2.3.3.1</span> 子系统设计</h6>
 <div class="outline-text-6" id="text-1-2-3-3-1">
 <p>
 在设计中表示构件，封装类行为，通过接口访问功能。为确保子系统在模型中可互换，有以下设计规则：
@@ -656,8 +669,8 @@ Sorry, your browser does not support SVG.</object>
 </div>
 </div>
 </div>
-<div id="outline-container-org7c470a2" class="outline-6">
-<h6 id="org7c470a2"><span class="section-number-6">1.2.3.3.2</span> 系统分为子系统的条件</h6>
+<div id="outline-container-org9cfb03a" class="outline-6">
+<h6 id="org9cfb03a"><span class="section-number-6">1.2.3.3.2</span> 系统分为子系统的条件</h6>
 <div class="outline-text-6" id="text-1-2-3-3-2">
 <p>
 系统规模太大，元素很多、差异不可忽略
@@ -674,8 +687,8 @@ Sorry, your browser does not support SVG.</object>
 </div>
 </div>
 
-<div id="outline-container-orgcc7539e" class="outline-6">
-<h6 id="orgcc7539e"><span class="section-number-6">1.2.3.3.3</span> 子系统与元素差异</h6>
+<div id="outline-container-org869a2ee" class="outline-6">
+<h6 id="org869a2ee"><span class="section-number-6">1.2.3.3.3</span> 子系统与元素差异</h6>
 <div class="outline-text-6" id="text-1-2-3-3-3">
 <ul class="org-ul">
 <li>元素也是系统的组成部分，但有基元性 (无需再分)，元素不具系统性，不讨论结构。</li>
@@ -690,8 +703,8 @@ Sorry, your browser does not support SVG.</object>
 </div>
 </div>
 
-<div id="outline-container-orgffe3d39" class="outline-5">
-<h5 id="orgffe3d39"><span class="section-number-5">1.2.3.4</span> 系统层次</h5>
+<div id="outline-container-org7416b3c" class="outline-5">
+<h5 id="org7416b3c"><span class="section-number-5">1.2.3.4</span> 系统层次</h5>
 <div class="outline-text-5" id="text-1-2-3-4">
 <ul class="org-ul">
 <li>物质层面</li>
@@ -700,8 +713,8 @@ Sorry, your browser does not support SVG.</object>
 </ul>
 </div>
 
-<div id="outline-container-org0d5d772" class="outline-6">
-<h6 id="org0d5d772"><span class="section-number-6">1.2.3.4.1</span> 物质层面：系统内部秩序</h6>
+<div id="outline-container-org3c3ef11" class="outline-6">
+<h6 id="org3c3ef11"><span class="section-number-6">1.2.3.4.1</span> 物质层面：系统内部秩序</h6>
 <div class="outline-text-6" id="text-1-2-3-4-1">
 <ul class="org-ul">
 <li>系统内部在结构或功能方面形成层级（对复杂系统处理的基本方法）。</li>
@@ -716,8 +729,8 @@ Sorry, your browser does not support SVG.</object>
 </div>
 </div>
 
-<div id="outline-container-orgaaac8c1" class="outline-6">
-<h6 id="orgaaac8c1"><span class="section-number-6">1.2.3.4.2</span> 认识层面：对系统阶段性认识反映</h6>
+<div id="outline-container-orgcb4d6e4" class="outline-6">
+<h6 id="orgcb4d6e4"><span class="section-number-6">1.2.3.4.2</span> 认识层面：对系统阶段性认识反映</h6>
 <div class="outline-text-6" id="text-1-2-3-4-2">
 <ul class="org-ul">
 <li>认识和表达事物思维过程在系统认识与理解中的反映,体现人们对系统认识发展步骤。</li>
@@ -733,8 +746,8 @@ Sorry, your browser does not support SVG.</object>
 </div>
 </div>
 
-<div id="outline-container-org8a988ae" class="outline-6">
-<h6 id="org8a988ae"><span class="section-number-6">1.2.3.4.3</span> 行为层面：对系统的组织和规划</h6>
+<div id="outline-container-orgdd3e502" class="outline-6">
+<h6 id="orgdd3e502"><span class="section-number-6">1.2.3.4.3</span> 行为层面：对系统的组织和规划</h6>
 <div class="outline-text-6" id="text-1-2-3-4-3">
 <p>
 通过对系统层次划分、组织和规划,实现对系统高效管理、运行和维护。
@@ -749,16 +762,16 @@ Sorry, your browser does not support SVG.</object>
 </div>
 </div>
 
-<div id="outline-container-org2bf6e0d" class="outline-4">
-<h4 id="org2bf6e0d"><span class="section-number-4">1.2.4</span> 产品系统构成</h4>
+<div id="outline-container-org97d1e65" class="outline-4">
+<h4 id="org97d1e65"><span class="section-number-4">1.2.4</span> 产品系统构成</h4>
 <div class="outline-text-4" id="text-1-2-4">
 <ul class="org-ul">
 <li>产品系统与任何系统一样,宏观由物质、能量和信息构成。</li>
 <li>存在方式和属性上表现为要素、结构和功能因素。</li>
 </ul>
 </div>
-<div id="outline-container-orgfff0fee" class="outline-5">
-<h5 id="orgfff0fee"><span class="section-number-5">1.2.4.1</span> 产品系统构成之要素</h5>
+<div id="outline-container-org9a92c3e" class="outline-5">
+<h5 id="org9a92c3e"><span class="section-number-5">1.2.4.1</span> 产品系统构成之要素</h5>
 <div class="outline-text-5" id="text-1-2-4-1">
 <p>
 一个产品包括功能、结构、材料、工艺、色彩、纹理和界面等要素。
@@ -774,8 +787,8 @@ Sorry, your browser does not support SVG.</object>
 </div>
 </div>
 
-<div id="outline-container-org39921c0" class="outline-5">
-<h5 id="org39921c0"><span class="section-number-5">1.2.4.2</span> 产品系统构成之结构</h5>
+<div id="outline-container-org121a338" class="outline-5">
+<h5 id="org121a338"><span class="section-number-5">1.2.4.2</span> 产品系统构成之结构</h5>
 <div class="outline-text-5" id="text-1-2-4-2">
 <p>
 若干要素相互联系相互作用方式
@@ -790,8 +803,8 @@ Sorry, your browser does not support SVG.</object>
 </div>
 </div>
 </div>
-<div id="outline-container-orgd47515c" class="outline-5">
-<h5 id="orgd47515c"><span class="section-number-5">1.2.4.3</span> 产品系统构成之功能</h5>
+<div id="outline-container-org5369ff9" class="outline-5">
+<h5 id="org5369ff9"><span class="section-number-5">1.2.4.3</span> 产品系统构成之功能</h5>
 <div class="outline-text-5" id="text-1-2-4-3">
 <p>
 系统与外部环境相互联系和作用的过程秩序及能力称为系统功能。
@@ -811,8 +824,8 @@ Sorry, your browser does not support SVG.</object>
 </div>
 </div>
 
-<div id="outline-container-org427e3e2" class="outline-4">
-<h4 id="org427e3e2"><span class="section-number-4">1.2.5</span> 产品系统与环境</h4>
+<div id="outline-container-org3c25c7b" class="outline-4">
+<h4 id="org3c25c7b"><span class="section-number-4">1.2.5</span> 产品系统与环境</h4>
 <div class="outline-text-4" id="text-1-2-5">
 <p>
 系统通过边界与周围环境相分离而成为一种特定集合
@@ -828,8 +841,8 @@ Sorry, your browser does not support SVG.</object>
 </div>
 </div>
 
-<div id="outline-container-orgda9e687" class="outline-5">
-<h5 id="orgda9e687"><span class="section-number-5">1.2.5.1</span> 系统功能</h5>
+<div id="outline-container-org1122bbd" class="outline-5">
+<h5 id="org1122bbd"><span class="section-number-5">1.2.5.1</span> 系统功能</h5>
 <div class="outline-text-5" id="text-1-2-5-1">
 <ul class="org-ul">
 <li>系统在运行过程中所有效用(用途)和表现出的能力(性能指标)。</li>
@@ -841,8 +854,8 @@ Sorry, your browser does not support SVG.</object>
 </div>
 </div>
 
-<div id="outline-container-orgcc98b30" class="outline-6">
-<h6 id="orgcc98b30"><span class="section-number-6">1.2.5.1.1</span> 产品功能</h6>
+<div id="outline-container-orga3f5038" class="outline-6">
+<h6 id="orga3f5038"><span class="section-number-6">1.2.5.1.1</span> 产品功能</h6>
 <div class="outline-text-6" id="text-1-2-5-1-1">
 <p>
 做什么用 (以功能命名, 如剃须刀、菜刀、理发剪、指甲剪)
@@ -859,8 +872,8 @@ Sorry, your browser does not support SVG.</object>
 </div>
 </div>
 
-<div id="outline-container-org5923d54" class="outline-6">
-<h6 id="org5923d54"><span class="section-number-6">1.2.5.1.2</span> 功能是一个过程</h6>
+<div id="outline-container-org6cc5401" class="outline-6">
+<h6 id="org6cc5401"><span class="section-number-6">1.2.5.1.2</span> 功能是一个过程</h6>
 <div class="outline-text-6" id="text-1-2-5-1-2">
 <p>
 体现系统对外部的作用能力 (三要素: 输入、输出和转换)
@@ -877,8 +890,8 @@ Sorry, your browser does not support SVG.</object>
 </div>
 </div>
 </div>
-<div id="outline-container-org54039ec" class="outline-5">
-<h5 id="org54039ec"><span class="section-number-5">1.2.5.2</span> 系统环境</h5>
+<div id="outline-container-org9654cfc" class="outline-5">
+<h5 id="org9654cfc"><span class="section-number-5">1.2.5.2</span> 系统环境</h5>
 <div class="outline-text-5" id="text-1-2-5-2">
 <ul class="org-ul">
 <li>系统之外所有事物或存在称为该系统环境。</li>
@@ -893,8 +906,8 @@ Sorry, your browser does not support SVG.</object>
 </div>
 </div>
 </div>
-<div id="outline-container-org7bc4b0c" class="outline-5">
-<h5 id="org7bc4b0c"><span class="section-number-5">1.2.5.3</span> 产品设计与环境</h5>
+<div id="outline-container-orgf854b50" class="outline-5">
+<h5 id="orgf854b50"><span class="section-number-5">1.2.5.3</span> 产品设计与环境</h5>
 <div class="outline-text-5" id="text-1-2-5-3">
 <ul class="org-ul">
 <li>产品设计与自然环境</li>
@@ -902,8 +915,8 @@ Sorry, your browser does not support SVG.</object>
 <li>产品设计与技术环境</li>
 </ul>
 </div>
-<div id="outline-container-orgf3fd4f7" class="outline-6">
-<h6 id="orgf3fd4f7"><span class="section-number-6">1.2.5.3.1</span> 产品设计与自然环境</h6>
+<div id="outline-container-orgd1d8d3c" class="outline-6">
+<h6 id="orgd1d8d3c"><span class="section-number-6">1.2.5.3.1</span> 产品设计与自然环境</h6>
 <div class="outline-text-6" id="text-1-2-5-3-1">
 <p>
 包括资源、生态和地理环境
@@ -919,8 +932,8 @@ Sorry, your browser does not support SVG.</object>
 </div>
 </div>
 
-<div id="outline-container-orgba9fbab" class="outline-6">
-<h6 id="orgba9fbab"><span class="section-number-6">1.2.5.3.2</span> 产品设计与社会环境</h6>
+<div id="outline-container-orga4b5344" class="outline-6">
+<h6 id="orga4b5344"><span class="section-number-6">1.2.5.3.2</span> 产品设计与社会环境</h6>
 <div class="outline-text-6" id="text-1-2-5-3-2">
 <p>
 包括社会制度、民族文化、国际关系等
@@ -938,8 +951,8 @@ Sorry, your browser does not support SVG.</object>
 </div>
 </div>
 
-<div id="outline-container-org9153cae" class="outline-6">
-<h6 id="org9153cae"><span class="section-number-6">1.2.5.3.3</span> 产品设计与技术环境</h6>
+<div id="outline-container-orgf1ebe08" class="outline-6">
+<h6 id="orgf1ebe08"><span class="section-number-6">1.2.5.3.3</span> 产品设计与技术环境</h6>
 <div class="outline-text-6" id="text-1-2-5-3-3">
 <p>
 包括设施环境和协作环境
@@ -956,8 +969,8 @@ Sorry, your browser does not support SVG.</object>
 </div>
 </div>
 
-<div id="outline-container-org3932cce" class="outline-6">
-<h6 id="org3932cce"><span class="section-number-6">1.2.5.3.4</span> 例：厨房吸油烟机产品系统环境</h6>
+<div id="outline-container-org786de1c" class="outline-6">
+<h6 id="org786de1c"><span class="section-number-6">1.2.5.3.4</span> 例：厨房吸油烟机产品系统环境</h6>
 <div class="outline-text-6" id="text-1-2-5-3-4">
 <p>
 在烹饪时会有油烟污染厨房
@@ -968,7 +981,7 @@ Sorry, your browser does not support SVG.</object>
 </ul>
 
 <div class="figure">
-<p><img src="./psd/img/kitchen_environment.jpg" alt="kitchen_environment.jpg" width="35%" />
+<p><img src="./psd/img/kitchen_environment.jpg" alt="kitchen_environment.jpg" width="40%" />
 </p>
 </div>
 </div>
@@ -979,13 +992,13 @@ Sorry, your browser does not support SVG.</object>
 
 
 
-<div id="outline-container-orgca78a92" class="outline-3">
-<h3 id="orgca78a92"><span class="section-number-3">1.3</span> 系统属性(特征)</h3>
+<div id="outline-container-orgb2b5a37" class="outline-3">
+<h3 id="orgb2b5a37"><span class="section-number-3">1.3</span> 系统属性(特征)</h3>
 <div class="outline-text-3" id="text-1-3">
 </div>
 
-<div id="outline-container-org7fa2589" class="outline-4">
-<h4 id="org7fa2589"><span class="section-number-4">1.3.1</span> 整体(涌现)性</h4>
+<div id="outline-container-org21da6ed" class="outline-4">
+<h4 id="org21da6ed"><span class="section-number-4">1.3.1</span> 整体(涌现)性</h4>
 <div class="outline-text-4" id="text-1-3-1">
 <ul class="org-ul">
 <li>所有组分构成统一整体,有整体结构、特性、状态、行为、功能等。</li>
@@ -994,16 +1007,16 @@ Sorry, your browser does not support SVG.</object>
 <li>例：单个轮子不可骑，而单轮车表现出可骑性质称为系统整体涌现。</li>
 </ul>
 </div>
-<div id="outline-container-org53e4336" class="outline-5">
-<h5 id="org53e4336"><span class="section-number-5">1.3.1.1</span> 涌现特征</h5>
+<div id="outline-container-org2796732" class="outline-5">
+<h5 id="org2796732"><span class="section-number-5">1.3.1.1</span> 涌现特征</h5>
 <div class="outline-text-5" id="text-1-3-1-1">
 <ul class="org-ul">
 <li>结构涌现</li>
 <li>层次涌现</li>
 </ul>
 </div>
-<div id="outline-container-orgd15fbc0" class="outline-6">
-<h6 id="orgd15fbc0"><span class="section-number-6">1.3.1.1.1</span> 结构</h6>
+<div id="outline-container-org74a678b" class="outline-6">
+<h6 id="org74a678b"><span class="section-number-6">1.3.1.1.1</span> 结构</h6>
 <div class="outline-text-6" id="text-1-3-1-1-1">
 <p>
 不同结构方式,即组分间不同相互激发、相互制约方式,产生不同整体涌现性。
@@ -1016,8 +1029,8 @@ Sorry, your browser does not support SVG.</object>
 </div>
 </div>
 
-<div id="outline-container-org47299bb" class="outline-6">
-<h6 id="org47299bb"><span class="section-number-6">1.3.1.1.2</span> 层次</h6>
+<div id="outline-container-orgf9dc929" class="outline-6">
+<h6 id="orgf9dc929"><span class="section-number-6">1.3.1.1.2</span> 层次</h6>
 <div class="outline-text-6" id="text-1-3-1-1-2">
 <p>
 复杂系统通过一系列中间等级整合逐步涌现。
@@ -1036,8 +1049,8 @@ Sorry, your browser does not support SVG.</object>
 </div>
 </div>
 
-<div id="outline-container-org72bf9b3" class="outline-5">
-<h5 id="org72bf9b3"><span class="section-number-5">1.3.1.2</span> 产品设计的自组织性</h5>
+<div id="outline-container-orgda207f0" class="outline-5">
+<h5 id="orgda207f0"><span class="section-number-5">1.3.1.2</span> 产品设计的自组织性</h5>
 <div class="outline-text-5" id="text-1-3-1-2">
 <p>
 产品设计系统由内部及系统与环境交叉作用结果。
@@ -1056,8 +1069,8 @@ Sorry, your browser does not support SVG.</object>
 </div>
 </div>
 
-<div id="outline-container-orge78a3a9" class="outline-4">
-<h4 id="orge78a3a9"><span class="section-number-4">1.3.2</span> 有序关联性</h4>
+<div id="outline-container-org5bfb712" class="outline-4">
+<h4 id="org5bfb712"><span class="section-number-4">1.3.2</span> 有序关联性</h4>
 <div class="outline-text-4" id="text-1-3-2">
 <p>
 系统中各层次结构有秩序地工作
@@ -1073,8 +1086,8 @@ Sorry, your browser does not support SVG.</object>
 </div>
 </div>
 
-<div id="outline-container-org050edea" class="outline-5">
-<h5 id="org050edea"><span class="section-number-5">1.3.2.1</span> 产品设计的层次性</h5>
+<div id="outline-container-org6ba185c" class="outline-5">
+<h5 id="org6ba185c"><span class="section-number-5">1.3.2.1</span> 产品设计的层次性</h5>
 <div class="outline-text-5" id="text-1-3-2-1">
 
 <div class="figure">
@@ -1091,8 +1104,8 @@ Sorry, your browser does not support SVG.</object>
 </div>
 </div>
 
-<div id="outline-container-org6854b87" class="outline-4">
-<h4 id="org6854b87"><span class="section-number-4">1.3.3</span> 动态稳定性</h4>
+<div id="outline-container-orgf5fadef" class="outline-4">
+<h4 id="orgf5fadef"><span class="section-number-4">1.3.3</span> 动态稳定性</h4>
 <div class="outline-text-4" id="text-1-3-3">
 <ul class="org-ul">
 <li>内部诸要素作用产生惯性,显现出动态平衡,维持稳定性。</li>
@@ -1106,8 +1119,8 @@ Sorry, your browser does not support SVG.</object>
 </div>
 </div>
 
-<div id="outline-container-org735aaf4" class="outline-5">
-<h5 id="org735aaf4"><span class="section-number-5">1.3.3.1</span> 例：移动通讯系统</h5>
+<div id="outline-container-org015195c" class="outline-5">
+<h5 id="org015195c"><span class="section-number-5">1.3.3.1</span> 例：移动通讯系统</h5>
 <div class="outline-text-5" id="text-1-3-3-1">
 <p>
 在网络作用下,系统各要素按某种秩序形成整体,要素间保持依存关系,且这种关系稳定、相互作用。
@@ -1124,8 +1137,8 @@ Sorry, your browser does not support SVG.</object>
 </div>
 </div>
 
-<div id="outline-container-orgb2100df" class="outline-5">
-<h5 id="orgb2100df"><span class="section-number-5">1.3.3.2</span> 产品设计的动态开放性</h5>
+<div id="outline-container-org8519365" class="outline-5">
+<h5 id="org8519365"><span class="section-number-5">1.3.3.2</span> 产品设计的动态开放性</h5>
 <div class="outline-text-5" id="text-1-3-3-2">
 <ul class="org-ul">
 <li>设计为审美、使用习惯、行为方式和文化背景不同且不断更迭的人们提供解决方案。</li>
@@ -1141,8 +1154,8 @@ Sorry, your browser does not support SVG.</object>
 </div>
 </div>
 
-<div id="outline-container-org594e0cb" class="outline-4">
-<h4 id="org594e0cb"><span class="section-number-4">1.3.4</span> 其它属性</h4>
+<div id="outline-container-org0905319" class="outline-4">
+<h4 id="org0905319"><span class="section-number-4">1.3.4</span> 其它属性</h4>
 <div class="outline-text-4" id="text-1-3-4">
 <ul class="org-ul">
 <li>目的作用：由各元素、子系统协同完成特定功能。</li>
@@ -1154,13 +1167,13 @@ Sorry, your browser does not support SVG.</object>
 </div>
 </div>
 
-<div id="outline-container-orgfcc37b7" class="outline-3">
-<h3 id="orgfcc37b7"><span class="section-number-3">1.4</span> 系统分类</h3>
+<div id="outline-container-orgd00bca2" class="outline-3">
+<h3 id="orgd00bca2"><span class="section-number-3">1.4</span> 系统分类</h3>
 <div class="outline-text-3" id="text-1-4">
 </div>
 
-<div id="outline-container-orgf033a1b" class="outline-4">
-<h4 id="orgf033a1b"><span class="section-number-4">1.4.1</span> 自然-人工系统</h4>
+<div id="outline-container-org11604d7" class="outline-4">
+<h4 id="org11604d7"><span class="section-number-4">1.4.1</span> 自然-人工系统</h4>
 <div class="outline-text-4" id="text-1-4-1">
 <p>
 自然系统:
@@ -1189,8 +1202,8 @@ Sorry, your browser does not support SVG.</object>
 </div>
 </div>
 
-<div id="outline-container-org41d029f" class="outline-4">
-<h4 id="org41d029f"><span class="section-number-4">1.4.2</span> 简单-复杂系统</h4>
+<div id="outline-container-org57fe8f6" class="outline-4">
+<h4 id="org57fe8f6"><span class="section-number-4">1.4.2</span> 简单-复杂系统</h4>
 <div class="outline-text-4" id="text-1-4-2">
 <p>
 简单系统（线性）：
@@ -1219,8 +1232,8 @@ Sorry, your browser does not support SVG.</object>
 </div>
 </div>
 
-<div id="outline-container-org2d2e281" class="outline-4">
-<h4 id="org2d2e281"><span class="section-number-4">1.4.3</span> 开放-闭式系统</h4>
+<div id="outline-container-orgbb58faa" class="outline-4">
+<h4 id="orgbb58faa"><span class="section-number-4">1.4.3</span> 开放-闭式系统</h4>
 <div class="outline-text-4" id="text-1-4-3">
 <ul class="org-ul">
 <li>开放系统(open system): 与环境间既有能量交换又有物质交换的系统。</li>
@@ -1242,8 +1255,8 @@ Sorry, your browser does not support SVG.</object>
 </div>
 </div>
 
-<div id="outline-container-org5d21deb" class="outline-4">
-<h4 id="org5d21deb"><span class="section-number-4">1.4.4</span> 静态-动态系统</h4>
+<div id="outline-container-org72048fd" class="outline-4">
+<h4 id="org72048fd"><span class="section-number-4">1.4.4</span> 静态-动态系统</h4>
 <div class="outline-text-4" id="text-1-4-4">
 <p>
 静态系统：
@@ -1270,8 +1283,8 @@ Sorry, your browser does not support SVG.</object>
 </div>
 </div>
 
-<div id="outline-container-orgeddefc5" class="outline-4">
-<h4 id="orgeddefc5"><span class="section-number-4">1.4.5</span> 产品设计系统分类</h4>
+<div id="outline-container-orgf7dad73" class="outline-4">
+<h4 id="orgf7dad73"><span class="section-number-4">1.4.5</span> 产品设计系统分类</h4>
 <div class="outline-text-4" id="text-1-4-5">
 <ul class="org-ul">
 <li>平面产品设计: 图书、宣传册、卡片、招贴等</li>
@@ -1281,8 +1294,8 @@ Sorry, your browser does not support SVG.</object>
 </ul>
 </div>
 
-<div id="outline-container-org408a4dd" class="outline-5">
-<h5 id="org408a4dd"><span class="section-number-5">1.4.5.1</span> 产品系统设计层次</h5>
+<div id="outline-container-orgb4326a1" class="outline-5">
+<h5 id="orgb4326a1"><span class="section-number-5">1.4.5.1</span> 产品系统设计层次</h5>
 <div class="outline-text-5" id="text-1-4-5-1">
 <ul class="org-ul">
 <li>外观设计：以外形整体及局部线条、图案、色彩、雕刻装饰设计为主。</li>
@@ -1297,12 +1310,12 @@ Sorry, your browser does not support SVG.</object>
 </div>
 </div>
 
-<div id="outline-container-org10d1260" class="outline-3">
-<h3 id="org10d1260"><span class="section-number-3">1.5</span> 设计系统观</h3>
+<div id="outline-container-org2ad458c" class="outline-3">
+<h3 id="org2ad458c"><span class="section-number-3">1.5</span> 设计系统观</h3>
 <div class="outline-text-3" id="text-1-5">
 </div>
-<div id="outline-container-org84bbc93" class="outline-11">
-<h11 id="org84bbc93"><span class="section-number-11">1.5.0.0.0.0.0.0.0.1</span> </h11>
+<div id="outline-container-orgcbb7758" class="outline-11">
+<h11 id="orgcbb7758"><span class="section-number-11">1.5.0.0.0.0.0.0.0.1</span> </h11>
 <div class="outline-text-11" id="text-1-5-0-0-0-0-0-0-0-1">
 <p>
 设计概念和领域不断扩大及系统观念强化,现代产品设计已将对象事物当作一个整体系统认识和研究
@@ -1319,12 +1332,12 @@ Sorry, your browser does not support SVG.</object>
 </div>
 </div>
 
-<div id="outline-container-org5402244" class="outline-4">
-<h4 id="org5402244"><span class="section-number-4">1.5.1</span> 产品系统设计时空观</h4>
+<div id="outline-container-org02d005d" class="outline-4">
+<h4 id="org02d005d"><span class="section-number-4">1.5.1</span> 产品系统设计时空观</h4>
 <div class="outline-text-4" id="text-1-5-1">
 </div>
-<div id="outline-container-orgfc8366d" class="outline-5">
-<h5 id="orgfc8366d"><span class="section-number-5">1.5.1.1</span> 多种构成(空间)</h5>
+<div id="outline-container-orge74f2aa" class="outline-5">
+<h5 id="orge74f2aa"><span class="section-number-5">1.5.1.1</span> 多种构成(空间)</h5>
 <div class="outline-text-5" id="text-1-5-1-1">
 <ul class="org-ul">
 <li>把设计对象及有关问题,设计信息分类整理、设计目标拟定、人—机—环境系统功能分配、功能-结构-造型协调等视为系统</li>
@@ -1333,8 +1346,8 @@ Sorry, your browser does not support SVG.</object>
 </div>
 </div>
 
-<div id="outline-container-org41a0d11" class="outline-5">
-<h5 id="org41a0d11"><span class="section-number-5">1.5.1.2</span> 动态变化(时间)</h5>
+<div id="outline-container-orgabb6528" class="outline-5">
+<h5 id="orgabb6528"><span class="section-number-5">1.5.1.2</span> 动态变化(时间)</h5>
 <div class="outline-text-5" id="text-1-5-1-2">
 <p>
 产品设计一个由多要素和多方法构成的过程系统,需考虑从产品诞生到消亡整个生命过程。
@@ -1353,8 +1366,8 @@ Sorry, your browser does not support SVG.</object>
 </div>
 </div>
 
-<div id="outline-container-orgd1b08d3" class="outline-4">
-<h4 id="orgd1b08d3"><span class="section-number-4">1.5.2</span> 产品系统设计的意义</h4>
+<div id="outline-container-org3421011" class="outline-4">
+<h4 id="org3421011"><span class="section-number-4">1.5.2</span> 产品系统设计的意义</h4>
 <div class="outline-text-4" id="text-1-5-2">
 <ul class="org-ul">
 <li>专注整体与部分 (整体性) 及与外部环境 (综合性) 间相互关系,</li>
@@ -1369,13 +1382,13 @@ Sorry, your browser does not support SVG.</object>
 </div>
 </div>
 
-<div id="outline-container-org37926b5" class="outline-3">
-<h3 id="org37926b5"><span class="section-number-3">1.6</span> 产品系统化特征</h3>
+<div id="outline-container-org0829fbc" class="outline-3">
+<h3 id="org0829fbc"><span class="section-number-3">1.6</span> 产品系统化特征</h3>
 <div class="outline-text-3" id="text-1-6">
 </div>
 
-<div id="outline-container-org7785f5a" class="outline-4">
-<h4 id="org7785f5a"><span class="section-number-4">1.6.1</span> 产品信息化促进系统化</h4>
+<div id="outline-container-org76772ba" class="outline-4">
+<h4 id="org76772ba"><span class="section-number-4">1.6.1</span> 产品信息化促进系统化</h4>
 <div class="outline-text-4" id="text-1-6-1">
 <ul class="org-ul">
 <li>信息本身已成为重要产品,实体产品强化为信息载体。</li>
@@ -1383,8 +1396,8 @@ Sorry, your browser does not support SVG.</object>
 <li>产品特征信息化 | 产品设计信息化 | 产品制造信息化与智能化</li>
 </ul>
 </div>
-<div id="outline-container-orgde5b9bf" class="outline-5">
-<h5 id="orgde5b9bf"><span class="section-number-5">1.6.1.1</span> 产品特征信息化</h5>
+<div id="outline-container-org329e789" class="outline-5">
+<h5 id="org329e789"><span class="section-number-5">1.6.1.1</span> 产品特征信息化</h5>
 <div class="outline-text-5" id="text-1-6-1-1">
 <ul class="org-ul">
 <li>多功能复合化</li>
@@ -1399,8 +1412,8 @@ Sorry, your browser does not support SVG.</object>
 </div>
 </div>
 
-<div id="outline-container-orgc2d8bab" class="outline-6">
-<h6 id="orgc2d8bab"><span class="section-number-6">1.6.1.1.1</span> 多功能复合化</h6>
+<div id="outline-container-orga517e69" class="outline-6">
+<h6 id="orga517e69"><span class="section-number-6">1.6.1.1.1</span> 多功能复合化</h6>
 <div class="outline-text-6" id="text-1-6-1-1-1">
 
 <div class="figure">
@@ -1417,8 +1430,8 @@ Sorry, your browser does not support SVG.</object>
 </div>
 </div>
 
-<div id="outline-container-org1036864" class="outline-6">
-<h6 id="org1036864"><span class="section-number-6">1.6.1.1.2</span> 便携化</h6>
+<div id="outline-container-org24fb8b9" class="outline-6">
+<h6 id="org24fb8b9"><span class="section-number-6">1.6.1.1.2</span> 便携化</h6>
 <div class="outline-text-6" id="text-1-6-1-1-2">
 <p>
 电子元器件大量应用及信息技术发展,使产品结构改良,零部件数量减少,体积缩小,重量减轻。
@@ -1437,8 +1450,8 @@ Sorry, your browser does not support SVG.</object>
 </div>
 </div>
 
-<div id="outline-container-org7d74aa0" class="outline-6">
-<h6 id="org7d74aa0"><span class="section-number-6">1.6.1.1.3</span> 智能与知识化</h6>
+<div id="outline-container-orgdcad8a2" class="outline-6">
+<h6 id="orgdcad8a2"><span class="section-number-6">1.6.1.1.3</span> 智能与知识化</h6>
 <div class="outline-text-6" id="text-1-6-1-1-3">
 <p>
 把人们通过学习才能掌握知识和技术转化到产品中
@@ -1454,8 +1467,8 @@ Sorry, your browser does not support SVG.</object>
 </div>
 </div>
 
-<div id="outline-container-org833d09b" class="outline-6">
-<h6 id="org833d09b"><span class="section-number-6">1.6.1.1.4</span> 精神化</h6>
+<div id="outline-container-orga87d824" class="outline-6">
+<h6 id="orga87d824"><span class="section-number-6">1.6.1.1.4</span> 精神化</h6>
 <div class="outline-text-6" id="text-1-6-1-1-4">
 <p>
 对品味追求, 包括美学价值和象征意味等精神文化价值。
@@ -1469,16 +1482,16 @@ Sorry, your browser does not support SVG.</object>
 </div>
 </div>
 
-<div id="outline-container-org7a0fcee" class="outline-5">
-<h5 id="org7a0fcee"><span class="section-number-5">1.6.1.2</span> 产品设计信息化</h5>
+<div id="outline-container-org8314eaf" class="outline-5">
+<h5 id="org8314eaf"><span class="section-number-5">1.6.1.2</span> 产品设计信息化</h5>
 <div class="outline-text-5" id="text-1-6-1-2">
 <ul class="org-ul">
 <li>网络化协同设计</li>
 <li>信息设计技术支撑</li>
 </ul>
 </div>
-<div id="outline-container-orgfe7efde" class="outline-6">
-<h6 id="orgfe7efde"><span class="section-number-6">1.6.1.2.1</span> 网络化协同设计</h6>
+<div id="outline-container-orgbe6dee1" class="outline-6">
+<h6 id="orgbe6dee1"><span class="section-number-6">1.6.1.2.1</span> 网络化协同设计</h6>
 <div class="outline-text-6" id="text-1-6-1-2-1">
 <ul class="org-ul">
 <li>串行设计:</li>
@@ -1488,15 +1501,15 @@ Sorry, your browser does not support SVG.</object>
 </ul>
 </div>
 
-<div id="outline-container-org2ae9b07" class="outline-11">
-<h11 id="org2ae9b07"><span class="section-number-11">1.6.1.2.1.0.0.0.0.1</span> 并行工程</h11>
+<div id="outline-container-org2787be6" class="outline-11">
+<h11 id="org2787be6"><span class="section-number-11">1.6.1.2.1.0.0.0.0.1</span> 并行工程</h11>
 <div class="outline-text-11" id="text-1-6-1-2-1-0-0-0-0-1">
 </div>
 </div>
 </div>
 
-<div id="outline-container-org3793815" class="outline-6">
-<h6 id="org3793815"><span class="section-number-6">1.6.1.2.2</span> 信息设计技术支撑</h6>
+<div id="outline-container-org5fe0209" class="outline-6">
+<h6 id="org5fe0209"><span class="section-number-6">1.6.1.2.2</span> 信息设计技术支撑</h6>
 <div class="outline-text-6" id="text-1-6-1-2-2">
 <ul class="org-ul">
 <li>计算机辅助设计与制造</li>
@@ -1506,8 +1519,8 @@ Sorry, your browser does not support SVG.</object>
 <li>全面质量控制体系</li>
 </ul>
 </div>
-<div id="outline-container-org0571829" class="outline-7">
-<h7 id="org0571829"><span class="section-number-7">1.6.1.2.2.1</span> 计算机辅助设计与制造</h7>
+<div id="outline-container-org526f35a" class="outline-7">
+<h7 id="org526f35a"><span class="section-number-7">1.6.1.2.2.1</span> 计算机辅助设计与制造</h7>
 <div class="outline-text-7" id="text-1-6-1-2-2-1">
 <ul class="org-ul">
 <li>CAD (Design) | CAE (Engineering) | CAPP (Process Planning) | CAM (Manufacturing)</li>
@@ -1520,8 +1533,8 @@ Sorry, your browser does not support SVG.</object>
 </div>
 </div>
 
-<div id="outline-container-org4fb3ef9" class="outline-7">
-<h7 id="org4fb3ef9"><span class="section-number-7">1.6.1.2.2.2</span> 逆向工程(反向工程)</h7>
+<div id="outline-container-org68a793e" class="outline-7">
+<h7 id="org68a793e"><span class="section-number-7">1.6.1.2.2.2</span> 逆向工程(反向工程)</h7>
 <div class="outline-text-7" id="text-1-6-1-2-2-2">
 <p>
 直接从模型或实物获得几何数据,转化成零件图纸和加工程序。
@@ -1537,8 +1550,8 @@ Sorry, your browser does not support SVG.</object>
 </div>
 </div>
 
-<div id="outline-container-orgaf790d7" class="outline-7">
-<h7 id="orgaf790d7"><span class="section-number-7">1.6.1.2.2.3</span> 快速成型技术(3D打印)</h7>
+<div id="outline-container-orgd4d13d7" class="outline-7">
+<h7 id="orgd4d13d7"><span class="section-number-7">1.6.1.2.2.3</span> 快速成型技术(3D打印)</h7>
 <div class="outline-text-7" id="text-1-6-1-2-2-3">
 <p>
 在CAD/CAM技术支持下,采用粘结、熔结、聚合作用
@@ -1548,14 +1561,14 @@ Sorry, your browser does not support SVG.</object>
 </ul>
 
 <div class="figure">
-<p><img src="./psd/img/3D-Printing-Trends.jpg" alt="3D-Printing-Trends.jpg" width="70%" />
+<p><img src="./psd/img/3D-Printing-Trends.jpg" alt="3D-Printing-Trends.jpg" width="50%" />
 </p>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org2a72cc9" class="outline-7">
-<h7 id="org2a72cc9"><span class="section-number-7">1.6.1.2.2.4</span> 虚拟制造与虚拟产品开发</h7>
+<div id="outline-container-orgd498516" class="outline-7">
+<h7 id="orgd498516"><span class="section-number-7">1.6.1.2.2.4</span> 虚拟制造与虚拟产品开发</h7>
 <div class="outline-text-7" id="text-1-6-1-2-2-4">
 <p>
 以计算仿真、智能推理和预测为基础,对制造信息动态操作,虚拟制造过程和产品及消费或损耗过程。
@@ -1573,8 +1586,8 @@ Sorry, your browser does not support SVG.</object>
 </div>
 </div>
 
-<div id="outline-container-org5b3ab25" class="outline-7">
-<h7 id="org5b3ab25"><span class="section-number-7">1.6.1.2.2.5</span> 全面质量控制体系</h7>
+<div id="outline-container-orge86bca6" class="outline-7">
+<h7 id="orge86bca6"><span class="section-number-7">1.6.1.2.2.5</span> 全面质量控制体系</h7>
 <div class="outline-text-7" id="text-1-6-1-2-2-5">
 <p>
 计算机收集整理用户对产品质量需求,转变成生产时间、成本、性能值,以此调整生产系统,指导设计。
@@ -1593,16 +1606,16 @@ Sorry, your browser does not support SVG.</object>
 </div>
 </div>
 
-<div id="outline-container-org40310f1" class="outline-5">
-<h5 id="org40310f1"><span class="section-number-5">1.6.1.3</span> 产品制造信息化与智能化</h5>
+<div id="outline-container-org77b96ac" class="outline-5">
+<h5 id="org77b96ac"><span class="section-number-5">1.6.1.3</span> 产品制造信息化与智能化</h5>
 <div class="outline-text-5" id="text-1-6-1-3">
 <ul class="org-ul">
 <li>信息化促成精益生产、敏捷生产和柔性生产方式</li>
 <li>自动化机器生产机器、控制机器</li>
 </ul>
 </div>
-<div id="outline-container-org711a425" class="outline-6">
-<h6 id="org711a425"><span class="section-number-6">1.6.1.3.1</span> 信息化促成精益生产、敏捷生产和柔性生产方式</h6>
+<div id="outline-container-orga6819d1" class="outline-6">
+<h6 id="orga6819d1"><span class="section-number-6">1.6.1.3.1</span> 信息化促成精益生产、敏捷生产和柔性生产方式</h6>
 <div class="outline-text-6" id="text-1-6-1-3-1">
 <p>
 应对个性化需求和复杂精细、功能多样产品制造要求。
@@ -1619,8 +1632,8 @@ Sorry, your browser does not support SVG.</object>
 </div>
 </div>
 </div>
-<div id="outline-container-orge8ca735" class="outline-6">
-<h6 id="orge8ca735"><span class="section-number-6">1.6.1.3.2</span> 自动化机器生产机器、控制机器</h6>
+<div id="outline-container-orge7094d1" class="outline-6">
+<h6 id="orge7094d1"><span class="section-number-6">1.6.1.3.2</span> 自动化机器生产机器、控制机器</h6>
 <div class="outline-text-6" id="text-1-6-1-3-2">
 <p>
 计算机技术广泛应用于设计开发系统、生产系统及管理系统。
@@ -1638,8 +1651,8 @@ Sorry, your browser does not support SVG.</object>
 </div>
 </div>
 
-<div id="outline-container-orgbe4136a" class="outline-4">
-<h4 id="orgbe4136a"><span class="section-number-4">1.6.2</span> 产品系列化促进系统化</h4>
+<div id="outline-container-org8e187f4" class="outline-4">
+<h4 id="org8e187f4"><span class="section-number-4">1.6.2</span> 产品系列化促进系统化</h4>
 <div class="outline-text-4" id="text-1-6-2">
 <p>
 相互关联成组、成套产品
@@ -1649,8 +1662,8 @@ Sorry, your browser does not support SVG.</object>
 <li>系列化意义：商业意义、生产意义</li>
 </ul>
 </div>
-<div id="outline-container-org98a8b4c" class="outline-5">
-<h5 id="org98a8b4c"><span class="section-number-5">1.6.2.1</span> 系列化形式</h5>
+<div id="outline-container-orgffe4209" class="outline-5">
+<h5 id="orgffe4209"><span class="section-number-5">1.6.2.1</span> 系列化形式</h5>
 <div class="outline-text-5" id="text-1-6-2-1">
 <p>
 品牌系列 | 成套系列 | 单元系列
@@ -1661,8 +1674,8 @@ Sorry, your browser does not support SVG.</object>
 </p>
 </div>
 </div>
-<div id="outline-container-orgf9c9de3" class="outline-6">
-<h6 id="orgf9c9de3"><span class="section-number-6">1.6.2.1.1</span> 品牌系列</h6>
+<div id="outline-container-orge20c1cd" class="outline-6">
+<h6 id="orge20c1cd"><span class="section-number-6">1.6.2.1.1</span> 品牌系列</h6>
 <div class="outline-text-6" id="text-1-6-2-1-1">
 <ul class="org-ul">
 <li>例：同一品牌家用电器</li>
@@ -1675,8 +1688,8 @@ Sorry, your browser does not support SVG.</object>
 </div>
 </div>
 
-<div id="outline-container-org786a285" class="outline-6">
-<h6 id="org786a285"><span class="section-number-6">1.6.2.1.2</span> 成套系列</h6>
+<div id="outline-container-org8d95b0a" class="outline-6">
+<h6 id="org8d95b0a"><span class="section-number-6">1.6.2.1.2</span> 成套系列</h6>
 <div class="outline-text-6" id="text-1-6-2-1-2">
 <p>
 由多种独立功能产品组成一个产品系统。
@@ -1692,8 +1705,8 @@ Sorry, your browser does not support SVG.</object>
 </div>
 </div>
 
-<div id="outline-container-org1cd1fea" class="outline-6">
-<h6 id="org1cd1fea"><span class="section-number-6">1.6.2.1.3</span> 单元系列</h6>
+<div id="outline-container-org1587cd8" class="outline-6">
+<h6 id="org1587cd8"><span class="section-number-6">1.6.2.1.3</span> 单元系列</h6>
 <div class="outline-text-6" id="text-1-6-2-1-3">
 <p>
 单元产品间有某种相关性和依存关系,构成完整产品系列。
@@ -1710,16 +1723,16 @@ Sorry, your browser does not support SVG.</object>
 </div>
 </div>
 
-<div id="outline-container-org2e88cc7" class="outline-5">
-<h5 id="org2e88cc7"><span class="section-number-5">1.6.2.2</span> 系列化意义</h5>
+<div id="outline-container-org81e8c1e" class="outline-5">
+<h5 id="org81e8c1e"><span class="section-number-5">1.6.2.2</span> 系列化意义</h5>
 <div class="outline-text-5" id="text-1-6-2-2">
 <ul class="org-ul">
 <li>产品系列化的商业意义</li>
 <li>产品系列化的生产意义</li>
 </ul>
 </div>
-<div id="outline-container-org670adcb" class="outline-6">
-<h6 id="org670adcb"><span class="section-number-6">1.6.2.2.1</span> 产品系列化的商业意义</h6>
+<div id="outline-container-orga2e6bd0" class="outline-6">
+<h6 id="orga2e6bd0"><span class="section-number-6">1.6.2.2.1</span> 产品系列化的商业意义</h6>
 <div class="outline-text-6" id="text-1-6-2-2-1">
 <p>
 通过增加产品覆盖面和提高产品适应性来提高市场竞争力。
@@ -1735,8 +1748,8 @@ Sorry, your browser does not support SVG.</object>
 </div>
 </div>
 
-<div id="outline-container-org8df8f63" class="outline-6">
-<h6 id="org8df8f63"><span class="section-number-6">1.6.2.2.2</span> 产品系列化的生产意义</h6>
+<div id="outline-container-orgf2e0c59" class="outline-6">
+<h6 id="orgf2e0c59"><span class="section-number-6">1.6.2.2.2</span> 产品系列化的生产意义</h6>
 <div class="outline-text-6" id="text-1-6-2-2-2">
 <p>
 柔性生产：
@@ -1769,8 +1782,8 @@ Sorry, your browser does not support SVG.</object>
 </div>
 </div>
 
-<div id="outline-container-org8c7f77a" class="outline-4">
-<h4 id="org8c7f77a"><span class="section-number-4">1.6.3</span> 产品商品化促进系统化</h4>
+<div id="outline-container-orga95e947" class="outline-4">
+<h4 id="orga95e947"><span class="section-number-4">1.6.3</span> 产品商品化促进系统化</h4>
 <div class="outline-text-4" id="text-1-6-3">
 <p>
 企业为谋求生产系统快速反应市场变化,打破生产和营销分离状态。
@@ -1788,8 +1801,8 @@ Sorry, your browser does not support SVG.</object>
 </div>
 </div>
 
-<div id="outline-container-orgf13d845" class="outline-4">
-<h4 id="orgf13d845"><span class="section-number-4">1.6.4</span> 产品生态化促进系统化</h4>
+<div id="outline-container-org739e13b" class="outline-4">
+<h4 id="org739e13b"><span class="section-number-4">1.6.4</span> 产品生态化促进系统化</h4>
 <div class="outline-text-4" id="text-1-6-4">
 <p>
 生产制造业已成为大量废弃物(包括物料废弃物、能源废弃物和产品使用终结废弃物等)主要源头。只用见污治污未端治理方式不能从根本上解决污染问题,需从绿色设计入手。
@@ -1805,8 +1818,8 @@ Sorry, your browser does not support SVG.</object>
 </div>
 </div>
 
-<div id="outline-container-orgb0f0a30" class="outline-4">
-<h4 id="orgb0f0a30"><span class="section-number-4">1.6.5</span> 产品多元化促进系统化</h4>
+<div id="outline-container-org3914b3b" class="outline-4">
+<h4 id="org3914b3b"><span class="section-number-4">1.6.5</span> 产品多元化促进系统化</h4>
 <div class="outline-text-4" id="text-1-6-5">
 <p>
 市场需求趋于多样化、个性化,开发采用新技术、新材料、新结构或新形式全新产品。
@@ -1823,8 +1836,8 @@ Sorry, your browser does not support SVG.</object>
 </div>
 </div>
 
-<div id="outline-container-org54b4ed1" class="outline-3">
-<h3 id="org54b4ed1"><span class="section-number-3">1.7</span> 作业一</h3>
+<div id="outline-container-org92e3e6d" class="outline-3">
+<h3 id="org92e3e6d"><span class="section-number-3">1.7</span> 作业一</h3>
 <div class="outline-text-3" id="text-1-7">
 <ul class="org-ul">
 <li>找一个产品系统实例做成PPT。</li>
@@ -1836,10 +1849,2621 @@ Sorry, your browser does not support SVG.</object>
 </div>
 </div>
 </div>
+<div id="outline-container-org2ea97b5" class="outline-2">
+<h2 id="org2ea97b5"><span class="section-number-2">2</span> 产品系统设计方法</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org4e126b3" class="outline-11">
+<div class="outline-text-11" id="text-2-0-0-0-0-0-0-0-0-1">
+
+<div class="figure">
+<p><object type="image/svg+xml" data="./psd/img/psd_methods.svg" class="org-svg" width="45%">
+Sorry, your browser does not support SVG.</object>
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgc60bd9c" class="outline-3">
+<h3 id="orgc60bd9c"><span class="section-number-3">2.1</span> 系统方法论</h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+理论-经验 | 定性-定量 | 数学-非数学 | 精确-近似
+</p>
+</div>
+<div id="outline-container-org38536b7" class="outline-4">
+<h4 id="org38536b7"><span class="section-number-4">2.1.1</span> 还原论与整体论</h4>
+<div class="outline-text-4" id="text-2-1-1">
+<ul class="org-ul">
+<li>还原论</li>
+<li>整体论</li>
+<li>还原论 &amp; 整体论</li>
+</ul>
+</div>
+<div id="outline-container-org23d2380" class="outline-5">
+<h5 id="org23d2380"><span class="section-number-5">2.1.1.1</span> 还原论</h5>
+<div class="outline-text-5" id="text-2-1-1-1">
+<p>
+把整体分解为部分，通过认识部分，把握整体特性。分析（分解、还原）—重构
+</p>
+<ul class="org-ul">
+<li>把系统从环境中分离，独立出来研究;</li>
+<li>然后把系统分解为部分，把高层次还原到低层次,</li>
+<li>用部分说明整体，用低层次说明高层次。</li>
+</ul>
+
+<div class="figure">
+<p><img src="./psd/img/reductionism.jpg" alt="reductionism.jpg" width="100%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org6e2e272" class="outline-5">
+<h5 id="org6e2e272"><span class="section-number-5">2.1.1.2</span> 整体论</h5>
+<div class="outline-text-5" id="text-2-1-1-2">
+<ul class="org-ul">
+<li>许多宇宙奥秘源于整体涌现 （生成论：多源于少,复杂生于简单）。</li>
+<li>社会实践越来越大型化、复杂化,一系列全球问题形成,突出强调从整体上认识和处理。</li>
+</ul>
+
+<div class="figure">
+<p><img src="./psd/img/holism_triangle.gif" alt="holism_triangle.gif" width="38%" />
+</p>
+</div>
+</div>
+<div id="outline-container-orgc3ee7d4" class="outline-11">
+<h11 id="orgc3ee7d4"><span class="section-number-11">2.1.1.2.0.0.0.0.0.1</span> </h11>
+<div class="outline-text-11" id="text-2-1-1-2-0-0-0-0-0-1">
+<p>
+例: 由分析法可算出海水体积，每天把海水舀到地面量一旦定下来,就可算出到哪一天将把地球海水舀干。
+</p>
+<ul class="org-ul">
+<li>但这不符合海水占地球70%巨大规模实际整体情况。</li>
+</ul>
+
+<div class="figure">
+<p><img src="./psd/img/2015SeaIce_volume.jpg" alt="2015SeaIce_volume.jpg" width="70%" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org44685fc" class="outline-11">
+<h11 id="org44685fc"><span class="section-number-11">2.1.1.2.0.0.0.0.0.2</span> </h11>
+<div class="outline-text-11" id="text-2-1-1-2-0-0-0-0-0-2">
+<ul class="org-ul">
+<li>世界演化,系统并非永恒不变。只有用生成演化观点,才能作出科学说明。</li>
+</ul>
+
+<div class="figure">
+<p><img src="./psd/img/The-BIG-BANG-Diagram.jpg" alt="The-BIG-BANG-Diagram.jpg" width="70%" />
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgfcb2b3d" class="outline-5">
+<h5 id="orgfcb2b3d"><span class="section-number-5">2.1.1.3</span> 还原论结合整体论</h5>
+<div class="outline-text-5" id="text-2-1-1-3">
+<ul class="org-ul">
+<li>见树木：还原到元素层次，理解局部精细结构，避免猜测、笼统。</li>
+<li>见森林：从整体上把握事物、解决问题，避免零碎。</li>
+</ul>
+
+<div class="figure">
+<p><img src="./psd/img/forest-research-malaysia.jpg" alt="forest-research-malaysia.jpg" width="80%" />
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgc07bc05" class="outline-4">
+<h4 id="orgc07bc05"><span class="section-number-4">2.1.2</span> 定性描述与定量描述</h4>
+<div class="outline-text-4" id="text-2-1-2">
+<ul class="org-ul">
+<li>质：定性认识(对象的性质、特点、发展变化规律)不正确,会把认识引向歧途。</li>
+<li>量：定量描述可深入准确地把握系统行为特性（数学公式描述物体运动规律）</li>
+</ul>
+
+
+<div class="figure">
+<p><img src="./psd/img/qualitative_vs_quantitative_methods.png" alt="qualitative_vs_quantitative_methods.png" width="70%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org0ddc02d" class="outline-4">
+<h4 id="org0ddc02d"><span class="section-number-4">2.1.3</span> 局部描述与整体描述</h4>
+<div class="outline-text-4" id="text-2-1-3">
+<ul class="org-ul">
+<li>整体由局部构成,整体统摄局部,局部支撑整体</li>
+<li>描述系统包括描述整体和局部两方面</li>
+<li>在系统整体观对照下建立对局部描述,综合所有局部描述以建立关于系统整体描述。</li>
+</ul>
+
+<div class="figure">
+<p><img src="./psd/img/fractal.jpg" alt="fractal.jpg" width="100%" />
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org4cc382e" class="outline-3">
+<h3 id="org4cc382e"><span class="section-number-3">2.2</span> 系统方法特点</h3>
+<div class="outline-text-3" id="text-2-2">
+<p>
+整体与部分，对象与环境相互联系、作用、制约，综合精确考查对象
+</p>
+<ul class="org-ul">
+<li>达到整合优化处理设计问题（包括子问题）的目的。</li>
+</ul>
+</div>
+<div id="outline-container-org0093cac" class="outline-4">
+<h4 id="org0093cac"><span class="section-number-4">2.2.1</span> 整体性</h4>
+<div class="outline-text-4" id="text-2-2-1">
+<p>
+各种对象、事件、过程等是一个合乎规律，由各要素组成的有机整体。
+</p>
+<ul class="org-ul">
+<li>各子系统各具特定功能和目标，分工协作，实现系统整体功能和目标。</li>
+<li>从事物 (系统) 整体出发，着眼于系统总体最高效益，而不局限于个别子系统。</li>
+</ul>
+
+<div class="figure">
+<p><img src="./psd/img/system_unity.jpg" alt="system_unity.jpg" width="40%" />
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0c4c740" class="outline-5">
+<h5 id="org0c4c740"><span class="section-number-5">2.2.1.1</span> 产品系统应用</h5>
+<div class="outline-text-5" id="text-2-2-1-1">
+<ul class="org-ul">
+<li>增强系列产品灵活性、统一性和持久性。</li>
+<li>强调产品在造型、色彩等形象因素上统一,以保证使用环境获得秩序感。</li>
+</ul>
+
+<div class="figure">
+<p><img src="./psd/img/Electric_Power_Tools.jpg" alt="Electric_Power_Tools.jpg" width="100%" />
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org7057606" class="outline-4">
+<h4 id="org7057606"><span class="section-number-4">2.2.2</span> 综合性</h4>
+<div class="outline-text-4" id="text-2-2-2">
+<p>
+通过辩证分析和高度综合，使各要素相互渗透、协调达到整个系统最优化。
+</p>
+<ul class="org-ul">
+<li>系统是一些要素为特定目的而组成的综合体，如建筑功能、环境、技术、人文、艺术等组成综合体;</li>
+<li>对任何事物研究，须从成分、结构、功能、相互联系方式等综合系统考察。</li>
+</ul>
+
+<div class="figure">
+<p><img src="./psd/img/office_environment.png" alt="office_environment.png" width="100%" />
+</p>
+</div>
+</div>
+
+<div id="outline-container-org60fa913" class="outline-5">
+<h5 id="org60fa913"><span class="section-number-5">2.2.2.1</span> 产品系统应用</h5>
+<div class="outline-text-5" id="text-2-2-2-1">
+<p>
+汽车驾驶、发动机、底盘、内饰、外型等组成综合体
+</p>
+<ul class="org-ul">
+<li>例：汽车高加速性与低油耗系统思考。</li>
+<li>例：标致307两厢车改成三厢车，要综合考虑车头、车身造型与车尾协调。</li>
+</ul>
+
+<div class="figure">
+<p><img src="./psd/img/psd2-250.png" alt="psd2-250.png" width="60%" />
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-orgfb56aaf" class="outline-4">
+<h4 id="orgfb56aaf"><span class="section-number-4">2.2.3</span> 细分化</h4>
+<div class="outline-text-4" id="text-2-2-3">
+<p>
+对组成要素进一步细分为零件材料、结构、造型、表面处理、色彩等
+</p>
+<ul class="org-ul">
+<li>保证符合功能与结构要求，并精细化设计。</li>
+</ul>
+
+<div class="figure">
+<p><img src="./psd/img/design4manufacture.jpg" alt="design4manufacture.jpg" width="60%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org80db744" class="outline-4">
+<h4 id="org80db744"><span class="section-number-4">2.2.4</span> 最优化</h4>
+<div class="outline-text-4" id="text-2-2-4">
+<p>
+取得最好功能效果，选择出解决问题最好方案。
+</p>
+<ul class="org-ul">
+<li>最优目标：在条件约束下,为系统确定最优目标,运用数学方法获得最佳解决方案。</li>
+<li>实现目标的过程和方式最优：从整体、全局、相互联系上来研究设计对象及有关问题。</li>
+</ul>
+
+<div class="figure">
+<p><img src="./psd/img/optimization2.png" alt="optimization2.png" width="60%" />
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgacac225" class="outline-5">
+<h5 id="orgacac225"><span class="section-number-5">2.2.4.1</span> 产品系统应用</h5>
+<div class="outline-text-5" id="text-2-2-4-1">
+<ul class="org-ul">
+<li>产品优化：功能完整、结构合理、造型美观、成本经济。</li>
+<li>制品过程优化：设计、生产、管理，产品经济性、维护性、包装运输、安全性、可靠性等</li>
+</ul>
+
+<div class="figure">
+<p><img src="./psd/img/shape_optimization.jpg" alt="shape_optimization.jpg" width="60%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org0c12f1a" class="outline-5">
+<h5 id="org0c12f1a"><span class="section-number-5">2.2.4.2</span> 例：奔驰C系轿车对比前几代系统优化</h5>
+<div class="outline-text-5" id="text-2-2-4-2">
+<ul class="org-ul">
+<li>功能完整、结构合理、造型美观、成本经济、操控优异。</li>
+<li>安全性指标也达最优。</li>
+</ul>
+
+<div class="figure">
+<p><img src="./psd/img/psd2-260.png" alt="psd2-260.png" width="70%" />
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgaffb969" class="outline-3">
+<h3 id="orgaffb969"><span class="section-number-3">2.3</span> 产品系统分析与综合法</h3>
+<div class="outline-text-3" id="text-2-3">
+</div>
+<div id="outline-container-orga81e91f" class="outline-4">
+<h4 id="orga81e91f"><span class="section-number-4">2.3.1</span> 分析与综合的基本概念</h4>
+<div class="outline-text-4" id="text-2-3-1">
+<p>
+分析与综合是一个扩散和整合交织的过程。
+</p>
+
+<div class="figure">
+<p><img src="./psd/img/analysis_synthesis.png" alt="analysis_synthesis.png" width="75%" />
+</p>
+</div>
+</div>
+<div id="outline-container-orgc8f0b90" class="outline-5">
+<h5 id="orgc8f0b90"><span class="section-number-5">2.3.1.1</span> 分析</h5>
+<div class="outline-text-5" id="text-2-3-1-1">
+<p>
+为设计提供解决问题依据，加深认识，启发构思。
+</p>
+<ul class="org-ul">
+<li>为使设计问题构成要素和有关因素清晰显现</li>
+<li>对系统结构和层次关系分解，明确系统特点，取得必要设计信息和线索。</li>
+</ul>
+
+<div class="figure">
+<p><img src="./psd/img/product_analysis.png" alt="product_analysis.png" width="60%" />
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4a5a554" class="outline-6">
+<h6 id="org4a5a554"><span class="section-number-6">2.3.1.1.1</span> 系统分析内容</h6>
+<div class="outline-text-6" id="text-2-3-1-1-1">
+<ul class="org-ul">
+<li>系统组分</li>
+<li>系统组分关联方式</li>
+<li>系统所处环境(特点)、互相影响、变化趋势</li>
+</ul>
+</div>
+<div id="outline-container-orga62936a" class="outline-11">
+<div class="outline-text-11" id="text-2-3-1-1-1-0-0-0-0-1">
+<p>
+具体包括调查研究、目标确定、总体分析、宏观、微观模型建立、系统优化、系统方案综合、系统评价等
+</p>
+<ul class="org-ul">
+<li>定量分析与定性分析相结合。</li>
+</ul>
+
+<div class="figure">
+<p><img src="./psd/img/design_analysis.jpg" alt="design_analysis.jpg" width="60%" />
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgc61430e" class="outline-6">
+<h6 id="orgc61430e"><span class="section-number-6">2.3.1.1.2</span> 系统分析作用</h6>
+<div class="outline-text-6" id="text-2-3-1-1-2">
+<ul class="org-ul">
+<li>系统分析(功能、环境、条件、可行性、费用、效果等)保证获得良好方案，避免大量返工和经济损失。</li>
+<li>系统层层解析利于对分系统用以往经验和知识分析和处理，把复杂问题条理化、简单化。</li>
+</ul>
+
+<div class="figure">
+<p><img src="./psd/img/complex-to-simple.jpg" alt="complex-to-simple.jpg" width="70%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgb8cfc16" class="outline-6">
+<h6 id="orgb8cfc16"><span class="section-number-6">2.3.1.1.3</span> 系统分解</h6>
+<div class="outline-text-6" id="text-2-3-1-1-3">
+<ul class="org-ul">
+<li>简单系统分解：结构要素分解（例：电冰箱分为压缩机、冷凝器、蒜发器、箱体、温控器等）。</li>
+<li>其它系统分解：系统目的明确化(总目的、子目的)、系统评价、系统研制进程安排等分解条理化。</li>
+</ul>
+</div>
+
+<div id="outline-container-orgb4dd069" class="outline-7">
+<h7 id="orgb4dd069"><span class="section-number-7">2.3.1.1.3.1</span> 分解原则</h7>
+<div class="outline-text-7" id="text-2-3-1-1-3-1">
+<ul class="org-ul">
+<li>分解程度(数目)适当，过细花费精力，也使系统综合变得困难，过粗不利于分析。</li>
+<li>分解位置，应在分系统间联系最少处，减少各分系统分析干涉。</li>
+</ul>
+
+<div class="figure">
+<p><img src="./psd/img/FHWA-RI-tolls-2018.png" alt="FHWA-RI-tolls-2018.png" width="60%" />
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org6fe6259" class="outline-5">
+<h5 id="org6fe6259"><span class="section-number-5">2.3.1.2</span> 综合</h5>
+<div class="outline-text-5" id="text-2-3-1-2">
+<ul class="org-ul">
+<li>对分析结果归纳、整理、完善和改进。</li>
+<li>根据分析结果，经评价、整理、改善后，决定事物构成和特点，确定设计对象基本方面。</li>
+<li>尽可能作出多种综合方案，并按一定标准和方法评价、择优，选出最佳。</li>
+</ul>
+
+<div class="figure">
+<p><img src="./psd/img/product_analysis.jpg" alt="product_analysis.jpg" width="55%" />
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc00b9b3" class="outline-6">
+<h6 id="orgc00b9b3"><span class="section-number-6">2.3.1.2.1</span> 综合创新</h6>
+<div class="outline-text-6" id="text-2-3-1-2-1">
+<ul class="org-ul">
+<li>分析——重构：由部分重构整体</li>
+<li>对现有系统分析后加以改善,达到新综合;对尚未存在系统可收集分析类似资料后创造性设计。</li>
+</ul>
+
+<div class="figure">
+<p><img src="./psd/img/pen_reconstruction.jpg" alt="pen_reconstruction.jpg" width="100%" />
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgfb4f23d" class="outline-4">
+<h4 id="orgfb4f23d"><span class="section-number-4">2.3.2</span> 产品系统分析与综合</h4>
+<div class="outline-text-4" id="text-2-3-2">
+<ul class="org-ul">
+<li>系统是一系列有序要素集合，各要素间有层次关系和逻辑联系。</li>
+<li>设计是动态过程，通过设计因素(功能、经济、审美)间信息传递相互调整和修正。</li>
+<li>把诸因素层次及联系了解清楚,按预定目标综合整理出问题解答。</li>
+</ul>
+
+<div class="figure">
+<p><img src="./psd/img/product_system_elements.png" alt="product_system_elements.png" width="60%" />
+</p>
+</div>
+</div>
+
+<div id="outline-container-org494e350" class="outline-5">
+<h5 id="org494e350"><span class="section-number-5">2.3.2.1</span> 系统分析与综合原则</h5>
+<div class="outline-text-5" id="text-2-3-2-1">
+<ul class="org-ul">
+<li>把内外影响因素综合分析</li>
+<li>把局部与整体效益结合考虑，追求最佳效益。</li>
+<li>依据目标性质和特性采取定量或定性分析。</li>
+<li>遵循系统与子系统或构成要素间协调原则，使总体性能最佳。</li>
+<li>遵循辩证观点，从实际出发，对情况周密调查，考虑各因素，准确反映客观现实。</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgd54f459" class="outline-5">
+<h5 id="orgd54f459"><span class="section-number-5">2.3.2.2</span> 系统分析与综合步骤</h5>
+<div class="outline-text-5" id="text-2-3-2-2">
+<ul class="org-ul">
+<li>总体分析: 确定总目标及客观条件。</li>
+<li>任务与要求分析: 确定为实现目标需完成任务及要求。</li>
+<li>功能分析: 根据任务与要求，对系统及各子系统功能和相互关系分析。</li>
+<li>指标分配: 在分析基础上确定对各子系统要求。</li>
+<li>方案研究: 为完成预定任务和各指标，需制定各种可能方案。</li>
+<li>分析模拟: 系统受多因素影响，当某因素变化时，系统指标随之变化 (因果关系由模拟和实验确定)</li>
+<li>系统优化: 在方案研究和分析模拟基础上，从可行方案中选出最优方案。</li>
+<li>系统综合: 对最优方案论证和具体化。</li>
+</ul>
+</div>
+<div id="outline-container-orgd2eaeff" class="outline-11">
+<div class="outline-text-11" id="text-2-3-2-2-0-0-0-0-0-1">
+
+<div class="figure">
+<p><img src="./psd/img/process_of_analysis_synthesis.png" alt="process_of_analysis_synthesis.png" width="30%" />
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgeb97ca8" class="outline-4">
+<h4 id="orgeb97ca8"><span class="section-number-4">2.3.3</span> 系统分析方法</h4>
+<div class="outline-text-4" id="text-2-3-3">
+<p>
+系统分析是系统决策与设计基础。
+</p>
+<ul class="org-ul">
+<li>从系统长远和总体最优出发，确定目标与准则，</li>
+<li>分析各层次子系统功能及关系，及系统同环境相互影响。</li>
+<li>在调查研究、收集资料和系统推理基础上，提出对系统输入、输出及转换过程若干可能方案。</li>
+</ul>
+
+<div class="figure">
+<p><img src="./psd/img/SE_Process.jpg" alt="SE_Process.jpg" width="50%" />
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3d919e9" class="outline-5">
+<h5 id="org3d919e9"><span class="section-number-5">2.3.3.1</span> 投入产出法</h5>
+<div class="outline-text-5" id="text-2-3-3-1">
+<p>
+Input-Output Technique 输入输出法
+</p>
+<ul class="org-ul">
+<li>通用电器公司用于探求设想。</li>
+<li>确定期望产出(结果和目标,明确输入输出) -&gt; 决定投入 -&gt; 利用智力激励法寻求投入产出关系。</li>
+<li>同时确定限制条件，如成本不超过某值、坚固耐用等。</li>
+</ul>
+
+<div class="figure">
+<p><img src="./psd/img/input_output_tech.png" alt="input_output_tech.png" width="100%" />
+</p>
+</div>
+</div>
+
+<div id="outline-container-org48302b3" class="outline-6">
+<h6 id="org48302b3"><span class="section-number-6">2.3.3.1.1</span> 例: 天黑灯自亮问题</h6>
+<div class="outline-text-6" id="text-2-3-3-1-1">
+<ul class="org-ul">
+<li>输入: 天黑下来, 输出: 灯自亮</li>
+<li>根据入、出和限制条件，考虑相互关系，</li>
+<li>运用创造性思维和逐步推敲明确入和出联系，分析出解决问题方案。</li>
+</ul>
+
+<div class="figure">
+<p><img src="./psd/img/light.png" alt="light.png" width="90%" />
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org5d9a7d0" class="outline-5">
+<h5 id="org5d9a7d0"><span class="section-number-5">2.3.3.2</span> 相关表法</h5>
+<div class="outline-text-5" id="text-2-3-3-2">
+<p>
+探讨设计问题中相关要素间关系为目的
+</p>
+<ul class="org-ul">
+<li>分解设计问题 -&gt; 分析比较 -&gt; 明确主次问题 (关系最重要、希望产生关系和无关系)</li>
+</ul>
+
+<ul class="org-ul">
+<li>例：街道清扫系统要素相关表</li>
+</ul>
+
+<div class="figure">
+<p><img src="./psd/img/relation_cleaning_street.png" alt="relation_cleaning_street.png" width="80%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgc14fed0" class="outline-5">
+<h5 id="orgc14fed0"><span class="section-number-5">2.3.3.3</span> PERT 法</h5>
+<div class="outline-text-5" id="text-2-3-3-3">
+<p>
+Program Evaluation and Review Technique 评测复审法
+</p>
+
+<ul class="org-ul">
+<li>1958年，美国海军特殊设计局发明PERT法，并应用于潜艇和导弹开发，使工期比预定时间缩短两年。</li>
+<li>包括PERT/TIME、PERT/MAN-POWER和PERT/COST (时间、人员、费用)</li>
+</ul>
+
+<div class="figure">
+<p><img src="./psd/img/Pert_chart.png" alt="Pert_chart.png" width="55%" />
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4cf9f51" class="outline-6">
+<h6 id="org4cf9f51"><span class="section-number-6">2.3.3.3.1</span> 利用PERT制订计划方法</h6>
+<div class="outline-text-6" id="text-2-3-3-3-1">
+<ul class="org-ul">
+<li>基本图示符号</li>
+<li>规则</li>
+<li>基本步骤</li>
+</ul>
+</div>
+<div id="outline-container-org1957554" class="outline-7">
+<h7 id="org1957554"><span class="section-number-7">2.3.3.3.1.1</span> 基本图示符号</h7>
+<div class="outline-text-7" id="text-2-3-3-3-1-1">
+<ul class="org-ul">
+<li>圆圈: 事件结点，不需时间和资源。圈内为作业名称或数字</li>
+<li>箭头线: 作业过程</li>
+<li>虚箭头线: 两结点间无实际作业，仅示先后顺序</li>
+</ul>
+
+</div>
+</div>
+
+<div id="outline-container-org9371178" class="outline-7">
+<h7 id="org9371178"><span class="section-number-7">2.3.3.3.1.2</span> 规则</h7>
+<div class="outline-text-7" id="text-2-3-3-3-1-2">
+<ul class="org-ul">
+<li>箭头线顺序发展（无回路）</li>
+<li>结点编号逐渐增大，可跳号以补充修改作业，但不可重复编号。</li>
+<li>符合实际工作程序。</li>
+</ul>
+
+<div class="figure">
+<p><img src="./psd/img/Critical_Path_Method.gif" alt="Critical_Path_Method.gif" width="80%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgaf1b68a" class="outline-7">
+<h7 id="orgaf1b68a"><span class="section-number-7">2.3.3.3.1.3</span> PERT法基本步骤</h7>
+<div class="outline-text-7" id="text-2-3-3-3-1-3">
+<ul class="org-ul">
+<li>a. 制订整体计划 (时间、人、物与资金)。</li>
+<li>b. 分析确定所需全部作业项目。</li>
+<li>c. 构造网络。</li>
+<li>d. 计算日程。</li>
+<li>e. 配置资源。</li>
+<li>f. 预算费用。</li>
+<li>在估计时间、资源等问题时，可按乐观、悲观、最可能情况估算，取平均值Te=(a+4m+b)/6</li>
+<li>例：乐观3天完成、悲观10天完成、最可能5天完成 -&gt; (3+4*5+10)/6 = 5.5天</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgefae51e" class="outline-6">
+<h6 id="orgefae51e"><span class="section-number-6">2.3.3.3.2</span> 大型儿童游乐玩具项目设计计划</h6>
+<div class="outline-text-6" id="text-2-3-3-3-2">
+<p>
+应将时间、人员、费用，及资源配置等因素估计或计算进去，以使系统开发工作过程得到有效控制。
+</p>
+<ul class="org-ul">
+<li>a 调查准备 (a1准备调查记录本卡;a2研究调查场所;a3确定调查人员;a4准备调查用具。)</li>
+<li>b 实地调查 (b1现状调查;b2资料整理。)</li>
+<li>c 收集有关大型游乐玩具资料 (c1杂志、商品选购指南;c2市场上有关玩具。)</li>
+<li>d 有关儿童身体发育资料 (d1图表化处理;d2按年龄等分类处理。)</li>
+<li>e 活动分析 (e1活动种类;e2动作分析;e3把握活动意义。)</li>
+<li>f 分析游乐时使用物品 (f1分析物品;f2物品特征;f3分析游戏与物品关联性。)</li>
+<li>g 综合化 (g1:d、e、f关系明确化;g2图形化。)</li>
+<li>h 展开 (h1意念性草图;h2比较 c、g;h3设计定位;h4草模。)</li>
+<li>i 基本设计 (i1基本形态、结构确定;i2预想图绘制;i3细部审核;i4修正。)</li>
+<li>j 制作模型 (j1绘制模型工程图纸;j2选择模型材料;j3模型制作完成;j4拍摄模型照片;j5对模型审核。)</li>
+<li>k 评价</li>
+<li>l 试销准备 (l1创意和设想;l2调查;l3根据调查结果修改设计预想图;l4修改或重新制作模型;l5信息整理。)</li>
+</ul>
+</div>
+<div id="outline-container-org42cf2d3" class="outline-11">
+<h11 id="org42cf2d3"><span class="section-number-11">2.3.3.3.2.0.0.0.0.1</span> </h11>
+<div class="outline-text-11" id="text-2-3-3-3-2-0-0-0-0-1">
+
+<div class="figure">
+<p><img src="./psd/img/toy_design_plan.png" alt="toy_design_plan.png" width="100%" />
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgc3999d9" class="outline-5">
+<h5 id="orgc3999d9"><span class="section-number-5">2.3.3.4</span> 因果分析图法</h5>
+<div class="outline-text-5" id="text-2-3-3-4">
+<p>
+Cause and Effect Diagram 鱼骨图
+</p>
+<ul class="org-ul">
+<li>以图示方法揭示关系而认清相关因素间影响。</li>
+<li>着眼问题结果和对问题结果产生影响的原因。</li>
+<li>箭头顶端表示设计问题或其它问题要点，大、中、小骨分别表示大、中、小原因</li>
+</ul>
+
+<div class="figure">
+<p><img src="./psd/img/Cause_Effect_Diagram.png" alt="Cause_Effect_Diagram.png" width="60%" />
+</p>
+</div>
+</div>
+
+<div id="outline-container-org04dd8bd" class="outline-6">
+<h6 id="org04dd8bd"><span class="section-number-6">2.3.3.4.1</span> 绘制鱼骨图方法</h6>
+<div class="outline-text-6" id="text-2-3-3-4-1">
+<ul class="org-ul">
+<li>确定问题要点 (要分析项目)，如机械加工为什么出现废品。</li>
+<li>确定大原因，如机床、方法、操作者等。</li>
+<li>继续找出中原因和小原因及更细原因。</li>
+<li>对关键原因作标记以便进一步研究。(鱼骨图可转化成树形图)</li>
+</ul>
+
+<div class="figure">
+<p><img src="./psd/img/Cause_Effect_waste.png" alt="Cause_Effect_waste.png" width="60%" />
+</p>
+</div>
+</div>
+<div id="outline-container-org47d980d" class="outline-11">
+<h11 id="org47d980d"><span class="section-number-11">2.3.3.4.1.0.0.0.0.1</span> </h11>
+<div class="outline-text-11" id="text-2-3-3-4-1-0-0-0-0-1">
+
+<div class="figure">
+<p><img src="./psd/img/Fishbone_Diagram.png" alt="Fishbone_Diagram.png" width="70%" />
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgaa01e77" class="outline-5">
+<h5 id="orgaa01e77"><span class="section-number-5">2.3.3.5</span> 雷达图分析方法(radar chart)</h5>
+<div class="outline-text-5" id="text-2-3-3-5">
+<p>
+一种多变量对比分析技术,形似导航雷达图或蜘蛛网。
+</p>
+<ul class="org-ul">
+<li>雷达图可对多组变量多种项目对比,反映数据相对中心点和其它数据点变化情况。</li>
+<li>适于对多属性体系结构描述对象作出全局、整体评价(如：判断产业发展趋势、确定产业范围边界)</li>
+</ul>
+
+<div class="figure">
+<p><img src="./psd/img/radar_chart.png" alt="radar_chart.png" width="60%" />
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb866c1f" class="outline-6">
+<h6 id="orgb866c1f"><span class="section-number-6">2.3.3.5.1</span> 图示说明</h6>
+<div class="outline-text-6" id="text-2-3-3-5-1">
+<ul class="org-ul">
+<li>档次渐高,边缘为最高档,由若干同心圆组成。</li>
+<li>同心圆向外引若干条射线,等间距。</li>
+<li>每个圆代表一定分值,由中心向外分值增加。</li>
+<li>每条射线末端标明指标。</li>
+</ul>
+
+<div class="figure">
+<p><img src="./psd/img/radar_chart2.png" alt="radar_chart2.png" width="80%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org0d3fddb" class="outline-6">
+<h6 id="org0d3fddb"><span class="section-number-6">2.3.3.5.2</span> 例：产品功能属性用户评价雷达图</h6>
+<div class="outline-text-6" id="text-2-3-3-5-2">
+<p>
+功能性(实用)、技术性、艺术性(造型)、舒适性(人机)、经济性(性价比)、环保性等评价。
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org3e225c0" class="outline-5">
+<h5 id="org3e225c0"><span class="section-number-5">2.3.3.6</span> 关联图法(网络)</h5>
+<div class="outline-text-5" id="text-2-3-3-6">
+<p>
+分析原因一结果、目的一手段等各因素间互相影响、制约
+</p>
+<ul class="org-ul">
+<li>据逻辑联系，寻求最有效解决措施。</li>
+<li>箭头由原因指向结果，或由手段指向目的，或由因素指向问题等。</li>
+<li>重点项目可用双框。</li>
+</ul>
+
+<div class="figure">
+<p><img src="./psd/img/relation_diagram.png" alt="relation_diagram.png" width="70%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org50d30aa" class="outline-5">
+<h5 id="org50d30aa"><span class="section-number-5">2.3.3.7</span> 矩阵图法</h5>
+<div class="outline-text-5" id="text-2-3-3-7">
+<ul class="org-ul">
+<li>运用矩阵形式多维分析。将问题分解，找出全部因素并分类，</li>
+<li>把属于因素群R的因素R1、R2、…、及属于因素群L的因素L1、L2、…、排成行和列，</li>
+<li>在行和列交点处表示出设想点，据以探求问题所在及解决问题方法。</li>
+</ul>
+
+<div class="figure">
+<p><img src="./psd/img/matrix_diagram.png" alt="matrix_diagram.png" width="80%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org914b3cd" class="outline-5">
+<h5 id="org914b3cd"><span class="section-number-5">2.3.3.8</span> 复杂系统工程分析法</h5>
+<div class="outline-text-5" id="text-2-3-3-8">
+<p>
+定性分析、定量分析、综合分析
+</p>
+</div>
+<div id="outline-container-orgd71fea7" class="outline-6">
+<h6 id="orgd71fea7"><span class="section-number-6">2.3.3.8.1</span> 系统分析工具</h6>
+<div class="outline-text-6" id="text-2-3-3-8-1">
+<ul class="org-ul">
+<li>霍尔三维结构方法(硬系统方法论)</li>
+<li>切克兰德软系统方法(软系统方法论)</li>
+<li>并行工程方法</li>
+<li>物-事-人理系统方法</li>
+<li>螺旋式推进系统方法</li>
+<li>综合集成方法——统计数据参数模型,人机交互,逐次逼近。</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgad0d0dc" class="outline-6">
+<h6 id="orgad0d0dc"><span class="section-number-6">2.3.3.8.2</span> 系统分析前提条件</h6>
+<div class="outline-text-6" id="text-2-3-3-8-2">
+<p>
+建立系统模型，描述系统某一方面本质属性
+</p>
+<ul class="org-ul">
+<li>并能以确定形式(文字、符号、图表、实物、数学公式、计算机建模)提供该系统知识,</li>
+<li>且据此(系统模型)对系统定性、定量、综合分析,</li>
+<li>找出研究对象特征和发展规律。</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org61d390e" class="outline-6">
+<h6 id="org61d390e"><span class="section-number-6">2.3.3.8.3</span> 系统模型</h6>
+<div class="outline-text-6" id="text-2-3-3-8-3">
+<ul class="org-ul">
+<li>实体模型</li>
+<li>相似模型</li>
+<li>比例模型</li>
+<li>文字模型</li>
+<li>网络模型</li>
+<li>图表模型</li>
+<li>逻辑模型</li>
+<li>数学模型</li>
+<li>计算机模型</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org091084f" class="outline-6">
+<h6 id="org091084f"><span class="section-number-6">2.3.3.8.4</span> 霍尔(Hall)三维坐标系表示的系统工程研究方法和步骤</h6>
+<div class="outline-text-6" id="text-2-3-3-8-4">
+<p>
+时间、逻辑、专业三维结构
+</p>
+<ul class="org-ul">
+<li>时间维：整个寿命周期 (规划设计-&#x2026;-&gt;更新)</li>
+<li>逻辑维：思维过程 (问题提出-&#x2026;-&gt;实施)</li>
+<li>专业维：专业知识排列 (工程-&#x2026;-&gt;社会)</li>
+</ul>
+
+<div class="figure">
+<p><img src="./psd/img/psd2-328.png" alt="psd2-328.png" width="50%" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgcffed82" class="outline-6">
+<h6 id="orgcffed82"><span class="section-number-6">2.3.3.8.5</span> 切克兰德软系统方法</h6>
+<div class="outline-text-6" id="text-2-3-3-8-5">
+
+<div class="figure">
+<p><img src="./psd/img/Soft_Systems_Methodology.png" alt="Soft_Systems_Methodology.png" width="60%" />
+</p>
+</div>
+</div>
+<div id="outline-container-orgc7152af" class="outline-7">
+<h7 id="orgc7152af"><span class="section-number-7">2.3.3.8.5.1</span> 出发点</h7>
+<div class="outline-text-7" id="text-2-3-3-8-5-1">
+<p>
+社会经济系统中的问题往往很难象工程技术系统中的问题那样，事先将“需求”给定清楚，因而也难以按价值系统的评价准则设计出符合这种“需求”的最优系统方案。
+</p>
+<ul class="org-ul">
+<li>切克兰德方法论的核心不是“最优化”而是“比较”与“探寻”</li>
+<li>从模型和现状的比较中来学习改善现状的途径</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org3111151" class="outline-7">
+<h7 id="org3111151"><span class="section-number-7">2.3.3.8.5.2</span> 内容和工作过程</h7>
+<div class="outline-text-7" id="text-2-3-3-8-5-2">
+<ul class="org-ul">
+<li>①认识问题：收集与问题有关的信息，表达问题现状，寻找构成或影响因素及其关系，以明确系统问题结构、现存过程及其相互之间的不适应之处，确定有关行为主体和利益主体</li>
+<li>②根底定义：初步弄清、改善与现状有关的各种因素及其相互关系。目的是弄清系统问题的关键要素以及关联因素，为系统的发展及其研究确立各种基本看法，并尽可能选择出最合适的基本观点</li>
+<li>③建立概念模型：在不能建立精确数学模型的情况下，用结构模型或语言模型来描述系统现状。概念模型来自于根底定义，是通过系统化语言对问题抽象描述的结果，其结构及要素必须符合根底定义的思想，并能实现其要求</li>
+<li>④比较及探寻：将现实问题和概念模型进行对比，找出符合决策者意图且可行的方案或途径。有时通过比较，需要对根底定义的结果进行适当修正</li>
+<li>⑤选择：针对比较的结果，考虑有关人员的态度及其它社会、行为等因素，选出现实可行的改善方案</li>
+<li>⑥设计与实施：通过详尽和有针对性的设计，形成具有可操作性的方案，并使得有关人员乐于接受和愿意为方案的实现竭尽全力</li>
+<li>⑦评估与反馈：根据在实施过程中获得的新的认识，修正问题描述、根底定义及概念模型等</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org993841d" class="outline-4">
+<h4 id="org993841d"><span class="section-number-4">2.3.4</span> 系统综合方法</h4>
+<div class="outline-text-4" id="text-2-3-4">
+<p>
+在系统分析基础上提出全面完善的整体解决方案。
+</p>
+<ul class="org-ul">
+<li>系统分析的反向过程，常常是一个创新过程，重构即综合。</li>
+<li>功能求索法、整合重构法、产品定位法、产品基准法、系统优化法</li>
+<li>标准化法、模块化法、平台化法、系列化法</li>
+</ul>
+</div>
+<div id="outline-container-org3e1610d" class="outline-5">
+<h5 id="org3e1610d"><span class="section-number-5">2.3.4.1</span> 功能求索法</h5>
+<div class="outline-text-5" id="text-2-3-4-1">
+<p>
+确定总功能，通过总功能层层适度分解，构成若干子系统和功能元的有序组合。
+</p>
+<ul class="org-ul">
+<li>明确功能系统基本构造和特点。</li>
+<li>分功能求解：部分分功能已有可选部件,其余分功能需探索解决办法。</li>
+<li>各分功能解法组合就是系统综合设计原理方案。</li>
+</ul>
+
+<div class="figure">
+<p><img src="./psd/img/functional_system.png" alt="functional_system.png" width="55%" />
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgaeb72a5" class="outline-6">
+<h6 id="orgaeb72a5"><span class="section-number-6">2.3.4.1.1</span> 功能求索方法实施</h6>
+<div class="outline-text-6" id="text-2-3-4-1-1">
+<ul class="org-ul">
+<li>借鉴汇集前人经验的设计手册、设计原理方案 (技术物理效应、物理原理等)</li>
+<li>发挥创造性思维，利用创新技法提高设计水平和工作效率 (头脑风暴法、联想法、类比法)</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org58b5ade" class="outline-5">
+<h5 id="org58b5ade"><span class="section-number-5">2.3.4.2</span> 重构整合法</h5>
+<div class="outline-text-5" id="text-2-3-4-2">
+<ul class="org-ul">
+<li>在系统分析、分解基础上，将系统要素及其结构依据功能要求重新打散，建立新构成关系</li>
+<li>由部分重构整体实现整合创新（分解与组合）</li>
+</ul>
+</div>
+
+<div id="outline-container-orgea8bb4f" class="outline-6">
+<h6 id="orgea8bb4f"><span class="section-number-6">2.3.4.2.1</span> 分解原理</h6>
+<div class="outline-text-6" id="text-2-3-4-2-1">
+<ul class="org-ul">
+<li>事物本身由很多可分解功能组成,组成方式不同,总体功能将不同,满足不同需求,由分解到重组。</li>
+<li>分解出主要功能，组成更多更好主辅搭配。</li>
+<li>多种功能合在一起彼此影响,分离有利于各自特点发挥,或利于创新改进。</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org3098985" class="outline-6">
+<h6 id="org3098985"><span class="section-number-6">2.3.4.2.2</span> 组合类别</h6>
+<div class="outline-text-6" id="text-2-3-4-2-2">
+<ul class="org-ul">
+<li>主要功能与辅助功能组合</li>
+<li>同种功能组合</li>
+<li>无关功能组合</li>
+<li>不同功能关系组合</li>
+</ul>
+
+<div class="figure">
+<p><img src="./psd/img/Multi-function_DA.png" alt="Multi-function_DA.png" width="70%" />
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgf829e46" class="outline-5">
+<h5 id="orgf829e46"><span class="section-number-5">2.3.4.3</span> 产品定位法</h5>
+<div class="outline-text-5" id="text-2-3-4-3">
+<p>
+将竞争产品作为参考对象,以自身产品体系完整性为开发目的,寻找设计突破。
+</p>
+
+<div class="figure">
+<p><img src="./psd/img/coffee-makers.jpeg" alt="coffee-makers.jpeg" width="100%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org13a55b5" class="outline-5">
+<h5 id="org13a55b5"><span class="section-number-5">2.3.4.4</span> 产品基准法</h5>
+<div class="outline-text-5" id="text-2-3-4-4">
+<p>
+据产品定位,选择行业领先产品作为产品基准,对结构参数、性能、尺度、外观提出对应方案。
+</p>
+<ul class="org-ul">
+<li>例：尼康选择佳能产品作为其产品基准</li>
+</ul>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">佳能</td>
+<td class="org-left">尼康</td>
+</tr>
+
+<tr>
+<td class="org-left">1280万象素,5D全幅单反</td>
+<td class="org-left">1210万象素,D3</td>
+</tr>
+
+<tr>
+<td class="org-left">小幅单反1010万象素,40D</td>
+<td class="org-left">1230万象素,D300</td>
+</tr>
+
+<tr>
+<td class="org-left">准专业数码1210万象素,G9</td>
+<td class="org-left">1210万象素,P5100</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-orgc7f4e33" class="outline-5">
+<h5 id="orgc7f4e33"><span class="section-number-5">2.3.4.5</span> 标准化方法</h5>
+<div class="outline-text-5" id="text-2-3-4-5">
+<ul class="org-ul">
+<li>标准化要求产品各部件或某些种类产品间建立一种联系，实现零、部件可互换。</li>
+<li>标准化要求合理制定产品品种规格以满足不同层次需求;</li>
+<li>5种标准化形式：简化、统一化、系列化、通用化、组合化（标准接口）</li>
+</ul>
+
+<div class="figure">
+<p><img src="./psd/img/charging_standardization.jpeg" alt="charging_standardization.jpeg" width="60%" />
+</p>
+</div>
+</div>
+<div id="outline-container-orge3844df" class="outline-6">
+<h6 id="orge3844df"><span class="section-number-6">2.3.4.5.1</span> 标准化路径</h6>
+<div class="outline-text-6" id="text-2-3-4-5-1">
+<ul class="org-ul">
+<li>制定高标准以提高产品质量;</li>
+<li>在生产、流通、消费等方面全面节约人力、物力以降低成本;</li>
+<li>在商品交换和服务方面保护消费者合法利益和社会公共利益;</li>
+<li>保障人类安全、健康,创造舒适、宜人环境,有利于建立科学、文明、进步生活方式;</li>
+<li>促进相互理解、交流,提高信息传递效率;促进国际间生产协作、技术交流和贸易等。</li>
+</ul>
+
+<div class="figure">
+<p><img src="./psd/img/sockets.jpg" alt="sockets.jpg" width="80%" />
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org78d632a" class="outline-5">
+<h5 id="org78d632a"><span class="section-number-5">2.3.4.6</span> 模块化方法</h5>
+<div class="outline-text-5" id="text-2-3-4-6">
+<ul class="org-ul">
+<li>模块化换元与移植创新思维法则与标准化思想相结合产品系统设计整合创新方法。</li>
+<li>模块产品中相对独立有互换性部件,在模块化系统中用于构成系统功能单元。</li>
+</ul>
+
+<div class="figure">
+<p><img src="./psd/img/modular_design.jpg" alt="modular_design.jpg" width="100%" />
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6443f3f" class="outline-6">
+<h6 id="org6443f3f"><span class="section-number-6">2.3.4.6.1</span> 例：镜头模块化</h6>
+<div class="outline-text-6" id="text-2-3-4-6-1">
+<p>
+EOS系列单反镜头模块 
+</p>
+<ul class="org-ul">
+<li>适马公司采用模块化方法为佳能和尼康公司提供一系列单反镜头(有对应接口)。</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org0847f73" class="outline-5">
+<h5 id="org0847f73"><span class="section-number-5">2.3.4.7</span> 平台化方法</h5>
+<div class="outline-text-5" id="text-2-3-4-7">
+<p>
+零部件可互换产品平台实现多种产品部件共享
+</p>
+
+<div class="figure">
+<p><img src="./psd/img/platforms.jpg" alt="platforms.jpg" width="80%" />
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9c47949" class="outline-6">
+<h6 id="org9c47949"><span class="section-number-6">2.3.4.7.1</span> 例: 大众紧凑型轿车PQ35平台</h6>
+<div class="outline-text-6" id="text-2-3-4-7-1">
+<p>
+既满足客户多样化需求，又实现规模效应，降低造车成本。
+</p>
+<ul class="org-ul">
+<li>PQ35 (P: 产品平台, Q: 动力总成横置, 3: A级车, 5: 第五代)</li>
+<li>PQ35平台车型：高尔夫5、奥迪A3、宝来、斯柯达明锐、大众SUV途观</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org1f8c31d" class="outline-5">
+<h5 id="org1f8c31d"><span class="section-number-5">2.3.4.8</span> 系列化方法</h5>
+<div class="outline-text-5" id="text-2-3-4-8">
+<ul class="org-ul">
+<li>通过对同一类产品发展规律分析、研究,</li>
+<li>对国内外生产与需发展趋势调查和预测,</li>
+<li>结合企业自身生产技术条件,</li>
+<li>经过全面技术经济比较,</li>
+<li>将产品主要参数、型式、尺寸、基本结构等做出合理安排与规划 (最佳数列排列)</li>
+<li>以尽量少品种数来满足最广泛需求, 形成产品品种和规格标准化。</li>
+</ul>
+
+<div class="figure">
+<p><img src="./psd/img/ios12.png" alt="ios12.png" width="40%" />
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0be765d" class="outline-6">
+<h6 id="org0be765d"><span class="section-number-6">2.3.4.8.1</span> 例: 大众系列产品</h6>
+<div class="outline-text-6" id="text-2-3-4-8-1">
+  <p width="100px">
+    <img src="./psd/img/psd2-388.png" alt="psd2-388.png" width="150px" />
+    <img src="./psd/img/psd2-389.png" alt="psd2-389.png" width="150px" />
+    <img src="./psd/img/psd2-390.png" alt="psd2-390.png" width="150px" />
+    <img src="./psd/img/psd2-391.png" alt="psd2-391.png" width="150px" />
+    <img src="./psd/img/psd2-392.png" alt="psd2-392.png" width="150px" />
+    <img src="./psd/img/psd2-393.png" alt="psd2-393.png" width="150px" />
+    <img src="./psd/img/psd2-394.png" alt="psd2-394.png" width="150px" />
+    <img src="./psd/img/psd2-395.png" alt="psd2-395.png" width="150px" />
+    <img src="./psd/img/psd2-396.png" alt="psd2-396.png" width="150px" />
+    <img src="./psd/img/psd2-397.png" alt="psd2-397.png" width="150px" />
+    <img src="./psd/img/psd2-398.png" alt="psd2-398.png" width="150px" />
+    <img src="./psd/img/psd2-399.png" alt="psd2-399.png" width="150px" />
+    <img src="./psd/img/psd2-400.png" alt="psd2-400.png" width="150px" />
+    <img src="./psd/img/psd2-401.png" alt="psd2-401.png" width="150px" />
+    <img src="./psd/img/psd2-402.png" alt="psd2-402.png" width="150px" />
+</p>
+</div>
+</div>
+<div id="outline-container-org192a8f0" class="outline-6">
+<h6 id="org192a8f0"><span class="section-number-6">2.3.4.8.2</span> 例: 相似功能系列</h6>
+<div class="outline-text-6" id="text-2-3-4-8-2">
+<p>
+成套锅具系列
+</p>
+
+<div class="figure">
+<p><img src="./psd/img/cookware_series.jpg" alt="cookware_series.jpg" width="100%" />
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org5c12288" class="outline-3">
+<h3 id="org5c12288"><span class="section-number-3">2.4</span> 产品系统优化设计方法</h3>
+<div class="outline-text-3" id="text-2-4">
+<ul class="org-ul">
+<li>指研究和寻求在给定条件下最佳解决问题方案(最合理参数、最好工作性能、最低成本等)。</li>
+<li>使功能完整、结构合理、造型美观、成本经济</li>
+</ul>
+</div>
+<div id="outline-container-org33dfb5a" class="outline-4">
+<h4 id="org33dfb5a"><span class="section-number-4">2.4.1</span> 质量指标</h4>
+<div class="outline-text-4" id="text-2-4-1">
+<ul class="org-ul">
+<li>稳定性：功能长期有效性及在下一次更新换代前保持其先进性与竞争性</li>
+<li>准确性：预期目标与现实状况近似程度</li>
+<li>快速性：设计速度及由设计到实现的时间</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org5c4f570" class="outline-4">
+<h4 id="org5c4f570"><span class="section-number-4">2.4.2</span> 优化设计程式</h4>
+<div class="outline-text-4" id="text-2-4-2">
+<p>
+发散 (广开思路) -&gt; 创造(构想各种独创、新颖方案) -&gt; 收敛(关键部位创新设计、附属部分常规设计)
+</p>
+
+<div class="figure">
+<p><img src="./psd/img/divergence-and-convergence.jpg" alt="divergence-and-convergence.jpg" width="70%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org6ab6fe9" class="outline-4">
+<h4 id="org6ab6fe9"><span class="section-number-4">2.4.3</span> 优化方法</h4>
+<div class="outline-text-4" id="text-2-4-3">
+<ul class="org-ul">
+<li>直觉优化方法</li>
+<li>试验优化方法</li>
+<li>进化优化方法</li>
+<li>数学优化方法</li>
+<li>专家系统(知识库)优化方法</li>
+<li>模糊优化方法</li>
+<li>其它优化方法</li>
+</ul>
+</div>
+<div id="outline-container-orgfa194a3" class="outline-5">
+<h5 id="orgfa194a3"><span class="section-number-5">2.4.3.1</span> 直觉优化方法</h5>
+<div class="outline-text-5" id="text-2-4-3-1">
+<ul class="org-ul">
+<li>赁直觉和经验确定，如造型形态问题等。</li>
+<li>取决于设计者知识广泛性及修养，并配合一些评价方法。</li>
+</ul>
+
+<div class="figure">
+<p><img src="./psd/img/car_shape_optimization.jpg" alt="car_shape_optimization.jpg" width="60%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org130e9bd" class="outline-5">
+<h5 id="org130e9bd"><span class="section-number-5">2.4.3.2</span> 试验优化方法</h5>
+<div class="outline-text-5" id="text-2-4-3-2">
+<p>
+应用环境: 产品本身机制不清楚，新产品系统设计经验不足，各参数对设计指标影响主次难以分清。
+</p>
+<ul class="org-ul">
+<li>试验模型 (样机或模拟装置等)，经数次试验后据试验结果来优选方案。</li>
+<li>或根据实验数据，构造函数，再求极值。</li>
+</ul>
+
+<div class="figure">
+<p><img src="./psd/img/P1-Testing.jpg" alt="P1-Testing.jpg" width="60%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgbfb4625" class="outline-5">
+<h5 id="orgbfb4625"><span class="section-number-5">2.4.3.3</span> 进化优化方法</h5>
+<div class="outline-text-5" id="text-2-4-3-3">
+<p>
+渐变与突变，随时根据市场需求和竞争形势等不断更新换代。
+</p>
+<ul class="org-ul">
+<li>价值工程从使用寿命期间功能价值出发一点一滴分析改进，使工程和产品达到优化。</li>
+<li>适应性设计、变异性设计也一种进化优化，而开发性设计属突变彻底优化。</li>
+</ul>
+
+<div class="figure">
+<p><img src="./psd/img/Volkswagen-Golf-Evolution.jpg" alt="Volkswagen-Golf-Evolution.jpg" width="100%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org60fc711" class="outline-5">
+<h5 id="org60fc711"><span class="section-number-5">2.4.3.4</span> 数学优化方法</h5>
+<div class="outline-text-5" id="text-2-4-3-4">
+<p>
+简易优化法(如黄金分割)、图解分析法和数学规划法，分三个阶段: 
+</p>
+<ul class="org-ul">
+<li>将问题转换为数学模型，建立评价目标函数，考虑约束条件，确定参与优化的参数。</li>
+<li>根据数学模型中函数性质，选用合适优化方法，并作程序设计。</li>
+<li>运行程序，求出最优值，然后分析判断出最优设计方案或参数。</li>
+</ul>
+
+<div class="figure">
+<p><img src="./psd/img/optimization.png" alt="optimization.png" width="58%" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org1dcc62b" class="outline-5">
+<h5 id="org1dcc62b"><span class="section-number-5">2.4.3.5</span> 专家系统 (知识库) 优化方法</h5>
+<div class="outline-text-5" id="text-2-4-3-5">
+<p>
+将专家知识和经验分类整理后纳入程序中，在输入原始参数后，模拟专家推理、判断与决策。
+</p>
+
+<div class="figure">
+<p><img src="./psd/img/Expert-Systems-Process.png" alt="Expert-Systems-Process.png" width="70%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org7625a8f" class="outline-5">
+<h5 id="org7625a8f"><span class="section-number-5">2.4.3.6</span> 模糊优化方法</h5>
+<div class="outline-text-5" id="text-2-4-3-6">
+<p>
+现实事物存在界限糢糊的特点
+</p>
+<ul class="org-ul">
+<li>在模糊数学(模糊集合)基础上，定量处理影响设计方案的模糊因素。</li>
+<li>给出一系列不同安全水平优化方案，供选择。</li>
+</ul>
+
+<div class="figure">
+<p><img src="./psd/img/fuzzy_controller.png" alt="fuzzy_controller.png" width="70%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org645459e" class="outline-5">
+<h5 id="org645459e"><span class="section-number-5">2.4.3.7</span> 其它优化方法</h5>
+<div class="outline-text-5" id="text-2-4-3-7">
+<p>
+多维图形法、图论法、准则法，以及大量创造性方法。
+</p>
+</div>
+<div id="outline-container-org3f6c337" class="outline-6">
+<h6 id="org3f6c337"><span class="section-number-6">2.4.3.7.1</span> 方案优化</h6>
+<div class="outline-text-6" id="text-2-4-3-7-1">
+<p>
+适用于只有任务要求、用户要求或总功能要求，还没有原理方案的情况。
+</p>
+<ul class="org-ul">
+<li>功能论方法为指导，在约束限制下，利用创造工程和功能技术矩阵产生多个原理方案。</li>
+<li>再通过各种办法评价、筛选和决策。</li>
+<li>在产品开发中有可能产生创新和飞跃。</li>
+</ul>
+
+<div class="figure">
+<p><img src="./psd/img/Functional_technology_matrix.png" alt="Functional_technology_matrix.png" width="100%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgdd68480" class="outline-6">
+<h6 id="orgdd68480"><span class="section-number-6">2.4.3.7.2</span> 参数优化</h6>
+<div class="outline-text-6" id="text-2-4-3-7-2">
+<p>
+通过数学规划等在已有原理方案情况下
+</p>
+<ul class="org-ul">
+<li>使参数具体化和优化，完成预定总功能方案设计和参数设计。</li>
+<li>如图：零件的容差等级越低，成本就越低，但产品参数偏离目标值的可能性就越大，造成损失就越大。需优化进行平衡。</li>
+</ul>
+
+<div class="figure">
+<p><img src="./psd/img/Parameters_optimization.png" alt="Parameters_optimization.png" width="70%" />
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgb6f0db1" class="outline-4">
+<h4 id="orgb6f0db1"><span class="section-number-4">2.4.4</span> 优化方法小结</h4>
+<div class="outline-text-4" id="text-2-4-4">
+<ul class="org-ul">
+<li>优化贯穿于产品构思、计划、设计、制造、装配、使用、维修、改造直至报废全过程。</li>
+<li>设计追求多目标 (性能、环境、成本、使用经济性)。为协调各方因素，不同指标高低均衡。</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org8e53e25" class="outline-3">
+<h3 id="org8e53e25"><span class="section-number-3">2.5</span> 产品系统原型设计方法</h3>
+<div class="outline-text-3" id="text-2-5">
+</div>
+<div id="outline-container-org594ff5f" class="outline-4">
+<h4 id="org594ff5f"><span class="section-number-4">2.5.1</span> 模型与原型</h4>
+<div class="outline-text-4" id="text-2-5-1">
+<ul class="org-ul">
+<li>模型：简化对象实体,用适当表现形式或规则描绘主要特征所得模仿品。</li>
+<li>原型：用于研究、分析和验证的对象实体，保证客观性和有效性。</li>
+</ul>
+</div>
+<div id="outline-container-org8ca3baa" class="outline-5">
+<h5 id="org8ca3baa"><span class="section-number-5">2.5.1.1</span> 模型分类</h5>
+<div class="outline-text-5" id="text-2-5-1-1">
+<ul class="org-ul">
+<li>按构造模型成分</li>
+<li>按模型功能</li>
+<li>按模型结构</li>
+</ul>
+</div>
+<div id="outline-container-org6bd47d8" class="outline-6">
+<h6 id="org6bd47d8"><span class="section-number-6">2.5.1.1.1</span> 按构造模型成分</h6>
+<div class="outline-text-6" id="text-2-5-1-1-1">
+<ul class="org-ul">
+<li>实物模型</li>
+<li>符号模型</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org5be996f" class="outline-6">
+<h6 id="org5be996f"><span class="section-number-6">2.5.1.1.2</span> 按模型功能</h6>
+<div class="outline-text-6" id="text-2-5-1-1-2">
+<ul class="org-ul">
+<li>解释模型(统计模型用于测试因果假设)</li>
+<li>预测模型(通过统计模型和数据挖掘来进行预测新的数据或未来)</li>
+<li>规范模型</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org3f42d6d" class="outline-6">
+<h6 id="org3f42d6d"><span class="section-number-6">2.5.1.1.3</span> 按模型结构</h6>
+<div class="outline-text-6" id="text-2-5-1-1-3">
+<ul class="org-ul">
+<li>标度模型(scale model): 与原型结构相同或相似, 但尺度缩小(如模型船舶、模型飞机)</li>
+<li>地图模型(map model): 与原型有相同拓扑结构。</li>
+<li>数学模型: 抽象模型, 与原型结构有内在联系,结构问题用数学语言描述,用数学方法分析和解决。</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org2a34c0f" class="outline-5">
+<h5 id="org2a34c0f"><span class="section-number-5">2.5.1.2</span> 产品原型分类（按实体程度）</h5>
+<div class="outline-text-5" id="text-2-5-1-2">
+<p>
+范围从概念草模到功能齐全样品（三维模型设计、分析和验证）
+</p>
+<ul class="org-ul">
+<li>外观原型</li>
+<li>概念原型 (用于快速检测设想)</li>
+<li>实验原型 (用于证实产品功能)</li>
+<li>样机原型 (全范围、全操作产品版本)</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgc331749" class="outline-4">
+<h4 id="orgc331749"><span class="section-number-4">2.5.2</span> 数字(解析化)原型与实体原型</h4>
+<div class="outline-text-4" id="text-2-5-2">
+</div>
+
+<div id="outline-container-org852200f" class="outline-5">
+<h5 id="org852200f"><span class="section-number-5">2.5.2.1</span> 解析化原型一般比实体化原型更具弹性</h5>
+<div class="outline-text-5" id="text-2-5-2-1">
+<ul class="org-ul">
+<li>解析化原型产品一个数学上近似品,包含随不同设计选择而改变参数。</li>
+<li>一般，改变解析化原型某个参数比改变实体化原型某个属性校容易，且允许作更大改变。</li>
+<li>解析化原型用于缩小可变参数取值范围,而实体化原型用于对设计精雕细琢或确定。</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgdce104e" class="outline-5">
+<h5 id="orgdce104e"><span class="section-number-5">2.5.2.2</span> 检测不可预见现象需实体化原型</h5>
+<div class="outline-text-5" id="text-2-5-2-2">
+<ul class="org-ul">
+<li>实体化原型经常揭示出与原型最初目标完全不相关不可预见现象。</li>
+<li>相反,解析化原型无法揭示非基础解析模型(原型基于其上)部分现象。</li>
+<li>因此,在产品开发尝试中,始终至少要建造一个实体化原型。</li>
+</ul>
+</div>
+<div id="outline-container-org6e38e71" class="outline-6">
+<h6 id="org6e38e71"><span class="section-number-6">2.5.2.2.1</span> 例: 开发太空实验室（方便间原型）</h6>
+<div class="outline-text-6" id="text-2-5-2-2-1">
+<p>
+一项规模庞大系统工程,有许多子系统需反复实验改进。
+</p>
+
+<div class="figure">
+<p><img src="./psd/img/psd2-414.png" alt="psd2-414.png" width="70%" />
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-orge3bea95" class="outline-4">
+<h4 id="orge3bea95"><span class="section-number-4">2.5.3</span> 原型的作用</h4>
+<div class="outline-text-4" id="text-2-5-3">
+<ul class="org-ul">
+<li>原型可降低高值重复风险</li>
+<li>原型可加快其它开发步骤</li>
+</ul>
+</div>
+<div id="outline-container-orgdfe880a" class="outline-5">
+<h5 id="orgdfe880a"><span class="section-number-5">2.5.3.1</span> 原型可降低高值重复风险</h5>
+<div class="outline-text-5" id="text-2-5-3-1">
+<ul class="org-ul">
+<li>一个测试结果可决定一个开发任务是否将不得不重复。</li>
+<li>适于高成本、新技术或产品特性重大变革而有高风险或不确定性产品。</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org033915c" class="outline-5">
+<h5 id="org033915c"><span class="section-number-5">2.5.3.2</span> 原型可加快其它开发步骤</h5>
+<div class="outline-text-5" id="text-2-5-3-2">
+<ul class="org-ul">
+<li>有时加入一个短暂原型化阶段可使后续活动比没有这一阶段时完成得快得多。</li>
+<li>如果原型化阶段所需时间少于后续活动节省时间,则这一策略(原型化)适当。</li>
+<li>有复杂几何形状部件的实体化模型使得模具设计者更快地细化和设计模具。</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org1548ef8" class="outline-4">
+<h4 id="org1548ef8"><span class="section-number-4">2.5.4</span> 原型化技术</h4>
+<div class="outline-text-4" id="text-2-5-4">
+<ul class="org-ul">
+<li>计算机3D建模</li>
+<li>快速原型化——3D打印</li>
+</ul>
+</div>
+<div id="outline-container-org28eab61" class="outline-5">
+<h5 id="org28eab61"><span class="section-number-5">2.5.4.1</span> 计算机3D建模</h5>
+<div class="outline-text-5" id="text-2-5-4-1">
+<p>
+用3D实体表现设计,每个实体通常用圆柱、块、孔等几何单元构造而成。
+</p>
+
+<div class="figure">
+<p><img src="./psd/img/psd2-419.png" alt="psd2-419.png" width="100%" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org4262af9" class="outline-5">
+<h5 id="org4262af9"><span class="section-number-5">2.5.4.2</span> 快速原型化——3D打印</h5>
+<div class="outline-text-5" id="text-2-5-4-2">
+<ul class="org-ul">
+<li>快速成型技术(Rapid Prototyping)由3D System公司于1984年推出。</li>
+<li>基本原理：分层制造，逐层叠加。</li>
+<li>每次做一个横截面，就铺置一种材料或选择性地凝固一种液体。</li>
+<li>材料：塑料、石蜡、纸、陶瓷和金属</li>
+<li>3D打印也被用来制造假牙、人体骨骼器官等。</li>
+</ul>
+</div>
+
+<div id="outline-container-orga1df363" class="outline-6">
+<h6 id="orga1df363"><span class="section-number-6">2.5.4.2.1</span> 快速原型化技术特点</h6>
+<div class="outline-text-6" id="text-2-5-4-2-1">
+<p>
+将一个实体复杂三维加工离散成一系列层片加工,大大降低加工难度
+</p>
+<ul class="org-ul">
+<li>快速成型适合激烈产品市场竞争。</li>
+<li>可制造任意复杂形状三维实体。</li>
+<li>用CAD模型直接驱动,实现设计与制造高度一体化。</li>
+<li>成型过程无需专用夹具、模具、刀具,既节省费用,又缩短制作周期。</li>
+<li>技术高度集成。</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org0051d73" class="outline-3">
+<h3 id="org0051d73"><span class="section-number-3">2.6</span> 产品系统过程设计方法</h3>
+<div class="outline-text-3" id="text-2-6">
+<p>
+预制计划阶段 | 计划控制 | 探索问题状况方法 | 寻求构想 (Ideas) 方法 | 探索问题结构方法 | 产品造型设计方法 | 广义工业设计 | 新产品开发
+</p>
+</div>
+<div id="outline-container-org4266852" class="outline-4">
+<h4 id="org4266852"><span class="section-number-4">2.6.1</span> 过程设计方法概述</h4>
+<div class="outline-text-4" id="text-2-6-1">
+<ul class="org-ul">
+<li>包括分析、创造、综合、发展、表达、反馈等阶段</li>
+<li>系统、动态地解决设计过程中出现各类课题</li>
+<li>产生具体、明确步骤和有针对性解决方法</li>
+</ul>
+
+<div class="figure">
+<p><img src="./psd/img/psd2-253.png" alt="psd2-253.png" width="50%" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org417bde9" class="outline-4">
+<h4 id="org417bde9"><span class="section-number-4">2.6.2</span> 预制计划阶段</h4>
+<div class="outline-text-4" id="text-2-6-2">
+</div>
+<div id="outline-container-org4eedebc" class="outline-5">
+<h5 id="org4eedebc"><span class="section-number-5">2.6.2.1</span> 系统研究</h5>
+<div class="outline-text-5" id="text-2-6-2-1">
+<p>
+目的: 确定系统设计变量
+</p>
+<ul class="org-ul">
+<li>明确问题组成要素，按重要性权衡出可控和不可控变量。</li>
+<li>明确各变量间关系。</li>
+<li>预测不由设计师控制的变量影响。</li>
+<li>确定边界条件。</li>
+<li>调节每一个决策变量数值，并预测依赖性变量数值。</li>
+<li>选择决策变量和各种数值，以获得被权衡目标综合最优值或可行解。</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgabf183c" class="outline-5">
+<h5 id="orgabf183c"><span class="section-number-5">2.6.2.2</span> 价值分析</h5>
+<div class="outline-text-5" id="text-2-6-2-2">
+<p>
+目的: 降低产品成本
+</p>
+<ul class="org-ul">
+<li>按规定实施步骤(GB8223一1987)，价值创新分析。</li>
+<li>将价值分析结果提交管理部门和设计组。</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgf9af67b" class="outline-5">
+<h5 id="orgf9af67b"><span class="section-number-5">2.6.2.3</span> 系统工程分析</h5>
+<div class="outline-text-5" id="text-2-6-2-3">
+<p>
+目的: 在系统内各元件间取得内部相容性;在系统和环境间取得外部相容性。
+</p>
+<ul class="org-ul">
+<li>确定系统输入和输出。</li>
+<li>确定如何将输入转化成输出功能 (实施方案)。</li>
+<li>选择或设计能实现上述每一个功能元件。</li>
+<li>检测内部相容和外部相容结果。</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org374b4c0" class="outline-5">
+<h5 id="org374b4c0"><span class="section-number-5">2.6.2.4</span> 人机系统设计</h5>
+<div class="outline-text-5" id="text-2-6-2-4">
+<p>
+目的: 取得系统内人-机间内部相容; 系统与其所在运行环境间取得外部相容。
+</p>
+<ul class="org-ul">
+<li>确定系统输入和输出。</li>
+<li>确定将输入转化成输出所需功能。</li>
+<li>确定人和机器间功能分配。</li>
+<li>确定必要训练程序、辅助工作、人机界面设计和机器设计。</li>
+<li>保证人-机-环境间相容。</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org93f4079" class="outline-5">
+<h5 id="org93f4079"><span class="section-number-5">2.6.2.5</span> 设计时程计划</h5>
+<div class="outline-text-5" id="text-2-6-2-5">
+<p>
+目的: 制定系统性工作程序与方法。
+</p>
+</div>
+<div id="outline-container-orgc36b815" class="outline-6">
+<h6 id="orgc36b815"><span class="section-number-6">2.6.2.5.1</span> 用甘特图 (横道图) 表示设计时程</h6>
+<div class="outline-text-6" id="text-2-6-2-5-1">
+
+<div class="figure">
+<p><img src="./psd/img/Gantt-StudioBinder-videoMaker.jpg" alt="Gantt-StudioBinder-videoMaker.jpg" width="70%" />
+</p>
+</div>
+</div>
+
+<div id="outline-container-org946122d" class="outline-7">
+<h7 id="org946122d"><span class="section-number-7">2.6.2.5.1.1</span> 一般甘特图</h7>
+<div class="outline-text-7" id="text-2-6-2-5-1-1">
+<p>
+例：工程由X、Y、Z 3项任务组成，X任务中，任务2)须在任务1)完成后才能开始。
+</p>
+<ul class="org-ul">
+<li>这种甘特图只能用于单线工作, X、Y、Z 任务间的联系不能在图上反映出来。</li>
+</ul>
+
+<div class="figure">
+<p><img src="./psd/img/Gantt0.png" alt="Gantt0.png" width="60%" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org135c6e6" class="outline-7">
+<h7 id="org135c6e6"><span class="section-number-7">2.6.2.5.1.2</span> 改进甘特图</h7>
+<div class="outline-text-7" id="text-2-6-2-5-1-2">
+<p>
+图中箭头表示各项任务中各项工作间关系，带箭头直线上的数字为该项工作所需时间。
+</p>
+<ul class="org-ul">
+<li>从事项1)到7)可有5条路线，其中所需时间最长的称为紧急线或关键路线。</li>
+<li>紧急线上的工作提前或拖后都直接影响整个任务的提前或推迟。</li>
+<li>图中所示工程紧急线为1)-3)-6)-7)。所需时间为9周。</li>
+</ul>
+
+<div class="figure">
+<p><img src="./psd/img/Gantt1.png" alt="Gantt1.png" width="50%" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgb1d517e" class="outline-7">
+<h7 id="orgb1d517e"><span class="section-number-7">2.6.2.5.1.3</span> 甘特图法</h7>
+<div class="outline-text-7" id="text-2-6-2-5-1-3">
+<ul class="org-ul">
+<li>确定元素或组分按什么方式相互关联形成整体,即研究和发现系统结构或元素分类。</li>
+<li>描述任务进度。</li>
+<li>图包含水平时间线和垂线。</li>
+<li>通过画出代表每一任务从开始到结束水平条绘制而成,</li>
+<li>每一水平条已填充部分代表该任务已完成部分。</li>
+<li>垂线代表当前任务,因此可直接看出任务提前或落后于进度。</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org69170c7" class="outline-6">
+<h6 id="org69170c7"><span class="section-number-6">2.6.2.5.2</span> PERT法 (计划协调技术)</h6>
+<div class="outline-text-6" id="text-2-6-2-5-2">
+<p>
+图为一项工程共6个事项，即图中1)、2)、3)、4)、5)、6)，
+</p>
+<ul class="org-ul">
+<li>9项工作 1-2、1-3、2-3、2-4、3-4、3-5、4-5、4-6、5-6。</li>
+<li>各项工作完成先后顺序如图(b)所示。</li>
+<li>紧急线或关键路线用带箭头双线表示。</li>
+<li>对只与其它工作有约束关系而不需消耗时间工作，称为虚工作，以0表示，如工作4-5。</li>
+</ul>
+
+<div class="figure">
+<p><img src="./psd/img/PERT.png" alt="PERT.png" width="100%" />
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3ae0b3f" class="outline-7">
+<h7 id="org3ae0b3f"><span class="section-number-7">2.6.2.5.2.1</span> PERT计划步骤如下:</h7>
+<div class="outline-text-7" id="text-2-6-2-5-2-1">
+<ul class="org-ul">
+<li>准备PERT网络</li>
+<li>估计每项工作"预计完成周期"，计算式为Te=(a+4m+b)/6, 式中，a、m、b分别为每项工作最短、最可能及最长周期估计值。</li>
+<li>寻找关键路线</li>
+<li>计算非关键路线上工作机动时间一一时差</li>
+<li>评价PERT计划</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgba26847" class="outline-5">
+<h5 id="orgba26847"><span class="section-number-5">2.6.2.6</span> 边界研究</h5>
+<div class="outline-text-5" id="text-2-6-2-6">
+<p>
+目的: 找出满足设计要求所处限定范围。
+</p>
+<ul class="org-ul">
+<li>写出关键条件性能规范。</li>
+<li>尽可能精确地定义不确定因素存在范围。</li>
+<li>制作模拟器，在不确定因素存在大致范围内，对每一个规范关键广度调节。</li>
+<li>性能测验，以找出可达到预定性能限制范围。</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgc91fff5" class="outline-4">
+<h4 id="orgc91fff5"><span class="section-number-4">2.6.3</span> 计划控制</h4>
+<div class="outline-text-4" id="text-2-6-3">
+</div>
+<div id="outline-container-org4f1bc0e" class="outline-5">
+<h5 id="org4f1bc0e"><span class="section-number-5">2.6.3.1</span> 计划转换</h5>
+<div class="outline-text-5" id="text-2-6-3-1">
+<p>
+目的: 正确处理设计过程中产生自发思想与原计划思想两者关系。
+</p>
+<ul class="org-ul">
+<li>着手制订一个适合的问题计划。</li>
+<li>在执行计划时，分别记录自发出现在有关人员头脑中想法。</li>
+<li>在每一个自发思想没有充分研究之前，不要修改原有计划。只有在无计可施时才去重新修改原计划。</li>
+<li>分析预定计划和自发思想所产生输出项，以便决定放弃一个，还将两者综合成一个新计划。</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgd17f8c0" class="outline-5">
+<h5 id="orgd17f8c0"><span class="section-number-5">2.6.3.2</span> Machett基础设计法 (F.D.M)</h5>
+<div class="outline-text-5" id="text-2-6-3-2">
+<p>
+目的: 从设计师熟悉部分入手，建立初步思考模型，再针对问题模式，选择适合思考方式，以完成工作目标。使用以下思考模式对设计问题思考：
+</p>
+<ul class="org-ul">
+<li>用概括计划思考，其要点为: 预制计划; 比较各种设计计划 ;拟定设计策略。</li>
+<li>从平行面思考，以客观方式观察各种思想和方法，并比较。</li>
+<li>以检核表方式多角度地思考。</li>
+<li>从不同概念 (例: 主要产品特性、产品寿命周期、可行性等) 思考。</li>
+<li>以基本要素思考，以便在各设计阶段中作出正确选择 (需求、预测、策略、技术、观念、理性、排障)。</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org74e1b3e" class="outline-4">
+<h4 id="org74e1b3e"><span class="section-number-4">2.6.4</span> 探索问题状况方法</h4>
+<div class="outline-text-4" id="text-2-6-4">
+</div>
+<div id="outline-container-org53bc8a4" class="outline-5">
+<h5 id="org53bc8a4"><span class="section-number-5">2.6.4.1</span> 目标描述</h5>
+<div class="outline-text-5" id="text-2-6-4-1">
+<p>
+目的:确定设计须与之相容外部条件。
+</p>
+<ul class="org-ul">
+<li>明确设计操作环境。</li>
+<li>明确与设计相容环境特征（委托者期望及动机、可利用资源、基本目标）</li>
+<li>确保所描述目标彼此不相矛盾，并且与设计时可用信息也不矛盾。</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgdc4c756" class="outline-5">
+<h5 id="orgdc4c756"><span class="section-number-5">2.6.4.2</span> 文献检索</h5>
+<div class="outline-text-5" id="text-2-6-4-2">
+<p>
+目的: 找出对设计有用信息。
+</p>
+<ul class="org-ul">
+<li>明确检索目的、要求。</li>
+<li>找出信息出版物种类。</li>
+<li>选择检索方法。</li>
+<li>设法使检索费用降到最低。</li>
+<li>保留完整参考目录。</li>
+<li>尽量缩小收集出版物范围，以加速检索过程。</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org0328f6d" class="outline-5">
+<h5 id="org0328f6d"><span class="section-number-5">2.6.4.3</span> 列举缺点</h5>
+<div class="outline-text-5" id="text-2-6-4-3">
+<p>
+目的:为改进型设计定向。
+</p>
+<ul class="org-ul">
+<li>检查现有设计样品或照片。</li>
+<li>鉴别设计元件间安排，找出与设计目的明显矛盾地方。</li>
+<li>找出产生上述矛盾原因。</li>
+<li>设想清除缺点的方法。</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org215b3da" class="outline-5">
+<h5 id="org215b3da"><span class="section-number-5">2.6.4.4</span> 采访用户</h5>
+<div class="outline-text-5" id="text-2-6-4-4">
+<p>
+目的: 获取本产品用户信息。
+</p>
+<ul class="org-ul">
+<li>选择用户，并设法调查出一致意见。</li>
+<li>鼓励用户描述和亲自演示他们认为重要问题详细情况。</li>
+<li>记录下采访过程中主要和次要发现。</li>
+<li>如有可能，争取用户对采访中已得结论作出评论。</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org8fc950e" class="outline-5">
+<h5 id="org8fc950e"><span class="section-number-5">2.6.4.5</span> 问卷调查 (调查表)</h5>
+<div class="outline-text-5" id="text-2-6-4-5">
+<p>
+目的: 在大量人群中收集信息。
+</p>
+<ul class="org-ul">
+<li>问卷设计和调查方式(调研、访谈)</li>
+</ul>
+
+<div class="figure">
+<p><img src="./psd/img/marketResearchEnquiry.png" alt="marketResearchEnquiry.png" width="100%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org659a874" class="outline-5">
+<h5 id="org659a874"><span class="section-number-5">2.6.4.6</span> 用户行为研究</h5>
+<div class="outline-text-5" id="text-2-6-4-6">
+<p>
+目的: 探索行为特征，并预测一个新产品潜在用户操作要求。
+</p>
+<ul class="org-ul">
+<li>征询对与新产品类似产品有经验和无经验用户意见，并观察他们的行为。</li>
+<li>分析一个人机系统，以确定用户能力和人机界面设计要求。</li>
+<li>对一个模拟预想设计产品，观察熟练者和初学者使用各种行为。</li>
+<li>记录下用户在使用过程中不产生错误、伤害或不舒适而不能超出极限值。</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgc00b634" class="outline-5">
+<h5 id="orgc00b634"><span class="section-number-5">2.6.4.7</span> 系统检测</h5>
+<div class="outline-text-5" id="text-2-6-4-7">
+<p>
+目的: 在复杂情况下对系统控制。
+</p>
+<ul class="org-ul">
+<li>确定需排除因素 (不希望存在因素) 特征。</li>
+<li>确认产生各种变化无常情况原因。</li>
+<li>变化(施加或放松) 参数，并记录下对需排除因素特征影响，也记录下对其它特征影响。</li>
+<li>选出最优和最小损害被测限制。</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org181dea9" class="outline-5">
+<h5 id="org181dea9"><span class="section-number-5">2.6.4.8</span> 选择测量尺度</h5>
+<div class="outline-text-5" id="text-2-6-4-8">
+<p>
+目的: 根据设计目标制订测量项目要求及费用。
+</p>
+<ul class="org-ul">
+<li>提出需测量问题。</li>
+<li>选择测量允许误差和人允许费用。</li>
+<li>选择相应测量尺度。</li>
+<li>设计一个与上述要求相容测量过程。</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org98ff7c6" class="outline-5">
+<h5 id="org98ff7c6"><span class="section-number-5">2.6.4.9</span> 信息记录和精简</h5>
+<div class="outline-text-5" id="text-2-6-4-9">
+<p>
+目的: 指明重要能决定设计行动特征，并使之视觉化。
+</p>
+<ul class="org-ul">
+<li>确认对设计成败有关键影响不定因素。</li>
+<li>确定这些关键因素被缩减程度。</li>
+<li>确定可用于缩减不定因素资料。</li>
+<li>检索可用于信息记录和精简各种方法，精度、速度、费用及适用范围。</li>
+<li>选择与上述各项都能兼容信息记录和精简方法。</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org1b8b783" class="outline-4">
+<h4 id="org1b8b783"><span class="section-number-4">2.6.5</span> 寻求构想 (Ideas) 方法</h4>
+<div class="outline-text-4" id="text-2-6-5">
+<p>
+目的: 使设计师或一个设计群体能迅速产生许多有用构想。
+</p>
+<ul class="org-ul">
+<li>强化创造动因群体激智方法，如头脑风暴法、德尔菲法、CBS 法、KJ 法等。</li>
+<li>寻找设计目标方法有提喻法、设问法、和希望点列举法、检核表法、专利法等。</li>
+<li>寻求改进设计构想可采用设问法、检核表法、缺点列举法等。</li>
+<li>创造性设计方法有类比法、联想法、形态学法、区法、移植法、仿生法、组合设计法等。</li>
+<li>创造方法很多，但不能生搬硬套。有时，一种方法可反复使用多次，有时要几种方法同时使用。</li>
+<li>辅助构思工具 (Mind Map)</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org1ba6127" class="outline-4">
+<h4 id="org1ba6127"><span class="section-number-4">2.6.6</span> 探索问题结构方法</h4>
+<div class="outline-text-4" id="text-2-6-6">
+</div>
+<div id="outline-container-orge9749c0" class="outline-5">
+<h5 id="orge9749c0"><span class="section-number-5">2.6.6.1</span> 功能技术矩阵</h5>
+<div class="outline-text-5" id="text-2-6-6-1">
+<p>
+目的: 系统地探索各元素间关系。
+</p>
+<ul class="org-ul">
+<li>定义各项元素及其关系。</li>
+<li>建立一个矩阵，在其中每一元素都能与其它任何元素相比较。</li>
+<li>确定每一对元素间实际上是否存在联系，若不存在联系即为不相容。</li>
+<li>找出各种可能相容组合，即确定不同类型结构。</li>
+</ul>
+
+<div class="figure">
+<p><img src="./psd/img/Functional_technology_matrix2.png" alt="Functional_technology_matrix2.png" width="100%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgfd7c628" class="outline-5">
+<h5 id="orgfd7c628"><span class="section-number-5">2.6.6.2</span> 相互关系网</h5>
+<div class="outline-text-5" id="text-2-6-6-2">
+<p>
+目的: 系统地探索各元素间关系特征。
+</p>
+<ul class="org-ul">
+<li>如上所述，利用关系矩阵，确定哪些元素相关。</li>
+<li>画出代表各元素点列图, 连接不相容元素</li>
+<li>利用相互关系网可得出相容结构有6个: a1b1c1d1, a1b2c1d1, a2b2c1d1, a2b2c1d2, a2b2c2d1, a2b2c2d2</li>
+</ul>
+
+<div class="figure">
+<p><img src="./psd/img/consistent_investigation.png" alt="consistent_investigation.png" width="30%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org0d8f2d3" class="outline-5">
+<h5 id="org0d8f2d3"><span class="section-number-5">2.6.6.3</span> 相互关联决策域分析</h5>
+<div class="outline-text-5" id="text-2-6-6-3">
+<p>
+目的: 对结合在一起各互相相容子解答，确认和评价。
+</p>
+<ul class="org-ul">
+<li>在每个决策区域内确认几个可行子解答。</li>
+<li>指出哪些子解答与其它不相容。</li>
+<li>列出结合在一起相容子解答; 并按标准 (例: 成本) 评价</li>
+<li>找出最优一套子解答。</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org0585803" class="outline-5">
+<h5 id="org0585803"><span class="section-number-5">2.6.6.4</span> 系统转变</h5>
+<div class="outline-text-5" id="text-2-6-6-4">
+<p>
+目的: 改变一个不能令人满意系统，以排除其固有缺陷。
+</p>
+<ul class="org-ul">
+<li>确认现有系统固有缺陷及产生原因。</li>
+<li>找到能排除这些缺陷新型元件。</li>
+<li>找出使现有元件演化为新型元件过程。</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgdf8f716" class="outline-5">
+<h5 id="orgdf8f716"><span class="section-number-5">2.6.6.5</span> 功能更新</h5>
+<div class="outline-text-5" id="text-2-6-6-5">
+<p>
+目的: 创造新功能。
+</p>
+<ul class="org-ul">
+<li>确定现有设计每个部分功能。</li>
+<li>确定哪些是主要功能，哪些是次要功能。</li>
+<li>分析改善现有设计主要功能的可能性。</li>
+<li>将以上两步结果合起来形成一个新修正的主要功能。</li>
+<li>将新主要功能分解，并分配给相应新部分，找出多种选择方法。</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org685d08a" class="outline-5">
+<h5 id="org685d08a"><span class="section-number-5">2.6.6.6</span> 亚历山大确定元素法</h5>
+<div class="outline-text-5" id="text-2-6-6-6">
+<p>
+目的: 将某一结构分组成合适元素，使得每一元素能分离，并被自由地替换以适应环境变化。
+</p>
+<ul class="org-ul">
+<li>确定能对该结构产生影响的全部需求。</li>
+<li>确定相互关系矩阵中每对元素需求否相关，并将结果记录。</li>
+<li>将该矩阵分解成若干子阵(块)，每一块内部密切联系; 而各块间联系松弛。这些块就要寻求合适元素。</li>
+<li>将每一个块需求设计为一个元件。</li>
+<li>将这些元件组织起来，构成新系统，或将某些新元件引入到现有结构中，而均不改变原有结构功能。</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org5b00f2c" class="outline-5">
+<h5 id="org5b00f2c"><span class="section-number-5">2.6.6.7</span> 设计信息分类</h5>
+<div class="outline-text-5" id="text-2-6-6-7">
+<p>
+目的: 将一个设计问题信息分成较易处理若干部分 (KJ法)
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org18f2df7" class="outline-4">
+<h4 id="org18f2df7"><span class="section-number-4">2.6.7</span> 产品造型设计方法</h4>
+<div class="outline-text-4" id="text-2-6-7">
+</div>
+<div id="outline-container-orgb1aa31e" class="outline-5">
+<h5 id="orgb1aa31e"><span class="section-number-5">2.6.7.1</span> 定量结构变化法</h5>
+<div class="outline-text-5" id="text-2-6-7-1">
+<p>
+目的: 将产品主功能分解为限制在一定数量之下分功能，再作结构上变化，以此创造最佳产品造型。
+</p>
+<ul class="org-ul">
+<li>确认产品主功能</li>
+<li>将主功能分解成子功能</li>
+<li>展开功能结构</li>
+</ul>
+
+<div class="figure">
+<p><img src="./psd/img/function2structure.png" alt="function2structure.png" width="90%" />
+</p>
+</div>
+</div>
+<div id="outline-container-org7a15926" class="outline-6">
+<h6 id="org7a15926"><span class="section-number-6">2.6.7.1.1</span> 确认产品主功能</h6>
+</div>
+<div id="outline-container-org9d6f90e" class="outline-6">
+<h6 id="org9d6f90e"><span class="section-number-6">2.6.7.1.2</span> 将主功能分解成一定数量子功能(功能树)</h6>
+<div class="outline-text-6" id="text-2-6-7-1-2">
+
+<div class="figure">
+<p><img src="./psd/img/functions_Vacuum_cleaner.png" alt="functions_Vacuum_cleaner.png" width="90%" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org02c11db" class="outline-6">
+<h6 id="org02c11db"><span class="section-number-6">2.6.7.1.3</span> 由3个变量展开功能结构</h6>
+<div class="outline-text-6" id="text-2-6-7-1-3">
+</div>
+<div id="outline-container-orge999627" class="outline-7">
+<h7 id="orge999627"><span class="section-number-7">2.6.7.1.3.1</span> 变量1为配置方式</h7>
+<div class="outline-text-7" id="text-2-6-7-1-3-1">
+<p>
+所谓配置方式即为主要功能在结构变化上的可能形式。
+</p>
+
+<div class="figure">
+<p><img src="./psd/img/Vacuum_cleaners.png" alt="Vacuum_cleaners.png" width="70%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgf45f135" class="outline-7">
+<h7 id="orgf45f135"><span class="section-number-7">2.6.7.1.3.2</span> 变量2为空间排列可能形式</h7>
+<div class="outline-text-7" id="text-2-6-7-1-3-2">
+<ul class="org-ul">
+<li>两个构成元素的空间排列（点状、轴向、面状和立体排列）</li>
+<li>三个元素的可能排列情况</li>
+<li>吸尘器空间排列</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org17584e4" class="outline-7">
+<h7 id="org17584e4"><span class="section-number-7">2.6.7.1.3.3</span> 变量3为主要件尺度变化</h7>
+<div class="outline-text-7" id="text-2-6-7-1-3-3">
+
+<div class="figure">
+<p><img src="./psd/img/size_variation.png" alt="size_variation.png" width="60%" />
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgb56bc42" class="outline-6">
+<h6 id="orgb56bc42"><span class="section-number-6">2.6.7.1.4</span> 使多样化造型与产品功能相容</h6>
+</div>
+<div id="outline-container-org4f00e1c" class="outline-6">
+<h6 id="org4f00e1c"><span class="section-number-6">2.6.7.1.5</span> 选择最佳方案</h6>
+</div>
+</div>
+
+<div id="outline-container-org66decb9" class="outline-5">
+<h5 id="org66decb9"><span class="section-number-5">2.6.7.2</span> 机能面关系界定法</h5>
+<div class="outline-text-5" id="text-2-6-7-2">
+<p>
+构成产品元素组件间形成一定数量机能面，按机能不同可分为: 
+</p>
+<ul class="org-ul">
+<li>物理机能，即表现出产品各组件间关系;</li>
+<li>生理、心理机能，即表现出人和组件间关系(人机工程学)。</li>
+</ul>
+</div>
+<div id="outline-container-org9e59848" class="outline-6">
+<h6 id="org9e59848"><span class="section-number-6">2.6.7.2.1</span> 总目的</h6>
+<div class="outline-text-6" id="text-2-6-7-2-1">
+<p>
+按造型应满足物理、生理和心理三项机能，创造出产品最佳造型。
+</p>
+</div>
+</div>
+<div id="outline-container-org3b8bea6" class="outline-6">
+<h6 id="org3b8bea6"><span class="section-number-6">2.6.7.2.2</span> 步骤</h6>
+<div class="outline-text-6" id="text-2-6-7-2-2">
+</div>
+<div id="outline-container-org3b249a5" class="outline-7">
+<h7 id="org3b249a5"><span class="section-number-7">2.6.7.2.2.1</span> 确定所设计产品机能面数量。</h7>
+<div class="outline-text-7" id="text-2-6-7-2-2-1">
+<p>
+(a)所示旋钮，其机能面数量有两个:  
+</p>
+<ul class="org-ul">
+<li>A 与人接触的外在机能面 (生理、心理机能面)</li>
+<li>B 与轴接触的内在机能面 (物理机能面)</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org37839ec" class="outline-7">
+<h7 id="org37839ec"><span class="section-number-7">2.6.7.2.2.2</span> 预估各机能面所需体量 (面积或容积) 及其位置，如图(b)所示。</h7>
+<div class="outline-text-7" id="text-2-6-7-2-2-2">
+
+<div class="figure">
+<p><img src="./psd/img/button_functions.png" alt="button_functions.png" width="70%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orga9d10f0" class="outline-7">
+<h7 id="orga9d10f0"><span class="section-number-7">2.6.7.2.2.3</span> 连接各机能面产生概略形</h7>
+<div class="outline-text-7" id="text-2-6-7-2-2-3">
+
+<div class="figure">
+<p><img src="./psd/img/button_outlines.png" alt="button_outlines.png" width="60%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org5e45d9d" class="outline-7">
+<h7 id="org5e45d9d"><span class="section-number-7">2.6.7.2.2.4</span> 将概略形规整，使造型几何化、有机化; 并修正扩度大小</h7>
+<div class="outline-text-7" id="text-2-6-7-2-2-4">
+
+<div class="figure">
+<p><img src="./psd/img/button_modelling.png" alt="button_modelling.png" width="80%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgc31394e" class="outline-7">
+<h7 id="orgc31394e"><span class="section-number-7">2.6.7.2.2.5</span> 选择可行最佳造型</h7>
+<div class="outline-text-7" id="text-2-6-7-2-2-5">
+<p>
+图 8-22 为机能面关系界定法流程图。机能面关系界定法用由小到大、由内向外方式来造型。
+</p>
+
+<div class="figure">
+<p><img src="./psd/img/button_function_surface.png" alt="button_function_surface.png" width="60%" />
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgb7e00eb" class="outline-5">
+<h5 id="orgb7e00eb"><span class="section-number-5">2.6.7.3</span> 造型分解法</h5>
+<div class="outline-text-5" id="text-2-6-7-3">
+<p>
+目的: 按造型各种需分解形态，以创造最佳造型。
+</p>
+<ul class="org-ul">
+<li>确定产品 (计算器) 概略性形状</li>
+<li>确认计算器可变更部分</li>
+<li>按功能、构造及视觉将造型展开。</li>
+<li>选择最佳适型</li>
+</ul>
+
+<div class="figure">
+<p><img src="./psd/img/modelling_process.png" alt="modelling_process.png" width="60%" />
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-org08d0373" class="outline-6">
+<h6 id="org08d0373"><span class="section-number-6">2.6.7.3.1</span> 确定产品 (计算器) 概略性形状</h6>
+<div class="outline-text-6" id="text-2-6-7-3-1">
+
+<div class="figure">
+<p><img src="./psd/img/calculator_outline.png" alt="calculator_outline.png" width="30%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgbce065a" class="outline-6">
+<h6 id="orgbce065a"><span class="section-number-6">2.6.7.3.2</span> 确认计算器可变更部分</h6>
+<div class="outline-text-6" id="text-2-6-7-3-2">
+
+<div class="figure">
+<p><img src="./psd/img/calculator_changeable_parts.png" alt="calculator_changeable_parts.png" width="70%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org8afbe71" class="outline-6">
+<h6 id="org8afbe71"><span class="section-number-6">2.6.7.3.3</span> 按功能展开造型</h6>
+<div class="outline-text-6" id="text-2-6-7-3-3">
+
+<div class="figure">
+<p><img src="./psd/img/calculator_function_modelling.png" alt="calculator_function_modelling.png" width="50%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org389173e" class="outline-6">
+<h6 id="org389173e"><span class="section-number-6">2.6.7.3.4</span> 按构造展开造型</h6>
+<div class="outline-text-6" id="text-2-6-7-3-4">
+
+<div class="figure">
+<p><img src="./psd/img/calculator_structure_modelling.png" alt="calculator_structure_modelling.png" width="40%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orge6d0b2c" class="outline-6">
+<h6 id="orge6d0b2c"><span class="section-number-6">2.6.7.3.5</span> 按视觉展开造型</h6>
+<div class="outline-text-6" id="text-2-6-7-3-5">
+
+<div class="figure">
+<p><img src="./psd/img/calculator_vision_modelling.png" alt="calculator_vision_modelling.png" width="50%" />
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org8df6e87" class="outline-4">
+<h4 id="org8df6e87"><span class="section-number-4">2.6.8</span> 广义工业设计</h4>
+<div class="outline-text-4" id="text-2-6-8">
+</div>
+<div id="outline-container-orgd5fc71d" class="outline-5">
+<h5 id="orgd5fc71d"><span class="section-number-5">2.6.8.1</span> 对人类生活方式设计</h5>
+<div class="outline-text-5" id="text-2-6-8-1">
+<p>
+产品设计不仅是造型，研究对象是人-机-环境-社会大系统。
+</p>
+<ul class="org-ul">
+<li>产品设计出发点是人，目的为人而不是产品本身。</li>
+<li>使生存环境更加合乎人性。</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org5913c85" class="outline-5">
+<h5 id="org5913c85"><span class="section-number-5">2.6.8.2</span> 广泛创新活动</h5>
+<div class="outline-text-5" id="text-2-6-8-2">
+<p>
+生产力（科学技术、设计）进步正在不断地推动生产关系更新。
+</p>
+<ul class="org-ul">
+<li>先进设计和制造技术，功能齐备产品，深刻影响物质领域，生活领域，同时改变人们观念。</li>
+<li>产品设计已发展为广泛创新活动，推动市场竞争由产品向企业、产业、工业以至国家、地区方向发展，</li>
+<li>从低到高，由微观向宏观，由技术到经济、文化综合实力竞争，均体现在设计中。</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org4c99055" class="outline-5">
+<h5 id="org4c99055"><span class="section-number-5">2.6.8.3</span> 生态设计</h5>
+<div class="outline-text-5" id="text-2-6-8-3">
+<p>
+设计不仅研究人-机关系，还扩及整个人类环境，要将人造和自然环境作为整体来规划。
+</p>
+<ul class="org-ul">
+<li>设计已超出一般意义下技术与艺术相结合范畴，成为一种促进现代产品、企业和社会发展动力。</li>
+<li>随着人类和自然、社会间自适应状态逐渐改变、综合和协调，设计将日益发挥重要作用。</li>
+<li>设计除科技、艺术外还须考虑经济、文化和社会实践各种要素，设计应多元、动态、系统、综合。</li>
+<li>产业生态 | 社会生态 | 自然生态</li>
+</ul>
+</div>
+<div id="outline-container-org506d540" class="outline-6">
+<h6 id="org506d540"><span class="section-number-6">2.6.8.3.1</span> 产业生态</h6>
+<div class="outline-text-6" id="text-2-6-8-3-1">
+<p>
+设计不仅决定产品开发，还在产品和产业结构调整，企业和产业改造，新兴产业诞生中有不可替代作用。
+</p>
+<ul class="org-ul">
+<li>科技通过设计，正在迅速改变人类生存和发展条件，生存质量不断提高，生活方式不断改变。</li>
+<li>新兴信息产品不但影响和改变生活方式，且为促进新兴产业出现和建设市场经济提供广阔空间。</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org721e37a" class="outline-6">
+<h6 id="org721e37a"><span class="section-number-6">2.6.8.3.2</span> 社会生态</h6>
+<div class="outline-text-6" id="text-2-6-8-3-2">
+<p>
+设计中引进社会学、生态学和人类文化学概念，研究生活形态学，生活设计，以提高消费社会经济效果。
+</p>
+</div>
+</div>
+<div id="outline-container-org54ef0d4" class="outline-6">
+<h6 id="org54ef0d4"><span class="section-number-6">2.6.8.3.3</span> 自然生态</h6>
+<div class="outline-text-6" id="text-2-6-8-3-3">
+<p>
+在生态设计中发挥先导作用。合理消费模式和适度消费规模，能使生存环境得到保护和改善
+</p>
+<ul class="org-ul">
+<li>低效高耗生产和不合理生活消费极大地破坏现有生态环境。</li>
+<li>保护地球，重新规划人类生活。</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orge33f559" class="outline-5">
+<h5 id="orge33f559"><span class="section-number-5">2.6.8.4</span> 企业策划</h5>
+<div class="outline-text-5" id="text-2-6-8-4">
+<p>
+设计在企业资产增值，提高企业竞争力和经济效益方面发挥巨大推动作用。
+</p>
+<ul class="org-ul">
+<li>为企业作设计开发、生产开发和市场开发工作，协助企业克服在市场竞争中遇到的新问题。</li>
+<li>问题：富有竞争力性价比产品概念; 合理产品产业结构; 企业优势、机遇和企业潜在问题</li>
+<li>制定企业产品、行销和形象战略部署，提出行销企划（分销网络、广告策划、宣传展示及售后服务）</li>
+<li>还可在城市规划、公共设施和室内设计等方面发挥作用。</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org00b0f77" class="outline-5">
+<h5 id="org00b0f77"><span class="section-number-5">2.6.8.5</span> 设计大团队</h5>
+<div class="outline-text-5" id="text-2-6-8-5">
+<p>
+多元动力机制，运作，要靠大团队来支撑。
+</p>
+<ul class="org-ul">
+<li>由企业家、设计师、工程师、经济师、专家、管理人员、学校研究机构和政府部门共同组成</li>
+<li>核心：企业家、设计师和政府公务人员三结合体制。</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org9a4859b" class="outline-4">
+<h4 id="org9a4859b"><span class="section-number-4">2.6.9</span> 新产品开发</h4>
+<div class="outline-text-4" id="text-2-6-9">
+<ul class="org-ul">
+<li>新产品概念</li>
+<li>开发机制</li>
+<li>产品设计创新过程模型</li>
+</ul>
+</div>
+<div id="outline-container-orge06be6f" class="outline-5">
+<h5 id="orge06be6f"><span class="section-number-5">2.6.9.1</span> 新产品概念</h5>
+<div class="outline-text-5" id="text-2-6-9-1">
+<ul class="org-ul">
+<li>仿制产品</li>
+<li>改进型产品</li>
+<li>换代产品</li>
+<li>全新产品</li>
+<li>未来型产品</li>
+</ul>
+</div>
+<div id="outline-container-orgc71c258" class="outline-6">
+<h6 id="orgc71c258"><span class="section-number-6">2.6.9.1.1</span> 仿制产品</h6>
+<div class="outline-text-6" id="text-2-6-9-1-1">
+<p>
+仿照已有产品，在造型及局部结构，零部件、材料、工艺上作修改
+</p>
+<ul class="org-ul">
+<li>制造出在性能、质量、价格等方面有竞争力产品。</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org469ba2a" class="outline-6">
+<h6 id="org469ba2a"><span class="section-number-6">2.6.9.1.2</span> 改进型产品</h6>
+<div class="outline-text-6" id="text-2-6-9-1-2">
+<p>
+对现有产品，改进性能、提高质量或增加品种、规格、款式花色等。
+</p>
+<ul class="org-ul">
+<li>对提高企业经济竞争力大有益处。</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orga85d6c8" class="outline-6">
+<h6 id="orga85d6c8"><span class="section-number-6">2.6.9.1.3</span> 换代产品</h6>
+<div class="outline-text-6" id="text-2-6-9-1-3">
+<p>
+在原有基础上，采用部分新技术、新结构、新材料、新工艺及元件以满足新需求。
+</p>
+<ul class="org-ul">
+<li>渐进性创新</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgd185584" class="outline-6">
+<h6 id="orgd185584"><span class="section-number-6">2.6.9.1.4</span> 全新产品</h6>
+<div class="outline-text-6" id="text-2-6-9-1-4">
+<p>
+在原理、技术、结构、工艺或材料等方面有重大突破
+</p>
+<ul class="org-ul">
+<li>与现有产品无共同之处新产品，科学技术新发明应用</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgfa7281b" class="outline-6">
+<h6 id="orgfa7281b"><span class="section-number-6">2.6.9.1.5</span> 未来型产品</h6>
+<div class="outline-text-6" id="text-2-6-9-1-5">
+<p>
+探索性(概念方式)设计，旨在满足人们近期或未来需求。
+</p>
+<ul class="org-ul">
+<li>可能幻想，但却未来现实。</li>
+<li>未来型设计因极具创意，故一般能推动技术开发、生产开发和市场开发。</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org002c43c" class="outline-5">
+<h5 id="org002c43c"><span class="section-number-5">2.6.9.2</span> 开发机制</h5>
+<div class="outline-text-5" id="text-2-6-9-2">
+<ul class="org-ul">
+<li>设计主导型创新机制</li>
+<li>技术主导型创新机制</li>
+<li>设计一技术结合型创新</li>
+</ul>
+</div>
+<div id="outline-container-org591aa5f" class="outline-6">
+<h6 id="org591aa5f"><span class="section-number-6">2.6.9.2.1</span> 设计主导型创新机制</h6>
+<div class="outline-text-6" id="text-2-6-9-2-1">
+<p>
+随着科技和社会经济发展，设计内涵发生深刻变化使以设计为主导创新成为必要。
+</p>
+
+<div class="figure">
+<p><img src="./psd/img/design_driven_innovation.png" alt="design_driven_innovation.png" width="100%" />
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5c3b439" class="outline-7">
+<h7 id="org5c3b439"><span class="section-number-7">2.6.9.2.1.1</span> 例：牙科综合治疗机</h7>
+<div class="outline-text-7" id="text-2-6-9-2-1-1">
+
+<div class="figure">
+<p><object type="image/svg+xml" data="./psd/img/Dental_treatment_machine.svg" class="org-svg" width="60%">
+Sorry, your browser does not support SVG.</object>
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgf01a34b" class="outline-6">
+<h6 id="orgf01a34b"><span class="section-number-6">2.6.9.2.2</span> 技术主导型创新机制</h6>
+<div class="outline-text-6" id="text-2-6-9-2-2">
+<p>
+这种创新机制特点技术创新和工程设计先于设计开发和设计。
+</p>
+
+<div class="figure">
+<p><img src="./psd/img/tech_driven_innovation.png" alt="tech_driven_innovation.png" width="100%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgd9992d7" class="outline-6">
+<h6 id="orgd9992d7"><span class="section-number-6">2.6.9.2.3</span> 设计一技术结合型创新</h6>
+<div class="outline-text-6" id="text-2-6-9-2-3">
+<p>
+由技术人员和设计人员共同组成创新小组。
+或以设计创新为主，或以技术开发创新为主，要看项目特点和人力配备。
+</p>
+
+<div class="figure">
+<p><img src="./psd/img/design_tech_driven_innovation.png" alt="design_tech_driven_innovation.png" width="100%" />
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org1a94ca4" class="outline-5">
+<h5 id="org1a94ca4"><span class="section-number-5">2.6.9.3</span> 产品设计创新过程模型</h5>
+<div class="outline-text-5" id="text-2-6-9-3">
+<p>
+在企业内部实现产品创新，可有三种过程模型。
+</p>
+<ul class="org-ul">
+<li>部门阶段模型</li>
+<li>整合性设计创新过程模型</li>
+<li>综合模型</li>
+</ul>
+</div>
+<div id="outline-container-org47f795f" class="outline-6">
+<h6 id="org47f795f"><span class="section-number-6">2.6.9.3.1</span> 部门阶段模型</h6>
+<div class="outline-text-6" id="text-2-6-9-3-1">
+<p>
+设计创新任务按部门分阶段，部门间缺乏协调与联系。
+</p>
+
+<div class="figure">
+<p><img src="./psd/img/innovation_departments.png" alt="innovation_departments.png" width="100%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgb32ac3e" class="outline-6">
+<h6 id="orgb32ac3e"><span class="section-number-6">2.6.9.3.2</span> 整合性设计创新过程模型</h6>
+<div class="outline-text-6" id="text-2-6-9-3-2">
+<p>
+通过企业设计开发策略制定和设计管理，将市场、设计、生产、营销等部门有机组合起来，实现开发过程同步化，在企业内部达成共识。
+</p>
+<ul class="org-ul">
+<li>缩短产品开发周期和企业内部协调时间，加快产品推向市场速度。</li>
+</ul>
+
+<div class="figure">
+<p><img src="./psd/img/innovation_integration.png" alt="innovation_integration.png" width="80%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org629fa27" class="outline-6">
+<h6 id="org629fa27"><span class="section-number-6">2.6.9.3.3</span> 综合模型</h6>
+<div class="outline-text-6" id="text-2-6-9-3-3">
+<p>
+将创新活动划分5个阶段，从创新决策上分为3个阶段，将各阶段活动与决策结合模型。
+</p>
+
+<div class="figure">
+<p><img src="./psd/img/innovation_integration2.png" alt="innovation_integration2.png" width="90%" />
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org2156fe7" class="outline-3">
+<h3 id="org2156fe7"><span class="section-number-3">2.7</span> 作业二</h3>
+<div class="outline-text-3" id="text-2-7">
+<ul class="org-ul">
+<li>选择一类产品中的3～4款产品运用至少一种分析方法（比如雷达图分析方法、矩阵图法等）进行分析比较，明确各自优缺点；</li>
+<li>在此基础上，对此类产品基本功能结构分解（可用功能结构系统图表示），再重组为新的设计方案（可有若干组合，并选出其中最优方案）。</li>
+<li>做成PPT，9月8日(周日)23:00前发送到anhongz@outlook.com</li>
+<li>文件名: PSD2-标题-姓名</li>
+<li>文件类型: 演示文稿或PDF文档</li>
+</ul>
+</div>
+</div>
+</div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Anhongz@outlook.com</p>
-<p class="date">Created: 2019-09-02 Mon 10:22</p>
+<p class="date">Created: 2019-09-04 Wed 13:16</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
