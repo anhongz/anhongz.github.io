@@ -13,6 +13,10 @@
 
 [[file:p_semantic_d/p_semantic_d.html][产品语意设计 Product Semantic Design]]
 
+* 设计方法学 Design Methodology
+
+[[file:dm.html][设计方法学 Design Methodology]]
+
 * 计算机辅助设计 Computer Aided Design
 ** FreeCAD
 [[file:cad/FreeCAD/pen.FCStd][笔的模型文件 pen.FCStd]]

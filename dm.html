@@ -1,0 +1,3126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2019-09-27 Fri 21:20 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>设计方法学 Design Methodology</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Anhongz@outlook.com" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/styles/readtheorg/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/styles/readtheorg/css/readtheorg.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/styles/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/styles/readtheorg/js/readtheorg.js"></script>
+<style> .figure p {text-align: center;}</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2018 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">设计方法学 Design Methodology</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org968c8c2">1. 设计方法学概述</a>
+<ul>
+<li><a href="#orgac36a83">1.1. 方法论的发展</a></li>
+<li><a href="#org0a057dd">1.2. 设计方法学定义</a></li>
+<li><a href="#orga623972">1.3. 现代设计方法</a></li>
+</ul>
+</li>
+<li><a href="#org2cffb6f">2. TRIZ创新方法</a>
+<ul>
+<li><a href="#orga4ef4c1">2.1. 拆分</a></li>
+<li><a href="#org615f4df">2.2. 组合</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org968c8c2" class="outline-2">
+<h2 id="org968c8c2"><span class="section-number-2">1</span> 设计方法学概述</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-orgac36a83" class="outline-3">
+<h3 id="orgac36a83"><span class="section-number-3">1.1</span> 方法论的发展</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+四个时期：自然哲学时期 | 分析为主的方法论时期 | 分析与综合并重的方法论时期 | 综合方法论时期
+</p>
+</div>
+<div id="outline-container-orgdc7cbcf" class="outline-4">
+<h4 id="orgdc7cbcf"><span class="section-number-4">1.1.1</span> 自然哲学时期</h4>
+<div class="outline-text-4" id="text-1-1-1">
+<p>
+从古代朴素自然观到16世纪近代科学的产生
+</p>
+<ul class="org-ul">
+<li>人们将世界看做一个混沌的整体，表现为哲学、自然科学和方法论三者没有分开。</li>
+<li>这一时期方法论的最高成就是亚里士多德的逻辑学和欧几里得几何学中的方法论思想。</li>
+</ul>
+</div>
+
+<div id="outline-container-org4d00450" class="outline-5">
+<h5 id="org4d00450"><span class="section-number-5">1.1.1.1</span> 亚里士多德的逻辑系统以三段论为核心</h5>
+<div class="outline-text-5" id="text-1-1-1-1">
+<ul class="org-ul">
+<li>如果所有B是A</li>
+<li>并且所有C是B</li>
+<li>那么所有C是A</li>
+</ul>
+</div>
+
+<div id="outline-container-org8264efb" class="outline-6">
+<h6 id="org8264efb"><span class="section-number-6">1.1.1.1.1</span> 演绎推理</h6>
+<div class="outline-text-6" id="text-1-1-1-1-1">
+<ul class="org-ul">
+<li>如果所有人都是要吃饭的</li>
+<li>并且所有中国人都是人</li>
+<li>那么所有中国人都是要吃饭的</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org9455aa8" class="outline-6">
+<h6 id="org9455aa8"><span class="section-number-6">1.1.1.1.2</span> 归纳推理</h6>
+<div class="outline-text-6" id="text-1-1-1-1-2">
+<p>
+从个别到一般的过程
+</p>
+<ul class="org-ul">
+<li>假如技术娴熟的舵工是最有能力的舵工，</li>
+<li>技术娴熟的清洁工是最有能力的清洁工，</li>
+<li>那么一般地说，技术娴熟的人就是在某一特定方面最有能力的人</li>
+<li>（白天鹅与黑天鹅?）</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org8c2bd88" class="outline-6">
+<h6 id="org8c2bd88"><span class="section-number-6">1.1.1.1.3</span> 归谬法</h6>
+<div class="outline-text-6" id="text-1-1-1-1-3">
+<p>
+归谬法先规定它所要反驳的命题，然后用它推出一个公认的谬误。
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0c29020" class="outline-6">
+<h6 id="org0c29020"><span class="section-number-6">1.1.1.1.4</span> 例证法</h6>
+<div class="outline-text-6" id="text-1-1-1-1-4">
+<p>
+包括演绎、归纳与类比的一种推理方法
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org108b242" class="outline-5">
+<h5 id="org108b242"><span class="section-number-5">1.1.1.2</span> 欧几里德几何方法论</h5>
+<div class="outline-text-5" id="text-1-1-1-2">
+<p>
+把公认的一些几何知识作为定义和公理，在此基础上研究图形性质，推导出一系列定理，组成演绎体系。
+</p>
+<ul class="org-ul">
+<li>1、任意两个点可以通过一条直线连接。</li>
+<li>2、任意线段能无限延长成一条直线。</li>
+<li>3、给定任意线段，可以以其一个端点作为圆心，该线段作为半径作一个圆。</li>
+<li>4、所有直角都全等。</li>
+<li>5、若两条直线都与第三条直线相交，并且在同一边的内角之和小于两个直角和，则这两条直线在这一边必定相交。</li>
+</ul>
+
+<div class="NOTES">
+<p>
+其中公理五又称之为平行公设（Parallel Postulate），叙述比较复杂，并不像其他公理那么显然。这个公设衍生出“三角形内角和等于一百八十度”的定理。
+并非必然的几何真理，也就是“三角形内角和不一定等于一百八十度”，从而发现非欧几里得的几何学，即“非欧几何”（non-Euclidean geometry）。
+</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org67781d4" class="outline-4">
+<h4 id="org67781d4"><span class="section-number-4">1.1.2</span> 分析为主的方法论时期</h4>
+<div class="outline-text-4" id="text-1-1-2">
+<p>
+从16世纪经典力学建立到19世纪初期。
+</p>
+<ul class="org-ul">
+<li>这一时期自然科学相继分化出来，并形成各自的研究方法，</li>
+<li>而哲学则担当了方法论的职能，哲学的范畴、原理、世界观都作为自然科学研究的方法论出现。</li>
+<li>1620年，培根的《新工具》探讨了新的认识方法 (经验归纳法)，成为归纳法的基础，推动了近代科学的发展。</li>
+<li>笛卡尔在《谈方法》一书中提出唯理论的演绎法，突出了理性的推理与分析。这些方法都是以分析为主的哲学方法论。</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org4f32beb" class="outline-4">
+<h4 id="org4f32beb"><span class="section-number-4">1.1.3</span> 分析与综合并重的方法论时期</h4>
+<div class="outline-text-4" id="text-1-1-3">
+<p>
+从19世纪40年代到20世纪中叶
+</p>
+<ul class="org-ul">
+<li>一方面: 分析方法论有了重大发展</li>
+<li>另一方面: 自然科学实现两次重大综合</li>
+</ul>
+</div>
+<div id="outline-container-org734a1b1" class="outline-5">
+<h5 id="org734a1b1"><span class="section-number-5">1.1.3.1</span> 分析方法论的重大发展</h5>
+<div class="outline-text-5" id="text-1-1-3-1">
+<p>
+数理逻辑和分析哲学作出重要贡献。
+</p>
+</div>
+</div>
+<div id="outline-container-org07200fc" class="outline-5">
+<h5 id="org07200fc"><span class="section-number-5">1.1.3.2</span> 自然科学的重大综合</h5>
+<div class="outline-text-5" id="text-1-1-3-2">
+<ul class="org-ul">
+<li>能量守恒和转化、细胞学说和进化论在很大程度上实现了宏观领域自然科学的综合;</li>
+<li>相对论和量子力学理论的创立实现了宏观和微观的理论综合；</li>
+<li>这一时期，综合的思维方式日益受到重视。</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org3252cf2" class="outline-4">
+<h4 id="org3252cf2"><span class="section-number-4">1.1.4</span> 综合方法论时期</h4>
+<div class="outline-text-4" id="text-1-1-4">
+<p>
+从20世纪中期开始
+</p>
+<ul class="org-ul">
+<li>出现许多综合学科，如各种边缘学科、横断学科 (系统论、控制论、信息论)、综合性学科 (环境科学、能源科学、航天科学等)。</li>
+<li>这些学科的迅猛发展极大促进了综合方法论的发展。</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org6b58c1f" class="outline-4">
+<h4 id="org6b58c1f"><span class="section-number-4">1.1.5</span> 社会化创新模式</h4>
+<div class="outline-text-4" id="text-1-1-5">
+<p>
+经验和知识 &#x2013;设计(思考)&#x2013;&gt; 创新 &#x2013;&gt; 新知识
+</p>
+<ul class="org-ul">
+<li>文化知识 &#x2013; 个人创作 &#x2013; 社会活动</li>
+</ul>
+
+<div class="figure">
+<p><img src="./dm/img/The_DIFI_framework_of_artificial_creativity.png" alt="The_DIFI_framework_of_artificial_creativity.png" width="35%" />
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org0a057dd" class="outline-3">
+<h3 id="org0a057dd"><span class="section-number-3">1.2</span> 设计方法学定义</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+设计方法学是研究解决设计问题的进程的一般理论。
+</p>
+<ul class="org-ul">
+<li>包括一般设计策略及用于设计工作各个具体部分的方法措施；</li>
+<li>主要领域包括进程模式、进程规划、进程风格、方法、方法学及行动规划、工作方法、工作原则等。</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orga623972" class="outline-3">
+<h3 id="orga623972"><span class="section-number-3">1.3</span> 现代设计方法</h3>
+<div class="outline-text-3" id="text-1-3">
+<p>
+突变论方法 | 信息论方法 | 系统论方法 | 离散论方法 | 智能论方法 | 控制论方法 | 对应论方法 | 优化论方法 | 寿命论方法 | 模糊论方法 | 艺术论方法
+</p>
+
+<p>
+设计是一种创造性的活动，其目的是为物品、过程、服务以及它们在整个生命周期中构成的系统建立起多方面的品质。
+</p>
+<ul class="org-ul">
+<li>生产力的发展与变革，引起了科学交叉、综合及各种科学方法论的发展与变革。</li>
+<li>设计是实现事物发明创造的过程，设计创新寓于现代科学方法论之中。</li>
+<li>现代设计的主要特点是优化、动态化、多元化及计算机化。</li>
+</ul>
+</div>
+
+<div id="outline-container-org6ce1c32" class="outline-4">
+<h4 id="org6ce1c32"><span class="section-number-4">1.3.1</span> 突变论方法</h4>
+<div class="outline-text-4" id="text-1-3-1">
+<p>
+突变论研究非线性系统从一种稳定组态跃迁到另一种稳定组态的现象和规律。
+</p>
+<ul class="org-ul">
+<li>玻璃瓶放置状态的突变: 稳定态-&gt;非稳定态-&gt;稳定态</li>
+<li>突变论是混沌理论（Chaos Theory）的一部分</li>
+</ul>
+</div>
+
+<div id="outline-container-org721dab4" class="outline-5">
+<h5 id="org721dab4"><span class="section-number-5">1.3.1.1</span> 渐变和突变</h5>
+<div class="outline-text-5" id="text-1-3-1-1">
+<ul class="org-ul">
+<li>前者如植物正常生长,行星绕太阳运行;后者如火山爆发、地震、新星爆发、股票暴跌、爆款产品。</li>
+<li>连续性范畴和间断性范畴的区别（波粒二相性？）</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgc7ba9f1" class="outline-5">
+<h5 id="orgc7ba9f1"><span class="section-number-5">1.3.1.2</span> 突变类型</h5>
+<div class="outline-text-5" id="text-1-3-1-2">
+<ul class="org-ul">
+<li>劣型</li>
+<li>优型</li>
+</ul>
+</div>
+<div id="outline-container-org2d2882c" class="outline-6">
+<h6 id="org2d2882c"><span class="section-number-6">1.3.1.2.1</span> 劣型</h6>
+<div class="outline-text-6" id="text-1-3-1-2-1">
+<p>
+普通意义的突变：系统遭到了破坏并不可逆转地让位于另一个系统
+</p>
+</div>
+</div>
+<div id="outline-container-org55db98f" class="outline-6">
+<h6 id="org55db98f"><span class="section-number-6">1.3.1.2.2</span> 优型</h6>
+<div class="outline-text-6" id="text-1-3-1-2-2">
+<p>
+突变论意义的突变：突变没有使系统消灭,是系统得以“生存的手段”,它帮助系统脱离通常的特征状态。
+</p>
+
+<div class="figure">
+<p><img src="./dm/img/Catastrophic_Change.png" alt="Catastrophic_Change.png" width="70%" />
+</p>
+</div>
+</div>
+
+<div id="outline-container-org49a1243" class="outline-7">
+<h7 id="org49a1243"><span class="section-number-7">1.3.1.2.2.1</span> 例：一夜暴富、一夜暴红</h7>
+<div class="outline-text-7" id="text-1-3-1-2-2-1">
+<p>
+财富来源于更好地突破现状、把握未知，而非更好地完善已知（当然，完善已知也可创造财富）
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb4b33f6" class="outline-7">
+<h7 id="orgb4b33f6"><span class="section-number-7">1.3.1.2.2.2</span> 常规设计-&gt;改良设计-&gt;创新设计</h7>
+<div class="outline-text-7" id="text-1-3-1-2-2-2">
+<p>
+突变是摆脱积重难返的现有产品系统巨大惯性的唯一出路
+</p>
+<ul class="org-ul">
+<li>一刀两段、一刀斩乱麻</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org4fc72f2" class="outline-5">
+<h5 id="org4fc72f2"><span class="section-number-5">1.3.1.3</span> 突变与设计的两点关系</h5>
+<div class="outline-text-5" id="text-1-3-1-3">
+<ul class="org-ul">
+<li>(关键)细节决定成败</li>
+<li>寻求“满意解”而非“最优解”</li>
+</ul>
+</div>
+<div id="outline-container-orgd582c09" class="outline-6">
+<h6 id="orgd582c09"><span class="section-number-6">1.3.1.3.1</span> 细节决定成败</h6>
+<div class="outline-text-6" id="text-1-3-1-3-1">
+<p>
+蝴蝶效应现象，是指事物发展的结果对初始条件和边界条件具有极为敏感的依赖性。初始条件极小的偏差将会引起结果的巨大差异（龙卷风）。
+</p>
+<ul class="org-ul">
+<li>大停电事故，造成了60亿美元的直接损失。经联合调查小组的专家证实，其原因却非常简单，不过是一些长得过分茂密的树丛使俄亥俄州克里夫兰附近的电线短路。</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org0808a54" class="outline-6">
+<h6 id="org0808a54"><span class="section-number-6">1.3.1.3.2</span> 寻求“满意解”而非“最优解”</h6>
+<div class="outline-text-6" id="text-1-3-1-3-2">
+<p>
+当断不断，必为所乱。在做决策的时候，不追求绝对最优的决策，转而追求简洁高效的满意解甚至非劣解（Pareto解）即可。
+</p>
+<ul class="org-ul">
+<li>突变论也指出高度优化的设计（最优解）很可能有许多不理想的性质，因为在结构上、性能上追求最优，常常鲁棒性很差，稳定性不高，对方案中可能的缺陷具有高度敏感性。</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org2b1e3ea" class="outline-5">
+<h5 id="org2b1e3ea"><span class="section-number-5">1.3.1.4</span> 突变与设计方法</h5>
+<div class="outline-text-5" id="text-1-3-1-4">
+<p>
+各种创造性设计法：头脑风暴法、逆向发明法、灵感法等，均能产生罕变机理。
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org5937799" class="outline-4">
+<h4 id="org5937799"><span class="section-number-4">1.3.2</span> 信息论方法</h4>
+<div class="outline-text-4" id="text-1-3-2">
+</div>
+<div id="outline-container-org3b5d696" class="outline-5">
+<h5 id="org3b5d696"><span class="section-number-5">1.3.2.1</span> 信息的定义</h5>
+<div class="outline-text-5" id="text-1-3-2-1">
+<ul class="org-ul">
+<li>信息是确定性的增加-&#x2014;逆Shannon信息定义；</li>
+<li>信息是物质、能量、信息的标示-&#x2014;Wiener信息定义的逆;</li>
+<li>信息是事物及其属性标识的集合。</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org73a2edd" class="outline-5">
+<h5 id="org73a2edd"><span class="section-number-5">1.3.2.2</span> 信息量的确定</h5>
+<div class="outline-text-5" id="text-1-3-2-2">
+<p>
+一个事件给予人们的信息量多少，与这一事件发生的概率(可能性)大小有关。
+</p>
+<ul class="org-ul">
+<li>一个小概率事件的发生，如“唐山发生七级以上大地震”使人们感到意外，它给人们的信息量就很多。</li>
+<li>相反一个大概率事件的出现，如“12月15日北京下雪”给人们的信息量就很少。</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org1e97e39" class="outline-5">
+<h5 id="org1e97e39"><span class="section-number-5">1.3.2.3</span> 信息论</h5>
+<div class="outline-text-5" id="text-1-3-2-3">
+<p>
+信息论是一门用数理统计方法来研究信息的度量、传递和变换规律的科学。它主要研究信息的获取、变换、传输、处理等问题。
+</p>
+<ul class="org-ul">
+<li>扩展为一门研究信息的产生、获取、变换、传输、存储、处理、显示、识别和利用的信息科学。</li>
+<li>常用方法有预测技术法、信号分析法 (相关分析法、方差分析法、状态方程分析法)、信息合成法等。</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgdcec735" class="outline-5">
+<h5 id="orgdcec735"><span class="section-number-5">1.3.2.4</span> 信息系统的主要性能指标</h5>
+<div class="outline-text-5" id="text-1-3-2-4">
+<p>
+有效性和可靠性
+</p>
+<ul class="org-ul">
+<li>有效性就是在系统中传送尽可能多的信息；</li>
+<li>可靠性是要求信宿收到的信息尽可能地与信源发出的信息一致，或者说失真尽可能小。</li>
+<li>但，可靠性和有效性往往相互矛盾，应使系统在规定的失真或基本无失真条件下，传送最大的信息率。</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org1903b5f" class="outline-5">
+<h5 id="org1903b5f"><span class="section-number-5">1.3.2.5</span> 语法、语义、语用信息</h5>
+<div class="outline-text-5" id="text-1-3-2-5">
+<p>
+语义应考虑各符号的意义，同样一种意义，可用不同语言或文字(语法信息)来表示。
+</p>
+<ul class="org-ul">
+<li>一般，语义信息率可小于语法信息率；例: 电报信息率可低于表达同一含义的语声的信息率。</li>
+<li>更进一步，信息接受者往往只需要对其有用的信息；听不懂的语言或有意义，但对接受者也是无用的。所以语用信息一般又小于语义信息。</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orga523cca" class="outline-5">
+<h5 id="orga523cca"><span class="section-number-5">1.3.2.6</span> 信息方法的特点</h5>
+<div class="outline-text-5" id="text-1-3-2-6">
+<p>
+用信息概念作为分析和处理问题的基础
+</p>
+<ul class="org-ul">
+<li>撇开研究对象的具体结构和运动形态,</li>
+<li>把系统的有目的性运动抽象为信息变换过程。</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org044815b" class="outline-5">
+<h5 id="org044815b"><span class="section-number-5">1.3.2.7</span> 信息方法的准则</h5>
+<div class="outline-text-5" id="text-1-3-2-7">
+<ul class="org-ul">
+<li>功能准则</li>
+<li>整体准则</li>
+</ul>
+</div>
+<div id="outline-container-org0c72d32" class="outline-6">
+<h6 id="org0c72d32"><span class="section-number-6">1.3.2.7.1</span> 功能准则</h6>
+<div class="outline-text-6" id="text-1-3-2-7-1">
+<p>
+运用信息方法对复杂事物进行研究时,
+</p>
+<ul class="org-ul">
+<li>不需要对事物的具体结构加以解剖性的分析,</li>
+<li>而是对其信息流程加以综合性的考察,</li>
+<li>着眼于该系统在与环境交互作用过程中的动态功能,从而获得关于事物整体的知识.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org98c9473" class="outline-6">
+<h6 id="org98c9473"><span class="section-number-6">1.3.2.7.2</span> 整体准则</h6>
+<div class="outline-text-6" id="text-1-3-2-7-2">
+<ul class="org-ul">
+<li>信息方法不是割断系统的联系,不是用孤立的、局部的、静止的方法研究事物,</li>
+<li>也不是那种在剖析的基础上进行简单的机械综合,</li>
+<li>而是直接从整体出发,用联系的、全面的、化的观点去综合分析系统运动过程.</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org22cc4c4" class="outline-5">
+<h5 id="org22cc4c4"><span class="section-number-5">1.3.2.8</span> 信息方法的作用</h5>
+<div class="outline-text-5" id="text-1-3-2-8">
+<ul class="org-ul">
+<li>揭露不同物质运动形态之间的信息联系</li>
+<li>信息方法为科学技术、生产过程、社会管理提供有效手段</li>
+<li>信息方法揭示事物运动的深层规律</li>
+<li>提高人们掌握和运用客观规律的能力</li>
+</ul>
+</div>
+<div id="outline-container-org2279589" class="outline-6">
+<h6 id="org2279589"><span class="section-number-6">1.3.2.8.1</span> 揭露不同物质运动形态之间的信息联系</h6>
+<div class="outline-text-6" id="text-1-3-2-8-1">
+<p>
+人脑和机器
+</p>
+<ul class="org-ul">
+<li>人脑是一百多亿种细胞组成的，神经细胞可以处于兴奋和抑制两种状态。</li>
+<li>而电子计算机是由许多电子器件组成的机械，相应地有接通和断开两种状态。</li>
+<li>人脑工作的特征是利用神经脉冲，而机器可以利用电脉冲。</li>
+<li>机器与人脑都具有从外界获得信息、加工处理、传递信息的能力，它们存在着共同的信息联系，可以把它们看做是一个信息变换的系统。</li>
+<li>-&gt; 机器模拟人脑</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgc1a11ce" class="outline-6">
+<h6 id="orgc1a11ce"><span class="section-number-6">1.3.2.8.2</span> 信息方法为科学技术、生产过程、社会管理提供有效手段</h6>
+<div class="outline-text-6" id="text-1-3-2-8-2">
+<p>
+例，铁路运输管理，其中有许多具体变化难以事先预测。
+</p>
+<ul class="org-ul">
+<li>需要根据线路、货栈、机车、车辆、装卸能力、运行时间和流向等情况，把各种信息加以综合处理，</li>
+<li>以获得最合理、最经济的调度方案，并不断加以调整。</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org4e6b940" class="outline-6">
+<h6 id="org4e6b940"><span class="section-number-6">1.3.2.8.3</span> 信息方法揭示事物运动的深层规律</h6>
+<div class="outline-text-6" id="text-1-3-2-8-3">
+<p>
+许多以往让人无法理解的病变和症状，正是由于遗传信息密码及组合发生了变化
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgecafa5a" class="outline-6">
+<h6 id="orgecafa5a"><span class="section-number-6">1.3.2.8.4</span> 提高人们掌握和运用客观规律的能力</h6>
+<div class="outline-text-6" id="text-1-3-2-8-4">
+<p>
+动物之中具有完整的发送和接受信息的生物通讯系统。
+</p>
+<ul class="org-ul">
+<li>它们通过气味、姿态、色彩、超声波、电磁场等多种形式，互相递送信息。</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orga0ddfe2" class="outline-4">
+<h4 id="orga0ddfe2"><span class="section-number-4">1.3.3</span> 系统论方法</h4>
+<div class="outline-text-4" id="text-1-3-3">
+<p>
+以系统整体分析及系统观点来解决各领域具体问题。
+</p>
+<ul class="org-ul">
+<li>系统是由若干要素以一定结构形式联结构成有某种功能的有机整体。</li>
+<li>步骤：系统分析(管理) -&gt; 系统设计 -&gt; 系统实施(决策)</li>
+<li>具体方法：系统分析法、逻辑分析法、模式识别法、系统辨识法等。</li>
+<li>学科分支：管理系统工程、环境系统工程、人才系统工程、产品系统开发工程（内外因素和生命周期）</li>
+<li>系统分析方法有：投入产出法、相关表法、PERT法、因果分析图法、雷达图分析方法、关联图法和矩阵图法</li>
+</ul>
+
+<div class="figure">
+<p><img src="./psd/img/system_elements.jpg" alt="system_elements.jpg" width="60%" />
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc8a483e" class="outline-5">
+<h5 id="orgc8a483e"><span class="section-number-5">1.3.3.1</span> 投入产出法</h5>
+<div class="outline-text-5" id="text-1-3-3-1">
+<p>
+Input-Output Technique 输入输出法
+</p>
+<ul class="org-ul">
+<li>通用电器公司用于探求设想。</li>
+<li>确定期望产出(结果和目标,明确输入输出) -&gt; 决定投入 -&gt; 利用智力激励法寻求投入产出关系。</li>
+<li>同时确定限制条件，如成本不超过某值、坚固耐用等。</li>
+</ul>
+
+<div class="figure">
+<p><img src="./psd/img/input_output_tech.png" alt="input_output_tech.png" width="100%" />
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf78e7d7" class="outline-6">
+<h6 id="orgf78e7d7"><span class="section-number-6">1.3.3.1.1</span> 例: 天黑灯自亮问题</h6>
+<div class="outline-text-6" id="text-1-3-3-1-1">
+<ul class="org-ul">
+<li>输入: 天黑下来, 输出: 灯自亮</li>
+<li>根据入、出和限制条件，考虑相互关系，</li>
+<li>运用创造性思维和逐步推敲明确入和出联系，分析出解决问题方案。</li>
+</ul>
+
+<div class="figure">
+<p><img src="./psd/img/light.png" alt="light.png" width="100%" />
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org98444a2" class="outline-5">
+<h5 id="org98444a2"><span class="section-number-5">1.3.3.2</span> 相关表法</h5>
+<div class="outline-text-5" id="text-1-3-3-2">
+<p>
+探讨设计问题中相关要素间关系为目的
+</p>
+<ul class="org-ul">
+<li>分解设计问题 -&gt; 分析比较 -&gt; 明确主次问题 (关系最重要、希望产生关系和无关系)</li>
+</ul>
+
+<ul class="org-ul">
+<li>例：街道清扫系统要素相关表</li>
+</ul>
+
+<div class="figure">
+<p><img src="./psd/img/relation_cleaning_street.png" alt="relation_cleaning_street.png" width="75%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org76280c5" class="outline-5">
+<h5 id="org76280c5"><span class="section-number-5">1.3.3.3</span> PERT法</h5>
+<div class="outline-text-5" id="text-1-3-3-3">
+<p>
+Program Evaluation and Review Technique 评测复审法
+</p>
+
+<ul class="org-ul">
+<li>有效应用PERT法可缩短工期，提高效率。</li>
+<li>包括PERT/TIME、PERT/MAN-POWER和PERT/COST (时间、人员、费用)</li>
+</ul>
+
+<div class="figure">
+<p><img src="./psd/img/Pert_chart.png" alt="Pert_chart.png" width="55%" />
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5526ddf" class="outline-6">
+<h6 id="org5526ddf"><span class="section-number-6">1.3.3.3.1</span> 利用PERT制订计划方法</h6>
+<div class="outline-text-6" id="text-1-3-3-3-1">
+<ul class="org-ul">
+<li>基本图示符号</li>
+<li>规则</li>
+<li>基本步骤</li>
+</ul>
+</div>
+<div id="outline-container-org5c5204c" class="outline-7">
+<h7 id="org5c5204c"><span class="section-number-7">1.3.3.3.1.1</span> 基本图示符号</h7>
+<div class="outline-text-7" id="text-1-3-3-3-1-1">
+<ul class="org-ul">
+<li>圆圈: 事件结点，不需时间和资源。圈内为作业名称或数字</li>
+<li>箭头线: 作业过程</li>
+<li>虚箭头线: 两结点间无实际作业，仅示先后顺序</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org25b1d9a" class="outline-7">
+<h7 id="org25b1d9a"><span class="section-number-7">1.3.3.3.1.2</span> 规则</h7>
+<div class="outline-text-7" id="text-1-3-3-3-1-2">
+<ul class="org-ul">
+<li>箭头线顺序发展（无回路）</li>
+<li>结点编号逐渐增大，可跳号以补充修改作业，但不可重复编号。</li>
+<li>符合实际工作程序。</li>
+</ul>
+
+<div class="figure">
+<p><img src="./psd/img/Critical_Path_Method.gif" alt="Critical_Path_Method.gif" width="80%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgd292c54" class="outline-7">
+<h7 id="orgd292c54"><span class="section-number-7">1.3.3.3.1.3</span> PERT法基本步骤</h7>
+<div class="outline-text-7" id="text-1-3-3-3-1-3">
+<ul class="org-ul">
+<li>a. 制订整体计划 (时间、人、物与资金)</li>
+<li>b. 分析确定所需全部作业项目</li>
+<li>c. 构造网络</li>
+<li>d. 计算日程</li>
+<li>e. 配置资源</li>
+<li>f. 预算费用</li>
+<li>在估计时间、资源等问题时，可按乐观、悲观、最可能情况估算，取平均值Te=(a+4m+b)/6</li>
+<li>例：乐观3天完成、悲观10天完成、最可能5天完成 -&gt; (3+4*5+10)/6 = 5.5天</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org5990b78" class="outline-6">
+<h6 id="org5990b78"><span class="section-number-6">1.3.3.3.2</span> 大型儿童游乐玩具项目设计计划</h6>
+<div class="outline-text-6" id="text-1-3-3-3-2">
+<p>
+应将时间、人员、费用，及资源配置等因素估计或计算进去，以使系统开发工作过程得到有效控制。
+</p>
+<ul class="org-ul">
+<li>a 调查准备 (a1准备调查记录本卡;a2研究调查场所;a3确定调查人员;a4准备调查用具。)</li>
+<li>b 实地调查 (b1现状调查;b2资料整理。)</li>
+<li>c 收集有关大型游乐玩具资料 (c1杂志、商品选购指南;c2市场上有关玩具。)</li>
+<li>d 有关儿童身体发育资料 (d1图表化处理;d2按年龄等分类处理。)</li>
+<li>e 活动分析 (e1活动种类;e2动作分析;e3把握活动意义。)</li>
+<li>f 分析游乐时使用物品 (f1分析物品;f2物品特征;f3分析游戏与物品关联性。)</li>
+<li>g 综合化 (g1:d、e、f关系明确化;g2图形化。)</li>
+<li>h 展开 (h1意念性草图;h2比较 c、g;h3设计定位;h4草模。)</li>
+<li>i 基本设计 (i1基本形态、结构确定;i2预想图绘制;i3细部审核;i4修正。)</li>
+<li>j 制作模型 (j1绘制模型工程图纸;j2选择模型材料;j3模型制作完成;j4拍摄模型照片;j5对模型审核。)</li>
+<li>k 评价</li>
+<li>l 试销准备 (l1创意和设想;l2调查;l3根据调查结果修改设计预想图;l4修改或重新制作模型;l5信息整理。)</li>
+</ul>
+
+<div class="figure">
+<p><img src="./psd/img/toy_design_plan.png" alt="toy_design_plan.png" width="100%" />
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org238f244" class="outline-5">
+<h5 id="org238f244"><span class="section-number-5">1.3.3.4</span> 因果分析图法</h5>
+<div class="outline-text-5" id="text-1-3-3-4">
+<p>
+Cause and Effect Diagram 鱼骨图
+</p>
+<ul class="org-ul">
+<li>以图示方法揭示关系而认清相关因素间影响。</li>
+<li>着眼问题结果和对问题结果产生影响的原因。</li>
+<li>箭头顶端表示设计问题或其它问题要点，大、中、小骨分别表示大、中、小原因。</li>
+</ul>
+
+<div class="figure">
+<p><img src="./psd/img/Cause_Effect_Diagram.png" alt="Cause_Effect_Diagram.png" width="60%" />
+</p>
+</div>
+</div>
+
+<div id="outline-container-org31c1b66" class="outline-6">
+<h6 id="org31c1b66"><span class="section-number-6">1.3.3.4.1</span> 绘制鱼骨图方法</h6>
+<div class="outline-text-6" id="text-1-3-3-4-1">
+<ul class="org-ul">
+<li>确定问题要点 (要分析项目)，如机械加工为什么出现废品。</li>
+<li>确定大原因，如机床、方法、操作者等。</li>
+<li>继续找出中原因和小原因及更细原因。</li>
+<li>对关键原因作标记以便进一步研究。(鱼骨图可转化成树形图)</li>
+</ul>
+
+<div class="figure">
+<p><img src="./psd/img/Cause_Effect_waste.png" alt="Cause_Effect_waste.png" width="80%" />
+</p>
+</div>
+
+<div class="figure">
+<p><img src="./psd/img/Fishbone_Diagram.png" alt="Fishbone_Diagram.png" width="100%" />
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org9e2f3d5" class="outline-5">
+<h5 id="org9e2f3d5"><span class="section-number-5">1.3.3.5</span> 雷达图分析方法(radar chart)</h5>
+<div class="outline-text-5" id="text-1-3-3-5">
+<p>
+一种多变量对比分析技术,形似导航雷达图或蜘蛛网。
+</p>
+<ul class="org-ul">
+<li>雷达图可对多组变量多种项目对比,反映数据相对中心点和其它数据点变化情况。</li>
+<li>适于对多属性体系结构描述对象作出全局、整体评价(如：判断产业发展趋势、确定产业范围边界)</li>
+</ul>
+
+<div class="figure">
+<p><img src="./psd/img/radar_chart.png" alt="radar_chart.png" width="60%" />
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge7ed3cb" class="outline-6">
+<h6 id="orge7ed3cb"><span class="section-number-6">1.3.3.5.1</span> 图示说明</h6>
+<div class="outline-text-6" id="text-1-3-3-5-1">
+<ul class="org-ul">
+<li>档次渐高,边缘为最高档,由若干同心圆组成。</li>
+<li>同心圆向外引若干条射线,等间距。</li>
+<li>每个圆代表一定分值,由中心向外分值增加。</li>
+<li>每条射线末端标明指标。</li>
+</ul>
+
+<div class="figure">
+<p><img src="./psd/img/radar_chart2.png" alt="radar_chart2.png" width="90%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgba8b538" class="outline-6">
+<h6 id="orgba8b538"><span class="section-number-6">1.3.3.5.2</span> 例：产品功能属性用户评价雷达图</h6>
+<div class="outline-text-6" id="text-1-3-3-5-2">
+<p>
+功能性(实用)、技术性、艺术性(造型)、舒适性(人机)、经济性(性价比)、环保性等评价。
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgb509e3e" class="outline-5">
+<h5 id="orgb509e3e"><span class="section-number-5">1.3.3.6</span> 关联图法(网络)</h5>
+<div class="outline-text-5" id="text-1-3-3-6">
+<p>
+分析原因一结果、目的一手段等各因素间互相影响、制约
+</p>
+<ul class="org-ul">
+<li>据逻辑联系，寻求最有效解决措施。</li>
+<li>箭头由原因指向结果，或由手段指向目的，或由因素指向问题等。</li>
+<li>重点项目可用双框。</li>
+</ul>
+
+<div class="figure">
+<p><img src="./psd/img/relation_diagram.png" alt="relation_diagram.png" width="70%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org9e7e024" class="outline-5">
+<h5 id="org9e7e024"><span class="section-number-5">1.3.3.7</span> 矩阵图法</h5>
+<div class="outline-text-5" id="text-1-3-3-7">
+<ul class="org-ul">
+<li>运用矩阵形式多维分析。将问题分解，找出全部因素并分类，</li>
+<li>把属于因素群R的因素R1、R2、…、及属于因素群L的因素L1、L2、…、排成行和列，</li>
+<li>在行和列交点处表示出设想点，据以探求问题所在及解决问题方法。</li>
+</ul>
+
+<div class="figure">
+<p><img src="./psd/img/matrix_diagram.png" alt="matrix_diagram.png" width="90%" />
+</p>
+</div>
+
+<div class="figure">
+<p><img src="./psd/img/Market-Matrix-Example-1-2012-1024x791.jpg" alt="Market-Matrix-Example-1-2012-1024x791.jpg" width="100%" />
+</p>
+</div>
+
+<div class="figure">
+<p><img src="./psd/img//product_analysis.jpg" alt="product_analysis.jpg" width="100%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org711ca0b" class="outline-5">
+<h5 id="org711ca0b"><span class="section-number-5">1.3.3.8</span> 作业一</h5>
+<div class="outline-text-5" id="text-1-3-3-8">
+<ul class="org-ul">
+<li>选择3~4款产品运用至少一种分析方法（比如雷达图分析方法、矩阵图法等）进行分析比较，明确各自优缺点；</li>
+<li>根据分析结果，结合产品基本功能结构分解（可用功能结构系统图表示），再重组升级为新的设计方案（只需表达清楚概念和产品结构关系，可手绘草图或相关软件表达）</li>
+<li>做成PPT，9月12日(周四)23:00前发送到anhongz@outlook.com</li>
+<li>文件名: DM1-标题-姓名</li>
+<li>文件类型: 演示文稿或PDF文档</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org29b6d1b" class="outline-4">
+<h4 id="org29b6d1b"><span class="section-number-4">1.3.4</span> 离散论方法</h4>
+<div class="outline-text-4" id="text-1-3-4">
+<p>
+与系统论方法相对，将复杂、广义的系统离散为分系统、子系统、单元
+</p>
+<ul class="org-ul">
+<li>以求得总体的近似与最优解。</li>
+<li>常用方法：微分法、隔离体法、有限单元法、边界元法、离散优化法等。</li>
+</ul>
+</div>
+<div id="outline-container-org110e6f0" class="outline-5">
+<h5 id="org110e6f0"><span class="section-number-5">1.3.4.1</span> 有限单元法</h5>
+<div class="outline-text-5" id="text-1-3-4-1">
+
+<div class="figure">
+<p><img src="./dm/img/can.png" alt="can.png" width="60%" />
+</p>
+</div>
+
+
+<div class="figure">
+<p><img src="./dm/img/fea-1.jpg" alt="fea-1.jpg" width="60%" />
+</p>
+</div>
+
+
+<div class="figure">
+<p><img src="./dm/img/finite_element_method.png" alt="finite_element_method.png" width="100%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgbea0251" class="outline-5">
+<h5 id="orgbea0251"><span class="section-number-5">1.3.4.2</span> 边界元法</h5>
+<div class="outline-text-5" id="text-1-3-4-2">
+<p>
+BEM(boundary element method，边界元法)是一种继有限元法之后发展起来的一种新数值方法
+</p>
+<ul class="org-ul">
+<li>与有限元法在连续体域内划分单元的基本思想不同，边界元法是在定义域的边界上划分单元，用满足控制议程的函数去逼近边界条件。</li>
+<li>所以边界元法与有限元相比具有单元的未知数少，数据准备简单等优点。</li>
+<li>但用边界元法解非线性问题时，遇到同非线性项相对应的区域积分，这种积分在奇异点附近有强烈的奇异性，使求解变得困难。</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org6cce4a9" class="outline-5">
+<h5 id="org6cce4a9"><span class="section-number-5">1.3.4.3</span> 离散优化法</h5>
+<div class="outline-text-5" id="text-1-3-4-3">
+<p>
+离散优化问题，又称为整数规划 (线性整数规划)
+</p>
+<ul class="org-ul">
+<li>纯整数规划: 全部决策变量取整数值；</li>
+<li>混合整数规划: 允许一部分决策变量连续，其余决策变量取整数值；</li>
+<li>二进制(0-1)规划: 限制全部决策变量不是0就是1。</li>
+</ul>
+</div>
+<div id="outline-container-org72d5075" class="outline-6">
+<h6 id="org72d5075"><span class="section-number-6">1.3.4.3.1</span> 背包问题 (Knapsack problem)</h6>
+<div class="outline-text-6" id="text-1-3-4-3-1">
+<p>
+给定一组物品，每种物品都有自己的重量和价格
+</p>
+<ul class="org-ul">
+<li>在限定的总重量内，我们如何选择，才能使得物品的总价格最高？</li>
+</ul>
+
+<ul class="org-ul">
+<li>即：在总重量不超过W的前提下，总价值是否能达到V？</li>
+</ul>
+
+
+<div class="figure">
+<p><img src="./dm/img/Knapsack.png" alt="Knapsack.png" width="55%" />
+</p>
+</div>
+
+
+<div class="figure">
+<p><img src="./dm/img/knapsack_problem.png" alt="knapsack_problem.png" width="55%" />
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgd5c26bf" class="outline-4">
+<h4 id="orgd5c26bf"><span class="section-number-4">1.3.5</span> 智能论方法</h4>
+<div class="outline-text-4" id="text-1-3-5">
+<p>
+运用智能理论，采取各种方法、工具去认识、改造、设计各种系统。 
+</p>
+<ul class="org-ul">
+<li>常用方法：计算机求解、设计、控制; 机器人技术、仿生物智能(swarm intelligence, neural networks (machine learning), evolutionary algorithm)、专家系统等。</li>
+<li>应用：计算机辅助设计</li>
+</ul>
+
+
+<div class="figure">
+<p><img src="./dm/img/evolutionary-design-of-swarms.jpg" alt="evolutionary-design-of-swarms.jpg" width="100%" />
+</p>
+</div>
+</div>
+
+<div id="outline-container-org77e1fbc" class="outline-5">
+<h5 id="org77e1fbc"><span class="section-number-5">1.3.5.1</span> 生成设计 Generative Design</h5>
+<div class="outline-text-5" id="text-1-3-5-1">
+
+<div class="figure">
+<p><img src="./dm/img/MX3D-bridge-machine-learning.gif" alt="MX3D-bridge-machine-learning.gif" width="100%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org0b91307" class="outline-5">
+<h5 id="org0b91307"><span class="section-number-5">1.3.5.2</span> 进化设计 Evolutionary Design</h5>
+<div class="outline-text-5" id="text-1-3-5-2">
+
+<div class="figure">
+<p><img src="./dm/img/quadcopter-machine-learning.gif" alt="quadcopter-machine-learning.gif" width="100%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgd9e5f0a" class="outline-5">
+<h5 id="orgd9e5f0a"><span class="section-number-5">1.3.5.3</span> 群体智能 Swarm Intelligence</h5>
+<div class="outline-text-5" id="text-1-3-5-3">
+
+<div class="figure">
+<p><img src="./dm/img/swarmbot.png" alt="swarmbot.png" width="90%" />
+</p>
+</div>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-orgc4e5377" class="outline-4">
+<h4 id="orgc4e5377"><span class="section-number-4">1.3.6</span> 控制论方法</h4>
+<div class="outline-text-4" id="text-1-3-6">
+<p>
+研究动态的信息与控制、反馈过程，以使系统在稳定的前提下正常工作。
+</p>
+<ul class="org-ul">
+<li>将系统、过程和运动看成一个复杂的控制系统 (自动化技术)。</li>
+<li>常用方法：动态分析法、柔性设计法、动态优化法、动态系统辨识法等。</li>
+</ul>
+
+
+<div class="figure">
+<p><img src="./dm/img/control_theory_feedback.gif" alt="control_theory_feedback.gif" width="55%" />
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8b5b549" class="outline-5">
+<h5 id="org8b5b549"><span class="section-number-5">1.3.6.1</span> 控制论基本原理</h5>
+<div class="outline-text-5" id="text-1-3-6-1">
+<p>
+据系统与环境关系，用“输入”(环境对系统的作用)和“输出”(系统对环境的响应)揭示和描述系统行为，达到认识和控制该系统的目的。
+</p>
+<ul class="org-ul">
+<li>负反馈：通过负反馈信息实现自稳控制，当正常运转的系统受到外来干扰而偏离稳定点时，利用控制系统的负反馈信息调节，维持系统按控制所要达到的目的而运行。</li>
+<li>正反馈：当系统需要由旧质态转变到新质态时，就通过正反馈信息进行自组控制，改变系统的结构和行为方式，经过重组形成新的稳定系统，适应环境。</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org4aba07b" class="outline-4">
+<h4 id="org4aba07b"><span class="section-number-4">1.3.7</span> 对应论方法</h4>
+<div class="outline-text-4" id="text-1-3-7">
+<p>
+各类事物间存在某些共性或相似的恰当比拟，具有大量而普遍的对应性。
+</p>
+<ul class="org-ul">
+<li>以相似或对应模拟作为思维和设计方式的科学方法，即为对应论方法。</li>
+<li>常用于已有成熟的参照对象而尚未掌握设计对象性状的各种情况。</li>
+<li>如科学类比法、相似设计法、模拟设计法、建模技术、符号设计法等。</li>
+</ul>
+</div>
+
+<div id="outline-container-org4305020" class="outline-5">
+<h5 id="org4305020"><span class="section-number-5">1.3.7.1</span> 类比</h5>
+<div class="outline-text-5" id="text-1-3-7-1">
+
+<div class="figure">
+<p><img src="./dm/img/analogies_wfun.png" alt="analogies_wfun.png" width="30%" />
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org28ce4c8" class="outline-4">
+<h4 id="org28ce4c8"><span class="section-number-4">1.3.8</span> 优化论方法</h4>
+<div class="outline-text-4" id="text-1-3-8">
+<p>
+用数学方法在给定的多因素、多方案等条件下得到尽可能满意的结果。
+</p>
+<ul class="org-ul">
+<li>包括线性和非线性规划、动态规划、多目标优化等优化设计法、控制法、试验法。</li>
+</ul>
+
+<div class="figure">
+<p><img src="./dm/img/topology_optimization.jpg" alt="topology_optimization.jpg" width="55%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org5d44826" class="outline-4">
+<h4 id="org5d44826"><span class="section-number-4">1.3.9</span> 寿命论方法</h4>
+<div class="outline-text-4" id="text-1-3-9">
+<p>
+功能与其使用时间，成本之间存在密切关系。
+</p>
+<ul class="org-ul">
+<li>以产品使用寿命为依据，保证寿命周期内的经济指标与使用价值，同时谋求可靠性与经济效益。</li>
+<li>可靠性分析法，可靠性设计法，功能价值工程与价值创新等。</li>
+</ul>
+
+<div class="figure">
+<p><img src="./dm/img/reliability.jpg" alt="reliability.jpg" width="50%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgccc68ad" class="outline-4">
+<h4 id="orgccc68ad"><span class="section-number-4">1.3.10</span> 模糊论方法</h4>
+<div class="outline-text-4" id="text-1-3-10">
+<p>
+将模糊问题进行量化解题。
+</p>
+<ul class="org-ul">
+<li>主要用于模糊性参数的确定、方案的整体质量评价等。</li>
+<li>常用方法：模糊分析法、模糊评价法、模糊控制法、模糊设计法等。</li>
+</ul>
+
+<div class="figure">
+<p><img src="./dm/img/Fuzzy_control.png" alt="Fuzzy_control.png" width="60%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org0621a49" class="outline-4">
+<h4 id="org0621a49"><span class="section-number-4">1.3.11</span> 艺术论方法</h4>
+<div class="outline-text-4" id="text-1-3-11">
+<p>
+以艺术美感作为出发点，使技术与艺术、科学与美学、创造与工艺紧密联系。
+</p>
+<ul class="org-ul">
+<li>主要用于系统、子系统、单体的形态设计、结构设计和表面处理等。</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org2cffb6f" class="outline-2">
+<h2 id="org2cffb6f"><span class="section-number-2">2</span> TRIZ创新方法</h2>
+<div class="outline-text-2" id="text-2">
+
+<div class="figure">
+<p><object type="image/svg+xml" data="./dm/img/TRIZ.svg" class="org-svg" width="20%">
+Sorry, your browser does not support SVG.</object>
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga4ef4c1" class="outline-3">
+<h3 id="orga4ef4c1"><span class="section-number-3">2.1</span> 拆分</h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+需要整理复杂的情况,或者希望打破顾此失彼的矛盾状态时,最有效的做法是将问题分开考虑。
+</p>
+<ul class="org-ul">
+<li>易拆-&gt;不易拆：分割-&gt;分离-&gt;局部质量-&gt;不对称</li>
+</ul>
+</div>
+<div id="outline-container-orgf313229" class="outline-4">
+<h4 id="orgf313229"><span class="section-number-4">2.1.1</span> 分割Segmentation</h4>
+<div class="outline-text-4" id="text-2-1-1">
+<p>
+分割对象：空间、时间、错综复杂的问题。
+</p>
+<ul class="org-ul">
+<li>遇到棘手问题时，可以首先尝试对情况或者对之前的方法进行分割。</li>
+<li>空间分割 / 时间分割</li>
+</ul>
+</div>
+<div id="outline-container-org62c0711" class="outline-5">
+<h5 id="org62c0711"><span class="section-number-5">2.1.1.1</span> 空间分割</h5>
+<div class="outline-text-5" id="text-2-1-1-1">
+<ul class="org-ul">
+<li>将物体分成相互独立部分</li>
+<li>使物体分成易组装和拆卸部分</li>
+<li>增加物体分割程度</li>
+</ul>
+</div>
+<div id="outline-container-orgc4d23d6" class="outline-6">
+<h6 id="orgc4d23d6"><span class="section-number-6">2.1.1.1.1</span> 将物体分成相互独立的部分</h6>
+<div class="outline-text-6" id="text-2-1-1-1-1">
+</div>
+<div id="outline-container-orgad61daa" class="outline-7">
+<h7 id="orgad61daa"><span class="section-number-7">2.1.1.1.1.1</span> 运载火箭</h7>
+<div class="outline-text-7" id="text-2-1-1-1-1-1">
+<p>
+多级和多个助推器串并联
+</p>
+<ul class="org-ul">
+<li>每级工作结束后可抛掉，获得加速性能，逐步达到预定速度；</li>
+<li>各级发动机独立工作，可按每级飞行条件设计发动机，处于最佳工作状态；</li>
+<li>灵活选择每级推力大小和工作时间，以适应轨道要求及载人飞船对飞行过载的要求。</li>
+</ul>
+
+<div class="figure">
+<p><img src="./dm/img/rockets.jpg" alt="rockets.jpg" width="85%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org262cc8e" class="outline-7">
+<h7 id="org262cc8e"><span class="section-number-7">2.1.1.1.1.2</span> 列车</h7>
+<div class="outline-text-7" id="text-2-1-1-1-1-2">
+<p>
+分割为多个车厢，可根据不同时间段的需要配置车厢数量。
+</p>
+
+<div class="figure">
+<p><img src="./dm/img/train_Permanent_magnet_straddle.jpg" alt="train_Permanent_magnet_straddle.jpg" width="100%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgb50b2f5" class="outline-7">
+<h7 id="orgb50b2f5"><span class="section-number-7">2.1.1.1.1.3</span> 用卡车加拖车代替大卡车</h7>
+<div class="outline-text-7" id="text-2-1-1-1-1-3">
+
+<div class="figure">
+<p><img src="./dm/img/truck.jpeg" alt="truck.jpeg" width="60%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgeb63160" class="outline-7">
+<h7 id="orgeb63160"><span class="section-number-7">2.1.1.1.1.4</span> 房间分隔</h7>
+<div class="outline-text-7" id="text-2-1-1-1-1-4">
+<ul class="org-ul">
+<li>用墙壁分成客厅、卧室、浴室等，使卫生间或卧室等与生活空间分开，便于居住。</li>
+<li>宽敞的房间用隔扇分隔，可根据不同用途灵活使用。</li>
+</ul>
+
+<div class="figure">
+<p><img src="./dm/img/room_divider.jpeg" alt="room_divider.jpeg" width="70%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org4d733d4" class="outline-7">
+<h7 id="org4d733d4"><span class="section-number-7">2.1.1.1.1.5</span> 冰箱</h7>
+<div class="outline-text-7" id="text-2-1-1-1-1-5">
+<p>
+分为冷冻室和冷藏室，并分多层
+</p>
+
+<div class="figure">
+<p><img src="./dm/img/samsung_refrigerator.png" alt="samsung_refrigerator.png" width="50%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orge6ad0e7" class="outline-7">
+<h7 id="orge6ad0e7"><span class="section-number-7">2.1.1.1.1.6</span> 便当盒</h7>
+<div class="outline-text-7" id="text-2-1-1-1-1-6">
+<p>
+小格子使食物不串味，且提高强度。
+</p>
+
+<div class="figure">
+<p><img src="./dm/img/lunch-box4kids.jpg" alt="lunch-box4kids.jpg" width="100%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org9b23e60" class="outline-7">
+<h7 id="org9b23e60"><span class="section-number-7">2.1.1.1.1.7</span> 凹槽</h7>
+<div class="outline-text-7" id="text-2-1-1-1-1-7">
+<p>
+为了便于分割压出凹槽，可以让操作变得更容易。
+</p>
+<ul class="org-ul">
+<li>板状巧克力上压有凹槽，很容易掰开。</li>
+</ul>
+
+<div class="figure">
+<p><img src="./dm/img/chocolate.jpeg" alt="chocolate.jpeg" width="50%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgc0c2a93" class="outline-7">
+<h7 id="orgc0c2a93"><span class="section-number-7">2.1.1.1.1.8</span> 桌子内部分割</h7>
+<div class="outline-text-7" id="text-2-1-1-1-1-8">
+
+<div class="figure">
+<p><img src="./dm/img/drawer_divider.jpg" alt="drawer_divider.jpg" width="60%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org0325c94" class="outline-7">
+<h7 id="org0325c94"><span class="section-number-7">2.1.1.1.1.9</span> 工具箱分割</h7>
+<div class="outline-text-7" id="text-2-1-1-1-1-9">
+
+<div class="figure">
+<p><img src="./dm/img/toolbox.jpg" alt="toolbox.jpg" width="55%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org9d596dd" class="outline-7">
+<h7 id="org9d596dd"><span class="section-number-7">2.1.1.1.1.10</span> 垃圾箱分割为可回收和不可回收</h7>
+<div class="outline-text-7" id="text-2-1-1-1-1-10">
+
+<div class="figure">
+<p><img src="./dm/img/rubbish_bin.jpeg" alt="rubbish_bin.jpeg" width="100%" />
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgb8daff9" class="outline-6">
+<h6 id="orgb8daff9"><span class="section-number-6">2.1.1.1.2</span> 将物体分成容易组装和拆卸的部分</h6>
+<div class="outline-text-6" id="text-2-1-1-1-2">
+<p>
+通过在考虑组合的基础上分割成多个部分，可以提高适应性和灵活度。
+</p>
+<ul class="org-ul">
+<li>方便搬运, 并视空间与个人喜好，重新结合成不同形状</li>
+</ul>
+</div>
+<div id="outline-container-org9f1c4bd" class="outline-7">
+<h7 id="org9f1c4bd"><span class="section-number-7">2.1.1.1.2.1</span> 移动房屋</h7>
+<div class="outline-text-7" id="text-2-1-1-1-2-1">
+
+<div class="figure">
+<p><img src="./dm/img/movable_house.jpg" alt="movable_house.jpg" width="100%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org616c7b7" class="outline-7">
+<h7 id="org616c7b7"><span class="section-number-7">2.1.1.1.2.2</span> 活动帐篷</h7>
+<div class="outline-text-7" id="text-2-1-1-1-2-2">
+
+<div class="figure">
+<p><img src="./dm/img/portable-dome-tent.jpeg" alt="portable-dome-tent.jpeg" width="100%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orge999164" class="outline-7">
+<h7 id="orge999164"><span class="section-number-7">2.1.1.1.2.3</span> 组合式家具</h7>
+<div class="outline-text-7" id="text-2-1-1-1-2-3">
+
+<div class="figure">
+<p><img src="./dm/img/furniture-tables-modular.jpg" alt="furniture-tables-modular.jpg" width="70%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgb008822" class="outline-7">
+<h7 id="orgb008822"><span class="section-number-7">2.1.1.1.2.4</span> 可拆装交通灯</h7>
+<div class="outline-text-7" id="text-2-1-1-1-2-4">
+
+<div class="figure">
+<p><img src="./dm/img/traffic_lights_fordable.png" alt="traffic_lights_fordable.png" width="50%" />
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org227148b" class="outline-6">
+<h6 id="org227148b"><span class="section-number-6">2.1.1.1.3</span> 增加物体的分割程度</h6>
+<div class="outline-text-6" id="text-2-1-1-1-3">
+<p>
+分割成更细或更小的单位
+</p>
+</div>
+<div id="outline-container-orged36d22" class="outline-7">
+<h7 id="orged36d22"><span class="section-number-7">2.1.1.1.3.1</span> 百叶窗代替整体窗帘</h7>
+<div class="outline-text-7" id="text-2-1-1-1-3-1">
+
+<div class="figure">
+<p><img src="./dm/img/ucsf-parking-garage-louver.jpg" alt="ucsf-parking-garage-louver.jpg" width="80%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgfb3dbba" class="outline-7">
+<h7 id="orgfb3dbba"><span class="section-number-7">2.1.1.1.3.2</span> 输送高温玻璃用熔锡代替滚轴</h7>
+<div class="outline-text-7" id="text-2-1-1-1-3-2">
+<p>
+浮法玻璃：熔融玻璃从池窑中连续流入并漂浮在相对密度大的锡液表面上，在重力和表面张力的作用下，玻璃液在锡液面上铺开、摊平、形成上下表面平整、硬化、冷却后被引上过渡辊台。辊台的辊子转动，把玻璃带拉出锡槽进入退火窑，经退火、切裁，就得到浮法玻璃。
+</p>
+
+<div class="figure">
+<p><img src="./dm/img/glass_tin.png" alt="glass_tin.png" width="60%" />
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org3027e41" class="outline-5">
+<h5 id="org3027e41"><span class="section-number-5">2.1.1.2</span> 时间分割</h5>
+<div class="outline-text-5" id="text-2-1-1-2">
+<p>
+利用有限资源。通过时间的分割，可以让很多人共用一个资源。
+</p>
+<ul class="org-ul">
+<li>预约使用会议室或文化馆</li>
+<li>计算机的CPU处理等</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org13c826a" class="outline-5">
+<h5 id="org13c826a"><span class="section-number-5">2.1.1.3</span> 联想词语</h5>
+<div class="outline-text-5" id="text-2-1-1-3">
+<p>
+分、分类、分场合、细分、分要素、分隔、时间分割
+</p>
+<ul class="org-ul">
+<li>制定日程、零部件、水平分工、磨成粉末、纳米</li>
+<li>分格便当盒、板状巧克力、咖喱调料块、咖喱粉、电车车厢配置</li>
+<li>使用会议室的时间段、CPU处理</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgffc3edd" class="outline-4">
+<h4 id="orgffc3edd"><span class="section-number-4">2.1.2</span> 分离(拆出/抽取)Extract/Taking off</h4>
+<div class="outline-text-4" id="text-2-1-2">
+<p>
+花费能量或时间，把事物分成两个以上（将物体中有用或有害部分提取出来）。
+</p>
+<ul class="org-ul">
+<li>分割原理用于较易拆分事物，而分离原理强调消耗能量去分离、消除或提取。</li>
+<li>遇到问题时，可考虑空间分离、时间分离、条件抽取。</li>
+</ul>
+</div>
+
+<div id="outline-container-org1969daf" class="outline-5">
+<h5 id="org1969daf"><span class="section-number-5">2.1.2.1</span> 抽出负面影响的部分或不需要的属性</h5>
+<div class="outline-text-5" id="text-2-1-2-1">
+</div>
+<div id="outline-container-orgfd61de0" class="outline-6">
+<h6 id="orgfd61de0"><span class="section-number-6">2.1.2.1.1</span> 避雷针将雷电引入地下，减少其危害</h6>
+<div class="outline-text-6" id="text-2-1-2-1-1">
+
+<div class="figure">
+<p><img src="./dm/img/lighting_rod.jpg" alt="lighting_rod.jpg" width="30%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgdcd1d95" class="outline-6">
+<h6 id="orgdcd1d95"><span class="section-number-6">2.1.2.1.2</span> 将有噪音的空调压缩机放在室外</h6>
+<div class="outline-text-6" id="text-2-1-2-1-2">
+
+<div class="figure">
+<p><img src="./dm/img/Air_Conditioning.jpeg" alt="Air_Conditioning.jpeg" width="70%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org7d97418" class="outline-6">
+<h6 id="org7d97418"><span class="section-number-6">2.1.2.1.3</span> 食品真空包装</h6>
+<div class="outline-text-6" id="text-2-1-2-1-3">
+
+<div class="figure">
+<p><img src="./dm/img/Food_vacuum_packaging.jpg" alt="Food_vacuum_packaging.jpg" width="70%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org9ff188d" class="outline-6">
+<h6 id="org9ff188d"><span class="section-number-6">2.1.2.1.4</span> 泡茶器把茶叶隔离</h6>
+<div class="outline-text-6" id="text-2-1-2-1-4">
+
+<div class="figure">
+<p><img src="./dm/img/tea_making_device.jpg" alt="tea_making_device.jpg" width="30%" />
+</p>
+</div>
+
+
+<div class="figure">
+<p><img src="./dm/img/tea_making_device2.jpg" alt="tea_making_device2.jpg" width="50%" />
+</p>
+</div>
+
+
+<div class="figure">
+<p><img src="./dm/img/tea_making_device3.jpeg" alt="tea_making_device3.jpeg" width="40%" />
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgc4190ae" class="outline-5">
+<h5 id="orgc4190ae"><span class="section-number-5">2.1.2.2</span> 从物体中抽出必要的部分或属性</h5>
+<div class="outline-text-5" id="text-2-1-2-2">
+</div>
+<div id="outline-container-orgb8e7fe8" class="outline-6">
+<h6 id="orgb8e7fe8"><span class="section-number-6">2.1.2.2.1</span> 把彩喷打印机中的墨盒分离出来以便更换</h6>
+<div class="outline-text-6" id="text-2-1-2-2-1">
+
+<div class="figure">
+<p><img src="./dm/img/Ink_cartridge.jpg" alt="Ink_cartridge.jpg" width="65%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org76bf835" class="outline-6">
+<h6 id="org76bf835"><span class="section-number-6">2.1.2.2.2</span> 用光纤分离主光源，增加照明点</h6>
+<div class="outline-text-6" id="text-2-1-2-2-2">
+
+<div class="figure">
+<p><img src="./dm/img/fiber_optic_light.jpg" alt="fiber_optic_light.jpg" width="65%" />
+</p>
+</div>
+
+
+<div class="figure">
+<p><img src="./dm/img/fiber_optic_light2.jpg" alt="fiber_optic_light2.jpg" width="65%" />
+</p>
+</div>
+
+
+<div class="figure">
+<p><img src="./dm/img/fiber_optic_light3.jpg" alt="fiber_optic_light3.jpg" width="65%" />
+</p>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-orgc90a46a" class="outline-6">
+<h6 id="orgc90a46a"><span class="section-number-6">2.1.2.2.3</span> 隐形眼镜即是眼镜架与镜片离散后的新产品</h6>
+<div class="outline-text-6" id="text-2-1-2-2-3">
+
+<div class="figure">
+<p><img src="./dm/img/Contact-Lenses-Vs-Glasses.jpg" alt="Contact-Lenses-Vs-Glasses.jpg" width="65%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgd350dd6" class="outline-6">
+<h6 id="orgd350dd6"><span class="section-number-6">2.1.2.2.4</span> 音箱是扬声器与收录机整体的离散</h6>
+<div class="outline-text-6" id="text-2-1-2-2-4">
+
+<div class="figure">
+<p><img src="./dm/img/light-show-speakers.jpg" alt="light-show-speakers.jpg" width="60%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgc5389ca" class="outline-6">
+<h6 id="orgc5389ca"><span class="section-number-6">2.1.2.2.5</span> 活字印刷即是原来整体刻板的分离</h6>
+<div class="outline-text-6" id="text-2-1-2-2-5">
+
+<div class="figure">
+<p><img src="./dm/img/Movable_type_printing.jpg" alt="Movable_type_printing.jpg" width="70%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgacb43d1" class="outline-6">
+<h6 id="orgacb43d1"><span class="section-number-6">2.1.2.2.6</span> 搜索引擎</h6>
+<div class="outline-text-6" id="text-2-1-2-2-6">
+
+<div class="figure">
+<p><img src="./dm/img/search_engine.jpg" alt="search_engine.jpg" width="70%" />
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org5ee7388" class="outline-5">
+<h5 id="org5ee7388"><span class="section-number-5">2.1.2.3</span> 联想词语</h5>
+<div class="outline-text-5" id="text-2-1-2-3">
+<p>
+限定、提取、隔离、集锦、去除、选拔、替换、压缩、煎煮、过滤、沉淀、以外
+</p>
+<ul class="org-ul">
+<li>提取对象物、撇去浮沫、茶、三角形垃圾桶、人车分离式信号灯</li>
+<li>去除有害物质、清理垃圾、数据化、缩印版</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org9194ce5" class="outline-4">
+<h4 id="org9194ce5"><span class="section-number-4">2.1.3</span> 局部质量Local quality</h4>
+<div class="outline-text-4" id="text-2-1-3">
+<p>
+想拆分却无法拆时，通过改变局部性质，可以实现有所区别的操作。
+</p>
+<ul class="org-ul">
+<li>无法分开或不宜分开的情况下，有时可以有所偏重，分成浓度高的部分和浓度低的部分。</li>
+<li>在物体的特定区域改变其特征，从而获得必要特性。</li>
+</ul>
+</div>
+
+<div id="outline-container-orgbe5009f" class="outline-5">
+<h5 id="orgbe5009f"><span class="section-number-5">2.1.3.1</span> 变同质(一致)结构为异质(不一致)结构</h5>
+<div class="outline-text-5" id="text-2-1-3-1">
+<p>
+若整体成本太大，可改变局部或有所偏重来解决问题
+</p>
+<ul class="org-ul">
+<li>采用温度、密度或压力梯度。不必冷却所有地方，只冷却需要冷却的部分，节约能量。</li>
+<li>该原理与“#35参数变化原理” 组合使用，有时可能会解决问题。</li>
+</ul>
+</div>
+
+<div id="outline-container-org73230c8" class="outline-6">
+<h6 id="org73230c8"><span class="section-number-6">2.1.3.1.1</span> 刀面和刀刃</h6>
+<div class="outline-text-6" id="text-2-1-3-1-1">
+<ul class="org-ul">
+<li>刀刃用硬度高、耐磨好钢，其余部分用一般钢</li>
+</ul>
+
+<div class="figure">
+<p><img src="./dm/img/blade.jpg" alt="blade.jpg" width="55%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgadbb45a" class="outline-6">
+<h6 id="orgadbb45a"><span class="section-number-6">2.1.3.1.2</span> 书页和封皮</h6>
+<div class="outline-text-6" id="text-2-1-3-1-2">
+<ul class="org-ul">
+<li>封面用较厚和耐用纸，内部用一般纸</li>
+</ul>
+
+<div class="figure">
+<p><img src="./dm/img/yage-book.jpg" alt="yage-book.jpg" width="80%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org50c75ab" class="outline-6">
+<h6 id="org50c75ab"><span class="section-number-6">2.1.3.1.3</span> 高尔夫球杆</h6>
+<div class="outline-text-6" id="text-2-1-3-1-3">
+<p>
+高尔夫球杆的重量主要集中在球杆头部分(有所偏重的局部质量-网球拍)。
+</p>
+
+
+<div class="figure">
+<p><img src="./dm/img/golf-club-hosel.jpg" alt="golf-club-hosel.jpg" width="45%" />
+</p>
+</div>
+
+
+<div class="figure">
+<p><img src="./dm/img/Golf_clubs.png" alt="Golf_clubs.png" width="60%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org9c1fbd4" class="outline-6">
+<h6 id="org9c1fbd4"><span class="section-number-6">2.1.3.1.4</span> 杯子切口</h6>
+<div class="outline-text-6" id="text-2-1-3-1-4">
+<p>
+增加杯子切口，防止倒水泄漏
+</p>
+
+<div class="figure">
+<p><img src="./dm/img/cup2.jpeg" alt="cup2.jpeg" width="50%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org08accaa" class="outline-6">
+<h6 id="org08accaa"><span class="section-number-6">2.1.3.1.5</span> 提高物体某一部分"浓度"不局限于物品。</h6>
+<div class="outline-text-6" id="text-2-1-3-1-5">
+<ul class="org-ul">
+<li>零售商店的限时促销是只在一定时限内进行的强化宣传。</li>
+<li>只对一部分收费会员赠送礼品的服务。</li>
+</ul>
+
+<div class="figure">
+<p><img src="./dm/img/limited-time-offer-discount.jpg" alt="limited-time-offer-discount.jpg" width="35%" />
+</p>
+</div>
+
+
+<div class="figure">
+<p><img src="./dm/img/vip_gift.jpg" alt="vip_gift.jpg" width="40%" />
+</p>
+</div>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-orgfdb52c2" class="outline-5">
+<h5 id="orgfdb52c2"><span class="section-number-5">2.1.3.2</span> 使组成物体不同部分实现不同功能</h5>
+<div class="outline-text-5" id="text-2-1-3-2">
+</div>
+<div id="outline-container-org8790d01" class="outline-6">
+<h6 id="org8790d01"><span class="section-number-6">2.1.3.2.1</span> 多功能锤</h6>
+<div class="outline-text-6" id="text-2-1-3-2-1">
+<p>
+锤子一边做成平的一边做成扁的，增加锤子的切削功能
+</p>
+
+<div class="figure">
+<p><img src="./dm/img/Use-a-Hammer-Safely.jpg" alt="Use-a-Hammer-Safely.jpg" width="60%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgde7264c" class="outline-6">
+<h6 id="orgde7264c"><span class="section-number-6">2.1.3.2.2</span> 多功能削皮器</h6>
+<div class="outline-text-6" id="text-2-1-3-2-2">
+
+<div class="figure">
+<p><img src="./dm/img/Multi-Function-Peeler.jpg" alt="Multi-Function-Peeler.jpg" width="30%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgf9a6c3e" class="outline-6">
+<h6 id="orgf9a6c3e"><span class="section-number-6">2.1.3.2.3</span> 瑞士军刀</h6>
+<div class="outline-text-6" id="text-2-1-3-2-3">
+
+<div class="figure">
+<p><img src="./dm/img/swiss_knife.jpg" alt="swiss_knife.jpg" width="50%" />
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgbe956d4" class="outline-5">
+<h5 id="orgbe956d4"><span class="section-number-5">2.1.3.3</span> 物体每一部分均处于最有利于其工作的条件</h5>
+<div class="outline-text-5" id="text-2-1-3-3">
+<p>
+使组成物体每一部分最大限度发挥作用。
+</p>
+</div>
+<div id="outline-container-org208dad2" class="outline-6">
+<h6 id="org208dad2"><span class="section-number-6">2.1.3.3.1</span> 带橡皮铅笔</h6>
+<div class="outline-text-6" id="text-2-1-3-3-1">
+
+<div class="figure">
+<p><img src="./dm/img/pencil_PMRCG.jpg" alt="pencil_PMRCG.jpg" width="50%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org54e2c2b" class="outline-6">
+<h6 id="org54e2c2b"><span class="section-number-6">2.1.3.3.2</span> 带起钉器榔头（起钉锤）</h6>
+<div class="outline-text-6" id="text-2-1-3-3-2">
+
+<div class="figure">
+<p><img src="./dm/img/hammer3.jpg" alt="hammer3.jpg" width="50%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orge8972da" class="outline-6">
+<h6 id="orge8972da"><span class="section-number-6">2.1.3.3.3</span> 午餐盒被分成放热食、冷食及液体空间</h6>
+<div class="outline-text-6" id="text-2-1-3-3-3">
+<ul class="org-ul">
+<li>餐盒格子，防止串味</li>
+</ul>
+
+<div class="figure">
+<p><img src="./dm/img/Lunch-Box-Stainless-Soup.jpg" alt="Lunch-Box-Stainless-Soup.jpg" width="65%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgdab4c44" class="outline-6">
+<h6 id="orgdab4c44"><span class="section-number-6">2.1.3.3.4</span> 汤勺每一部分都有相应的工作条件</h6>
+<div class="outline-text-6" id="text-2-1-3-3-4">
+
+<div class="figure">
+<p><img src="./dm/img/soup_spoon.jpg" alt="soup_spoon.jpg" width="50%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org9796d32" class="outline-6">
+<h6 id="org9796d32"><span class="section-number-6">2.1.3.3.5</span> 多角橡皮</h6>
+<div class="outline-text-6" id="text-2-1-3-3-5">
+<p>
+把局部性质扩大到整体。
+在橡皮上制造出多个“角”的部分，更容易擦掉细小的地方。
+</p>
+
+<div class="figure">
+<p><img src="./dm/img/Multi-rubber.jpeg" alt="Multi-rubber.jpeg" width="60%" />
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org1c6e155" class="outline-5">
+<h5 id="org1c6e155"><span class="section-number-5">2.1.3.4</span> 联想词语</h5>
+<div class="outline-text-5" id="text-2-1-3-4">
+<p>
+张弛、偏重、极端、浓缩、部分的、有特征的、仅一部分、变形、强化、
+</p>
+<ul class="org-ul">
+<li>暂时的、限定的、附加费、限时促销</li>
+<li>高尔夫球杆、多角橡皮、纸币（水印、凹凸、局部光泽、嵌入文字）</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org8b42f19" class="outline-4">
+<h4 id="org8b42f19"><span class="section-number-4">2.1.4</span> 不对称Asymmetry</h4>
+<div class="outline-text-4" id="text-2-1-4">
+<p>
+在设计物品时，一般画成大小对称形。但此举行不通时，可通过不对称因素来解决问题。
+</p>
+<ul class="org-ul">
+<li>物体对称形式转为不对称形式。</li>
+<li>若物体不对称，则加强不对称程度。例：防撞汽车轮胎有高强度侧缘，以抵抗人行道路缘石碰撞。</li>
+</ul>
+</div>
+
+<div id="outline-container-org3100ef4" class="outline-5">
+<h5 id="org3100ef4"><span class="section-number-5">2.1.4.1</span> 防止错误连接</h5>
+<div class="outline-text-5" id="text-2-1-4-1">
+</div>
+<div id="outline-container-org39323ed" class="outline-6">
+<h6 id="org39323ed"><span class="section-number-6">2.1.4.1.1</span> HDMI端口或微型USB连接器</h6>
+<div class="outline-text-6" id="text-2-1-4-1-1">
+<p>
+为防止插反，把连接器做成梯形或设置突起。如果设置提示，则更能顺利无误地连接。
+</p>
+<ul class="org-ul">
+<li>没有做成长方形或圆形等对称形，而是略微不对称。确保连接器以正确方向插入。</li>
+<li>USB怎么都插不进去而烦躁的经历，因为这种连接器的外观乍看上去呈对称的长方形。</li>
+</ul>
+
+<div class="figure">
+<p><img src="./dm/img/HDMI.jpg" alt="HDMI.jpg" width="20%" />
+</p>
+</div>
+
+
+<div class="figure">
+<p><img src="./dm/img/micro_usb.jpg" alt="micro_usb.jpg" width="30%" />
+</p>
+</div>
+
+
+<div class="figure">
+<p><img src="./dm/img/usb-wifi-adapter.jpg" alt="usb-wifi-adapter.jpg" width="30%" />
+</p>
+</div>
+
+
+<div class="figure">
+<p><img src="./dm/img/USB_type_C.jpeg" alt="USB_type_C.jpeg" width="40%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgc136a1a" class="outline-6">
+<h6 id="orgc136a1a"><span class="section-number-6">2.1.4.1.2</span> 存储卡(SD卡)</h6>
+<div class="outline-text-6" id="text-2-1-4-1-2">
+<p>
+四个角中的一角缺失，可以便于人们弄清插入的方向，防止插反。
+</p>
+
+<div class="figure">
+<p><img src="./dm/img/512GB_sandisk.jpg" alt="512GB_sandisk.jpg" width="25%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgcf18b4b" class="outline-6">
+<h6 id="orgcf18b4b"><span class="section-number-6">2.1.4.1.3</span> 电源插头</h6>
+<div class="outline-text-6" id="text-2-1-4-1-3">
+<p>
+做成不对称形式，防止插错 
+</p>
+
+<div class="figure">
+<p><img src="./dm/img/Power_plug.jpg" alt="Power_plug.jpg" width="40%" />
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org9928d17" class="outline-5">
+<h5 id="org9928d17"><span class="section-number-5">2.1.4.2</span> 方便操作</h5>
+<div class="outline-text-5" id="text-2-1-4-2">
+</div>
+<div id="outline-container-org2ef40fa" class="outline-6">
+<h6 id="org2ef40fa"><span class="section-number-6">2.1.4.2.1</span> 杯子带有把手</h6>
+<div class="outline-text-6" id="text-2-1-4-2-1">
+
+<div class="figure">
+<p><img src="./dm/img/cup.jpeg" alt="cup.jpeg" width="50%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org36fe969" class="outline-6">
+<h6 id="org36fe969"><span class="section-number-6">2.1.4.2.2</span> 球棒</h6>
+<div class="outline-text-6" id="text-2-1-4-2-2">
+<p>
+握在手里的部分和击球部分的粗细不同，呈不对称形状。
+</p>
+
+<div class="figure">
+<p><img src="./dm/img/baseball.jpg" alt="baseball.jpg" width="70%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org14ee741" class="outline-6">
+<h6 id="org14ee741"><span class="section-number-6">2.1.4.2.3</span> 摄像机</h6>
+<div class="outline-text-6" id="text-2-1-4-2-3">
+<p>
+为了便于单手持握，只在一侧安有皮带。
+</p>
+
+<div class="figure">
+<p><img src="./dm/img/Sony-Handycam.jpg" alt="Sony-Handycam.jpg" width="80%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgf25169b" class="outline-6">
+<h6 id="orgf25169b"><span class="section-number-6">2.1.4.2.4</span> 汽车加速踏板和刹车踏板形状不同</h6>
+<div class="outline-text-6" id="text-2-1-4-2-4">
+
+<div class="figure">
+<p><img src="./dm/img/brake_accelerator_pedals.jpeg" alt="brake_accelerator_pedals.jpeg" width="50%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgaa1b5bc" class="outline-6">
+<h6 id="orgaa1b5bc"><span class="section-number-6">2.1.4.2.5</span> 将液化气瓶底部设计成斜面，气用完时会自己倾倒</h6>
+<div class="outline-text-6" id="text-2-1-4-2-5">
+
+<div class="figure">
+<p><img src="./dm/img/Liquefied_gas_bottle.png" alt="Liquefied_gas_bottle.png" width="60%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org78019b5" class="outline-6">
+<h6 id="org78019b5"><span class="section-number-6">2.1.4.2.6</span> 电力治炼做电极非对称置于炉中</h6>
+<div class="outline-text-6" id="text-2-1-4-2-6">
+<p>
+方便矿石送入和金属溶液流出。
+</p>
+
+<div class="figure">
+<p><img src="./dm/img/Electric_power_refining.png" alt="Electric_power_refining.png" width="60%" />
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org9d12390" class="outline-5">
+<h5 id="org9d12390"><span class="section-number-5">2.1.4.3</span> 产生多样性</h5>
+<div class="outline-text-5" id="text-2-1-4-3">
+<p>
+列车座位排列成不对称的一侧3个、另一侧2个
+</p>
+<ul class="org-ul">
+<li>满足3个人、4个人、5个人、6个人等不同人数需求。</li>
+</ul>
+
+<div class="figure">
+<p><img src="./dm/img/train-seats.jpg" alt="train-seats.jpg" width="80%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgb82835e" class="outline-5">
+<h5 id="orgb82835e"><span class="section-number-5">2.1.4.4</span> 获取动力</h5>
+<div class="outline-text-5" id="text-2-1-4-4">
+<p>
+不对称的形态还有可能由此得到重力、电力等产生的动力。
+</p>
+<ul class="org-ul">
+<li>电池通过电极金属的不对称性状态产生电力。</li>
+<li>柠檬里插入不同金属可以成为电池，不对称性能够产生能量。</li>
+</ul>
+
+<div class="figure">
+<p><img src="./dm/img/lemon-battery.jpg" alt="lemon-battery.jpg" width="80%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org637b3b1" class="outline-5">
+<h5 id="org637b3b1"><span class="section-number-5">2.1.4.5</span> 杠杆原理</h5>
+<div class="outline-text-5" id="text-2-1-4-5">
+<p>
+通过距离支点的不同距离，实现输出更大的力，使移动距离更大等目的。
+</p>
+
+<div class="figure">
+<p><img src="./dm/img/garden_scissors.jpg" alt="garden_scissors.jpg" width="50%" />
+</p>
+</div>
+
+
+<div class="figure">
+<p><img src="./dm/img/leverage.jpeg" alt="leverage.jpeg" width="50%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org51530cf" class="outline-5">
+<h5 id="org51530cf"><span class="section-number-5">2.1.4.6</span> 利于稳定</h5>
+<div class="outline-text-5" id="text-2-1-4-6">
+<p>
+做成不对称形状则可以取得平衡，变得稳定。
+</p>
+<ul class="org-ul">
+<li>公路转弯处外高内低, 消减离心力</li>
+<li>铁道转弯处内外铁轨间有高度差以提供向心力，减少对轨道挤压造成的危害</li>
+</ul>
+
+
+<div class="figure">
+<p><img src="./dm/img/GT5_road.jpg" alt="GT5_road.jpg" width="100%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org501b79f" class="outline-5">
+<h5 id="org501b79f"><span class="section-number-5">2.1.4.7</span> 加强不对称</h5>
+<div class="outline-text-5" id="text-2-1-4-7">
+<p>
+如果物体已经不对称，则加强它的不对称程度。
+</p>
+<ul class="org-ul">
+<li>为增强防水保温性，建筑上采用多重坡屋顶</li>
+</ul>
+
+<div class="figure">
+<p><img src="./dm/img/Multi-slope_roof.jpg" alt="Multi-slope_roof.jpg" width="70%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgf0091fa" class="outline-5">
+<h5 id="orgf0091fa"><span class="section-number-5">2.1.4.8</span> 联想词语</h5>
+<div class="outline-text-5" id="text-2-1-4-8">
+<p>
+梯形、槽口、突起部分、大小、不齐全、让分赛、有意破坏对称性和平衡、交错、把手部分、配合整体、
+</p>
+<ul class="org-ul">
+<li>电池、连接器的接口部分、记忆卡的缺口、球棒、录像机的手持部分</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgb830807" class="outline-4">
+<h4 id="orgb830807"><span class="section-number-4">2.1.5</span> 例：浴室</h4>
+<div class="outline-text-4" id="text-2-1-5">
+<ul class="org-ul">
+<li>分割：浴室被分割为淋浴和浴缸，淋浴较为清洁。</li>
+<li>分离：浴室被“拆分”到房子一角，让湿气通过窗户或换气扇散到外面。</li>
+<li>局部质量：淋浴头把水流集中到局部，可以解决“节水”和“时间浪费”之间的矛盾。</li>
+<li>不对称：浴缸底面朝排水孔略有倾斜，利用重力让浴缸中的水快些排净。</li>
+</ul>
+
+<div class="figure">
+<p><img src="./dm/img/bathroom.jpg" alt="bathroom.jpg" width="90%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org94bb274" class="outline-4">
+<h4 id="org94bb274"><span class="section-number-4">2.1.6</span> 例：吃饭&amp;烹调</h4>
+<div class="outline-text-4" id="text-2-1-6">
+<ul class="org-ul">
+<li>分割：便当盒里的格子；米饭、酱汤和菜分别装进不同的容器。</li>
+<li>分离：做饭撇去浮沫、去除骨头，通过淘米去除米糠、通过过滤去除纤维使食物口感更细滑。</li>
+<li>局部质量：酱油只蘸生鱼片一角，只在鱼皮上撒，调料集中于局部，味道和盐的平衡。大火烧热平底锅，先把牛肉表面煎好。</li>
+<li>非对称：筷子握手里的一端粗一些、用于夹菜的尖端细一些，较易剔掉鱼肉里的小刺。</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgf9103e4" class="outline-4">
+<h4 id="orgf9103e4"><span class="section-number-4">2.1.7</span> 练习：手</h4>
+<div class="outline-text-4" id="text-2-1-7">
+<ul class="org-ul">
+<li>一只手有5根手指 (分割原理)</li>
+<li>5根手指中只有大拇指朝向另一边 (非对称原理)</li>
+<li>指甲是皮肤分化、变硬后形成的 (局部质量原理)</li>
+<li>指甲(没有血管和神经)剪掉也不会疼 (分离原理)</li>
+<li>手指被关节分成3节 (分割原理)</li>
+</ul>
+
+<div class="figure">
+<p><img src="./dm/img/hand.jpg" alt="hand.jpg" width="20%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org1b03d3d" class="outline-4">
+<h4 id="org1b03d3d"><span class="section-number-4">2.1.8</span> 练习：做咖喱饭</h4>
+<div class="outline-text-4" id="text-2-1-8">
+<ul class="org-ul">
+<li>削掉胡萝卜和土豆的皮 (分离原理)</li>
+<li>为了方便食用，把胡萝卜和土豆切成可以一口吃进去的大小 (分割原理)</li>
+<li>先炒一下蔬菜和肉，将表面的局部用油做出涂层，防止炖碎 (局部质量原理)</li>
+<li>容易炖碎的土豆晚些(改变炖煮时间)下锅 (非对称原理)</li>
+<li>煮的过程中撇去浮沫 (分离原理)</li>
+<li>为了使咖喱调料块易于溶解，掰开后再放进锅里 (分割原理)</li>
+</ul>
+
+<div class="figure">
+<p><img src="./dm/img/curry-rice.jpg" alt="curry-rice.jpg" width="50%" />
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org615f4df" class="outline-3">
+<h3 id="org615f4df"><span class="section-number-3">2.2</span> 组合</h3>
+<div class="outline-text-3" id="text-2-2">
+<p>
+将不少于两种的技术、产品的一部分或全部适当结合，形成新原理、新技术、新产品。
+</p>
+</div>
+<div id="outline-container-orgf03f19c" class="outline-4">
+<h4 id="orgf03f19c"><span class="section-number-4">2.2.1</span> 组合方法</h4>
+<div class="outline-text-4" id="text-2-2-1">
+<ul class="org-ul">
+<li>主体添加法：在原有思想、原理、产品结构、功能中补充新内容。</li>
+<li>异类组合法：至少两种不同领域思想、原理、技术组合，有较大整体变化，创造性较强。</li>
+<li>同物组合法：增强功能、意义，产生新的事物。</li>
+<li>重组法：将研究对象在不同层次上分解，以新的意图重新组合，更有效地控掘和发挥科技潜力。</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org14bd9cb" class="outline-4">
+<h4 id="org14bd9cb"><span class="section-number-4">2.2.2</span> 组合实例</h4>
+<div class="outline-text-4" id="text-2-2-2">
+<ul class="org-ul">
+<li>主体添加：太阳能多功能计算器</li>
+<li>异类组合：复合材料</li>
+<li>同物组合：统一尺寸的拼插积木拼出各种形状</li>
+<li>重组：金刚石和石墨</li>
+</ul>
+</div>
+<div id="outline-container-org2d45c26" class="outline-5">
+<h5 id="org2d45c26"><span class="section-number-5">2.2.2.1</span> 主体添加：太阳能多功能计算器</h5>
+<div class="outline-text-5" id="text-2-2-2-1">
+<ul class="org-ul">
+<li>计算器用太阳能电池，装上日历、钟表，组合得到新产品。</li>
+</ul>
+
+<div class="figure">
+<p><img src="./dm/img/solar_calculator.jpg" alt="solar_calculator.jpg" width="100%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgd82efbe" class="outline-5">
+<h5 id="orgd82efbe"><span class="section-number-5">2.2.2.2</span> 异类组合：复合材料</h5>
+<div class="outline-text-5" id="text-2-2-2-2">
+<ul class="org-ul">
+<li>不同金属与金属或非金属可组合成性能良好的各种复合材料。</li>
+</ul>
+
+<div class="figure">
+<p><img src="./dm/img/composite-materials.jpg" alt="composite-materials.jpg" width="50%" />
+</p>
+</div>
+
+<div class="figure">
+<p><img src="./dm/img/Textile-reinforced_concrete.jpeg" alt="Textile-reinforced_concrete.jpeg" width="50%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org0fc726e" class="outline-5">
+<h5 id="org0fc726e"><span class="section-number-5">2.2.2.3</span> 同物组合：统一尺寸的拼插积木拼出各种形状</h5>
+<div class="outline-text-5" id="text-2-2-2-3">
+
+<div class="figure">
+<p><img src="./dm/img/Splicing_blocks.jpg" alt="Splicing_blocks.jpg" width="70%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orge60cb3a" class="outline-5">
+<h5 id="orge60cb3a"><span class="section-number-5">2.2.2.4</span> 重组：金刚石和石墨</h5>
+<div class="outline-text-5" id="text-2-2-2-4">
+<p>
+同是碳原子，以不同处理、不同晶格的组合，便可合成性能、用途完全不同的物质
+</p>
+<ul class="org-ul">
+<li>如坚硬而昂贵的金刚石和脆弱的良导体石墨。</li>
+</ul>
+
+<div class="figure">
+<p><img src="./dm/img/Diamond_graphite.jpg" alt="Diamond_graphite.jpg" width="60%" />
+</p>
+</div>
+
+<p>
+TRIZ组合
+</p>
+<ul class="org-ul">
+<li>TRIZ05合并(联合)Merge</li>
+<li>TRIZ06多用性Universality</li>
+<li>TRIZ07嵌套(套装)原理Nested-doll</li>
+<li>TRIZ08反重量(配重原理)Anti-weight</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgf708e61" class="outline-4">
+<h4 id="orgf708e61"><span class="section-number-4">2.2.3</span> TRIZ05合并(联合)Merge</h4>
+<div class="outline-text-4" id="text-2-2-3">
+<p>
+把两个以上(通常用于相同场合)事物(串联或并联)组合起来，便于使用。
+</p>
+<ul class="org-ul">
+<li>把相同物体或完成类似操作物体联合起来。</li>
+<li>把时间上相同或类似操作联合起来。</li>
+</ul>
+</div>
+
+<div id="outline-container-orga38bc16" class="outline-5">
+<h5 id="orga38bc16"><span class="section-number-5">2.2.3.1</span> 把相同物体或完成类似操作物体联合起来</h5>
+<div class="outline-text-5" id="text-2-2-3-1">
+<ul class="org-ul">
+<li>航天飞机、联合收割机</li>
+<li>双联显微镜组、多功能铅笔、插排</li>
+<li>组合电路、集成电路、并行计算</li>
+<li>钢琴、鸡尾酒、牙刷和牙膏配套、梳子</li>
+<li>洗衣夹子和衣架组合、拖布</li>
+<li>蜂房结构、店铺林立的商业街</li>
+</ul>
+</div>
+<div id="outline-container-org3e75576" class="outline-6">
+<h6 id="org3e75576"><span class="section-number-6">2.2.3.1.1</span> 航天飞机</h6>
+<div class="outline-text-6" id="text-2-2-3-1-1">
+<ul class="org-ul">
+<li>火箭与飞机的组合</li>
+</ul>
+
+<div class="figure">
+<p><img src="./dm/img/shuttle_space.jpg" alt="shuttle_space.jpg" width="90%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgb2ae7e6" class="outline-6">
+<h6 id="orgb2ae7e6"><span class="section-number-6">2.2.3.1.2</span> 联合收割机</h6>
+<div class="outline-text-6" id="text-2-2-3-1-2">
+
+<div class="figure">
+<p><img src="./dm/img/Combine_harvester.jpg" alt="Combine_harvester.jpg" width="90%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org8cbcba5" class="outline-6">
+<h6 id="org8cbcba5"><span class="section-number-6">2.2.3.1.3</span> 双联显微镜组：由一个人操作，另一个人观察和记录</h6>
+<div class="outline-text-6" id="text-2-2-3-1-3">
+
+<div class="figure">
+<p><img src="./dm/img/Duplex_Microscope.jpg" alt="Duplex_Microscope.jpg" width="70%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgf574e69" class="outline-6">
+<h6 id="orgf574e69"><span class="section-number-6">2.2.3.1.4</span> 带橡皮的铅笔、自动铅笔、红蓝铅笔</h6>
+<div class="outline-text-6" id="text-2-2-3-1-4">
+
+<div class="figure">
+<p><img src="./dm/img/pencil1.jpg" alt="pencil1.jpg" width="40%" />
+</p>
+</div>
+
+
+<div class="figure">
+<p><img src="./dm/img/pencil2.jpg" alt="pencil2.jpg" width="55%" />
+</p>
+</div>
+
+
+<div class="figure">
+<p><img src="./dm/img/pencil3.jpg" alt="pencil3.jpg" width="45%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org3d8c87e" class="outline-6">
+<h6 id="org3d8c87e"><span class="section-number-6">2.2.3.1.5</span> 由多个插座组合而成的插排</h6>
+<div class="outline-text-6" id="text-2-2-3-1-5">
+
+<div class="figure">
+<p><img src="./dm/img/sockets.jpg" alt="sockets.jpg" width="80%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgcbe1067" class="outline-6">
+<h6 id="orgcbe1067"><span class="section-number-6">2.2.3.1.6</span> 小灯泡和电池串联或并联产生不同特性</h6>
+<div class="outline-text-6" id="text-2-2-3-1-6">
+
+<div class="figure">
+<p><img src="./dm/img/Series_parallel_connection.jpeg" alt="Series_parallel_connection.jpeg" width="45%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgbf09e8b" class="outline-6">
+<h6 id="orgbf09e8b"><span class="section-number-6">2.2.3.1.7</span> 集成电路上的电子芯片</h6>
+<div class="outline-text-6" id="text-2-2-3-1-7">
+
+<div class="figure">
+<p><img src="./dm/img/Integrated_Circuits.jpg" alt="Integrated_Circuits.jpg" width="90%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org31a4dd1" class="outline-6">
+<h6 id="org31a4dd1"><span class="section-number-6">2.2.3.1.8</span> 并行计算的多个CPU和GPU</h6>
+<div class="outline-text-6" id="text-2-2-3-1-8">
+
+<div class="figure">
+<p><img src="./dm/img/CPU-GPU.png" alt="CPU-GPU.png" width="90%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org55e31af" class="outline-6">
+<h6 id="org55e31af"><span class="section-number-6">2.2.3.1.9</span> 钢琴(琴键组合，do re mi fa so la si do音阶周期排列)</h6>
+<div class="outline-text-6" id="text-2-2-3-1-9">
+
+<div class="figure">
+<p><img src="./dm/img/piano.jpg" alt="piano.jpg" width="80%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orge13326d" class="outline-6">
+<h6 id="orge13326d"><span class="section-number-6">2.2.3.1.10</span> 鸡尾酒</h6>
+<div class="outline-text-6" id="text-2-2-3-1-10">
+
+<div class="figure">
+<p><img src="./dm/img/Cocktail.jpg" alt="Cocktail.jpg" width="100%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org2e541c4" class="outline-6">
+<h6 id="org2e541c4"><span class="section-number-6">2.2.3.1.11</span> 牙刷和牙膏配套</h6>
+<div class="outline-text-6" id="text-2-2-3-1-11">
+
+<div class="figure">
+<p><img src="./dm/img/toothbrush_sets.jpg" alt="toothbrush_sets.jpg" width="70%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org07b3406" class="outline-6">
+<h6 id="org07b3406"><span class="section-number-6">2.2.3.1.12</span> 梳子(梳齿组合)</h6>
+<div class="outline-text-6" id="text-2-2-3-1-12">
+
+<div class="figure">
+<p><img src="./dm/img/comb.jpg" alt="comb.jpg" width="50%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org22aa0d6" class="outline-6">
+<h6 id="org22aa0d6"><span class="section-number-6">2.2.3.1.13</span> 洗衣夹子和衣架组合</h6>
+<div class="outline-text-6" id="text-2-2-3-1-13">
+
+<div class="figure">
+<p><img src="./dm/img/laundry_hanger_with_clips.jpg" alt="laundry_hanger_with_clips.jpg" width="60%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgdba3cdf" class="outline-6">
+<h6 id="orgdba3cdf"><span class="section-number-6">2.2.3.1.14</span> 拖布(布条组合)</h6>
+<div class="outline-text-6" id="text-2-2-3-1-14">
+
+<div class="figure">
+<p><img src="./dm/img/hurricane-spin-mop.png" alt="hurricane-spin-mop.png" width="50%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgf00cc97" class="outline-6">
+<h6 id="orgf00cc97"><span class="section-number-6">2.2.3.1.15</span> 多个六边形排在一起形成结实的蜂房结构</h6>
+<div class="outline-text-6" id="text-2-2-3-1-15">
+
+<div class="figure">
+<p><img src="./dm/img/Hive.jpg" alt="Hive.jpg" width="80%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org8dbbc7b" class="outline-6">
+<h6 id="org8dbbc7b"><span class="section-number-6">2.2.3.1.16</span> 比起单独一家店铺，店铺林立的商业街可创造更高销售额</h6>
+<div class="outline-text-6" id="text-2-2-3-1-16">
+
+<div class="figure">
+<p><img src="./dm/img/commercial_street.png" alt="commercial_street.png" width="100%" />
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org1c0ab83" class="outline-5">
+<h5 id="org1c0ab83"><span class="section-number-5">2.2.3.2</span> 把时间上相同或类似的操作联合起来</h5>
+<div class="outline-text-5" id="text-2-2-3-2">
+<ul class="org-ul">
+<li>冷热水龙头</li>
+<li>撮影机拍摄影像时同时录音</li>
+<li>音乐CD与商业广告合作</li>
+<li>外卖比萨饼</li>
+</ul>
+</div>
+<div id="outline-container-org9cd1e54" class="outline-6">
+<h6 id="org9cd1e54"><span class="section-number-6">2.2.3.2.1</span> 冷热水龙头</h6>
+<div class="outline-text-6" id="text-2-2-3-2-1">
+
+<div class="figure">
+<p><img src="./dm/img/Cold_hot_water_mixing_faucet.jpg" alt="Cold_hot_water_mixing_faucet.jpg" width="50%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgb2d8558" class="outline-6">
+<h6 id="orgb2d8558"><span class="section-number-6">2.2.3.2.2</span> 撮影机拍摄影像时同时录音</h6>
+<div class="outline-text-6" id="text-2-2-3-2-2">
+
+<div class="figure">
+<p><img src="./dm/img/panasonic_video_camera.jpg" alt="panasonic_video_camera.jpg" width="80%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org60006b8" class="outline-6">
+<h6 id="org60006b8"><span class="section-number-6">2.2.3.2.3</span> 音乐CD与商业广告合作</h6>
+<div class="outline-text-6" id="text-2-2-3-2-3">
+
+<div class="figure">
+<p><img src="./dm/img/ad_music_Brotherly-Love.png" alt="ad_music_Brotherly-Love.png" width="100%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org054868f" class="outline-6">
+<h6 id="org054868f"><span class="section-number-6">2.2.3.2.4</span> “外卖比萨”就是“快递+比萨店”。</h6>
+<div class="outline-text-6" id="text-2-2-3-2-4">
+
+<div class="figure">
+<p><img src="./dm/img/takeout-pizza.jpg" alt="takeout-pizza.jpg" width="80%" />
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org9bf2052" class="outline-5">
+<h5 id="org9bf2052"><span class="section-number-5">2.2.3.3</span> 与合并相关的其它原理</h5>
+<div class="outline-text-5" id="text-2-2-3-3">
+<ul class="org-ul">
+<li>#10预先作用原理：把用于相同场合的不同事物预先组合起来的。</li>
+<li>#19周期性动作原理：把相同事物以特定的模式周期性地组合起来的。</li>
+<li>#36相变原理：同一种物质由于结晶构造不同，也会呈现不同的特性。</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org606e183" class="outline-5">
+<h5 id="org606e183"><span class="section-number-5">2.2.3.4</span> 联想词语</h5>
+<div class="outline-text-5" id="text-2-2-3-4">
+<p>
+一体化、合并、合体、合作、糅合、新种类、毗连、并联、串联
+</p>
+<ul class="org-ul">
+<li>带橡皮的铅笔、外卖比萨、动作角色扮演、蜂房结构、结晶构造</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orga1bbb45" class="outline-4">
+<h4 id="orga1bbb45"><span class="section-number-4">2.2.4</span> TRIZ06通用性Universality</h4>
+<div class="outline-text-4" id="text-2-2-4">
+<p>
+一个物体执行多种不同功能，因而不需其它物体。一物多用。
+</p>
+<ul class="org-ul">
+<li>想增加功能，又不想增加零件或者尺寸时，就可以用“通用性原理”。</li>
+<li>与“合并原理”相比，“通用性原理”更适用于多个零件用于不同场合，很多时候像多功能刀。</li>
+</ul>
+</div>
+<div id="outline-container-org4945474" class="outline-5">
+<h5 id="org4945474"><span class="section-number-5">2.2.4.1</span> 实例</h5>
+<div class="outline-text-5" id="text-2-2-4-1">
+<ul class="org-ul">
+<li>提包提手可同时作为拉力器。</li>
+<li>多功能刀：通过刀柄通用部分，解决功能多与体积大的矛盾，使用途广泛，便携。</li>
+</ul>
+</div>
+
+<div id="outline-container-org6019f54" class="outline-6">
+<h6 id="org6019f54"><span class="section-number-6">2.2.4.1.1</span> 7段码显示法</h6>
+<div class="outline-text-6" id="text-2-2-4-1-1">
+<p>
+用摆成数字8的形状的7根数码管通过开关组合，来显示出0～9的数字。
+</p>
+
+<div class="figure">
+<p><img src="./dm/img/digital_number.jpeg" alt="digital_number.jpeg" width="100%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org835f02e" class="outline-6">
+<h6 id="org835f02e"><span class="section-number-6">2.2.4.1.2</span> 通用槽螺丝钉</h6>
+<div class="outline-text-6" id="text-2-2-4-1-2">
+<p>
+十字槽中间的“—”字凹槽做得更长，用一字螺丝刀也可拧紧。
+</p>
+
+<div class="figure">
+<p><img src="./dm/img/screw.jpg" alt="screw.jpg" width="50%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org43935ea" class="outline-6">
+<h6 id="org43935ea"><span class="section-number-6">2.2.4.1.3</span> 晴雨两用伞等都具备可以应对不同情景或对象的通用性。</h6>
+<div class="outline-text-6" id="text-2-2-4-1-3">
+
+<div class="figure">
+<p><img src="./dm/img/sunshine_rainy_umbrella.jpeg" alt="sunshine_rainy_umbrella.jpeg" width="100%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org7ff4b68" class="outline-6">
+<h6 id="org7ff4b68"><span class="section-number-6">2.2.4.1.4</span> 客卧两用房间</h6>
+<div class="outline-text-6" id="text-2-2-4-1-4">
+<p>
+铺上被子用作卧室，收起被子就是客厅
+</p>
+<ul class="org-ul">
+<li>一室两用可以有效利用空间。</li>
+</ul>
+
+<div class="figure">
+<p><img src="./dm/img/room_multi_function.jpg" alt="room_multi_function.jpg" width="100%" />
+</p>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-orge8019b4" class="outline-6">
+<h6 id="orge8019b4"><span class="section-number-6">2.2.4.1.5</span> 荧光笔的两端共用墨水部分</h6>
+<div class="outline-text-6" id="text-2-2-4-1-5">
+<p>
+分别写较粗和较细的字。不用的一侧可盖上笔帽。
+</p>
+
+<div class="figure">
+<p><img src="./dm/img/Marker.jpg" alt="Marker.jpg" width="60%" />
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org2170539" class="outline-5">
+<h5 id="org2170539"><span class="section-number-5">2.2.4.2</span> 联想词语</h5>
+<div class="outline-text-5" id="text-2-2-4-2">
+<p>
+身兼二职、一举两得、多种场合、兼用、通用零部件、平台、通货、通用模块、通用设计
+</p>
+<ul class="org-ul">
+<li>数码数字、多功能刀、筷子、菜刀、智能手机、客卧两用房间、十字一字通用螺丝钉、云服务、Web API、通用电脑板</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org367f00c" class="outline-4">
+<h4 id="org367f00c"><span class="section-number-4">2.2.5</span> TRIZ07嵌套(套装)原理Nested-doll</h4>
+<div class="outline-text-4" id="text-2-2-5">
+<p>
+把物体放入内部，避免并列组合时，体积增大。
+</p>
+<ul class="org-ul">
+<li>a．物体k+1位于物体k内</li>
+<li>b．物体k+1通过物体k的空腔</li>
+</ul>
+</div>
+<div id="outline-container-org16bc47b" class="outline-5">
+<h5 id="org16bc47b"><span class="section-number-5">2.2.5.1</span> 实例</h5>
+<div class="outline-text-5" id="text-2-2-5-1">
+<ul class="org-ul">
+<li>弹性振动超声精选机由两个互相夹紧半波片构成。为减小精选机长度和增大稳定性，两个半波片制成相互套在一起的空锥体。</li>
+<li>缩小变压器压电元件输出部分外形尺寸。</li>
+</ul>
+</div>
+
+<div id="outline-container-org9ce9ffc" class="outline-6">
+<h6 id="org9ce9ffc"><span class="section-number-6">2.2.5.1.1</span> 俄罗斯套娃, 内部嵌套收纳</h6>
+<div class="outline-text-6" id="text-2-2-5-1-1">
+
+<div class="figure">
+<p><img src="./dm/img/Nested-doll.jpg" alt="Nested-doll.jpg" width="60%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org4c44bcf" class="outline-6">
+<h6 id="org4c44bcf"><span class="section-number-6">2.2.5.1.2</span> 三脚架</h6>
+<div class="outline-text-6" id="text-2-2-5-1-2">
+<p>
+伸缩杆、钓鱼竿和波纹管利用内部空间，携带时变短、使用时变长。
+</p>
+
+<div class="figure">
+<p><img src="./dm/img/Tripod.jpg" alt="Tripod.jpg" width="70%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org7e62806" class="outline-6">
+<h6 id="org7e62806"><span class="section-number-6">2.2.5.1.3</span> 一本书第1部分第2章第3节的嵌套层次</h6>
+</div>
+
+<div id="outline-container-org039e7fc" class="outline-6">
+<h6 id="org039e7fc"><span class="section-number-6">2.2.5.1.4</span> 如果企业员工很多，就会设置部门、科室等层次化组织结构</h6>
+</div>
+<div id="outline-container-org27a4059" class="outline-6">
+<h6 id="org27a4059"><span class="section-number-6">2.2.5.1.5</span> 文件夹的嵌套结构可以帮助我们管理大量文件</h6>
+</div>
+<div id="outline-container-org8a50978" class="outline-6">
+<h6 id="org8a50978"><span class="section-number-6">2.2.5.1.6</span> 时间采用年、月、日、小时、分、秒表示</h6>
+<div class="outline-text-6" id="text-2-2-5-1-6">
+<p>
+比只用秒表示更方便
+</p>
+</div>
+</div>
+<div id="outline-container-orgc5cfefb" class="outline-6">
+<h6 id="orgc5cfefb"><span class="section-number-6">2.2.5.1.7</span> 分形结构（自相似结构）</h6>
+<div class="outline-text-6" id="text-2-2-5-1-7">
+<p>
+叶脉周期性嵌套结构。
+</p>
+<ul class="org-ul">
+<li>通过计算分形结构，模拟树木、云朵等形象。</li>
+</ul>
+
+<div class="figure">
+<p><img src="./dm/img/fractal_leaf.jpg" alt="fractal_leaf.jpg" width="60%" />
+</p>
+</div>
+
+
+<div class="figure">
+<p><img src="./dm/img/fractals.jpg" alt="fractals.jpg" width="60%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org4fe711a" class="outline-6">
+<h6 id="org4fe711a"><span class="section-number-6">2.2.5.1.8</span> 包里再放小包，可把物品整理得一目了然</h6>
+<div class="outline-text-6" id="text-2-2-5-1-8">
+
+<div class="figure">
+<p><img src="./dm/img/bags_in_bag.jpeg" alt="bags_in_bag.jpeg" width="100%" />
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org0e184fe" class="outline-5">
+<h5 id="org0e184fe"><span class="section-number-5">2.2.5.2</span> 联想词语</h5>
+<div class="outline-text-5" id="text-2-2-5-2">
+<p>
+内部、层次化、目录结构、树结构、分形结构、组织结构、嵌套、
+</p>
+<ul class="org-ul">
+<li>三脚架、钓鱼竿、波纹管、章节结构、条款、域、URL、HTML、树木、钱、夹馅饭团、</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgf119744" class="outline-4">
+<h4 id="orgf119744"><span class="section-number-4">2.2.6</span> TRIZ08反重量(配重原理)Anti-weight</h4>
+<div class="outline-text-4" id="text-2-2-6">
+<p>
+为取得平衡而进行组合，解决做功量与重量之间的矛盾。
+</p>
+<ul class="org-ul">
+<li>a．将物体与有上升力另一物体结合以抵消其重量。</li>
+<li>例：用滑轮将相反事物平衡组合。</li>
+<li>b．将物体与介质(气动/液动力)相互作用以抵消其重量。</li>
+<li>例：如需改变转动物体质量，但质量不能改变，可改成翼状，由翼片倾角获得附加力。</li>
+<li>例：浮力</li>
+</ul>
+</div>
+<div id="outline-container-org45138cb" class="outline-5">
+<h5 id="org45138cb"><span class="section-number-5">2.2.6.1</span> 电梯(滑轮和配重)</h5>
+<div class="outline-text-5" id="text-2-2-6-1">
+<p>
+电梯装置通过滑轮利用相反一侧的平衡重物。
+</p>
+<ul class="org-ul">
+<li>平衡重物在电梯上升时下降，下降时上升，节省电梯上下所需能量。</li>
+<li>需要举起重物时，可以考虑利用滑轮。</li>
+</ul>
+
+<div class="figure">
+<p><img src="./dm/img/elevator.jpeg" alt="elevator.jpeg" width="30%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org199c239" class="outline-5">
+<h5 id="org199c239"><span class="section-number-5">2.2.6.2</span> 船舶飞机(浮力和升力)</h5>
+<div class="outline-text-5" id="text-2-2-6-2">
+<p>
+获得浮力与重力的平衡，才能沿水平方向稳定移动。
+</p>
+<ul class="org-ul">
+<li>船舶、浮标、救生圈或浮力板等放入液体中。测量吃水线可算出重量。</li>
+<li>飞机能够在空中飞行，是因为机翼产生的升力与飞机的重量取得平衡。</li>
+</ul>
+
+<div class="figure">
+<p><img src="./dm/img/Flotteurs-gonflables.jpg" alt="Flotteurs-gonflables.jpg" width="100%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org0734936" class="outline-5">
+<h5 id="org0734936"><span class="section-number-5">2.2.6.3</span> 天平</h5>
+<div class="outline-text-5" id="text-2-2-6-3">
+<p>
+利用平衡原理称量重量
+</p>
+
+<div class="figure">
+<p><img src="./dm/img/tray-balance-weight.jpg" alt="tray-balance-weight.jpg" width="70%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org7e12d74" class="outline-5">
+<h5 id="org7e12d74"><span class="section-number-5">2.2.6.4</span> 双肩包</h5>
+<div class="outline-text-5" id="text-2-2-6-4">
+<p>
+让双肩平均负重，从而使全身承担重量
+</p>
+
+<div class="figure">
+<p><img src="./dm/img/backpack.jpeg" alt="backpack.jpeg" width="40%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgfbdd286" class="outline-5">
+<h5 id="orgfbdd286"><span class="section-number-5">2.2.6.5</span> 联想词语</h5>
+<div class="outline-text-5" id="text-2-2-6-5">
+<p>
+平衡、浮力、升力、滑轮、价格、代价、对抗、重力、重心、对手
+</p>
+<ul class="org-ul">
+<li>电梯、天平、救生圈、飞机、衣架、复式记账法</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgad61125" class="outline-4">
+<h4 id="orgad61125"><span class="section-number-4">2.2.7</span> 例：列车</h4>
+<div class="outline-text-4" id="text-2-2-7">
+<ul class="org-ul">
+<li>卧铺车厢或硬座车厢：电车与床或座椅的组合(#5合并原理)</li>
+<li>卧铺车厢可以把座椅放倒，当作床来使用：一个座椅两种用途(#6普遍性原理)</li>
+<li>缆车两两相向运行：一辆上山时另一辆在下山,上山车辆和下山车辆相互的重量平衡(#8配重原理)</li>
+<li>不同级别的列车(慢车、快车、特快)：慢车在快车停留的车站也会停车，慢车短途停靠, 效率低，但覆盖面广(#7嵌套原理)</li>
+<li>在车站建购物中心：在车站附近（#5合并原理）和内部（#7嵌套原理）设购物中心</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgdde6ca7" class="outline-4">
+<h4 id="orgdde6ca7"><span class="section-number-4">2.2.8</span> 例：卧室</h4>
+<div class="outline-text-4" id="text-2-2-8">
+<ul class="org-ul">
+<li>房间使用被子时是卧室，铺上坐垫时是客厅，摆上餐桌便成餐厅：一室三用（#6普遍性原理）</li>
+<li>天气寒冷时，把毛巾被、羽绒被、毛毯摞起来盖：同类物品一起使用（#5合并原理）</li>
+<li>有的床也可以收纳睡衣等物品：既能当作床来使用又具有收纳功能（#5合并原理、#6普遍性原理、#7嵌套原理）</li>
+<li>枕头在睡觉时支撑头部：低回弹枕头→回弹是指什么？（#8配重原理）</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orge2b5c58" class="outline-4">
+<h4 id="orge2b5c58"><span class="section-number-4">2.2.9</span> 作业二</h4>
+<div class="outline-text-4" id="text-2-2-9">
+<ul class="org-ul">
+<li>基于拆分或组合原理，选择一款或一系列产品分析其设计方法（拆分当中的分割、分离、局部质量或不对称等；组合当中的合并、多用性、嵌套或反重量等）；</li>
+<li>在此基础上，结合拆分或组合原理构思新的设计方案。</li>
+<li>做成PPT，10月10日(周四)23:00前发送到anhongz@outlook.com</li>
+<li>文件名: DM2-标题-姓名</li>
+<li>文件类型: 演示文稿或PDF文档</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Anhongz@outlook.com</p>
+<p class="date">Created: 2019-09-27 Fri 21:20</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
